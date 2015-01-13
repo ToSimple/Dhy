@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>登录</title>
+<link href="images/icon.png" rel="apple-touch-icon-precomposed">
+<link href="images/favicon.ico?v=0.1.0" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/pb.css">
+
+</head>
+
+<body>
+<div class="wrapper">
+<nav class="navbar navbar-inverse"  role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      	<a href="index_2.html" class="navbar-brand navlogimg">
+       	<img src="images/logo.png" height="32"></a>
+       
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     	<ul class="nav navbar-nav">
+        <li><a href="index_0.html">首页</a></li>
+        <li><a href="index_1.html">导师</a></li>
+       	<li><a href="index_2.html">课程</a></li>
+        <li><a href="http://www.amaker.org" target="_blank">项目</a></li>
+        <li><a href="#">活动</a></li>
+        <li><a href="#">团体</a></li>
+      	</ul>
+       
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.html">登录</a></li>
+        <li><a href="regist.html">注册</a></li>
+        <!-- 登录成功-->
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的管理<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a></li>
+          </ul>
+        </li>
+        
+        <!-- <li><a href="javascript:void(0);">欢迎您，波波</a></li>
+        <li><a id="a-grzx" href="login.html">进入个人中心</a></li>
+        -->
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="按课程、导师名称">
+        </div>
+        <button type="submit" class="btn btn-primary">搜索</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>	
+<div class="container c-fm">
+	<div class="row">
+    <div class="col-sm-offset-4"><h3>用户登录</h3></div>
+    </div>
+    <div class="row">
+    <form id="login" class="form-horizontal" role="form">
+  		<div class="form-group">
+    		<label for="account" class="col-sm-4 col-sm-offset-1 control-label">账&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
+    		<div class="col-sm-6">
+      		<input type="text" class="form-control form-control-hf f-inp" id="account" name="account" placeholder="账号">
+    		</div>
+  		</div>
+  		<div class="form-group">
+    		<label for="password" class="col-sm-4 col-sm-offset-1 control-label">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+    		<div class="col-sm-6">
+      		<input type="password" class="form-control form-control-hf f-inp" id="password" name="password" placeholder="密码"> 
+    		</div>
+  		</div>
+       <div class="form-group">
+    		<label for="verification" class="col-sm-4 col-sm-offset-1 control-label">验证码：</label>
+            <div class="col-sm-1"><img alt="验证码图片"></div>
+    		<div class="col-sm-4">
+      		<input type="text" class="form-control form-control-hf f-inp" id="verification" name="verification" placeholder="验证码"> 
+    		</div>
+  		</div>
+  		<div class="form-group">
+    		<div class="col-sm-offset-5 col-sm-4">
+      		<div class="checkbox">
+        	<label>
+          	<input type="checkbox"> 记住登录
+        	</label>
+      		</div>
+    	</div>
+	  	</div>
+  		<div class="form-group">
+    		<div class="col-sm-offset-5 col-sm-2">
+      		<button type="submit" class="btn btn-primary btn-block">登录</button>
+    	</div>
+  		</div>
+	</form>
+    </div>
+</div>	
+<div class="footer_placeholder"></div>
+</div>
+<div class="g-ft">
+	<div class="container-fluid m-ft">
+    	<div class="c-ft">
+    		<ul class="list-inline">
+  			<li><a href="#">关于Amaker</a></li>
+    		<li>·</li>
+   	 		<li><a href="#">服务协议</a></li>
+    		<li>·</li>
+    		<li><a href="#">合作机构</a></li>
+    		<li>·</li>
+    		<li><a href="#">联系我们</a></li>
+    		<li>·</li>
+    		<li class="share">关注我们：
+    			<a class="ck-ft weixing" href="javascript:void(0)"></a>
+    			<div class="qrcode-g">
+        			<div class="qrImg">
+           			<img src="images/qrcode_for_gh_8be2fded1c7f_258.jpg" width="100" height="100"> 
+            		</div>
+            		<p class="qrTitle">微信号:A_maker</p>
+         			<div class="tip"></div>
+        		</div>
+    		</li>
+			</ul>
+    <p>Copyright © 2014 - Amaker - All Right Reserved</p>
+	</div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/validatemessage.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".weixing").on("mouseover",function(){
+		$(".qrcode-g").css("display","block");
+	});
+	$(".weixing").on("mouseout",function(){
+		$(".qrcode-g").css("display","none");
+	});
+	 $("#login").validate({
+		rules:{
+			account:{
+				required: true,
+    			minlength: 3
+			},
+			password:{
+				required: true,
+    			minlength: 5
+			},
+			verification:{
+				required: true,
+			}
+		},
+		messages:{
+			account:{
+				required:" 请输入用户名",
+			    minlength: $.validator.format(" 用户名不能小于{0}个字 符")
+			},
+			password:{
+				required: " 请输入密码",
+    			minlength: $.validator.format(" 密码不能小于{0}个字 符")
+			},
+			verification:{
+				required:" 请输入验证码"
+			}
+		}
+	});
+})
+</script>
+</body>
+</html>

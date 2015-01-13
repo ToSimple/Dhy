@@ -1,0 +1,81 @@
+/* CSS Document */
+.navlogimg{
+	padding-top:9px;
+	padding-right:5px;
+}
+
+/*bootstrap 修改*/
+.form-control-hf{
+	width:50%;
+}
+.f-inp{
+	display:inline;
+}
+
+/*验证*/
+label[class=error]{
+	color:red;
+	display:inline;
+}
+
+
+html, body{
+	height:100%;
+	overflow:hidden;
+ }
+.wrapper{
+    min-height:100%;
+    height:100%;
+    margin-bottom:-90px;   /*假定页脚的高度为90px*/
+}
+.g-ft, .footer_placeholder{height:90px;} 
+
+/*foot*/
+.g-ft{
+	text-align:center;	
+}
+.g-ft .m-ft{
+	background:none repeat scroll 0 0 #e2e2e2;
+	border-color:#c0c0c0;
+	border-imge:none;
+	border-style:solid;
+	border-width:1px 1px 0;
+	box-shadow:1px 1px 1px #ddd inset;
+}
+.m-ft .c-ft{
+	padding:15px 0;	
+}
+
+.share .ck-ft{
+	background:url("../images/shareLinkUI.png");
+	display:inline-block;
+	height:20px;
+	width:20px;
+	position: relative;
+	top:5px;
+}
+.share .weixing{
+	background-position:-7px -52px;	
+}
+
+.share .qrcode-g{
+	display:none;
+	margin-left:15px;
+	background:none repeat scroll 0 0 #fff;
+	border:1px solid #ddd;
+	bottom:80px;
+	height:135px;
+	position:absolute;
+	padding:5px;
+	width:120px;
+	z-index:999;
+}
+.share .qrcode-g .tip{
+		background:url("../images/tip.png") no-repeat scroll 0 0;
+		width:14px;
+		height:10px;
+		margin-left:55px;
+		margin-top:-3px;
+}
+
+
