@@ -20,9 +20,12 @@ label[class=error]{
 
 
 html, body{
-	height:100%;
-	overflow:hidden;
+	
  }
+.c-fm {
+	height:700px;
+
+}
 .wrapper{
     min-height:100%;
     height:100%;
@@ -48,12 +51,10 @@ html, body{
 	text-align:center;	
 }
 .g-ft .m-ft{
-	background:none repeat scroll 0 0 #e2e2e2;
-	border-color:#c0c0c0;
-	border-imge:none;
-	border-style:solid;
-	border-width:1px 1px 0;
-	box-shadow:1px 1px 1px #ddd inset;
+	
+
+
+	
 }
 .m-ft .c-ft{
 	padding:15px 0;	
@@ -71,24 +72,24 @@ html, body{
 	background-position:-7px -52px;	
 }
 
-.share .qrcode-g{
+.qrcode-g{
+	padding-top:5px;
 	display:none;
-	margin-left:15px;
+	height:135px;
+	width:120px;
 	background:none repeat scroll 0 0 #fff;
 	border:1px solid #ddd;
-	bottom:80px;
-	height:135px;
 	position:absolute;
-	padding:5px;
-	width:120px;
+	margin-top:-160px;
+	margin-left:20px;
 	z-index:999;
 }
-.share .qrcode-g .tip{
+.qrcode-g .tip{
 		background:url("../images/tip.png") no-repeat scroll 0 0;
 		width:14px;
 		height:10px;
 		margin-left:55px;
-		margin-top:-3px;
+		margin-top:-2px;
 }
 
 
