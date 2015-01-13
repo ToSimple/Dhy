@@ -28,6 +28,19 @@ html, body{
     height:100%;
     margin-bottom:-90px;   /*假定页脚的高度为90px*/
 }
+
+@media (max-width: 992px){
+	.g-ft {
+		display:none;
+	}
+	.lab{
+	line-height:30px;
+}
+}
+
+
+
+
 .g-ft, .footer_placeholder{height:90px;} 
 
 /*foot*/
@@ -77,5 +90,7 @@ html, body{
 		margin-left:55px;
 		margin-top:-3px;
 }
+
+
 
 
