@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "amaker", "D:\github\Dhy\amaker\", "{591AA89A-2270-4E79-8316-D3F53A483D6B}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/amaker"
+		Debug.AspNetCompiler.PhysicalPath = "amaker\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\amaker\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/amaker"
+		Release.AspNetCompiler.PhysicalPath = "amaker\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\amaker\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "amakerMVC", "amakerMVC\amakerMVC.csproj", "{EE5FC754-C69A-4D2D-AFBB-C21FF4174EDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{591AA89A-2270-4E79-8316-D3F53A483D6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591AA89A-2270-4E79-8316-D3F53A483D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591AA89A-2270-4E79-8316-D3F53A483D6B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{591AA89A-2270-4E79-8316-D3F53A483D6B}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{EE5FC754-C69A-4D2D-AFBB-C21FF4174EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5FC754-C69A-4D2D-AFBB-C21FF4174EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5FC754-C69A-4D2D-AFBB-C21FF4174EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5FC754-C69A-4D2D-AFBB-C21FF4174EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
