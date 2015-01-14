@@ -39,8 +39,22 @@ html, body{
 	.lab{
 	line-height:30px;
 }
+    .val-img {padding-left:0px;margin-left:-26px;
+    }
+    .val-lb {
+        padding-left:0px;
+        margin-left:41px;
+    }
+    .val-inp {
+        width:133px;
+    }
 }
-
+.tl {
+    text-align:center;
+    font-size:25px;
+    font-family:"微软雅黑";
+    margin-bottom:10px;
+}
 
 
 
