@@ -56,22 +56,22 @@
                      <li><a id="a-grzx" href="login.html">进入个人中心</a></li>
                      -->
                 </ul>
-                <form class="navbar-form navbar-right" role="search" ">
-                    <select class="form-control">
-                        <option>课程</option>
-                        <option>项目</option>
-                        <option>活动</option>
-                        <option>团体</option>
-                        <option>导师</option>
-                    </select>
+                <form class="navbar-form navbar-right" role="search">
 
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="搜索">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                        </span>
+                         <input type="text" class="form-control" placeholder="搜索">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">课程<span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">项目</a></li>
+                                <li><a href="#">导师</a></li>
+                                  <li><a href="#">活动</a></li>
+                                <li><a href="#">团体</a></li>
+                            </ul>
+                        </div>
+                        <!-- /btn-group -->
                     </div>
-                    <!-- /input-group -->
 
                 </form>
             </div>
@@ -119,8 +119,8 @@
             </a>
         </div>
     </div>
-    <div class="container tabbox" id="tabbox">
-        <ul class="nav nav-tabs" role="tablist" id="myTab">
+    <div class="container tabbox">
+        <ul class="nav nav-tabs" role="tablist" >
             <li role="presentation" class="active"><a href="#teacher" role="tab" data-toggle="tab">推荐导师</a></li>
         </ul>
         <div class="tab-content">
