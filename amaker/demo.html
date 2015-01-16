@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <style>
+        .btn-del {
+            color:#FF3333;
+            background-color:#fff;
+            border-radius:9px;
+            font-size: 24px; 
+        }
+        .close_btn {
+          height:30px;
+          width: 145px;
+          text-align:right;
+          position:relative;
+        }
+
+        img {
+            margin-top:-30px;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-box">
+        <div style="" class="close_btn">
+            <a href="#" class="btn-del"><i class="fa fa-close (alias)"></i></a>
+        </div>
+        <img src="images/20120321145658a76a8.jpg" />
+    </div>
+    <script>
+        $(function () {
+            $(".btn-del").on("click", function () {
+                $(".img-box").css("display", "none");
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+﻿body {
+    background: #eee;
+}
+
+
+.pro-box-title {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pro-cc-box {
+    padding: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pro-pl-box {
+    padding: 20px;
+    background-color: #ddd;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+textarea {
+    resize: none;
+}
+
+.pro-bt-titl {
+    font-size: 22px;
+}
+
+.pro-bt-span {
+    margin: 10px 0;
+}
+
+    .pro-bt-span span {
+        margin-left: 10px;
+    }
+
+.light {
+    color: #000;
+    margin-right: 2px;
+}
+
+.lighted {
+    color: #ffcd20;
+}
+
+.right {
+    position: fixed;
+    top: 100px;
+    right: 20%;
+}
+
+.shadow {
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.white_card {
+    width: 160px;
+    background-color: #fff;
+    height: 122px;
+    line-height: 40px;
+    text-align: center;
+}
+
+    .white_card p {
+        cursor: pointer;
+        font-size: 18px;
+        border-bottom: 1px solid #eee;
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .white_card p a:hover {
+            text-decoration: none;
+        }
+
+@media (max-width: 700px) {
+    .right {
+        right: 0;
+        opacity: .7; /* 支持CSS3的浏览器（FF 1.5也支持） 透明度70%*/
+        filter: alpha(opacity=70); /* IE 透明度70%*/
+        -moz-opacity: .7; /* Moz + FF 透明度70%*/
+        -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1) inset;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1) inset;
+    }
+    .white_card {
+        width:100px;
+    }
+}
