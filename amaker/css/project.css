@@ -87,6 +87,7 @@ textarea {
 
 @media (max-width: 700px) {
     .right {
+        top:300px;
         right: 0;
         opacity: .7; /* 支持CSS3的浏览器（FF 1.5也支持） 透明度70%*/
         filter: alpha(opacity=70); /* IE 透明度70%*/
