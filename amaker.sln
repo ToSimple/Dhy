@@ -22,6 +22,26 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "amaker", "D:\github\Dhy\ama
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "amakerMVC", "amakerMVC\amakerMVC.csproj", "{EE5FC754-C69A-4D2D-AFBB-C21FF4174EDE}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Rebulid", "Rebulid\", "{F5EF8116-943D-4C97-98C4-83E49AA98535}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/Rebulid"
+		Debug.AspNetCompiler.PhysicalPath = "Rebulid\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Rebulid\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Rebulid"
+		Release.AspNetCompiler.PhysicalPath = "Rebulid\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Rebulid\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "8541"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +56,10 @@ Global
 		{EE5FC754-C69A-4D2D-AFBB-C21FF4174EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE5FC754-C69A-4D2D-AFBB-C21FF4174EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE5FC754-C69A-4D2D-AFBB-C21FF4174EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5EF8116-943D-4C97-98C4-83E49AA98535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EF8116-943D-4C97-98C4-83E49AA98535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5EF8116-943D-4C97-98C4-83E49AA98535}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EF8116-943D-4C97-98C4-83E49AA98535}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
