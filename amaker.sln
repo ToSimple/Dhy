@@ -42,6 +42,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Rebulid", "Rebulid\", "{F5E
 		VWDPort = "8541"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "wan", "http://localhost:9071", "{7159B453-787C-4B67-92E4-2A287386B1DC}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_9071"
+		Debug.AspNetCompiler.PhysicalPath = "..\wan\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9071\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_9071"
+		Release.AspNetCompiler.PhysicalPath = "..\wan\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9071\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\wan\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +82,10 @@ Global
 		{F5EF8116-943D-4C97-98C4-83E49AA98535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5EF8116-943D-4C97-98C4-83E49AA98535}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{F5EF8116-943D-4C97-98C4-83E49AA98535}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7159B453-787C-4B67-92E4-2A287386B1DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7159B453-787C-4B67-92E4-2A287386B1DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7159B453-787C-4B67-92E4-2A287386B1DC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7159B453-787C-4B67-92E4-2A287386B1DC}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
