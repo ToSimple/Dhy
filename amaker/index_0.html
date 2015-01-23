@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -91,17 +92,17 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="images/demo1.png">
+                    <img src="images/1.jpg" class="im1">
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item">
-                    <img src="images/demo1.png">
+                    <img src="images/2.jpg" class="im2">
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item">
-                    <img src="images/demo1.png">
+                    <img src="images/3.jpg" class="im3">
                     <div class="carousel-caption">
                     </div>
                 </div>
@@ -130,7 +131,8 @@
                         <div class="row kk-dv">
                             <div class="col-md-5">
                                 <div class="img-dv">
-                                    <img src="images/20120321145658a76a8.jpg" class="con-img">
+                                    <img src="images/QQ图片20150123114414.jpg" class="con-img" />
+
                                 </div>
                             </div>
                             <div class="col-md-7">
@@ -149,7 +151,7 @@
                         <div class="row kk-dv">
                             <div class="col-md-5">
                                 <div class="img-dv">
-                                    <img src="images/20120321145658a76a8.jpg" class="con-img">
+                                    <img src="images/QQ图片20150123114414.jpg" class="con-img" />
                                 </div>
                             </div>
                             <div class="col-md-7">
@@ -168,7 +170,7 @@
                         <div class="row kk-dv">
                             <div class="col-md-5">
                                 <div class="img-dv">
-                                    <img src="images/20120321145658a76a8.jpg" class="con-img">
+                                    <img src="images/QQ图片20150123114414.jpg" class="con-img" />
                                 </div>
                             </div>
                             <div class="col-md-7">
@@ -483,12 +485,42 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(".weixing").on("mouseover", function () {
-            $(".qrcode-g").css("display", "block");
-        });
-        $(".weixing").on("mouseout", function () {
-            $(".qrcode-g").css("display", "none");
-        });
+        $(function () {
+            $(".weixing").on("mouseover", function () {
+                $(".qrcode-g").css("display", "block");
+            });
+            $(".weixing").on("mouseout", function () {
+                $(".qrcode-g").css("display", "none");
+            });
+            findScreen();
+            function findScreen() {
+                if (screen.width < 800) {
+                    $(".im1").attr("src", "images/11.jpg");
+                    $(".im2").attr("src", "images/22.jpg");
+                    $(".im3").attr("src", "images/33.jpg");
+                }
+            };
+            
+            if (navigator.userAgent.indexOf("MSIE") > 0) {
+                if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
+                    window.close();
+                }
+                if (navigator.userAgent.indexOf("MSIE 7.0") > 0) {
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！"); window.close();
+                }
+                if (navigator.userAgent.indexOf("MSIE 8.0") > 0) {
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！"); window.close();
+                }
+                if (navigator.userAgent.indexOf("MSIE 9.0") > 0 && !window.innerWidth) {
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！"); window.close();
+                }
+                if (navigator.userAgent.indexOf("MSIE 9.0") > 0) {
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！"); window.close();
+                }
+            }
+
+        })
     </script>
 </body>
 </html>

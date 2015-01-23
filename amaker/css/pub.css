@@ -98,11 +98,19 @@ body {
 .content span {
     border: 1px solid #fff;
     border-radius: 7px;
-    font-weight:300;
+    font-weight: 300;
 }
 
 @media (max-width: 700px) {
     .thumbnail {
         margin: 20px auto;
     }
+}
+
+.h50 {
+    height: 50px; clear: both;
+}
+
+.h20 {
+    height: 20px; clear: both;
 }
