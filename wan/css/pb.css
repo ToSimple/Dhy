@@ -1,0 +1,111 @@
+/* CSS Document */
+.navlogimg{
+	padding-top:9px;
+	padding-right:5px;
+}
+
+/*bootstrap 修改*/
+.form-control-hf{
+	width:50%;
+}
+.f-inp{
+	display:inline;
+}
+
+/*验证*/
+label[class=error]{
+	color:red;
+	display:inline;
+}
+
+
+html, body{
+	
+ }
+.c-fm {
+	height:700px;
+
+}
+.wrapper{
+    min-height:100%;
+    height:100%;
+    margin-bottom:-90px;   /*假定页脚的高度为90px*/
+}
+
+@media (max-width: 992px){
+	.g-ft {
+		display:none;
+	}
+	.lab{
+	line-height:30px;
+}
+    .val-img {padding-left:0px;margin-left:-26px;
+    }
+    .val-lb {
+        padding-left:0px;
+        margin-left:41px;
+    }
+    .val-inp {
+        width:133px;
+    }
+}
+.tl {
+    text-align:center;
+    font-size:25px;
+    font-family:"微软雅黑";
+    margin-bottom:10px;
+}
+
+
+
+.g-ft, .footer_placeholder{height:90px;} 
+
+/*foot*/
+.g-ft{
+	text-align:center;	
+}
+.g-ft .m-ft{
+	
+
+
+	
+}
+.m-ft .c-ft{
+	padding:15px 0;	
+}
+
+.share .ck-ft{
+	background:url("../images/shareLinkUI.png");
+	display:inline-block;
+	height:20px;
+	width:20px;
+	position: relative;
+	top:5px;
+}
+.share .weixing{
+	background-position:-7px -52px;	
+}
+
+.qrcode-g{
+	padding-top:5px;
+	display:none;
+	height:135px;
+	width:120px;
+	background:none repeat scroll 0 0 #fff;
+	border:1px solid #ddd;
+	position:absolute;
+	margin-top:-160px;
+	margin-left:20px;
+	z-index:999;
+}
+.qrcode-g .tip{
+		background:url("../images/tip.png") no-repeat scroll 0 0;
+		width:14px;
+		height:10px;
+		margin-left:55px;
+		margin-top:-2px;
+}
+
+
+
+
