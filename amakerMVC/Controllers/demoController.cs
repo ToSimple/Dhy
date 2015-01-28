@@ -23,6 +23,7 @@ namespace amakerMVC.Controllers
 
         public ActionResult Save(FormCollection values)
         {
+           
             string a = values["a"];
             return Content("<img src=" + a + ">");
         }
@@ -30,14 +31,13 @@ namespace amakerMVC.Controllers
         public ActionResult Save2(FormCollection values)
         {
             Jsondata j = new Jsondata();
-            j.Status = 1;
-            string a = values["base64"];
+            j.Status =  values["base64"];
             return Json(j,JsonRequestBehavior.AllowGet);
         }
     }
 }
 public class Jsondata{
-    public int Status { get; set; }
+    public string Status { get; set; }
 
 }
 

@@ -15,35 +15,42 @@
     <script src="../../js2/jquery.min.js"></script>
 
     <script src="../../js2/upload.js"></script>
-        <script src="../../js2/mobileBUGFix.mini.js"></script>
+    <script src="../../js2/mobileBUGFix.mini.js"></script>
 </head>
 <body>
-<div id="error"></div>
-<input type="file" name="test" id="test">
-<img src="" id="img" style="width:120px;">
-<input type="hidden" id="imgurl">
-<script>
-    $('#test').UploadImg({
-        url: 'Save2',
-        width : '320',
-        //height : '200',
-        quality : '0.7', //压缩率，默认值为0.8
-        // 如果quality是1 宽和高都未设定 则上传原图
-        mixsize: '10000000',
-        
-        //type : 'image/png,image/jpg,image/jpeg,image/pjpeg,image/gif,image/bmp,image/x-png',
-        before : function(blob){
-            $('#img').attr('src',blob);
-        },
-        error : function(res){
-            $('#img').attr('src','');
-            $('#error').html(res);
-        },
-        success: function (res) {
+    <div id="error"></div>
+    <input type="file" name="test" id="test">
+    <img src="" id="img" style="width: 120px;">
+    <input type="hidden" id="imgurl">
+    <button id="open">开启</button>
+    <script>
 
-            $('#imgurl').val(res);
-        }
-    });
-</script>
+        $('#test').UploadImg({
+            url: 'Save2',
+            width: '800',
+            //height : '200',
+            quality: '0.9', //压缩率，默认值为0.8
+            // 如果quality是1 宽和高都未设定 则上传原图
+            mixsize: '10000000',
+
+            //type : 'image/png,image/jpg,image/jpeg,image/pjpeg,image/gif,image/bmp,image/x-png',
+            before: function (blob) {
+                $('#img').attr('src', blob);
+                $("#test").attr("disabled", "false");
+                $("#open").on("click", function () {
+                    $("#test").removeAttr("disabled");
+                })
+                
+            },
+            error: function (res) {
+                $('#img').attr('src', '');
+                $('#error').html(res);
+            },
+            success: function (res) {
+                $('#imgurl').val(res);
+            }
+        });
+
+    </script>
 </body>
 </html>
