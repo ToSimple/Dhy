@@ -76,7 +76,8 @@
                 if( navigator.userAgent.match(/iphone/i) ) {
                     var mpImg = new MegaPixImage(img);
                     mpImg.render(canvas, { maxWidth: w, maxHeight: h, quality: o.quality || 0.8, orientation: 6 });
-                    base64 = canvas.toDataURL(file.type, o.quality || 0.8 );
+                    base64 = canvas.toDataURL(file.type, o.quality || 0.8);
+                    alert(base64);
                 }
 
                 // 修复android
@@ -91,14 +92,14 @@
         }
 
         function _ajaximg(base64,type,file){
-            $.post(o.url,{base64:base64,type:type},function(res){
-                var res = eval('(' + res + ')');
-                if(res.status == 1){
-                    o.error(res.msg);
-                }else{
-                    o.success(res.imgurl);
+            $.ajax({
+                url: o.url,
+                type: "post",
+                data: { base64: base64, type: type },
+                dataType: "json",
+                success: function (data) {
+                    o.success(data);
                 }
-                console.log(res);
             });
 
         }
