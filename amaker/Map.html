@@ -7,6 +7,20 @@
     </style>
 </head>
 <body>
+ <a  onclick="SaveAs5()">123 </a>
+    <script>
+      function toDesktop(sName) {
+          try {
+              var WshShell = new ActiveXObject("WScript.Shell");
+              var oUrlLink = WshShell.CreateShortcut(WshShell.SpecialFolders("Desktop") + "\\" + sName + ".url");
+              oUrlLink.TargetPath = window.location.href;
+              oUrlLink.Save();
+          }
+          catch (e) {
+              alert("当前浏览器安全级别不允许操作！");
+          }
+      }
+    </script>
     <table class="table">
         <tr>
             <td>皂之家</td>

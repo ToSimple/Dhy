@@ -1,0 +1,56 @@
+﻿.b-50 {
+    height: 50px;
+    clear: both;
+}
+
+.b-20 {
+    height: 20px;
+    clear: both;
+}
+
+.navCent-img {
+    padding-top: 5px;
+}
+
+.navCent-inp {
+    padding-top: 8px;
+    padding-left: 12px;
+}
+
+.btn-wr {
+    -moz-user-select: none;
+    background-image: none;
+    border: 0px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #fff;
+    background-repeat: repeat-x;
+    color: #ccc;
+    position: absolute;
+    top: 5px;
+    left: -50px;
+    z-index: 999;
+}
+
+.showbox {
+    padding: 0px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    height: 170px;
+}
+.thumbnail {
+   
+}
+
+hr {
+    margin:5px;
+}

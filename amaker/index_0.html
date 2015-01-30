@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -26,11 +26,27 @@
                 </button>
                 <a href="index_1.html" class="navbar-brand navlogimg">
                     <img src="images/logo.png" height="32"></a>
-
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜索">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">课程<span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">项目</a></li>
+                                <li><a href="#">导师</a></li>
+                                <li><a href="#">活动</a></li>
+                                <li><a href="#">团体</a></li>
+                            </ul>
+                        </div>
+                        <!-- /btn-group -->
+                    </div>
+
+                </form>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="index_0.html">首页</a></li>
                     <li><a href="index_1.html">导师</a></li>
@@ -57,24 +73,7 @@
                      <li><a id="a-grzx" href="login.html">进入个人中心</a></li>
                      -->
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
-
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="搜索">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">课程<span class="caret"></span></button>
-                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">项目</a></li>
-                                <li><a href="#">导师</a></li>
-                                <li><a href="#">活动</a></li>
-                                <li><a href="#">团体</a></li>
-                            </ul>
-                        </div>
-                        <!-- /btn-group -->
-                    </div>
-
-                </form>
+                
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -121,6 +120,7 @@
         </div>
     </div>
     <div class="container tabbox">
+
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#teacher" role="tab" data-toggle="tab">推荐导师</a></li>
         </ul>
@@ -486,6 +486,13 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(function () {
+
+            $(".tabbox").on("mouseover", function (e) {
+                $("#bs-example-navbar-collapse-1").attr("aria-expanded", false);
+                $("#bs-example-navbar-collapse-1").css("height","1px");
+               
+            });
+
             $(".weixing").on("mouseover", function () {
                 $(".qrcode-g").css("display", "block");
             });
@@ -500,23 +507,27 @@
                     $(".im3").attr("src", "images/33.jpg");
                 }
             };
-            
+
             if (navigator.userAgent.indexOf("MSIE") > 0) {
                 if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {
                     alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
                     window.close();
                 }
                 if (navigator.userAgent.indexOf("MSIE 7.0") > 0) {
-                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！"); window.close();
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
+                    window.close();
                 }
                 if (navigator.userAgent.indexOf("MSIE 8.0") > 0) {
-                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！"); window.close();
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
+                    window.close();
                 }
                 if (navigator.userAgent.indexOf("MSIE 9.0") > 0 && !window.innerWidth) {
-                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！"); window.close();
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
+                    window.close();
                 }
                 if (navigator.userAgent.indexOf("MSIE 9.0") > 0) {
-                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！"); window.close();
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
+                    window.close();
                 }
             }
 
