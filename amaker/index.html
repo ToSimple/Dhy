@@ -1,0 +1,506 @@
+﻿<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>创客学堂</title>
+    <link href="images/icon.png" rel="apple-touch-icon-precomposed">
+    <link href="images/favicon.ico?v=0.1.0" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/pub.css">
+    <link href="pb/style/base.css" rel="stylesheet" />
+    <link href="pb/style/index.css" rel="stylesheet" />
+    <style type="text/css">
+        wrapper img {
+            border: none;
+        }
+
+        .wrapper {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+            .wrapper h3 {
+                color: #3366cc;
+                font-size: 16px;
+                height: 35px;
+                line-height: 1.9;
+                text-align: center;
+                border-bottom: 1px solid #E5E5E5;
+                margin: 0 0 10px 0;
+            }
+
+        #con1_1 {
+            position: relative;
+        }
+
+            #con1_1 .product_list {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                padding: 10px;
+                background: #eee;
+                margin: 5px;
+            }
+
+        .product_list img {
+            width: 200px;
+        }
+
+        .product_list p {
+            padding: 5px 0px;
+            font-size: 12px;
+            text-align: center;
+            color: #333;
+            white-space: normal;
+            width: 200px;
+        }
+
+        .content {
+            width: 100%;
+        }
+
+        .navCent-img {
+            padding-top: 10px;
+        }
+
+        @media (max-width:700px) {
+            .navCent-img {
+                padding-top: 5px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index_1.html" class="navbar-brand navCent-img">
+                    <img src="../images/logo.png" height="32"></a>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="搜索">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">课程<span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">项目</a></li>
+                                <li><a href="#">导师</a></li>
+                                <li><a href="#">活动</a></li>
+                                <li><a href="#">团体</a></li>
+                            </ul>
+                        </div>
+                        <!-- /btn-group -->
+                    </div>
+
+                </form>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index_0.html">首页</a></li>
+                    <li><a href="index_1.html">导师</a></li>
+                    <li><a href="index_2.html">课程</a></li>
+                    <li><a href="project.html">项目</a></li>
+                    <li><a href="#">活动</a></li>
+                    <li><a href="#">团体</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="regist.html">注册</a></li>
+                    <!-- 登录成功-->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的管理<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- <li><a href="javascript:void(0);">欢迎您，波波</a></li>
+                     <li><a id="a-grzx" href="login.html">进入个人中心</a></li>
+                     -->
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid showbox">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="images/1.jpg" class="im1">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/2.jpg" class="im2">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="images/3.jpg" class="im3">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="content">
+        <!-- 瀑布流样式开始 -->
+        <div class="waterfull clearfloat" id="waterfull">
+            <ul>
+                <li class="item">
+                    <a href="####" class="a-img">
+
+                        <img src="pb/images/t8.jpg">
+                    </a>
+                    <h5 class="li-title" title="手把手教你用css3来创建loading动画(二)">手把手教你用css3来创建loading动画(二)</h5>
+                    <p class="description">HTML 5以前的标准由于考虑到浏览器安全问题并不允许直接跨域通信并不允许直接跨域通信并不允许直接跨域通信，于...</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1"><b>688</b>浏览</span>
+                        <span class="sp2">志强不息</span>
+                        <span class="sp3">2小时前&nbsp;By</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="pb/images/t7.jpg" alt="">
+                    </a>
+                    <h5 class="li-title" title="手把手教你用css3来创建loading动画(二)">手把手教你用css3来创建loading动画(二)</h5>
+                    <p class="description">HTML 5以前的标准由于考虑到浏览器安全问题并不允许直接跨域通信并不允许直接跨域通信并不允许直接跨域通信，于...</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1"><b>688</b>浏览</span>
+                        <span class="sp2">志强不息</span>
+                        <span class="sp3">2小时前&nbsp;By</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="pb/images/t9.jpg" alt="">
+                    </a>
+                    <h5 class="li-title" title="手把手教你用css3来创建loading动画(二)">手把手教你用css3来创建loading动画(二)</h5>
+                    <p class="description">HTML 5以前的标准由于考虑到浏览器安全问题并不允许直接跨域通信并不允许直接跨域通信并不允许直接跨域通信，于...</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1"><b>688</b>浏览</span>
+                        <span class="sp2">志强不息</span>
+                        <span class="sp3">2小时前&nbsp;By</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="pb/images/t3.jpg" alt="">
+                    </a>
+                    <h5 class="li-title" title="手把手教你用css3来创建loading动画(二)">手把手教你用css3来创建loading动画(二)</h5>
+                    <p class="description">HTML 5以前的标准由于考虑到浏览器安全问题并不允许直接跨域通信并不允许直接跨域通信并不允许直接跨域通信，于...</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1"><b>688</b>浏览</span>
+                        <span class="sp2">志强不息</span>
+                        <span class="sp3">2小时前&nbsp;By</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="pb/images/t6.jpg" alt="">
+                    </a>
+                    <h5 class="li-title" title="手把手教你用css3来创建loading动画(二)">手把手教你用css3来创建loading动画(二)</h5>
+                    <p class="description">HTML 5以前的标准由于考虑到浏览器安全问题并不允许直接跨域通信并不允许直接跨域通信并不允许直接跨域通信，于...</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1"><b>688</b>浏览</span>
+                        <span class="sp2">志强不息</span>
+                        <span class="sp3">2小时前&nbsp;By</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="pb/images/t5.png" alt="">
+                    </a>
+                    <h5 class="li-title" title="手把手教你用css3来创建loading动画(二)">手把手教你用css3来创建loading动画(二)</h5>
+                    <p class="description">HTML 5以前的标准由于考虑到浏览器安全问题并不允许直接跨域通信并不允许直接跨域通信并不允许直接跨域通信，于...</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1"><b>688</b>浏览</span>
+                        <span class="sp2">志强不息</span>
+                        <span class="sp3">2小时前&nbsp;By</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="pb/images/t10.jpg" alt="">
+                    </a>
+                    <h5 class="li-title" title="手把手教你用css3来创建loading动画(二)">手把手教你用css3来创建loading动画(二)</h5>
+                    <p class="description">HTML 5以前的标准由于考虑到浏览器安全问题并不允许直接跨域通信并不允许直接跨域通信并不允许直接跨域通信，于...</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1"><b>688</b>浏览</span>
+                        <span class="sp2">志强不息</span>
+                        <span class="sp3">2小时前&nbsp;By</span>
+                    </div>
+                </li>
+                <li class="item">
+                    <a href="####" class="a-img">
+                        <img src="pb/images/t2.jpg" alt="">
+                    </a>
+                    <h5 class="li-title" title="手把手教你用css3来创建loading动画(二)">手把手教你用css3来创建loading动画(二)</h5>
+                    <p class="description">HTML 5以前的标准由于考虑到浏览器安全问题并不允许直接跨域通信并不允许直接跨域通信并不允许直接跨域通信，于...</p>
+                    <div class="qianm clearfloat">
+                        <span class="sp1"><b>688</b>浏览</span>
+                        <span class="sp2">志强不息</span>
+                        <span class="sp3">2小时前&nbsp;By</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- loading按钮自己通过样式调整 -->
+        <div id="imloading" style="width: 150px; height: 30px; line-height: 30px; font-size: 16px; text-align: center; border-radius: 3px; opacity: 0.7; background: #000; margin: 10px auto 30px; color: #fff; display: none">
+            I'm Loading.....
+        </div>
+    </div>
+    <div class="amakerfooter">
+        <div class="container-fluid m-ft">
+            <ul class="list-inline">
+                <li><a href="#">关于Amaker</a></li>
+                <li>·</li>
+                <li><a href="#">服务协议</a></li>
+                <li>·</li>
+                <li><a href="#">合作机构</a></li>
+                <li>·</li>
+                <li><a href="#">联系我们</a></li>
+                <li>·</li>
+                <li class="share">关注我们：
+        	<a class="ck-ft weixing" href="javascript:void(0)"></a>
+                    <div class="qrcode-g">
+                        <div class="qrImg">
+                            <img src="images/qrcode_for_gh_8be2fded1c7f_258.jpg" width="100" height="100">
+                        </div>
+                        <p class="qrTitle">微信号:A_maker</p>
+                        <div class="tip"></div>
+                    </div>
+                </li>
+            </ul>
+            <p>Copyright © 2014 - Amaker - All Right Reserved</p>
+        </div>
+    </div>
+    <!--[if lt IE 9]>
+	<script src="./js/css3-mediaqueries.js"></script>
+	<![endif]-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="pb/js/jQueryColor.js"></script>
+    <script src="pb/js/jquery.masonry.min.js"></script>
+    <script src="pb/js/jQeasing.js"></script>
+    <script type="text/javascript">
+        /*
+            抛开瀑布流布局各种乱七八糟的算法，基于masonry的瀑布流，很是简单的，而且通过扩展animate,能实现瀑布流布局的晃动、弹球等效果。
+            masonry还有很多参数我这里注解了常用的参数
+         */
+        $(function () {
+            /*瀑布流开始*/
+            var container = $('.waterfull ul');
+            var loading = $('#imloading');
+            // 初始化loading状态
+            loading.data("on", true);
+            /*判断瀑布流最大布局宽度，最大为1280*/
+            function tores() {
+                var tmpWid = $(window).width();
+                if (tmpWid > 1280) {
+                    tmpWid = 1280;
+                } else {
+                    var column = Math.floor(tmpWid / 320);
+                    tmpWid = column * 320;
+                }
+                $('.waterfull').width(tmpWid);
+            }
+            tores();
+            $(window).resize(function () {
+                tores();
+            });
+            container.imagesLoaded(function () {
+                container.masonry({
+                    columnWidth: 320,
+                    itemSelector: '.item',
+                    isFitWidth: true,//是否根据浏览器窗口大小自动适应默认false
+                    isAnimated: true,//是否采用jquery动画进行重拍版
+                    isRTL: false,//设置布局的排列方式，即：定位砖块时，是从左向右排列还是从右向左排列。默认值为false，即从左向右
+                    isResizable: true,//是否自动布局默认true
+                    animationOptions: {
+                        duration: 800,
+                        easing: 'easeInOutBack',//如果你引用了jQeasing这里就可以添加对应的动态动画效果，如果没引用删除这行，默认是匀速变化
+                        queue: false//是否队列，从一点填充瀑布流
+                    }
+                });
+            });
+            /*模拟从后台获取到的数据*/
+            var sqlJson = [{ 'title': '瀑布流其实就是几个函数的事！', 'intro': '爆料，苏亚雷斯又咬人啦，C罗哪有内马尔帅，梅西今年要不夺冠，你就去泰国吧，老子买了阿根廷赢得彩票，输了就去不成了。', 'src': 'pb/images/one.jpeg', 'writer': '志强不息', 'date': '2小时前', 'looked': 321 }, { 'title': '瀑布流其实就是几个函数的事！', 'intro': '爆料了，苏亚雷斯又咬人啦，C罗哪有内马尔帅，梅西今年要不夺冠，你就去泰国吧，老子买了阿根廷赢得彩票，输了就去不成了。', 'src': 'pb/images/demo2.jpg', 'writer': '志强不息', 'date': '2小时前', 'looked': 321 }, { 'title': '瀑布流其实就是几个函数的事！', 'intro': '爆料了，苏亚雷斯又咬人啦，C罗哪有内马尔帅，梅西今年要不夺冠，你就去泰国吧，老子买了阿根廷赢得彩票，输了就去不成了。', 'src': 'pb/images/p1.jpg', 'writer': '志强不息', 'date': '2小时前', 'looked': 321 }, { 'title': '瀑布流其实就是几个函数的事！', 'intro': '爆料了，苏亚雷斯又咬人啦，C罗哪有内马尔帅，梅西今年要不夺冠，你就去泰国吧，老子买了阿根廷赢得彩票，输了就去不成了。', 'src': 'pb/images/p1.jpg', 'writer': '志强不息', 'date': '2小时前', 'looked': 321 }];
+            /*本应该通过ajax从后台请求过来类似sqljson的数据然后，便利，进行填充，这里我们用sqlJson来模拟一下数据*/
+            $(window).scroll(function () {
+                if (!loading.data("on")) return;
+                // 计算所有瀑布流块中距离顶部最大，进而在滚动条滚动时，来进行ajax请求，方法很多这里只列举最简单一种，最易理解一种
+                var itemNum = $('#waterfull').find('.item').length;
+                var itemArr = [];
+                itemArr[0] = $('#waterfull').find('.item').eq(itemNum - 1).offset().top + $('#waterfull').find('.item').eq(itemNum - 1)[0].offsetHeight;
+                itemArr[1] = $('#waterfull').find('.item').eq(itemNum - 2).offset().top + $('#waterfull').find('.item').eq(itemNum - 1)[0].offsetHeight;
+                itemArr[2] = $('#waterfull').find('.item').eq(itemNum - 3).offset().top + $('#waterfull').find('.item').eq(itemNum - 1)[0].offsetHeight;
+                var maxTop = Math.max.apply(null, itemArr);
+                if (maxTop < $(window).height() + $(document).scrollTop()) {
+                    //加载更多数据
+                    loading.data("on", false).fadeIn(800);
+                    (function (sqlJson) {
+                        /*这里会根据后台返回的数据来判断是否你进行分页或者数据加载完毕这里假设大于30就不在加载数据*/
+                        if (itemNum > 30) {
+                            loading.text('就有这么多了！');
+                        } else {
+                            var html = "";
+                            for (var i in sqlJson) {
+                                html += "<li class='item'><a href='####' class='a-img'><img src='" + sqlJson[i].src + "'></a>";
+                                html += "<h4 class='li-title'>" + sqlJson[i].title + "</h4>";
+                                html += "<p class='description'>" + sqlJson[i].intro + "</p><div class='qianm clearfloat'>";
+                                html += "<span class='sp1'><b>" + sqlJson[i].looked + "</b>浏览</span>";
+                                html += "<span class='sp2'>" + sqlJson[i].writer + "</span><span class='sp3'>" + sqlJson[i].date + "&nbsp;By</span></div></li>";
+                            }
+                            /*模拟ajax请求数据时延时800毫秒*/
+                            var time = setTimeout(function () {
+                                $(html).find('img').each(function (index) {
+                                    loadImage($(this).attr('src'));
+                                })
+                                var $newElems = $(html).css({ opacity: 0 }).appendTo(container);
+                                $newElems.imagesLoaded(function () {
+                                    $newElems.animate({ opacity: 1 }, 800);
+                                    container.masonry('appended', $newElems, true);
+                                    loading.data("on", true).fadeOut();
+                                    clearTimeout(time);
+                                });
+                            }, 800)
+                        }
+                    })(sqlJson);
+                }
+            });
+            function loadImage(url) {
+                var img = new Image();
+                //创建一个Image对象，实现图片的预下载
+                img.src = url;
+                if (img.complete) {
+                    return img.src;
+                }
+                img.onload = function () {
+                    return img.src;
+                };
+            };
+
+            /*item hover效果*/
+            var rbgB = ['#71D3F5', '#F0C179', '#F28386', '#8BD38B'];
+            $('#waterfull').on('mouseover', '.item', function () {
+                var random = Math.floor(Math.random() * 4);
+                $(this).stop(true).animate({ 'backgroundColor': rbgB[random] }, 1000);
+            });
+            $('#waterfull').on('mouseout', '.item', function () {
+                $(this).stop(true).animate({ 'backgroundColor': '#fff' }, 1000);
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $(".tabbox").on("mouseover", function (e) {
+                $("#bs-example-navbar-collapse-1").attr("aria-expanded", false);
+                $("#bs-example-navbar-collapse-1").css("height", "1px");
+
+            });
+            $(".tabbox").on("click", function (e) {
+                $("#bs-example-navbar-collapse-1").attr("aria-expanded", false);
+                $("#bs-example-navbar-collapse-1").css("height", "1px");
+
+            });
+
+            $(".weixing").on("mouseover", function () {
+                $(".qrcode-g").css("display", "block");
+            });
+            $(".weixing").on("mouseout", function () {
+                $(".qrcode-g").css("display", "none");
+            });
+            findScreen();
+
+            window.onorientationchange = function () {
+                //alert(window.orientation);
+                if (window.orientation == 0) {
+                    $(".navCent-inp").css("width", "62%");
+                } else {
+                    $(".navCent-inp").css("width", "75%");
+                }
+
+            };
+            function findScreen() {
+                if (screen.width < 1300) {
+                    $(".mobsearch").css("display", "block");
+                    $("#logo").prop("src", "images/icon.png").css("height", "45");
+                    $(".navCent-img").css("padding-top", "4px");
+                    $(".navbar-form").css("display", "none");
+                    $(".im1").attr("src", "images/11.jpg");
+                    $(".im2").attr("src", "images/22.jpg");
+                    $(".im3").attr("src", "images/33.jpg");
+                }
+                if (screen.width > 1000) {
+                    $(".navCent-inp").css("width", "70%");
+                }
+            };
+
+            if (navigator.userAgent.indexOf("MSIE") > 0) {
+                if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载360极速浏览器、火狐浏览器或Google浏览器！");
+                    window.close();
+                }
+                if (navigator.userAgent.indexOf("MSIE 7.0") > 0) {
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载360极速浏览器、火狐浏览器或Google浏览器！");
+                    window.close();
+                }
+                if (navigator.userAgent.indexOf("MSIE 8.0") > 0) {
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载360极速浏览器、火狐浏览器或Google浏览器！");
+                    window.close();
+                }
+                if (navigator.userAgent.indexOf("MSIE 9.0") > 0 && !window.innerWidth) {
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载360极速浏览器、火狐浏览器或Google浏览器！");
+                    window.close();
+                }
+                if (navigator.userAgent.indexOf("MSIE 9.0") > 0) {
+                    alert("你的浏览器不支持HTML5，请升级你的浏览器或下载360极速浏览器、火狐浏览器或Google浏览器！");
+                    window.close();
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

@@ -1,13 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="UTF-8">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>创客学堂</title>
+
+    <link href="images/icon.png" rel="apple-touch-icon-precomposed">
+    <link href="images/favicon.ico?v=0.1.0" rel="shortcut icon">
+
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/pub.css">
+    <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome-ie7.min.css"  />
+    <![endif]-->
 </head>
-<body class="b-eee">
+
+<body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,18 +30,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <!--<a href="index_1.html" class="navbar-brand navlogimg">
-                    Laopaoda</a>-->
                 <a href="index_1.html" class="navbar-brand navlogimg">
-                    Laopoda</a>
+                    <img src="images/logo.png" height="32" id="logimg"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">首页</a></li>
-                    <li><a href="#">关于我们</a></li>
-
+                    <li class="active"><a href="index_0.html">首页</a></li>
+                    <li><a href="index_1.html">导师</a></li>
+                    <li><a href="index_2.html">课程</a></li>
+                    <li><a href="project.html">项目</a></li>
+                    <li><a href="#">活动</a></li>
+                    <li><a href="#">团体</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -45,154 +58,771 @@
                         </ul>
                     </li>
 
-
+                    <!-- <li><a href="javascript:void(0);">欢迎您，波波</a></li>
+                     <li><a id="a-grzx" href="login.html">进入个人中心</a></li>
+                     -->
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="搜索">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-default "><span class="fa fa-search"></span></button>
-                        </div>
-                        <!-- /btn-group -->
-                    </div>
-                </form>
+
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <div class="h50"></div>
-    <div class="h20"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="col-sm-8 col-sm-offset-2 box b-tl">
-                    <div class="col-sm-8 f22">这是一个盒子</div>
-                    <div class="col-sm-4 mt5">
-                        dhy 创建于 2015-01-16
+    <div class="container-fluid showbox">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="images/1.jpg" class="im1">
+                    <div class="carousel-caption">
                     </div>
                 </div>
-                <div class="col-sm-8 col-sm-offset-2 box">
-                    <div class="col-sm-12 tac">
-                        <img src="images/imgsize.ph.126.net.jpeg" style="height: 330px; width: 400px;">
-                    </div>
-                    <div class="col-sm-12">
+                <div class="item">
+                    <img src="images/2.jpg" class="im2">
+                    <div class="carousel-caption">
                     </div>
                 </div>
-                <div class="col-sm-8 col-sm-offset-2 box b-ft">
-                    <a class="btn btn-default"><span class="fa fa-thumbs-up"></span>555</a>
-                    <a class="btn btn-default"><span class="fa fa-thumbs-down"></span>22</a>
-                    <a class="btn btn-default"><span class="fa fa-pencil-square-o"></span>12</a>
-                    <a class="btn btn-default share share-btn"><span class="fa fa-share-alt"></span></a>
-                    <div class="share-show share">
-                        <div class="tip"></div>
-                        <div class="con">
-                            <a>人人网</a>
-                            <a>QQ空间</a>
-                            <a>新浪微博</a>
-                        </div>
+                <div class="item">
+                    <img src="images/3.jpg" class="im3">
+                    <div class="carousel-caption">
                     </div>
                 </div>
+
             </div>
-            <div class="h20"></div>
-            <div class="col-sm-12">
-                <div class="col-sm-8 col-sm-offset-2 box b-tl">
-                    <div class="col-sm-8 f22">这是一个盒子</div>
-                    <div class="col-sm-4 mt5">
-                        dhy 创建于 2015-01-16
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 box">
-                    <div class="col-sm-12 tac">
-                        <img src="images/imgsize.ph.126.net.jpeg" style="height: 330px; width: 400px;">
-                    </div>
-                    <div class="col-sm-12">
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 box b-ft">
-                    <a class="btn btn-default"><span class="fa fa-thumbs-up"></span>555</a>
-                    <a class="btn btn-default"><span class="fa fa-thumbs-down"></span>22</a>
-                    <a class="btn btn-default"><span class="fa fa-pencil-square-o"></span>12</a>
-                    <a class="btn btn-default share share-btn"><span class="fa fa-share-alt"></span></a>
-                    <div class="share-show share">
-                        <div class="tip"></div>
-                        <div class="con">
-                            <a>人人网</a>
-                            <a>QQ空间</a>
-                            <a>新浪微博</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="h20"></div>
-            <div class="col-sm-12">
-                <div class="col-sm-8 col-sm-offset-2 box b-tl">
-                    <div class="col-sm-8 f22">这是一个盒子</div>
-                    <div class="col-sm-4 mt5">
-                        dhy 创建于 2015-01-16
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 box">
-                    <div class="col-sm-12 tac">
-                        <img src="images/imgsize.ph.126.net.jpeg" style="height: 330px; width: 400px;">
-                    </div>
-                    <div class="col-sm-12">
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 box b-ft">
-                    <a class="btn btn-default"><span class="fa fa-thumbs-up"></span>555</a>
-                    <a class="btn btn-default"><span class="fa fa-thumbs-down"></span>22</a>
-                    <a class="btn btn-default"><span class="fa fa-pencil-square-o"></span>12</a>
-                    <a class="btn btn-default share share-btn"><span class="fa fa-share-alt"></span></a>
-                    <div class="share-show share">
-                        <div class="tip"></div>
-                        <div class="con">
-                            <a>人人网</a>
-                            <a>QQ空间</a>
-                            <a>新浪微博</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="h20"></div>
-            <div class="col-sm-12">
-                <div class="col-sm-8 col-sm-offset-2 box b-tl">
-                    <div class="col-sm-8 f22">这是一个盒子</div>
-                    <div class="col-sm-4 mt5">
-                        dhy 创建于 2015-01-16
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 box">
-                    <div class="col-sm-12 tac">
-                        <img src="images/imgsize.ph.126.net.jpeg" style="height: 330px; width: 400px;">
-                    </div>
-                    <div class="col-sm-12">
-                    </div>
-                </div>
-                <div class="col-sm-8 col-sm-offset-2 box b-ft">
-                    <a class="btn btn-default"><span class="fa fa-thumbs-up"></span>555</a>
-                    <a class="btn btn-default"><span class="fa fa-thumbs-down"></span>22</a>
-                    <a class="btn btn-default"><span class="fa fa-pencil-square-o"></span>12</a>
-                    <a class="btn btn-default share share-btn"><span class="fa fa-share-alt"></span></a>
-                    <div class="share-show share">
-                        <div class="tip"></div>
-                        <div class="con">
-                            <a>人人网</a>
-                            <a>QQ空间</a>
-                            <a>新浪微博</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="h20"></div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
+    <div class="container showbox">
+        <ul class="nav nav-tabs" role="tablist" id="myTab">
+            <li role="presentation" class="active"><a href="#teacher" role="tab" data-toggle="tab">推荐项目</a></li>
+        </ul>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="title"><a href="#">便携又实用的Qimini袖珍无线充电器</a></div>
+                        <div class="content">
+                            <a class="tag">数码相机</a>
+                            <a class="tag">高清视频</a>
+                            <a class="tag">单反相机</a>
+                            <a class="tag">索尼官方</a>
+                            <a class="tag">数码相机</a>
 
-    <div class="h20"></div>
-    <div class="foot">
-        <div class="container-fluid ft-box">
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="title"><a href="#">便携又实用的Qimini袖珍无线充电器</a></div>
+                        <div class="content">
+                            <a class="tag">数码相机</a>
+                            <a class="tag">高清视频</a>
+                            <a class="tag">单反相机</a>
+                            <a class="tag">索尼官方</a>
+                            <a class="tag">数码相机</a>
+
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="title"><a href="#">便携又实用的Qimini袖珍无线充电器</a></div>
+                        <div class="content">
+                            <a class="tag">数码相机</a>
+                            <a class="tag">高清视频</a>
+                            <a class="tag">单反相机</a>
+                            <a class="tag">索尼官方</a>
+                            <a class="tag">数码相机</a>
+
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="title"><a href="#">便携又实用的Qimini袖珍无线充电器</a></div>
+                        <div class="content">
+                            <a class="tag">数码相机</a>
+                            <a class="tag">高清视频</a>
+                            <a class="tag">单反相机</a>
+                            <a class="tag">索尼官方</a>
+                            <a class="tag">数码相机</a>
+
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="title"><a href="#">便携又实用的Qimini袖珍无线充电器</a></div>
+                        <div class="content">
+                            <a class="tag">数码相机</a>
+                            <a class="tag">高清视频</a>
+                            <a class="tag">单反相机</a>
+                            <a class="tag">索尼官方</a>
+                            <a class="tag">数码相机</a>
+
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="title"><a href="#">便携又实用的Qimini袖珍无线充电器</a></div>
+                        <div class="content">
+                            <a class="tag">数码相机</a>
+                            <a class="tag">高清视频</a>
+                            <a class="tag">单反相机</a>
+                            <a class="tag">索尼官方</a>
+                            <a class="tag">数码相机</a>
+
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="title"><a href="#">便携又实用的Qimini袖珍无线充电器</a></div>
+                        <div class="content">
+                            <a class="tag">数码相机</a>
+                            <a class="tag">高清视频</a>
+                            <a class="tag">单反相机</a>
+                            <a class="tag">索尼官方</a>
+                            <a class="tag">数码相机</a>
+
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="title"><a href="#">便携又实用的Qimini袖珍无线充电器</a></div>
+                        <div class="content">
+                            <a class="tag">数码相机</a>
+                            <a class="tag">高清视频</a>
+                            <a class="tag">单反相机</a>
+                            <a class="tag">索尼官方</a>
+                            <a class="tag">数码相机</a>
+
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container showbox">
+        <ul class="nav nav-tabs" role="tablist" id="Ul1">
+            <li role="presentation" class="active"><a href="#teacher" role="tab" data-toggle="tab">推荐老师</a></li>
+        </ul>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">张老师</div>
+                        <div class="content">
+                            <p>
+                                专长：3d打印，计算机<br />
+                                简介：南京某大学教授，从事科研工作20年，主授计算机应用。。。
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">张老师</div>
+                        <div class="content">
+                            <p>
+                                专长：3d打印，计算机<br />
+                                简介：南京某大学教授，从事科研工作20年，主授计算机应用。。。
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">张老师</div>
+                        <div class="content">
+                            <p>
+                                专长：3d打印，计算机<br />
+                                简介：南京某大学教授，从事科研工作20年，主授计算机应用。。。
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">张老师</div>
+                        <div class="content">
+                            <p>
+                                专长：3d打印，计算机<br />
+                                简介：南京某大学教授，从事科研工作20年，主授计算机应用。。。
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">张老师</div>
+                        <div class="content">
+                            <p>
+                                专长：3d打印，计算机<br />
+                                简介：南京某大学教授，从事科研工作20年，主授计算机应用。。。
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">张老师</div>
+                        <div class="content">
+                            <p>
+                                专长：3d打印，计算机<br />
+                                简介：南京某大学教授，从事科研工作20年，主授计算机应用。。。
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">张老师</div>
+                        <div class="content">
+                            <p>
+                                专长：3d打印，计算机<br />
+                                简介：南京某大学教授，从事科研工作20年，主授计算机应用。。。
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">张老师</div>
+                        <div class="content">
+                            <p>
+                                专长：3d打印，计算机<br />
+                                简介：南京某大学教授，从事科研工作20年，主授计算机应用。。。
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>查看详细</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container showbox">
+        <ul class="nav nav-tabs" role="tablist" id="Ul2">
+            <li role="presentation" class="active"><a href="#teacher" role="tab" data-toggle="tab">推荐课程</a></li>
+        </ul>
+        <div class="row">
+             <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">3D打印技术</div>
+                        <div class="content">
+                            <p>
+                                上课地点：南京图书馆二楼<br />
+                                上课时间：2015年1月31日 下午3点<br />
+
+                                简介：南京大学教授，从事科研工作20年
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                          <a class="btn btn-default" role="button" href="#"><i class="fa fa-users aic">&nbsp;</i>立即报名</a>
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>详细介绍</a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">3D打印技术</div>
+                        <div class="content">
+                            <p>
+                                上课地点：南京图书馆二楼<br />
+                                上课时间：2015年1月31日 下午3点<br />
+                                简介：南京大学教授，从事科研工作20年
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                          <a class="btn btn-default" role="button" href="#"><i class="fa fa-users aic">&nbsp;</i>立即报名</a>
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>详细介绍</a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">3D打印技术</div>
+                        <div class="content">
+                            <p>
+                                上课地点：南京图书馆二楼<br />
+                                上课时间：2015年1月31日 下午3点<br />
+                                简介：南京大学教授，从事科研工作20年
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                          <a class="btn btn-default" role="button" href="#"><i class="fa fa-users aic">&nbsp;</i>立即报名</a>
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>详细介绍</a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">3D打印技术</div>
+                        <div class="content">
+                            <p>
+                                上课地点：南京图书馆二楼<br />
+                                上课时间：2015年1月31日 下午3点<br />
+                                简介：南京大学教授，从事科研工作20年
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                          <a class="btn btn-default" role="button" href="#"><i class="fa fa-users aic">&nbsp;</i>立即报名</a>
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>详细介绍</a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">3D打印技术</div>
+                        <div class="content">
+                            <p>
+                                上课地点：南京图书馆二楼<br />
+                                上课时间：2015年1月31日 下午3点<br />
+                                简介：南京大学教授，从事科研工作20年
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                          <a class="btn btn-default" role="button" href="#"><i class="fa fa-users aic">&nbsp;</i>立即报名</a>
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>详细介绍</a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">3D打印技术</div>
+                        <div class="content">
+                            <p>
+                                上课地点：南京图书馆二楼<br />
+                                上课时间：2015年1月31日 下午3点<br />
+                                简介：南京大学教授，从事科研工作20年
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                          <a class="btn btn-default" role="button" href="#"><i class="fa fa-users aic">&nbsp;</i>立即报名</a>
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>详细介绍</a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">3D打印技术</div>
+                        <div class="content">
+                            <p>
+                                上课地点：南京图书馆二楼<br />
+                                上课时间：2015年1月31日 下午3点<br />
+                                简介：南京大学教授，从事科研工作20年
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                          <a class="btn btn-default" role="button" href="#"><i class="fa fa-users aic">&nbsp;</i>立即报名</a>
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>详细介绍</a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="caption">
+                        <div class="name">3D打印技术</div>
+                        <div class="content">
+                            <p>
+                                上课地点：南京图书馆二楼<br />
+                                上课时间：2015年1月31日 下午3点<br />
+                                简介：南京大学教授，从事科研工作20年
+                            </p>
+                        </div>
+                        <div class="author">
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="btn-group btn-group-lg btn-group-justified">
+                          <a class="btn btn-default" role="button" href="#"><i class="fa fa-users aic">&nbsp;</i>立即报名</a>
+                        <a class="btn btn-default" role="button" href="#"><i class="fa fa-newspaper-o aic">&nbsp;</i>详细介绍</a>
+                    </div>
+                </div>
+            </div>
+            
+     
+        </div>
+    </div>
+    <div class="container showbox">
+        <ul class="nav nav-tabs" role="tablist" id="Ul3">
+            <li role="presentation" class="active"><a href="#teacher" role="tab" data-toggle="tab">步骤卡片</a></li>
+        </ul>
+        <div class="row">
+           <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail_small">
+                    <div class="til" style="text-align: center; font-size: 20px;">第一步</div>
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="co">
+                        <a href="#">便携又实用的Qimini袖珍无线充电器</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail_small">
+                    <div class="til" style="text-align: center; font-size: 20px;">第一步</div>
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="co">
+                        <a href="#">便携又实用的Qimini袖珍无线充电器</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail_small">
+                    <div class="til" style="text-align: center; font-size: 20px;">第一步</div>
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="co">
+                        <a href="#">便携又实用的Qimini袖珍无线充电器</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail_small">
+                    <div class="til" style="text-align: center; font-size: 20px;">第一步</div>
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="co">
+                        <a href="#">便携又实用的Qimini袖珍无线充电器</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail_small">
+                    <div class="til" style="text-align: center; font-size: 20px;">第一步</div>
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="co">
+                        <a href="#">便携又实用的Qimini袖珍无线充电器</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail_small">
+                    <div class="til" style="text-align: center; font-size: 20px;">第一步</div>
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="co">
+                        <a href="#">便携又实用的Qimini袖珍无线充电器</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail_small">
+                    <div class="til" style="text-align: center; font-size: 20px;">第一步</div>
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="co">
+                        <a href="#">便携又实用的Qimini袖珍无线充电器</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12">
+                <div class="thumbnail_small">
+                    <div class="til" style="text-align: center; font-size: 20px;">第一步</div>
+                    <div class="imgs">
+                        <a href="project_info.html">
+                            <img src="images/test.jpg" style="width: 250px; height: 185px;" /></a>
+                    </div>
+                    <div class="co">
+                        <a href="#">便携又实用的Qimini袖珍无线充电器</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="amakerfooter">
+        <div class="container-fluid m-ft">
             <ul class="list-inline">
-                <li><a href="#">关于我们</a></li>
+                <li><a href="#">关于Amaker</a></li>
                 <li>·</li>
                 <li><a href="#">服务协议</a></li>
                 <li>·</li>
@@ -200,184 +830,37 @@
                 <li>·</li>
                 <li><a href="#">联系我们</a></li>
                 <li>·</li>
-                <li class="lk">关注我们：
-        	        <a class="lk-btn weixing" href="javascript:void(0)"></a>
-                    <div class="lk-show">
+                <li class="share">关注我们：
+        	<a class="ck-ft weixing" href="javascript:void(0)"></a>
+                    <div class="qrcode-g">
                         <div class="qrImg">
-                            <img src="images/qrcode_for_gh_52af2385b3c9_430.jpg" width="100" height="100">
+                            <img src="images/qrcode_for_gh_8be2fded1c7f_258.jpg" width="100" height="100">
                         </div>
                         <p class="qrTitle">微信号:A_maker</p>
                         <div class="tip"></div>
                     </div>
                 </li>
             </ul>
-            <p>Copyright © 2015 -  - All Right Reserved</p>
+            <p>Copyright © 2014 - Amaker - All Right Reserved</p>
         </div>
     </div>
-    <style>
-        /*public*/
-        * {
-            font-family: "微软雅黑";
-        }
-
-        .m-p-0 {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        .b-eee {
-            background-color: #eee;
-        }
-
-        .h50 {
-            height: 50px;
-            clear: both;
-        }
-
-        .h20 {
-            height: 20px;
-            clear: both;
-        }
-
-        .f14 {
-            font-size: 14px;
-        }
-
-        .f22 {
-            font-size: 22px;
-        }
-
-        .mt5 {
-            padding-top: 10px;
-        }
-
-        .tac {
-            text-align: center;
-        }
-
-        /*box-1*/
-        .box {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            background-color: #fff;
-            -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-            -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        .b-tl {
-            padding-left: 20px;
-        }
-
-        .b-ft {
-            padding-left: 40px;
-        }
-
-            .b-ft a {
-                margin-right: 10px;
-                font-size: 18px;
-                color: #444;
-            }
-        /*foot-1*/
-        .foot {
-            text-align: center;
-        }
-
-        .lk-btn {
-            background: url("../images/shareLinkUI.png");
-            display: inline-block;
-            height: 20px;
-            width: 20px;
-            position: relative;
-            top: 3px;
-        }
-
-        .weixing {
-            background-position: -7px -52px;
-        }
-
-        .lk-show {
-            padding-top: 5px;
-            display: none;
-            height: 135px;
-            width: 120px;
-            background: none repeat scroll 0 0 #fff;
-            border: 1px solid #ddd;
-            position: absolute;
-            margin-top: -160px;
-            margin-left: 20px;
-            z-index: 999;
-        }
-
-            .lk-show .tip {
-                background: url("../images/tip.png") no-repeat scroll 0 0;
-                width: 14px;
-                height: 10px;
-                margin-left: 55px;
-                margin-top: -2px;
-            }
-
-
-        /*share*/
-
-        .share-show {
-            padding-top: 5px;
-            display: none;
-            height: 100px;
-            width: 100px;
-            background: none repeat scroll 0 0 #fff;
-            border: 1px solid #ddd;
-            position: absolute;
-            margin-top: 10px;
-            margin-left: 220px;
-            z-index: 999;
-        }
-
-            .share-show a {
-                width: 100px;
-                display: block;
-            }
-
-            .share-show .tip {
-                background: url("../images/tip.png") no-repeat scroll 0 0;
-                width: 14px;
-                height: 10px;
-                margin-left: 46px;
-                margin-top: -14px;
-                -moz-transform: scaleY(-1);
-                -webkit-transform: scaleY(-1);
-                -o-transform: scaleY(-1);
-                transform: scaleY(-1);
-                /*IE*/
-                filter: FlipV;
-            }
-    </style>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        $(".lk-btn").on("mouseover", function () {
-            $(".lk-show").css("display", "block");
-        });
-        $(".lk-btn").on("mouseout", function () {
-            $(".lk-show").css("display", "none");
-        });
-
-        $(".share-btn").bind("mouseenter", function () {
-
-            $(".share-show").css("display", "block");
-
-        });
-        $(".share-show").bind("mouseenter", function () {
-            $(".share-show").css("display", "block");
-        });
-
-        $(".share-show").bind("mouseleave", function () {
-            $(".share-show").css("display", "none");
-        });
-        $(".b-ft").bind("mouseleave", function () {
-            $(".share-show").css("display", "none");
-        });
-
+        $(function () {
+            findScreen();
+            function findScreen() {
+                if (screen.width < 800) {
+                    $("#logimg").attr("src", "images/icon.png");
+                }
+            };
+            $(".weixing").on("mouseover", function () {
+                $(".qrcode-g").css("display", "block");
+            });
+            $(".weixing").on("mouseout", function () {
+                $(".qrcode-g").css("display", "none");
+            });
+        })
 
     </script>
 </body>

@@ -23,8 +23,7 @@ public class WebService : System.Web.Services.WebService {
     [WebMethod]
     public List<model> HelloWorld()
     {
-        List<model> list = new List<model>();
-       
+        List<model> list = new List<model>();       
         model m = new model();
         m.id = 1;
         m.name = "波波"; list.Add(m); list.Add(m); list.Add(m); list.Add(m);

@@ -1,101 +1,112 @@
 /* CSS Document */
-dd .btn{
-	margin-right:10px;
+dd .btn {
+    margin-right: 10px;
 }
 
-.tabbox p{
- margin-bottom:2px;
+.tabbox p {
+    margin-bottom: 2px;
 }
 
-.navbar{
-	
-	margin-bottom: 0px;
+.navbar {
+    margin-bottom: 0px;
 }
-.showbox{
-	padding:0px;
-	margin-bottom:20px;
+
+.showbox {
+    padding: 0px;
+    margin-bottom: 20px;
 }
 
 
 .item img {
-	width:100%;
+    width: 100%;
 }
 
 
-.nav-tabs li{
-	width:100px;
-}
-.nav-tabs li a{
-	font-size:1.3em;
-	text-align:center;
-}
-dt{
-	font-size:1.1em;
-	 margin-bottom:2px;
-}
-dd p{
-	font-size:0.9em;
-	line-height:22px
-}
-.tab-content{
-	padding-left:20px;
-	
-}
-.con-rw{
-	margin-top:10px;
-	margin-bottom:10px;
-}
-.con-cl{
-	margin-right:20px;
+.nav-tabs li {
+    width: 100px;
 }
 
-.kk-dv{
-	padding-top:20px;
-}
-.kk-dv:hover{
-	background-color:#f0f0f0;
-	box-shadow:0 2px 2px rgba(0,0,0,0.3);
-}
+    .nav-tabs li a {
+        font-size: 1.3em;
+        text-align: center;
+    }
 
-.img-dv{
-	width:170px;
-	height:120px;
-	overflow:hidden;
-}
-.con-img{
-	width:170px;
-	height:120px;
-	transition:all 1s ease 0s;
-}
-.img-dv:hover .con-img{
-	transform:scale(1.2);
+dt {
+    font-size: 1.1em;
+    margin-bottom: 2px;
 }
 
-
-
-#a-grzx{
-	color:#428bca;
+dd p {
+    font-size: 0.9em;
+    line-height: 22px;
 }
 
-
-.nav-tabs li{
-	width:120px;
+.tab-content {
+    padding-left: 20px;
 }
 
-@media (min-width: 992px){
-	#tabbox {
-		width:1200px;
-	}
+.con-rw {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.con-cl {
+    margin-right: 20px;
+}
+
+.kk-dv {
+    padding-top: 20px;
+}
+
+    .kk-dv:hover {
+        background-color: #f0f0f0;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+    }
+
+.img-dv {
+    width: 170px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.con-img {
+    width: 170px;
+    height: 120px;
+    transition: all 1s ease 0s;
+}
+
+.img-dv:hover .con-img {
+    transform: scale(1.2);
 }
 
 
-body{
-	padding-top:50px;}
-.navbar-inverse .navbar-nav>li>a{
-	color:#f4f4f4;
+
+#a-grzx {
+    color: #428bca;
 }
+
+
+.nav-tabs li {
+    width: 120px;
+}
+
+@media (min-width: 992px) {
+    #tabbox {
+        width: 1200px;
+    }
+}
+
+
+body {
+    padding-top: 50px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #f4f4f4;
+}
+
 .navCent-img {
-    padding-right:5px;
+    padding-right: 5px;
 }
 
 .navCent-inp {
@@ -104,7 +115,7 @@ body{
 }
 
 .btn-wr {
-    padding:3px 0 0 0 ;
+    padding: 3px 0 0 0;
     -moz-user-select: none;
     background-image: none;
     border: 0px solid transparent;
@@ -126,3 +137,5 @@ body{
     left: -36px;
     z-index: 999;
 }
+
+

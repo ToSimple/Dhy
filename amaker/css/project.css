@@ -2,6 +2,9 @@
     background: #eee;
 }
 
+p {
+    font-size: 16px;
+}
 
 .pro-box-title {
     padding: 20px;
@@ -133,6 +136,11 @@ textarea {
     width: 460px;
 }
 
+
+.p0 {
+    padding-left: 0px;
+}
+
 @media (max-width: 700px) {
     .cs {
         border: 1px solid #fff;
@@ -141,8 +149,53 @@ textarea {
         position: relative;
         color: #f0f0f0;
     }
+
+    .p0 {
+        padding-left: 20px;
+    }
 }
 
 .box-ct {
-    margin-bottom:20px;
+    margin-bottom: 20px;
+    padding: 0;
+    border-width: 1px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
 }
+
+.tac {
+    font-size: 16px;
+    text-align: center;
+}
+
+.ctb {
+    padding: 0px;
+    padding-bottom: 5px;
+}
+
+.ctc {
+    height: 42px;
+    overflow: hidden;
+}
+
+.media-heading {
+    color: #428bca;
+}
+
+.media-con {
+    font-size: 14px;
+}
+
+.btr {
+    height: 90px;
+}
+
+@media (max-width:700px) {
+    .btr {
+        margin-top: 10px;
+        height: 45px;
+    }
+    
+}
+.qrTitle {
+    font-size:14px;
+} 
