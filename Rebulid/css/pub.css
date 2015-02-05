@@ -77,6 +77,7 @@ body {
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     box-shadow: 0 6px 12px rgba(0, 0,0, 0.175);
 }
+
 .thumbnail_small {
     width: 250px;
     height: 280px;
@@ -86,34 +87,37 @@ body {
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     box-shadow: 0 6px 12px rgba(0, 0,0, 0.175);
 }
+
     .thumbnail_small .co {
-        padding:10px;
-    }
-    .thumbnail_small .co a {
-        
-        font-size:16px;
-        color:#000;
-    }
-  .thumbnail .caption .name {
-       font-size:18px;
-       color: #0068cf;
-    }
-    .thumbnail_small .til {
-        font-size:22px;
-    }
-    .thumbnail_small .caption {
-         font-size:16px;
-        padding:10px 10px;
-
+        padding: 10px;
     }
 
-    .thumbnail .caption .title {
-        height: 52px;
-    }
+        .thumbnail_small .co a {
+            font-size: 16px;
+            color: #000;
+        }
 
-    .thumbnail a i {
-        color: #fa5473;
-    }
+.thumbnail .caption .name {
+    font-size: 18px;
+    color: #0068cf;
+}
+
+.thumbnail_small .til {
+    font-size: 22px;
+}
+
+.thumbnail_small .caption {
+    font-size: 16px;
+    padding: 10px 10px;
+}
+
+.thumbnail .caption .title {
+    height: 52px;
+}
+
+.thumbnail a i {
+    color: #fa5473;
+}
 
 .title {
     margin-bottom: 5px;
@@ -130,10 +134,11 @@ body {
     display: inline-block;
     border: 1px solid #eee;
     border-radius: 2px;
-    color:#000;
+    color: #000;
 }
+
     .content .tag:hover {
-        color:#444;
+        color: #444;
     }
 
 @media (max-width: 700px) {
@@ -154,7 +159,6 @@ body {
 
 .thumbnail a .aic {
     color: #0755a1;
-    
 }
 
 a:hover {
@@ -162,6 +166,11 @@ a:hover {
     cursor: pointer;
 }
 
-.showbox a{
-    color:#0068cf;
+.showbox a {
+    color: #0068cf;
+}
+
+
+.tac {
+    text-align: center;
 }
