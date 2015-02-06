@@ -12,11 +12,19 @@ namespace bbl
 {
     public partial class demo : System.Web.UI.Page
     {
+        public string GetVariableStr;//注意变量的修饰符
         SimpleRepository _repo = SS.GetRepo();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                GetVariableStr = _repo.All<Ticker>().FirstOrDefault().Number; ;
+            }   
 
-            t1.Value = _repo.All<Ticker>().FirstOrDefault().Number;
+        }
+        protected string GetFunctionStr()//注意返回值的修饰符
+        {
+            return _repo.All<Ticker>().FirstOrDefault().Username;
         }
     }
 }

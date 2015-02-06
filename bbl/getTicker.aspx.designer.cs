@@ -10,7 +10,7 @@
 namespace bbl {
     
     
-    public partial class demo {
+    public partial class getTicker {
         
         /// <summary>
         /// form1 控件。

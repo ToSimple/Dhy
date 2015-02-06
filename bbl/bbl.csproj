@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="demo.aspx" />
+    <Content Include="getTicker.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -74,6 +75,13 @@
     </Compile>
     <Compile Include="demo.aspx.designer.cs">
       <DependentUpon>demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="getTicker.aspx.cs">
+      <DependentUpon>getTicker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="getTicker.aspx.designer.cs">
+      <DependentUpon>getTicker.aspx</DependentUpon>
     </Compile>
     <Compile Include="Helpers\SS.cs" />
     <Compile Include="index.aspx.cs">
