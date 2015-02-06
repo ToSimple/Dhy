@@ -130,3 +130,8 @@ body{
     margin: 0px;
     padding: 0px;
 }
+.imgs {
+    height:185px;
+    overflow:hidden;
+}
+

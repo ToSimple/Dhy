@@ -70,7 +70,7 @@ body {
 
 .thumbnail {
     width: 250px;
-    height: 366px;
+    height: 390px;
     margin: 20px;
     padding: 0;
     border-width: 1px;
@@ -97,9 +97,42 @@ body {
             color: #000;
         }
 
-.thumbnail .caption .name {
-    font-size: 18px;
-    color: #0068cf;
+.thumbnail .caption {
+    padding-top: 0px;
+}
+
+    .thumbnail .caption .name {
+        font-size: 20px;
+        color: #0068cf;
+        margin: 5px 0;
+    }
+     .thumbnail .caption .title {
+        font-size: 20px;
+        color: #0068cf;
+        margin: 5px 0;
+    }
+
+    .thumbnail .caption .content {
+        font-size: 13px;
+        height: 64px;
+    }
+
+    .thumbnail .caption .cc {
+        font-size: 16px;
+        height: 40px;
+    }
+
+    .caption .cc .c {
+        font-size: 16px;
+    }
+.caption .cc2{
+    font-size:15px;
+}
+.caption .cont{
+    height:43px;
+}
+.thumbnail hr {
+    margin: 5px 0px;
 }
 
 .thumbnail_small .til {
@@ -124,9 +157,7 @@ body {
     font-size: 18px;
 }
 
-.thumbnail hr {
-    margin: 10px 0;
-}
+
 
 .content .tag {
     padding: 0.2em 0.4em;
