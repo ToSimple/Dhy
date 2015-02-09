@@ -29,9 +29,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index_1.html" class="navbar-brand navlogimg">
-                    <img src="images/logo.png" height="32" id="logimg"></a>
-
+                <a href="index_1.html" class="navbar-brand navCent-img navlogimg">
+                    <img src="images/logo.png" height="32" id="logo"></a>
+                <form class="mobsearch" style="display: none;">
+                    <div class="input-group navCent navCent-inp" style="width: 62%; text-align: center;">
+                        <input type="text" class="form-control" placeholder="按名称搜索">
+                        <div class="input-group-btn">
+                            <button class="btn-wr" tabindex="-1" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -64,8 +73,8 @@
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control">
-                        <div class="input-group-btn" placeholder="按课程、导师名称">
+                        <input type="text" class="form-control" placeholder="按课程、导师名称">
+                        <div class="input-group-btn">
                             <button class="btn-wr" tabindex="-1" type="button"><span class="glyphicon glyphicon-search"></span></button>
                         </div>
                     </div>

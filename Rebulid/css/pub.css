@@ -13,7 +13,7 @@ body {
 }
 
 .weixing {
-    background: url("../images/shareLinkUI.png");
+    background: url("../img/shareLinkUI.png");
     display: inline-block;
     height: 20px;
     width: 20px;
@@ -36,7 +36,7 @@ body {
 }
 
     .qrcode-g .tip {
-        background: url("../images/tip.png") no-repeat scroll 0 0;
+        background: url("../img/tip.png") no-repeat scroll 0 0;
         width: 14px;
         height: 10px;
         margin-left: 55px;

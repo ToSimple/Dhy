@@ -11,6 +11,8 @@ namespace bbl.model
         public string Username { get; set; }
         public string Number { get; set; }
         public DateTime Createtime { get; set; }
-        public DateTime endtime { get; set; }
+        public DateTime Endtime { get; set; }
+
+
     }
 }
