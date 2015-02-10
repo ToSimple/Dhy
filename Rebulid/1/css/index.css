@@ -126,3 +126,12 @@ body{
     left: -36px;
     z-index: 999;
 }
+.row {
+    margin: 0px;
+    padding: 0px;
+}
+.imgs {
+    height:185px;
+    overflow:hidden;
+}
+
