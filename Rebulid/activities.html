@@ -19,6 +19,12 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/pub.css">
+    <link href="js/jquery-ui.css" rel="stylesheet" />
+    <style>
+        .ui-widget-content {
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
 
@@ -37,13 +43,14 @@
                     <img src="img/logo.png" height="32" id="logo"></a>
                 <form class="mobsearch" style="display: none;">
                     <div class="input-group navCent navCent-inp" style="width: 62%; text-align: center;">
-                        <input type="text" class="form-control" placeholder="按名称搜索">
+                        <input type="text" class="form-control search" placeholder="按名称搜索">
                         <div class="input-group-btn">
                             <button class="btn-wr" tabindex="-1" type="button">
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </div>
                     </div>
+
                 </form>
             </div>
 
@@ -51,44 +58,36 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">项目</a></li>
-                    <li class="active"><a href="teacher.html">导师</a></li>
+                    <li><a href="teacher.html">导师</a></li>
                     <li><a href="lesson.html">课程</a></li>
-                    <li><a href="activities.html">活动</a></li>
-                     <li><a href="group.html">团体</a></li>
+                    <li class="active"><a href="activities.html">活动</a></li>
+                    <li><a href="group.html">团体</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.html">登录</a></li>
-                    <li><a href="regist.html">注册</a></li>
-                    <!-- 登录成功
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的管理<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="user/user_manage"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心</a></li>
+            <li><a href="userLoginOut"><span class="glyphicon glyphicon-log-out"></span>&nbsp;安全退出</a></li>
 
-                    <!-- <li><a href="javascript:void(0);">欢迎您，波波</a></li>
-                     <li><a id="a-grzx" href="login.html">进入个人中心</a></li>-->
+
+                    <!-- 登录成功
+                    <li><a href="login.html">个人中心</a></li>
+                    <li><a href="regist.html">注销</a></li>
+                    -->
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="按课程、导师名称">
+                        <input type="text" class="form-control search" placeholder="按课程、导师名称">
                         <div class="input-group-btn">
                             <button class="btn-wr" tabindex="-1" type="button"><span class="glyphicon glyphicon-search"></span></button>
                         </div>
                     </div>
-
-
-
                 </form>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
+
     <div class="main">
         <div class="container">
             <div class="tool_bar shadow">
@@ -96,9 +95,8 @@
                     <a href="#" class="active" data-sort="created_at"><i class="fa fa-reorder"></i><span>按时间</span></a><a href="#" data-sort="difficulty"><i class="fa fa-thumbs-o-up"></i><span>按难度</span></a><a data-sort="period" href="#"><i class="fa fa-clock-o"></i><span>按周期</span></a><a href="#" data-sort="fork"><i class="fa fa-code-fork"></i><span>按Fork</span></a>
                     <!-- <a href="#"><i class="fa fa-comment-o"></i><span>按评论</span></a> -->
                 </div>
-                <h1>项目</h1>
+                <h1>活动</h1>
             </div>
-
             <div id="woo-holder" class="mt10">
                 <a name="woo-anchor" class="woo-swa woo-cur" style="display: none"></a>
 
@@ -107,22 +105,25 @@
                     <div class="woo-tmpmasn woo-pcont woo-masned" style="position: relative; height: 0; overflow: hidden; margin: 0; padding: 0;">
                     </div>
                     <div style="position: relative; width: 910px; height: 0px; visibility: visible;" class="woo-pcont woo-masned" data-subpagenum="10">
-                       
+
                         <div style="visibility: hidden;" id="woo-loading" class="woo-loading">
                         </div>
                     </div>
-                     <div style="display: none;" class="woo-pager">
-                        </div>
+                    <div style="display: none;" class="woo-pager">
+                    </div>
                 </div>
             </div>
+
+
         </div>
         <!--/.container-->
     </div>
     <!--/.main-->
 
+    <form id="woo-form-collect" action="Default.aspx?">
+    </form>
 
-    <!--<form id="woo-form-collect" action="http://www.amaker.org/proj/async_list?order=time&amp;p="></form>-->
-    <form id="woo-form-collect" action="Default.aspx?"></form>
+
 
 
 
@@ -158,7 +159,7 @@
         // static prefix
         var STATIC = '/';
 
-        var IMG_SERVER = 'http://file.amaker.org/';
+        var IMG_SERVER = '';
 
         var LANGUAGE = {
             'up': '收起',
@@ -170,11 +171,12 @@
             "wanna_rm_step": '你想要删除这个步骤',
             "error captcha": '验证码错误'
         };
-
     </script>
     <script src="js/jquery-1.js"></script>
     <script src="js/common.js"></script>
     <div id="_loading" class="loading hide">loading...</div>
+
+
 
     <script>
         // try{
@@ -189,12 +191,37 @@
     <script src="js/history.js"></script>
     <script src="js/woo.js"></script>
     <script src="js/tabswitch.js"></script>
-    <script src="js/teac_list.js"></script>
+    <script src="js/proj_list.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script>
+
+        $(".main").on("mouseover", function (e) {
+            $("#bs-example-navbar-collapse-1").attr("aria-expanded", false);
+            $("#bs-example-navbar-collapse-1").css("height", "1px");
+
+        });
+        $(".main").on("click", function (e) {
+            $("#bs-example-navbar-collapse-1").attr("aria-expanded", false);
+            $("#bs-example-navbar-collapse-1").css("height", "1px");
+
+        });
         // try{
         // }catch(err){
         // 	var FIRST_PAGE_ARR = [];
         // }
+        var availableTags = [
+            "赛格威",
+            "机器人",
+            "3D打印机",
+            "计算机",
+            "创客"
+        ];
+        $("#search").autocomplete({
+            source: availableTags
+        });
+
         window.onorientationchange = function () {
             //alert(window.orientation);
             if (window.orientation == 0) {
@@ -208,7 +235,7 @@
         function findScreen() {
             if (document.body.clientWidth < 1300) {
                 $(".mobsearch").css("display", "block");
-                $("#logo").prop("src", "images/icon.png").css("height", "45");
+                $("#logo").prop("src", "img/icon.png").css("height", "45");
                 $(".navCent-img").css("padding-top", "4px");
                 $(".navbar-form").css("display", "none");
             }

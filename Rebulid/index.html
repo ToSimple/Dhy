@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=false">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
+    <link rel="apple-touch-icon-precomposed" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
@@ -52,19 +53,17 @@
                     <li class="active"><a href="index.html">项目</a></li>
                     <li><a href="teacher.html">导师</a></li>
                     <li><a href="lesson.html">课程</a></li>
-                    <li><a href="#">活动</a></li>
-
+                    <li><a href="activities.html">活动</a></li>
+                    <li><a href="group.html">团体</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="login.html">登录</a></li>
                     <li><a href="regist.html">注册</a></li>
-                    <!-- 登录成功-->
-                   
+                    <!-- 登录成功
+                    <li><a href="login.html">个人中心</a></li>
+                    <li><a href="regist.html">注销</a></li>-->
 
-                     <li><a href="login.html">个人中心</a></li>
-                    <li><a href="regist.html">注销</a></li>
-                    
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="input-group">
@@ -83,7 +82,7 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <div class="main" >
+    <div class="main">
         <div class="container">
             <div class="tool_bar shadow">
                 <div id="J_sortProj" class="action">
@@ -92,7 +91,6 @@
                 </div>
                 <h1>项目</h1>
             </div>
-
             <div id="woo-holder" class="mt10">
                 <a name="woo-anchor" class="woo-swa woo-cur" style="display: none"></a>
 
@@ -100,13 +98,16 @@
 
                     <div class="woo-tmpmasn woo-pcont woo-masned" style="position: relative; height: 0; overflow: hidden; margin: 0; padding: 0;">
                     </div>
-                    <div style="position: relative; width: 910px; height: 2218px; visibility: visible;" class="woo-pcont woo-masned" data-subpagenum="10">
-                    </div>
+                    <div style="position: relative; width: 910px; height: 0px; visibility: visible;" class="woo-pcont woo-masned" data-subpagenum="10">
 
-                    <div style="display: none;" class="woo-pager"></div>
-                    <div style="visibility: hidden;" id="woo-loading" class="woo-loading"></div>
+                        <div style="visibility: hidden;" id="woo-loading" class="woo-loading">
+                        </div>
+                    </div>
+                    <div style="display: none;" class="woo-pager">
+                    </div>
                 </div>
             </div>
+
 
         </div>
         <!--/.container-->
@@ -152,8 +153,18 @@
         // static prefix
         var STATIC = '/';
 
-        var IMG_SERVER = '/';
+        var IMG_SERVER = '';
 
+        var LANGUAGE = {
+            'up': '收起',
+            'down': '展开',
+            'collected': '已收藏',
+            'collect': '收藏',
+            'fork': 'Fork',
+            'wanna_fork': '你想要fork这个项目吗？',
+            "wanna_rm_step": '你想要删除这个步骤',
+            "error captcha": '验证码错误'
+        };
     </script>
     <script src="js/jquery-1.js"></script>
     <script src="js/common.js"></script>
@@ -162,7 +173,7 @@
 
     <script>
         // try{
-        var FIRST_PAGE_ARR;
+        var FIRST_PAGE_ARR = JSON.parse('[{"id":"6949","user_id":"6","name":"完美诠释着黑胶情结的USB留声机","period":"5","copyright":"1","difficulty":"3","reference":"http://geek.techweb.com.cn/thread-215863-1-302.html","source":"撒旦的微笑","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 11:35:23","updated_at":"2015-02-05 11:35:23","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"714","name":"USB","created_at":"2014-08-21 10:02:12","pivot":{"project_id":"6949","tag_id":"714"}},{"id":"5637","name":" 电脑","created_at":"2014-10-27 09:36:49","pivot":{"project_id":"6949","tag_id":"5637"}},{"id":"7343","name":" 留声机","created_at":"2014-11-14 10:34:23","pivot":{"project_id":"6949","tag_id":"7343"}}],"assets":"","asset":{"url":"2015-02/05/c681cf59135294349f30f452f98cb32338ec41b3.png","width":"604","height":"590"}},{"id":"6948","user_id":"6","name":"可让盲人们轻松使用的语音银行卡","period":"5","copyright":"1","difficulty":"3","reference":"http://geek.techweb.com.cn/thread-215962-1-302.html","source":"疯狂的上帝","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 11:30:37","updated_at":"2015-02-05 11:30:37","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"5616","name":" 银行卡","created_at":"2014-10-27 09:15:44","pivot":{"project_id":"6948","tag_id":"5616"}},{"id":"8744","name":" 语音","created_at":"2015-01-09 09:37:33","pivot":{"project_id":"6948","tag_id":"8744"}},{"id":"9522","name":"盲文","created_at":"2015-02-05 11:30:37","pivot":{"project_id":"6948","tag_id":"9522"}}],"assets":"","asset":{"url":"2015-02/05/0c137de7e2ac6ff16319e22724ee226b2d986a24.png","width":"565","height":"692"}},{"id":"6947","user_id":"6","name":"当失去信心的时候来坐坐这款椅子","period":"5","copyright":"1","difficulty":"3","reference":"http://geek.techweb.com.cn/thread-215864-1-301.html","source":"撒旦的微笑","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 11:24:19","updated_at":"2015-02-05 11:24:19","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"5255","name":" 设计师","created_at":"2014-10-22 13:42:18","pivot":{"project_id":"6947","tag_id":"5255"}},{"id":"6387","name":" 三角形","created_at":"2014-10-30 16:30:13","pivot":{"project_id":"6947","tag_id":"6387"}},{"id":"6473","name":" 颜色搭配","created_at":"2014-10-31 11:49:14","pivot":{"project_id":"6947","tag_id":"6473"}},{"id":"9521","name":"聚碳酸酯","created_at":"2015-02-05 11:24:19","pivot":{"project_id":"6947","tag_id":"9521"}}],"assets":"","asset":{"url":"2015-02/05/ab055dc6e81baad25320fa045c9cb6402fb18f9f.png","width":"573","height":"290"}},{"id":"6946","user_id":"6","name":"概念设计：酷炫LED水龙头","period":"5","copyright":"1","difficulty":"3","reference":"http://geek.techweb.com.cn/thread-216092-1-301.html","source":"八爪娱","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 11:19:34","updated_at":"2015-02-05 11:19:34","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"99","name":"LED","created_at":"2014-08-18 15:14:30","pivot":{"project_id":"6946","tag_id":"99"}},{"id":"5504","name":" 水龙头","created_at":"2014-10-23 14:35:59","pivot":{"project_id":"6946","tag_id":"5504"}},{"id":"9520","name":" 酷炫","created_at":"2015-02-05 11:19:34","pivot":{"project_id":"6946","tag_id":"9520"}}],"assets":"","asset":{"url":"2015-02/05/f77cd1fb86ad00ef5c0e54bd4bde48ab65710acc.png","width":"635","height":"333"}},{"id":"6945","user_id":"6","name":"室内空气质量需要这个小玩意来净化","period":"5","copyright":"1","difficulty":"3","reference":"http://geek.techweb.com.cn/thread-215554-1-301.html","source":"撒旦的微笑","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 11:16:25","updated_at":"2015-02-05 11:16:25","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"5255","name":" 设计师","created_at":"2014-10-22 13:42:18","pivot":{"project_id":"6945","tag_id":"5255"}},{"id":"6266","name":" 功能性","created_at":"2014-10-30 10:10:50","pivot":{"project_id":"6945","tag_id":"6266"}},{"id":"7067","name":" 空气净化器","created_at":"2014-11-07 13:21:28","pivot":{"project_id":"6945","tag_id":"7067"}},{"id":"9518","name":"超微","created_at":"2015-02-05 11:16:25","pivot":{"project_id":"6945","tag_id":"9518"}},{"id":"9519","name":" 活性炭","created_at":"2015-02-05 11:16:25","pivot":{"project_id":"6945","tag_id":"9519"}}],"assets":"","asset":{"url":"2015-02/05/6a5b5a5bead4132d915cc26927946a6a21541e5d.png","width":"656","height":"388"}},{"id":"6944","user_id":"6","name":"让盲人也能感受科技的专用笔记本电脑","period":"6","copyright":"1","difficulty":"3","reference":"http://geek.techweb.com.cn/thread-216140-1-301.html","source":"撒旦的微笑","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 11:08:29","updated_at":"2015-02-05 11:08:29","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"5557","name":" 笔记本电脑","created_at":"2014-10-23 16:06:02","pivot":{"project_id":"6944","tag_id":"5557"}},{"id":"6610","name":" 转换器","created_at":"2014-11-04 10:05:17","pivot":{"project_id":"6944","tag_id":"6610"}},{"id":"7465","name":" 障碍者","created_at":"2014-11-17 11:18:56","pivot":{"project_id":"6944","tag_id":"7465"}},{"id":"9516","name":"笔记本采用","created_at":"2015-02-05 11:08:29","pivot":{"project_id":"6944","tag_id":"9516"}},{"id":"9517","name":" 积极性","created_at":"2015-02-05 11:08:29","pivot":{"project_id":"6944","tag_id":"9517"}}],"assets":"","asset":{"url":"2015-02/05/acd2c8d0245eb97b0dcf9207e8073886bee79cd3.png","width":"575","height":"596"}},{"id":"6943","user_id":"6","name":"不要小瞧我 我可是具有着双重身份","period":"5","copyright":"1","difficulty":"3","reference":"http://geek.techweb.com.cn/thread-216067-1-301.html","source":"疯狂的上帝","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 11:01:22","updated_at":"2015-02-05 11:01:22","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"222","name":"笔记本","created_at":"2014-08-18 19:31:26","pivot":{"project_id":"6943","tag_id":"222"}},{"id":"5255","name":" 设计师","created_at":"2014-10-22 13:42:18","pivot":{"project_id":"6943","tag_id":"5255"}},{"id":"5637","name":" 电脑","created_at":"2014-10-27 09:36:49","pivot":{"project_id":"6943","tag_id":"5637"}},{"id":"7251","name":" 蓄电池","created_at":"2014-11-12 12:58:32","pivot":{"project_id":"6943","tag_id":"7251"}},{"id":"9480","name":" 人体","created_at":"2015-02-04 16:54:56","pivot":{"project_id":"6943","tag_id":"9480"}}],"assets":"","asset":{"url":"2015-02/05/0e43dd849abad411322ff7efa4ccbdd4842905ba.png","width":"614","height":"264"}},{"id":"6942","user_id":"6","name":"时尚与科技的结合 可为手机充电的桌子","period":"5","copyright":"1","difficulty":"3","reference":"http://geek.techweb.com.cn/thread-216310-1-300.html","source":"飞天猪猪屁","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 10:54:17","updated_at":"2015-02-05 10:54:17","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"385","name":"充电器","created_at":"2014-08-19 14:26:04","pivot":{"project_id":"6942","tag_id":"385"}},{"id":"2185","name":" 手机","created_at":"2014-09-15 10:11:51","pivot":{"project_id":"6942","tag_id":"2185"}},{"id":"5495","name":" 创意设计","created_at":"2014-10-23 14:19:26","pivot":{"project_id":"6942","tag_id":"5495"}},{"id":"5627","name":" 太阳能","created_at":"2014-10-27 09:24:05","pivot":{"project_id":"6942","tag_id":"5627"}},{"id":"9515","name":" 松下公司","created_at":"2015-02-05 10:54:17","pivot":{"project_id":"6942","tag_id":"9515"}}],"assets":"","asset":{"url":"2015-02/05/147509eb9f558c21f29a505e1824933e8fea7ac1.png","width":"583","height":"444"}},{"id":"6941","user_id":"6","name":"可将能量进行转换的压力感应装置","period":"5","copyright":"1","difficulty":"3","reference":"http://geek.techweb.com.cn/thread-216508-1-299.html","source":"撒旦的微笑","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 10:49:36","updated_at":"2015-02-05 10:49:36","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"1950","name":"感应","created_at":"2014-09-11 10:00:40","pivot":{"project_id":"6941","tag_id":"1950"}},{"id":"8958","name":" 压力","created_at":"2015-01-13 10:18:40","pivot":{"project_id":"6941","tag_id":"8958"}},{"id":"9331","name":" 能量","created_at":"2015-01-22 15:50:02","pivot":{"project_id":"6941","tag_id":"9331"}},{"id":"9514","name":" 转化","created_at":"2015-02-05 10:49:36","pivot":{"project_id":"6941","tag_id":"9514"}}],"assets":"","asset":{"url":"2015-02/05/6c868c559e71dc41a86345a93ceb214ee3fab5fc.png","width":"715","height":"468"}},{"id":"6940","user_id":"6","name":"可实现多种用途的多功能无人潜水艇 ","period":"6","copyright":"1","difficulty":"4","reference":"http://geek.techweb.com.cn/thread-216593-1-299.html","source":"飞天猪猪屁","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 10:47:24","updated_at":"2015-02-05 10:47:24","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"1305","name":"多功能","created_at":"2014-08-28 11:49:55","pivot":{"project_id":"6940","tag_id":"1305"}},{"id":"8193","name":" 潜水艇","created_at":"2014-12-26 14:23:38","pivot":{"project_id":"6940","tag_id":"8193"}},{"id":"9513","name":" 无人","created_at":"2015-02-05 10:47:24","pivot":{"project_id":"6940","tag_id":"9513"}}],"assets":"","asset":{"url":"2015-02/05/2c3eaf656f086f4e65d632708d07b1ffb7310da8.png","width":"601","height":"335"}},{"id":"6939","user_id":"7","name":"机械美学台灯","period":"1","copyright":"1","difficulty":"2","reference":"http://www.zxskj.com/cysj/pic_3858.html","source":"中学生科技网","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 10:44:45","updated_at":"2015-02-05 10:44:45","deleted_at":null,"status":"1","owner":{"id":"7","email":"shi_guizhen@126.com","activated":"0","activated_at":null,"last_login":"2014-10-27 09:06:37","screen_name":"shijie","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 13:27:09","updated_at":"2014-10-27 09:06:37"},"tags":[{"id":"184","name":"台灯","created_at":"2014-08-18 17:09:59","pivot":{"project_id":"6939","tag_id":"184"}},{"id":"415","name":"机械","created_at":"2014-08-19 15:55:12","pivot":{"project_id":"6939","tag_id":"415"}},{"id":"9512","name":"美学","created_at":"2015-02-05 10:44:45","pivot":{"project_id":"6939","tag_id":"9512"}}],"assets":"","asset":{"url":"2015-02/05/3f570afe9f288528407386deb7cb22b997dd34d7.jpg","width":"450","height":"299"}},{"id":"6938","user_id":"6","name":"外观造型酷似老式磁带的环保自行车","period":"5","copyright":"1","difficulty":"3","reference":"http://geek.techweb.com.cn/thread-216507-1-299.html","source":"撒旦的微笑","description":"","is_forked":"0","forked_from":"0","forked_ancestor":"0","likes_count":"0","forks_count":"0","comments_count":"0","created_at":"2015-02-05 10:42:59","updated_at":"2015-02-05 10:42:59","deleted_at":null,"status":"1","owner":{"id":"6","email":"slm71122@sina.com","activated":"0","activated_at":null,"last_login":"2015-02-04 10:58:45","screen_name":"梅馨","avatar":null,"sex":"0","status":"1","created_at":"2014-08-18 08:59:56","updated_at":"2015-02-04 10:58:45"},"tags":[{"id":"2137","name":" 自行车","created_at":"2014-09-15 09:34:43","pivot":{"project_id":"6938","tag_id":"2137"}},{"id":"2326","name":" 环保","created_at":"2014-09-15 13:30:03","pivot":{"project_id":"6938","tag_id":"2326"}},{"id":"9511","name":"磁带","created_at":"2015-02-05 10:42:59","pivot":{"project_id":"6938","tag_id":"9511"}}],"assets":"","asset":{"url":"2015-02/05/837fc0c6dd85b7de7a64ea9712f1f6cc707cc9ee.png","width":"575","height":"718"}}]');
         // }catch(err){
         // 	var FIRST_PAGE_ARR = [];
         // }
