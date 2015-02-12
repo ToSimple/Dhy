@@ -1,0 +1,201 @@
+﻿body {
+    background: #eee;
+}
+
+p {
+    font-size: 16px;
+}
+
+.pro-box-title {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pro-cc-box {
+    padding: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pro-pl-box {
+    padding: 20px;
+    background-color: #ddd;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+textarea {
+    resize: none;
+}
+
+.pro-bt-titl {
+    font-size: 22px;
+}
+
+.pro-bt-span {
+    margin: 10px 0;
+}
+
+    .pro-bt-span span {
+        margin-left: 10px;
+    }
+
+.light {
+    color: #000;
+    margin-right: 2px;
+}
+
+.lighted {
+    color: #ffcd20;
+}
+
+.right {
+    position: fixed;
+    top: 100px;
+    right: 20%;
+}
+
+.shadow {
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.white_card {
+    width: 160px;
+    background-color: #fff;
+    height: 162px;
+    line-height: 40px;
+}
+
+    .white_card p {
+        text-indent: 18px;
+        cursor: pointer;
+        font-size: 18px;
+        border-bottom: 1px solid #eee;
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .white_card p a:hover {
+            text-decoration: none;
+        }
+
+@media (max-width: 700px) {
+    .right {
+        top: 300px;
+        right: 0;
+        opacity: .7; /* 支持CSS3的浏览器（FF 1.5也支持） 透明度70%*/
+        filter: alpha(opacity=70); /* IE 透明度70%*/
+        -moz-opacity: .7; /* Moz + FF 透明度70%*/
+        -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1) inset;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    .white_card {
+        width: 110px;
+    }
+
+        .white_card p {
+            text-indent: 5px;
+        }
+}
+
+
+
+.cs {
+    border: 1px solid #fff;
+    top: 10px;
+    left: 590px;
+    position: relative;
+    color: #f0f0f0;
+}
+
+    .cs:hover {
+        text-decoration: none; /*鼠标放上去有下划线*/
+    }
+
+#noo1, #noo2, #noo3, .active {
+    border: 0px solid #fff;
+    background-color: transparent;
+}
+
+    .active a {
+        background-color: #f0ad4e;
+    }
+
+.pro-cb-img {
+    width: 460px;
+}
+
+
+.p0 {
+    padding-left: 0px;
+}
+
+@media (max-width: 700px) {
+    .cs {
+        border: 1px solid #fff;
+        top: 0px;
+        left: 560px;
+        position: relative;
+        color: #f0f0f0;
+    }
+
+    .p0 {
+        padding-left: 20px;
+    }
+}
+
+.box-ct {
+    margin-bottom: 20px;
+    padding: 0;
+    border-width: 1px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+}
+
+.tac {
+    font-size: 16px;
+    text-align: center;
+}
+
+.ctb {
+    padding: 0px;
+    padding-bottom: 5px;
+}
+
+.ctc {
+    height: 42px;
+    overflow: hidden;
+}
+
+.media-heading {
+    color: #428bca;
+}
+
+.media-con {
+    font-size: 14px;
+}
+
+.btr {
+    height: 90px;
+}
+
+@media (max-width:700px) {
+    .btr {
+        margin-top: 10px;
+        height: 45px;
+    }
+    
+}
+.qrTitle {
+    font-size:14px;
+} 
