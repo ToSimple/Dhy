@@ -84,8 +84,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BuildMore", "http://localho
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bbl", "bbl\bbl.csproj", "{66F92406-783D-4AB3-B99E-98FEE9C6B487}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "new", "new\new.csproj", "{A6AEDB1A-6A33-42F4-90B1-F8C658532FFB}"
 EndProject
 Global
@@ -114,10 +112,6 @@ Global
 		{85740ECA-DD9E-432D-9F92-A065BB11093A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85740ECA-DD9E-432D-9F92-A065BB11093A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{85740ECA-DD9E-432D-9F92-A065BB11093A}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{66F92406-783D-4AB3-B99E-98FEE9C6B487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66F92406-783D-4AB3-B99E-98FEE9C6B487}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66F92406-783D-4AB3-B99E-98FEE9C6B487}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66F92406-783D-4AB3-B99E-98FEE9C6B487}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A6AEDB1A-6A33-42F4-90B1-F8C658532FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A6AEDB1A-6A33-42F4-90B1-F8C658532FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6AEDB1A-6A33-42F4-90B1-F8C658532FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU

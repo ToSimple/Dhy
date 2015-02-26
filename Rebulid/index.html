@@ -43,7 +43,9 @@
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </div>
+
                     </div>
+
                 </form>
             </div>
 
@@ -54,7 +56,7 @@
                     <li><a href="teacher.html">导师</a></li>
                     <li><a href="lesson.html">课程</a></li>
                     <li><a href="activities.html">活动</a></li>
-                    <li><a href="group.html">团体</a></li>
+                    <li><a href="group.html">创客团体</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -67,10 +69,19 @@
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="按课程、导师名称">
+                        <input type="text" class="form-control" id="sec" placeholder="按课程、导师名称">
+                        <div class="scrdiv" style="display:none;position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 175px; padding: 5px 12px; border: 1px solid #ccc">
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                        </div>
+                        
                         <div class="input-group-btn">
                             <button class="btn-wr" tabindex="-1" type="button"><span class="glyphicon glyphicon-search"></span></button>
                         </div>
+
                     </div>
 
 
@@ -240,6 +251,24 @@
                 window.close();
             }
         }
+        $("#sec").on("focus", function (e) {
+            $(".scrdiv").css("display", "block");
+        });
+        $("#sec").on("blur", function (e) {
+            $(".scrdiv").css("display", "none");
+        });
+        $("#sec").on("keyup", function (e) {
+           // alert($("#sec").val());
+            //$(".scrdiv").html($("#sec").val());
+            $.ajax({
+                url: "",
+                data: { i: $("sec").val() },
+                success: function (data) {
+                    $(".scrdiv").html("<p><a>" + $("#sec").val() + "</a></p>"+"<p><a>" + $("#sec").val() + "</a></p>"+"<p><a>" + $("#sec").val() + "</a></p>");
+                }
+            });
+        });
+        
     </script>
 
 </body>
