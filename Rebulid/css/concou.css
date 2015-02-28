@@ -1,0 +1,105 @@
+/* CSS Document */
+
+.b-20 {
+    height: 20px;
+    clear: both;
+}
+
+body {
+    background: #eee;
+}
+
+.cc-box {
+    padding: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box-title {
+    font-size: 22px;
+    height: 50px;
+    line-height: 51px;
+    text-indent: 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cbf {
+    padding: 0;
+}
+
+.cbb {
+    padding: 10px;
+}
+
+p {
+    font-size: 17px;
+}
+
+.qrTitle {
+    font-size: 14px;
+}
+
+.cbb p {
+    text-indent: 2em;
+}
+
+.tx-img {
+    border-radius: 79px;
+    margin-top: 20px;
+}
+
+h4 {
+    color: #0755a1;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+b {
+    color: #F00;
+}
+
+.cs {
+    border: 1px solid #fff;
+    top: 10px;
+    left: 570px;
+    position: relative;
+    color: #f0f0f0;
+}
+
+    .cs:hover {
+        text-decoration: none; /*鼠标放上去有下划线*/
+    }
+
+#noo1, #noo2, #noo3, .active {
+    border: 0px solid #fff;
+    background-color: transparent;
+}
+
+    .active a {
+        background-color: #f0ad4e;
+    }
+
+strong {
+    color: #0755a1;
+}
+
+.box-condan {
+    font-size: 20px;
+}
+
+.u-box {
+    cursor:pointer;
+    font-size:18px;
+    text-align: center;
+    margin: 10px;
+    padding: 0;
+    border-width: 1px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0,0, 0.175);
+}

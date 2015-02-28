@@ -71,15 +71,14 @@
 		        back += '			<a href="/proj/detail/' + this.id + '"><img srcd="' + img_src + '" alt="' + this.name + '" /></a>';
 		        back += '		</div>';
 		        back += '		<div class="info_wrap">';
-		        back += '			<p class="fb"><a href="/proj/detail/' + this.id + '">' + this.name + '</a></p>';
-		        back += '			<p>';
-		        if (this.tags && this.tags.length) {
-		            for (var i = 0, tags = this.tags, l = tags.length; i < l; i++) {
-		                var temp_tag = tags[i];
-		                back += '		<a href="/proj/list?tag=' + temp_tag.name + '" class="tag">' + temp_tag.name + '</a>';
-		            }
-		        }
-		        back += '			</p>';
+		        back += '			<p class="fb"><a href="/courseInfo.html?courseId=">3D打印聚会</a></p>';
+		        back += '<p>地点：北京天安门</p>';
+		        back += '<p>时间：2015-2-27</p>';
+		        back += '<p>简介：3D打印技术帮助人们实现自己的闷响</p>';
+		        back += '		</div>';
+		        back += '		<div class="btn-group btn-group-lg btn-group-justified">';
+		        back += "			<a class=\"btn btn-default\" href=\"user/ScoreRecordSave?courseId=" + this.courseId + "\" onclick='javascript:if(confirm(\"确定要报名吗?(提示：报名成功后将立即扣除积分)\")){return true;}else{return false;}' target=\"_blank\" role=\"button\"><i class=\"fa fa-users aic\">&nbsp;</i>报名</a> ";
+		        back += '				<a class="btn btn-default" href="activities_info.html" role="button"><i class="fa fa-newspaper-o aic">&nbsp;</i>详细</a>';
 		        back += '		</div>';
 		        back += '	</div>';
 		        back += '</div>';

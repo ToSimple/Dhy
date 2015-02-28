@@ -37,15 +37,20 @@
                     <img src="img/logo.png" height="32" id="logo"></a>
                 <form class="mobsearch" style="display: none;">
                     <div class="input-group navCent navCent-inp" style="width: 62%; text-align: center;">
-                        <input type="text" class="form-control" placeholder="按名称搜索">
+                        <input type="text" class="form-control" id="msec" placeholder="按名称搜索">
+                        <div class="mscrdiv" style="display:none;position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 62%; padding: 5px 0px; border: 1px solid #ccc;text-align:left;">
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                        </div>     
                         <div class="input-group-btn">
                             <button class="btn-wr" tabindex="-1" type="button">
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </div>
-
                     </div>
-
                 </form>
             </div>
 
@@ -58,14 +63,12 @@
                     <li><a href="activities.html">活动</a></li>
                     <li><a href="group.html">创客团体</a></li>
                 </ul>
-
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="login.html">登录</a></li>
                     <li><a href="regist.html">注册</a></li>
                     <!-- 登录成功
                     <li><a href="login.html">个人中心</a></li>
                     <li><a href="regist.html">注销</a></li>-->
-
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="input-group">
@@ -76,16 +79,11 @@
                             <p><a>赛格累</a></p>
                             <p><a>赛格累</a></p>
                             <p><a>赛格累</a></p>
-                        </div>
-                        
+                        </div>                        
                         <div class="input-group-btn">
                             <button class="btn-wr" tabindex="-1" type="button"><span class="glyphicon glyphicon-search"></span></button>
                         </div>
-
                     </div>
-
-
-
                 </form>
             </div>
             <!-- /.navbar-collapse -->
@@ -206,8 +204,10 @@
             //alert(window.orientation);
             if (window.orientation == 0) {
                 $(".navCent-inp").css("width", "62%");
+                $(".mscrdiv").css("width", "62%");
             } else {
                 $(".navCent-inp").css("width", "75%");
+                $(".mscrdiv").css("width", "75%");
             }
 
         };
@@ -221,6 +221,7 @@
             }
             if (document.body.clientWidth > 1000) {
                 $(".navCent-inp").css("width", "70%");
+                $(".mscrdiv").css("width", "70%");               
             }
         };
         $(".weixing").on("mouseover", function () {
@@ -253,18 +254,40 @@
         }
         $("#sec").on("focus", function (e) {
             $(".scrdiv").css("display", "block");
+            $(".scrdiv").html("<p><a>赛格雷</a></p><p><a>赛格雷</a></p><p><a>赛格雷</a></p><p><a>赛格雷</a></p>");
         });
         $("#sec").on("blur", function (e) {
             $(".scrdiv").css("display", "none");
         });
         $("#sec").on("keyup", function (e) {
+            $(".scrdiv").html("加载中...");
            // alert($("#sec").val());
+            //$(".scrdiv").html($("#sec").val());
+                $.ajax({
+                    url: "",
+                    data: { i: $("sec").val() },
+                    success: function (data) {
+                        $(".scrdiv").html("<p><a>" + $("#sec").val() + "</a></p>"+"<p><a>" + $("#sec").val() + "</a></p>"+"<p><a>" + $("#sec").val() + "</a></p>");
+                    }
+                });
+        });
+
+        $("#msec").on("focus", function (e) {
+            $(".mscrdiv").css("display", "block");
+            $(".mscrdiv").html("<p><a>赛格雷</a></p><p><a>赛格雷</a></p><p><a>赛格雷</a></p><p><a>赛格雷</a></p>");
+        });
+        $("#msec").on("blur", function (e) {
+            $(".mscrdiv").css("display", "none");
+        });
+        $("#msec").on("keyup", function (e) {
+            $(".mscrdiv").html("加载中...");
+            // alert($("#sec").val());
             //$(".scrdiv").html($("#sec").val());
             $.ajax({
                 url: "",
-                data: { i: $("sec").val() },
+                data: { i: $("msec").val() },
                 success: function (data) {
-                    $(".scrdiv").html("<p><a>" + $("#sec").val() + "</a></p>"+"<p><a>" + $("#sec").val() + "</a></p>"+"<p><a>" + $("#sec").val() + "</a></p>");
+                    $(".mscrdiv").html("<p><a>" + $("#sec").val() + "</a></p>" + "<p><a>" + $("#sec").val() + "</a></p>" + "<p><a>" + $("#sec").val() + "</a></p>");
                 }
             });
         });
