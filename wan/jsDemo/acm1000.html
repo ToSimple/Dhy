@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>acm1000</title>
+    <link href="css/pub.css" rel="stylesheet" />
+</head>
+<body>
+    <div class=".rq-qb">
+        <div class="rq-jz rq-col-5">
+            <label for="a">请输入A：</label><input id="a" />
+            <label for="b">请输入B：</label><input id="b" />
+            <button class="btn">提交</button>
+            <p>答案：<strong id="sum"></strong></p>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(".btn").on("click", function () {
+                var a = parseInt($("#a").val());
+                var b = parseInt($("#b").val());
+                $("#sum").html(a + b);
+            })
+        });
+
+    </script>
+</body>
+</html>
