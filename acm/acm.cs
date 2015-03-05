@@ -41,6 +41,12 @@ namespace acm
             return a + b;
         }
 
+        /// <summary>
+        /// 求幂
+        /// </summary>
+        /// <param name="a">实数</param>
+        /// <param name="b">b次方</param>
+        /// <returns></returns>
         public static double Exp(string a, string b)
         {
             return Exp(Convert.ToDouble(a), Convert.ToDouble(b));
@@ -56,50 +62,113 @@ namespace acm
             return sum;
         }
 
-        public string Exp_Ext(double a, double b)
+        /// <summary>
+        /// 求高精度幂
+        /// </summary>
+        /// <param name="a">实数</param>
+        /// <param name="b">b次方</param>
+        /// <param name="c">精度位数</param>
+        /// <returns></returns>
+        public static string Exp(string a, string b, int c = 9999)
         {
-            string c = a.ToString();
-
-            for (int i = 0; i < c.Length; i++)
+            char[] result = new char[c];
+            char[] cc = a.ToCharArray();//实数转char 放入数组
+            foreach (var item in cc)
             {
-                double d = Sum(c[i], c[i]);
-                string e = d.ToString();
-                if (e.Length > 1)
-                {
-                    if (c[i + 1] == 9)
-                    {
-
-                    }
-                }
+                Console.WriteLine((int)item - 48);
             }
 
-            double sum = 1;
-            while (b > 0)
+            do
             {
-                sum *= a;
-                b--;
-            }
-            return "";
+                c--;
+            } while (c > 0);
+
+            string s = new string(cc);
+
+            //string shishu = a.ToString();
+            //int sum = shishu.Length;
+            //int jssum = 0;
+            //foreach (var item in shishu)
+            //{
+            //    if (jssum<c)
+            //    {
+            //        j[0] = item;
+            //        jssum++;
+            //    }
+
+            //}
+            Console.WriteLine(s);
+            return s;
+
+
+
+            //for (int i = 0; i < c.Length; i++)
+            //{
+            //    double d = Sum(c[i], c[i]);
+            //    string e = d.ToString();
+            //    if (e.Length > 1)
+            //    {
+
+            //    }
+            //    else
+            //    {
+            //        c[i] = Convert.ToChar(e);
+            //    }
+            //}
+
+            //double sum = 1;
+            //while (b > 0)
+            //{
+            //    sum *= a;
+            //    b--;
+            //}
+            //return "";
         }
-        public void a(string c)
+
+
+
+
+
+
+        public static int chen(char[] a, char[] b)
         {
-            for (int i = 0; i < c.Length; i++)
-            {
-                double a = Sum(c[i], c[i]);
-                
-            }
-
+            List<char[]> items = new List<char[]>();
+            
+            return 0;
         }
-        public void b(double a,string c,int i)
+
+        /// <summary>
+        /// 计算 多(8位以内) 乘 一 ，包括位数
+        /// </summary>
+        /// <param name="a">多</param>
+        /// <param name="b">一</param>
+        /// <param name="c">位数</param>
+        /// <returns></returns>
+        public static int Chen(char[] a, char b)
         {
-            if (a>9)
+            int sum = 0;
+            int j = a.Count()-1;
+            for (int i = 0; i < a.Count(); i++)
             {
-               int b = Convert.ToInt32(c[i+1]) + 1;
-                
+                sum += Chen(a[i], b) * TenCiFang(j);
+                j--;
             }
-
+            return sum;
         }
-
+        private static int Chen(char a, char b)
+        {
+            int c = ((int)a - 48) * ((int)b - 48);
+            return c;
+        }
+        private static int TenCiFang(int a)
+        {
+            int re = 1;
+            for (int i = 1; i <= a; i++)
+            {
+                re *= 10;
+            }
+            return re;
+        }
 
     }
 }
