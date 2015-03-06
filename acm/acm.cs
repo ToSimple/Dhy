@@ -32,10 +32,10 @@ namespace acm
         {
             return Sum(Convert.ToDouble(a), Convert.ToDouble(b));
         }
-        public static double Sum(string a, string b)
-        {
-            return Sum(Convert.ToDouble(a), Convert.ToDouble(b));
-        }
+        //public static double Sum(string a, string b)
+        //{
+        //    return Sum(Convert.ToDouble(a), Convert.ToDouble(b));
+        //}
         public static double Sum(double a, double b)
         {
             return a + b;
@@ -124,19 +124,30 @@ namespace acm
             //}
             //return "";
         }
-
-
-
-
-
-
         public static int chen(char[] a, char[] b)
         {
+            #region 拆分大数
             List<char[]> items = new List<char[]>();
-            
+            if (a.Count() / 8 == 0)
+            {
+
+            }
+            for (int i = 0; i < a.Count() / 8; i++)
+            {
+                items.Add(new char[8] { a[i + 1], a[i], a[i], a[i], a[i], a[i], a[i], a[i] });
+            }
+            #endregion
+
+            int dot = 0;
+            for (int i = 0; i < a.Count(); i++)
+            {
+                if (a[i] == '.')
+                {
+                    dot = i;
+                }
+            }
             return 0;
         }
-
         /// <summary>
         /// 计算 多(8位以内) 乘 一 ，包括位数
         /// </summary>
@@ -147,7 +158,7 @@ namespace acm
         public static int Chen(char[] a, char b)
         {
             int sum = 0;
-            int j = a.Count()-1;
+            int j = a.Count() - 1;
             for (int i = 0; i < a.Count(); i++)
             {
                 sum += Chen(a[i], b) * TenCiFang(j);
@@ -168,6 +179,74 @@ namespace acm
                 re *= 10;
             }
             return re;
+        }
+
+
+        public static char[] Sum(string a, string b)
+        {
+            return null;
+        }
+        public static char[] Sum(char[] a, char[] b)
+        {
+            int alength = a.Count();
+            int blength = b.Count();
+            char[] result = new char[alength + 1];
+            for (int i = 0; i < alength + 1; i++)
+            {
+                result[i] = '0';
+            }
+
+            if (alength >= blength)
+            {
+                int j = alength - 1;//a char[]的最后一位
+                int g = 0;
+                for (int i = blength - 1; i >= 0; i--)
+                {
+                    int z = ((int)a[j] - 48) + ((int)b[i] - 48) + g;
+                    g = 0;
+                    if (z >= 10)
+                    {
+                        g = 1;
+                        result[j + 1] = Convert.ToChar((z - 10).ToString());
+                    }
+                    else
+                    {
+                        result[j + 1] = Convert.ToChar((z).ToString());
+                    } j--;
+                }
+                if (g == 1)
+                {
+                    bool dd = true;
+                    do
+                    {
+                        int aasd = alength - 1 - blength;
+                        int ss=0;
+                        if (aasd>=0)
+                        {
+                            ss = (int)a[aasd] - 48 + 1;
+                        }
+                        else
+                        {
+                            ss = 1;
+                        }                     
+                        if (ss >= 10)
+                        {
+                            blength++;
+                            result[alength  - blength] = Convert.ToChar((ss - 10).ToString());
+                        }
+                        else
+                        {
+                            dd = false;
+                            result[alength  - blength] = Convert.ToChar((ss).ToString());
+                        }
+                    } while (dd);
+                }
+            }
+            else
+            {
+
+            }
+            return result;
         }
 
     }
