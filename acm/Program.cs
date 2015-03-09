@@ -15,8 +15,8 @@ namespace acm
             //acm.Chen('8', '2');
             //string s = "99999999";
             //Console.WriteLine( acm.Chen(s.ToCharArray(), '9'));
-            string a = "999999999999";
-            string b = "1";
+            string a = "9999999999999999999999999999999";
+            string b = "9999999999999999999999999999999";
             char[] aa = acm.Sum(a.ToCharArray(), b.ToCharArray());
             Console.WriteLine(a.Length);
             Console.WriteLine(aa.Count());

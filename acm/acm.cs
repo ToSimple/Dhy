@@ -188,18 +188,46 @@ namespace acm
         }
         public static char[] Sum(char[] a, char[] b)
         {
-            int alength = a.Count();
-            int blength = b.Count();
-            char[] result = new char[alength + 1];
-            for (int i = 0; i < alength + 1; i++)
+            char[] result;
+            int alength = a.Count();//a数字长度
+            int blength = b.Count();//b数字长度
+            int adot = -1;
+            int bdot = -1;
+            for (int i = 0; i < alength; i++)
             {
-                result[i] = '0';
+                if (a[i] == '.')
+                {
+                    adot = i;
+                }
             }
+            for (int i = 0; i < blength; i++)
+            {
+                if (b[i] == '.')
+                {
+                    bdot = i;
+                }
+            }
+            int c;
+            int d;
+            if (alength + adot < blength + bdot)
+            {
+                c = alength;
+                d = blength;
+            }
+            else
+            {
+                c = blength;
+                d = alength;
+            }
+
+
+
 
             if (alength >= blength)
             {
                 int j = alength - 1;//a char[]的最后一位
-                int g = 0;
+                int g = 0;//进位数
+
                 for (int i = blength - 1; i >= 0; i--)
                 {
                     int z = ((int)a[j] - 48) + ((int)b[i] - 48) + g;
@@ -220,24 +248,24 @@ namespace acm
                     do
                     {
                         int aasd = alength - 1 - blength;
-                        int ss=0;
-                        if (aasd>=0)
+                        int ss = 0;
+                        if (aasd >= 0)
                         {
                             ss = (int)a[aasd] - 48 + 1;
                         }
                         else
                         {
                             ss = 1;
-                        }                     
+                        }
                         if (ss >= 10)
                         {
                             blength++;
-                            result[alength  - blength] = Convert.ToChar((ss - 10).ToString());
+                            result[alength - blength] = Convert.ToChar((ss - 10).ToString());
                         }
                         else
                         {
                             dd = false;
-                            result[alength  - blength] = Convert.ToChar((ss).ToString());
+                            result[alength - blength] = Convert.ToChar((ss).ToString());
                         }
                     } while (dd);
                 }
