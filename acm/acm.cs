@@ -182,22 +182,30 @@ namespace acm
         }
 
 
+
+
+
+
+
         public static char[] Sum(string a, string b)
         {
-            return null;
+            return Sum(a.ToCharArray(), b.ToCharArray());
         }
         public static char[] Sum(char[] a, char[] b)
         {
-            char[] result;
-            int alength = a.Count();//a数字长度
-            int blength = b.Count();//b数字长度
-            int adot = -1;
-            int bdot = -1;
+            char[] c = a;//补位后的a
+            char[] d = b;//补位后的b
+            int alength = a.Count();//a长度
+            int blength = b.Count();//b长度
+            int adot = alength;//a小数点位置
+            int bdot = blength;//b小数点位置
+            #region 小数点补位
             for (int i = 0; i < alength; i++)
             {
                 if (a[i] == '.')
                 {
                     adot = i;
+                    break;
                 }
             }
             for (int i = 0; i < blength; i++)
@@ -205,77 +213,159 @@ namespace acm
                 if (b[i] == '.')
                 {
                     bdot = i;
+                    break;
                 }
             }
-            int c;
-            int d;
-            if (alength + adot < blength + bdot)
+            if (adot != alength || bdot != blength)
             {
-                c = alength;
-                d = blength;
-            }
-            else
-            {
-                c = blength;
-                d = alength;
-            }
-
-
-
-
-            if (alength >= blength)
-            {
-                int j = alength - 1;//a char[]的最后一位
-                int g = 0;//进位数
-
-                for (int i = blength - 1; i >= 0; i--)
+                if (adot == alength)
                 {
-                    int z = ((int)a[j] - 48) + ((int)b[i] - 48) + g;
-                    g = 0;
-                    if (z >= 10)
+                    c = new char[alength + 1 + blength - bdot - 1];
+                    for (int i = 0; i < c.Length; i++)
                     {
-                        g = 1;
-                        result[j + 1] = Convert.ToChar((z - 10).ToString());
+                        if (i < alength)
+                        {
+                            c[i] = a[i];
+                        }
+                        else if (i == alength)
+                        {
+                            c[i] = '.';
+                        }
+                        else
+                        {
+                            c[i] = '0';
+                        }
+                    }
+
+                }
+                else if (bdot == blength)
+                {
+                    d = new char[blength + 1 + alength - adot - 1];
+                    for (int i = 0; i < d.Length; i++)
+                    {
+                        if (i < blength)
+                        {
+                            d[i] = b[i];
+                        }
+                        else if (i == blength)
+                        {
+                            d[i] = '.';
+                        }
+                        else
+                        {
+                            d[i] = '0';
+                        }
+                    }
+                }
+                else
+                {
+                    if (alength - adot > blength - bdot)
+                    {
+                        d = new char[blength + ((alength - adot) - (blength - bdot))];
+                        for (int i = 0; i < d.Length; i++)
+                        {
+                            if (i < blength)
+                            {
+                                d[i] = b[i];
+                            }
+                            else
+                            {
+                                d[i] = '0';
+                            }
+                        }
                     }
                     else
                     {
-                        result[j + 1] = Convert.ToChar((z).ToString());
-                    } j--;
-                }
-                if (g == 1)
-                {
-                    bool dd = true;
-                    do
-                    {
-                        int aasd = alength - 1 - blength;
-                        int ss = 0;
-                        if (aasd >= 0)
+                        c = new char[alength + ((blength - bdot) - (alength - adot))];
+                        for (int i = 0; i < c.Length; i++)
                         {
-                            ss = (int)a[aasd] - 48 + 1;
+                            if (i < alength)
+                            {
+                                c[i] = a[i];
+                            }
+                            else
+                            {
+                                c[i] = '0';
+                            }
                         }
-                        else
-                        {
-                            ss = 1;
-                        }
-                        if (ss >= 10)
-                        {
-                            blength++;
-                            result[alength - blength] = Convert.ToChar((ss - 10).ToString());
-                        }
-                        else
-                        {
-                            dd = false;
-                            result[alength - blength] = Convert.ToChar((ss).ToString());
-                        }
-                    } while (dd);
+                    }
                 }
             }
-            else
-            {
 
+            #endregion
+
+            List<char> item = new List<char>();
+            int cl = c.Length;
+            int dl = d.Length;
+            int r = 0;
+            int jw = 0;//进位
+            do
+            {
+                if (cl > 0 && dl > 0)
+                {
+                    if (c[cl - 1] == '.')
+                    {
+                        r = '.';
+                    }
+                    else
+                    {
+                        r = (int)c[cl - 1] + (int)d[dl - 1] - 96 + jw;
+                        jw = 0;
+                        if (r >= 10)
+                        {
+                            jw++;
+                            r = r - 10;
+                        }
+                    }
+                }
+                else if (cl <= 0 && dl > 0)
+                {
+                    r = d[dl - 1] - 48;
+                }
+                else if (cl > 0 && dl <= 0)
+                {
+                    r = c[cl - 1] - 48;
+                }
+
+                if (r == 46)
+                {
+                    item.Add(Convert.ToChar(r));
+                }
+                else
+                {
+                    item.Add(Convert.ToChar(r.ToString()));
+                }
+                cl--; dl--;
+            } while (cl > 0 || dl > 0);
+            if (jw == 1)
+            {
+                item.Add('1');
             }
-            return result;
+            return item.ToArray();
         }
+
+        public static void Buwei(char[] a, char[] b)
+        {
+            int alength = a.Count();
+
+            for (int i = 0; i < alength; i++)
+            {
+                if (a[i] == '.')
+                {
+                    adot = i;
+                    break;
+                }
+            }
+            for (int i = 0; i < blength; i++)
+            {
+                if (b[i] == '.')
+                {
+                    bdot = i;
+                    break;
+                }
+            }
+        }
+
 
     }
 }
