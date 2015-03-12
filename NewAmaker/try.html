@@ -40,6 +40,11 @@
                     }
 
         .slides-left {
+             filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */    
+            -webkit-filter: blur(10px); /* Chrome, Opera */
+            -moz-filter: blur(10px);       
+            filter: blur(10px);    
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
             border-radius: 12px;
             opacity: .55;
             box-shadow: 10px 10px 5px #888888;
@@ -58,6 +63,11 @@
         }
 
         .slides-right {
+            filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */    
+            -webkit-filter: blur(10px); /* Chrome, Opera */
+            -moz-filter: blur(10px);       
+            filter: blur(10px);    
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
             border-radius: 12px;
             box-shadow: 10px 10px 5px #888888;
             z-index: 998;
@@ -68,6 +78,11 @@
         }
 
         .slides-guodu {
+               filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */    
+            -webkit-filter: blur(10px); /* Chrome, Opera */
+            -moz-filter: blur(10px);       
+            filter: blur(10px);    
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
             box-shadow: 10px 10px 5px #888888;
             z-index: 900;
             position: relative;

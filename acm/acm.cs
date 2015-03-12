@@ -790,13 +790,30 @@ namespace acm
 
         }
 
+        public static char[] exponentiation(string a,int r)
+        {
+            char[] aa = new char[1];
+            string b = "";
+            string c = a;
+            for (int i = 0; i < r-1; i++)
+            {
+                aa = acm.Quadrature(c, a);
+                b = "";
+                foreach (var item in aa)
+                {
+                    b += item;
+                }
+                c = b;
+            }
+            return aa;
+        }
         public static char[] Quadrature(string a, string b)
         {
             char[] r = new char[1] { '0' };
             List<int> bu = new List<int>();
             List<int> au = new List<int>();
-            int bdot = 0;
-            int adot = 0;
+            int adot = a.Length;
+            int bdot = b.Length;
             for (int i = b.Length - 1; i >= 0; i--)
             {
                 if (b[i] == '.')
@@ -808,7 +825,7 @@ namespace acm
                     bu.Add(b[i] - 48);
                 }
             }
-            for (int i =a.Length - 1; i >= 0; i--)
+            for (int i = a.Length - 1; i >= 0; i--)
             {
                 if (a[i] == '.')
                 {
@@ -819,7 +836,7 @@ namespace acm
                     au.Add(a[i] - 48);
                 }
             }
-            a="";
+            a = "";
             for (int i = au.Count() - 1; i >= 0; i--)
             {
                 a += au[i];
@@ -831,13 +848,13 @@ namespace acm
                 string qqq = "";
                 for (int j = 1; j < i + 1; j++)
                 {
-                    qqq = "";            
+                    qqq = "";
                     foreach (var item in qq)
                     {
                         qqq += item;
                     }
                     qq = QuadUnit(qqq, 10);
-                } 
+                }
                 qqq = "";
                 foreach (var item in qq)
                 {
@@ -848,28 +865,53 @@ namespace acm
                 {
                     rr += item;
                 }
-                r= SumF(rr, qqq);
+                r = SumF(rr, qqq);
 
             }
-            char[] re =new char[r.Length+1];
-            int jjj = 0;
-            for (int i = 0; i < re.Length; i++)
+            List<char> rer = new List<char>();
+            for (int i = 0; i < r.Count(); i++)
             {
-                if (i ==re.Length-(a.Length - adot + b.Length - bdot))
-                {
-                    if (i != a.Length + b.Length)
-                    {
-                        re[i] = '.';
-                    }                   
-                }
-                else
-                {
-                    re[i] += r[jjj];
-                    jjj++;
-                }
-               
+                rer.Add(r[i]);
             }
-            return re;
+            int con = rer.Count();
+            int dot = a.Length + b.Length - (adot + bdot);
+
+            //Console.WriteLine(a);
+            //Console.WriteLine(b);
+            //Console.WriteLine(a.Length);
+            //Console.WriteLine(b.Length);
+            //Console.WriteLine(adot);
+            //Console.WriteLine(bdot);
+            //Console.WriteLine(con);
+            //Console.WriteLine(dot);
+            //Console.WriteLine(con-dot);
+
+            if (con - dot > 0)
+            {
+                if (con - dot != con)
+                {
+                    rer.Insert(con - dot + 1, '.');
+                }
+            }
+            else if (con - dot < 0)
+            {
+                rer.Insert(0, '.');
+                rer.Insert(0, '0');
+
+                int co = -1 * (con - dot) - 1;
+                while (co > 0)
+                {
+                    rer.Insert(2, '0');
+                    co--;
+                }
+            }
+            else
+            {
+                rer.Insert(0, '.');
+                rer.Insert(0, '0');
+            }
+
+            return rer.ToArray();
         }
         public static char[] QuadUnit(string a, int b)
         {
@@ -902,9 +944,9 @@ namespace acm
             {
                 items.Add(Convert.ToChar(jw.ToString()));
             }
- 
+
             for (int i = (items.Count() - 1); i >= 0; i--)
-            {                
+            {
                 ritems.Add(items[i]);
             }
             return ritems.ToArray();

@@ -50,16 +50,27 @@ namespace acm
             //{
             //    Console.Write(aa[i]);
             //}
-            string a = "812389.172894";
-            string b = "560.12314441";
-            char[] aa = acm.Quadrature(a, b);
 
-            foreach (var itam in aa)
+            //char[] aa = new char[1];
+            //string a = "88.08";
+            //string b = "";
+            //string c = "0.008";
+            //for (int i = 0; i <1; i++)
+            //{
+            //    aa = acm.Quadrature(c, a);
+            //    b = "";
+            //    foreach (var item in aa)
+            //    {
+            //        b += item;
+            //    }
+            //    c = b;
+            //}
+            //Console.WriteLine(c);
+
+            foreach (var item in acm.exponentiation("13.132", 100))
             {
-                Console.Write(itam);
+                Console.Write(item);
             }
-
-
         }
     }
 }
