@@ -67,10 +67,28 @@ namespace acm
             //}
             //Console.WriteLine(c);
 
-            foreach (var item in acm.exponentiation("13.132", 100))
-            {
-                Console.Write(item);
-            }
+            //foreach (var item in acm.exponentiation("13.132", 100))
+            //{
+            //    Console.Write(item);
+            //}
+
+            //string[] azx = new string[] { "12", "4873279", "ITS-EASY", "888-4567", "3-10-10-10", "888-GLOP", "TUT-GLOP", "967-11-11", "310-GINO", "F101010", "888-1200", "-4-8-7-3-2-7-9-", "487-3279", "14134134", "13121213", "4512333", "332211", "16612333", "133","1112" };
+            //acm.acm1002(azx);
+
+            //acm.acm1003(1.00);
+            //acm.acm1003(3.71);
+            //acm.acm1003(0.04);
+            //acm.acm1003(5.19);
+            //acm.acm1003(0.00);
+            // float[] a = new float[] { 100.00f, 489.12f, 12454.12f, 1234.10f, 823.05f, 109.20f, 5.27f, 1542.25f, 839.18f, 83.99f, 1295.01f, 1.75f };
+            //acm.acm1004(a);
+            float[,] a = new float[2,2];
+            a[0, 0] = 1.0f;
+            a[0, 1] = 1.0f;
+            a[1, 0] = 25.0f;
+            a[1, 1] = 0.0f;
+
+            acm.acm1005(2,a);
         }
     }
 }

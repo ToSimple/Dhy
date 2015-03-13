@@ -27,7 +27,7 @@ namespace acm
 
         }
 
-
+        #region 实验的
         public static double Sum(char a, char b)
         {
             return Sum(Convert.ToDouble(a), Convert.ToDouble(b));
@@ -350,6 +350,8 @@ namespace acm
             return item.ToArray();
         }
 
+        #endregion
+        #region 有用的
         public static void Buwei(char[] a, char[] b)
         {
             char[] c = a;//补位后的a
@@ -463,7 +465,6 @@ namespace acm
             //}
 
         }
-
         public static void BuweiF(ref string a, ref string b)
         {
             int al = a.Length;
@@ -514,7 +515,6 @@ namespace acm
             //Console.WriteLine(a);
             // Console.WriteLine(b);
         }
-
         public static char[] SumF(string a, string b)
         {
             BuweiF(ref a, ref b);//小数点后补位
@@ -584,7 +584,6 @@ namespace acm
             }
             return ritems.ToArray();
         }
-
         public static char[] Diff(string a, string b)
         {
             BuweiF(ref a, ref b);
@@ -789,13 +788,12 @@ namespace acm
             return ritems.ToArray();
 
         }
-
-        public static char[] exponentiation(string a,int r)
+        public static char[] exponentiation(string a, int r)
         {
             char[] aa = new char[1];
             string b = "";
             string c = a;
-            for (int i = 0; i < r-1; i++)
+            for (int i = 0; i < r - 1; i++)
             {
                 aa = acm.Quadrature(c, a);
                 b = "";
@@ -950,6 +948,184 @@ namespace acm
                 ritems.Add(items[i]);
             }
             return ritems.ToArray();
+        }
+        #endregion
+
+        public static void acm1002(string[] azx)
+        {
+
+            string[] a = new string[azx.Length];
+            for (int i = 0; i < azx.Length; i++)
+            {
+                StringBuilder sb = new StringBuilder();
+                azx[i] = azx[i].Replace("-", "");
+                for (int j = 0; j < azx[i].Length; j++)
+                {
+
+                    char cr = azx[i][j];
+                    if (cr == 'A' || cr == 'B' || cr == 'C')
+                    {
+                        sb.Append("2");
+                    }
+                    else if (cr == 'D' || cr == 'E' || cr == 'F')
+                    {
+                        sb.Append("3");
+                    }
+                    else if (cr == 'G' || cr == 'H' || cr == 'I')
+                    {
+                        sb.Append("4");
+                    }
+                    else if (cr == 'J' || cr == 'K' || cr == 'L')
+                    {
+                        sb.Append("5");
+                    }
+                    else if (cr == 'M' || cr == 'N' || cr == 'O')
+                    {
+                        sb.Append("6");
+                    }
+                    else if (cr == 'P' || cr == 'R' || cr == 'S')
+                    {
+                        sb.Append("7");
+                    }
+                    else if (cr == 'T' || cr == 'U' || cr == 'V')
+                    {
+                        sb.Append("8");
+                    }
+                    else if (cr == 'W' || cr == 'X' || cr == 'Y')
+                    {
+                        sb.Append("9");
+                    }
+                    else
+                    {
+                        sb.Append(cr);
+                    }
+                }
+                a[i] = sb.ToString();
+            }
+            int[] items = new int[a.Length];
+            int bbbb = 0;
+            foreach (var item in a)
+            {
+
+                items[bbbb] = Convert.ToInt32(item);
+                bbbb++;
+
+            }
+            QSortDIY(items, 0, items.Length - 1);
+            // Console.WriteLine(string.Join(",", items));
+            Dictionary<int, int> dic = new Dictionary<int, int>();
+            foreach (var item in items)
+            {
+                if (!dic.ContainsKey(item))
+                {
+                    dic.Add(item, 1);
+                }
+                else
+                {
+                    dic[item]++;
+                }
+            }
+            foreach (var item in dic)
+            {
+                if (item.Value != 1)
+                {
+                    string s = item.Key.ToString();
+                    s = s.Insert(3, "-");
+                    Console.WriteLine(s + " " + item.Value);
+                }
+            }
+
+        }
+
+        public static void MPSort(int[] array)
+        {
+            int tep;
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                for (int j = 0; j < array.Length - i - 1; j++)
+                {
+                    if (array[j] > array[j + 1])
+                    {
+                        tep = array[j + 1];
+                        array[j + 1] = array[j];
+                        array[j] = tep;
+                    }
+                }
+            }
+        }
+
+        public static void QSortDIY(int[] array, int low, int high)
+        {
+            if (low >= high)
+            {
+                return;
+            }
+            int ie = QSortUnit(array, low, high);
+            QSortDIY(array, low, ie - 1);
+            QSortDIY(array, ie + 1, high);
+        }
+        private static int QSortUnit(int[] array, int low, int high)
+        {
+            int key = array[low];
+            while (low < high)
+            {
+                while (array[high] >= key && high > low)
+                {
+                    --high;
+                }
+                array[low] = array[high];
+                while (array[low] <= key && high > low)
+                {
+
+                    ++low;
+                }
+                array[high] = array[low];
+            }
+            array[low] = key;
+            return high;
+        }
+
+        public static void acm1003(double a)
+        {
+            if (a == 0)
+            {
+                return;
+            }
+            double b = 2;
+            while (a > 0)
+            {
+                double c = 1 / b;
+                a = a - c;
+                b++;
+            }
+            Console.WriteLine(b - 2 + " card(s)");
+        }
+
+        public static void acm1004(float[] a)
+        {
+            float sum = 0;
+            foreach (var item in a)
+            {
+                sum += item;
+            }
+            Console.WriteLine("$" + sum / a.Count());
+        }
+
+        public static void acm1005(int n, float[,] a)
+        {
+            float pi = 3.1415926f, rr;
+            int years;
+            for (int i = 0; i < n; i++)
+            {
+                rr = a[i,0] * a[i,0] + a[i,1] * a[i,1];
+                int area =(int)(pi * rr);
+                years = Convert.ToInt32(area / 100+1);
+                Console.WriteLine(years);
+            }
+            Console.WriteLine("END OF OUTPUT.");
+        }
+        public static void acm1006_MN(int a,int b,int c,int d)
+        {
         }
     }
 }
