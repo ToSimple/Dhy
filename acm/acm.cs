@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace acm
 {
@@ -1053,7 +1054,12 @@ namespace acm
                 }
             }
         }
-
+        /// <summary>
+        /// 快速排序
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="low"></param>
+        /// <param name="high"></param>
         public static void QSortDIY(int[] array, int low, int high)
         {
             if (low >= high)
@@ -1117,15 +1123,101 @@ namespace acm
             int years;
             for (int i = 0; i < n; i++)
             {
-                rr = a[i,0] * a[i,0] + a[i,1] * a[i,1];
-                int area =(int)(pi * rr);
-                years = Convert.ToInt32(area / 100+1);
+                rr = a[i, 0] * a[i, 0] + a[i, 1] * a[i, 1];
+                int area = (int)(pi * rr);
+                years = Convert.ToInt32(area / 100 + 1);
                 Console.WriteLine(years);
             }
             Console.WriteLine("END OF OUTPUT.");
         }
-        public static void acm1006_MN(int a,int b,int c,int d)
+        /// <summary>
+        /// 中国剩余定理
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <param name="c"></param>
+        /// <param name="d"></param>
+        public static void acm1006(int a, int b, int c, int d)
         {
+            int z = 28 * 33;
+            int y = 23 * 33;
+            int x = 23 * 28;
+            int w = 23 * 28 * 33;
+            int n = Acm1006Unit(z, 23) * z;
+            int m = Acm1006Unit(y, 28) * y;
+            int o = Acm1006Unit(x, 33) * x;
+            int r = (n * a + m * b + o * c - d) % w;
+            Console.WriteLine(r);
+        }
+        public static int Acm1006Unit(int a, int b)
+        {
+            int n = 1;
+            while ((a * n) % b != 1)
+                n++;
+            return n;
+        }
+
+        public static void acm1007(int a, int b, string[] c)
+        {
+            Dictionary<int, string> dic = new Dictionary<int, string>();
+            int[] i = new int[a];
+            foreach (var item in c)
+            {
+                int k = Acm1007Unit(item);
+                if (!dic.ContainsKey(k))
+                {
+                    dic.Add(k, item + ",");
+                }
+                else
+                {
+                    dic[k] += item + ",";
+                }
+            }
+        }
+        public static int Acm1007Unit(string a)
+        {
+            int anum = 0;
+            int cnum = 0;
+            int gnum = 0;
+
+            int r = 0;
+            for (int i = a.Length - 1; i > 0; i--)
+            {
+                switch (a[i])
+                {
+                    case 'A':
+                        anum++;
+                        break;
+                    case 'C':
+                        r += anum;
+                        cnum++;
+                        break;
+                    case 'G':
+                        r += anum + cnum;
+                        gnum++;
+                        break;
+                    case 'T':
+                        r += anum + cnum + gnum;
+                        break;
+                }
+            }
+            return r;
+        }
+
+        public static void LXS(int[,] xy, int length = 50)
+        {
+            xy = new int[length, length];
+            Random r = new Random(DateTime.Now.GetHashCode());
+            int i = 0;
+            while (i < 50)
+            {
+                int x = r.Next(0, 100);
+                Thread.Sleep(50);
+                int y = r.Next(0, 100);
+                Thread.Sleep(50);
+
+                i++;
+            }
         }
     }
 }
