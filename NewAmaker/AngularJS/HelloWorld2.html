@@ -1,0 +1,13 @@
+﻿<!doctype html>
+<html ng-app>
+    <head>
+       <title>text</title>
+    </head>
+    <body>
+        Your name: <input type="text" ng-model="yourname" placeholder="World">
+        <hr>
+        Hello {{yourname || 'World'}}!
+         <p>我的第一个表达式： {{ 5 + 5 }}</p>
+         <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+    </body>
+</html>

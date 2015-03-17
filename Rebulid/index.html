@@ -19,6 +19,23 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/pub.css">
+    <style>
+        .fixright {
+            position: fixed;
+            top: 100px;
+            right: 0%;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+            width:50px;
+            font-size: 18px;
+        }
+
+        .shadow {
+            -webkit-box-shadow: 2px 2px 5px rgba(5, 2, 0, 0.2);
+            -moz-box-shadow: 2px 2px 5px rgba(5, 2, 0, 0.2);
+            box-shadow: 2px 2px 5px rgba(5, 2, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
 
@@ -38,13 +55,13 @@
                 <form class="mobsearch" style="display: none;">
                     <div class="input-group navCent navCent-inp" style="width: 62%; text-align: center;">
                         <input type="text" class="form-control" id="msec" placeholder="按名称搜索">
-                        <div class="mscrdiv" style="display:none;position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 62%; padding: 5px 0px; border: 1px solid #ccc;text-align:left;">
+                        <div class="mscrdiv" style="display: none; position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 62%; padding: 5px 0px; border: 1px solid #ccc; text-align: left;">
                             <p><a>赛格累</a></p>
                             <p><a>赛格累</a></p>
                             <p><a>赛格累</a></p>
                             <p><a>赛格累</a></p>
                             <p><a>赛格累</a></p>
-                        </div>     
+                        </div>
                         <div class="input-group-btn">
                             <button class="btn-wr" tabindex="-1" type="button">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -73,13 +90,13 @@
                 <form class="navbar-form navbar-right" role="search">
                     <div class="input-group">
                         <input type="text" class="form-control" id="sec" placeholder="按课程、导师名称">
-                        <div class="scrdiv" style="display:none;position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 175px; padding: 5px 12px; border: 1px solid #ccc">
+                        <div class="scrdiv" style="display: none; position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 175px; padding: 5px 12px; border: 1px solid #ccc">
                             <p><a>赛格累</a></p>
                             <p><a>赛格累</a></p>
                             <p><a>赛格累</a></p>
                             <p><a>赛格累</a></p>
                             <p><a>赛格累</a></p>
-                        </div>                        
+                        </div>
                         <div class="input-group-btn">
                             <button class="btn-wr" tabindex="-1" type="button"><span class="glyphicon glyphicon-search"></span></button>
                         </div>
@@ -125,13 +142,9 @@
 
     <form id="woo-form-collect" action="Default.aspx?">
     </form>
-
-
-
-
-
-
-    <div id="mycontrols"><a href="javascript:;" id="gotop" class="shadow"><i class="fa fa-arrow-up"></i></a></div>
+    <div id="mycontrols"><a href="javascript:;" id="gotop" class="shadow"><i class="fa fa-arrow-up"></i></a>
+      
+    </div>
 
     <div class="amakerfooter">
         <div class="container-fluid m-ft">
@@ -156,6 +169,16 @@
                 </li>
             </ul>
             <p>Copyright © 2014 - Amaker - All Right Reserved</p>
+        </div>
+    </div>
+    <div class=" fixright">
+        <div class="white_card shadow">
+
+            <a href="javascript:void(0);">
+                <i class="fa fa-edit"></i>意见反馈
+            </a>
+
+
         </div>
     </div>
     <script>
@@ -221,7 +244,7 @@
             }
             if (document.body.clientWidth > 1000) {
                 $(".navCent-inp").css("width", "70%");
-                $(".mscrdiv").css("width", "70%");               
+                $(".mscrdiv").css("width", "70%");
             }
         };
         $(".weixing").on("mouseover", function () {
@@ -261,15 +284,15 @@
         });
         $("#sec").on("keyup", function (e) {
             $(".scrdiv").html("加载中...");
-           // alert($("#sec").val());
+            // alert($("#sec").val());
             //$(".scrdiv").html($("#sec").val());
-                $.ajax({
-                    url: "",
-                    data: { i: $("sec").val() },
-                    success: function (data) {
-                        $(".scrdiv").html("<p><a>" + $("#sec").val() + "</a></p>"+"<p><a>" + $("#sec").val() + "</a></p>"+"<p><a>" + $("#sec").val() + "</a></p>");
-                    }
-                });
+            $.ajax({
+                url: "",
+                data: { i: $("sec").val() },
+                success: function (data) {
+                    $(".scrdiv").html("<p><a>" + $("#sec").val() + "</a></p>" + "<p><a>" + $("#sec").val() + "</a></p>" + "<p><a>" + $("#sec").val() + "</a></p>");
+                }
+            });
         });
 
         $("#msec").on("focus", function (e) {
@@ -291,7 +314,7 @@
                 }
             });
         });
-        
+
     </script>
 
 </body>

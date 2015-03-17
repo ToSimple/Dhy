@@ -57,6 +57,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AngularJS\Helloworld.html" />
+    <Content Include="AngularJS\HelloWorld2.html" />
     <Content Include="images\11.jpg" />
     <Content Include="images\22.jpg" />
     <Content Include="images\33.jpg" />

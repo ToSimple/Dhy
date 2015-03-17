@@ -1,15 +1,25 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>我要反馈</title>
-    <link href="images/icon.png" rel="apple-touch-icon-precomposed">
-    <link href="images/favicon.ico?v=0.1.0" rel="shortcut icon">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Amaker</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=false">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/proj_list.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
-    <link href="css/pub.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/pub.css">
+    <link href="js/jquery-ui.css" rel="stylesheet" />
     <!--[if IE 7]>
         <link href="css/font-awesome-ie7.min.css" rel="stylesheet" />
     <![endif]-->
@@ -66,65 +76,68 @@
     </style>
 </head>
 <body>
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index_1.html" class="navbar-brand navlogimg">
-                    <img src="images/logo.png" height="32"></a>
-
+                <a href="index_1.html" class="navbar-brand navCent-img navlogimg">
+                    <img src="img/logo.png" height="32" id="logo"></a>
+                <form class="mobsearch" style="display: none;">
+                    <div class="input-group navCent navCent-inp" style="width: 62%; text-align: center;">
+                        <input type="text" class="form-control" id="msec" placeholder="按名称搜索">
+                        <div class="mscrdiv" style="display:none;position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 62%; padding: 5px 0px; border: 1px solid #ccc;text-align:left;">
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                        </div>     
+                        <div class="input-group-btn">
+                            <button class="btn-wr" tabindex="-1" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="index_0.html">首页</a></li>
-                    <li><a href="index_1.html">导师</a></li>
-                    <li><a href="index_2.html">课程</a></li>
-                    <li><a href="project.html">项目</a></li>
-                    <li><a href="#">活动</a></li>
-                    <li><a href="#">团体</a></li>
+                    <li class="active"><a href="index.html">项目</a></li>
+                    <li><a href="teacher.html">导师</a></li>
+                    <li><a href="lesson.html">课程</a></li>
+                    <li><a href="activities.html">活动</a></li>
+                    <li><a href="group.html">创客团体</a></li>
                 </ul>
-
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="login.html">登录</a></li>
                     <li><a href="regist.html">注册</a></li>
-                    <!-- 登录成功-->
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的管理<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;个人中心</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- <li><a href="javascript:void(0);">欢迎您，波波</a></li>
-                     <li><a id="a-grzx" href="login.html">进入个人中心</a></li>
-                     -->
+                    <!-- 登录成功
+                    <li><a href="login.html">个人中心</a></li>
+                    <li><a href="regist.html">注销</a></li>-->
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
-
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="搜索">
+                        <input type="text" class="form-control" id="sec" placeholder="按课程、导师名称">
+                        <div class="scrdiv" style="display:none;position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 175px; padding: 5px 12px; border: 1px solid #ccc">
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                        </div>                        
                         <div class="input-group-btn">
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">课程<span class="caret"></span></button>
-                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                <li><a href="#">项目</a></li>
-                                <li><a href="#">导师</a></li>
-                                <li><a href="#">活动</a></li>
-                                <li><a href="#">团体</a></li>
-                            </ul>
+                            <button class="btn-wr" tabindex="-1" type="button"><span class="glyphicon glyphicon-search"></span></button>
                         </div>
-                        <!-- /btn-group -->
                     </div>
-
                 </form>
             </div>
             <!-- /.navbar-collapse -->

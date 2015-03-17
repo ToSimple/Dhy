@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Amaker</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=false">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/proj_list.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/pub.css">
+    <link href="js/jquery-ui.css" rel="stylesheet" />
+    <!--[if IE 7]>
+        <link href="css/font-awesome-ie7.min.css" rel="stylesheet" />
+    <![endif]-->
+    <style>
+        h2, h3 {
+            margin: 0px;
+        }
+
+        h2 {
+            font-size: 19px;
+            margin-bottom: 20px;
+            margin-left: 60px;
+        }
+
+        h3 {
+            font-size: 15px;
+        }
+
+        .box {
+            border: 1px solid #dadada;
+        }
+
+        .in-box {
+            padding: 20px;
+        }
+
+        .control-label {
+            font-size: 15px;
+            font-weight: 200;
+        }
+
+        .star {
+            color: red;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        hr {
+            background-color: #dadada;
+        }
+
+        input.error, select.error, textarea.error {
+            border: 1px solid red;
+        }
+
+        label.error {
+            padding-left: 16px;
+            padding-bottom: 2px;
+            font-weight: bold;
+            color: #EA5200;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index_1.html" class="navbar-brand navCent-img navlogimg">
+                    <img src="img/logo.png" height="32" id="logo"></a>
+                <form class="mobsearch" style="display: none;">
+                    <div class="input-group navCent navCent-inp" style="width: 62%; text-align: center;">
+                        <input type="text" class="form-control" id="msec" placeholder="按名称搜索">
+                        <div class="mscrdiv" style="display: none; position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 62%; padding: 5px 0px; border: 1px solid #ccc; text-align: left;">
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                        </div>
+                        <div class="input-group-btn">
+                            <button class="btn-wr" tabindex="-1" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">项目</a></li>
+                    <li><a href="teacher.html">导师</a></li>
+                    <li><a href="lesson.html">课程</a></li>
+                    <li><a href="activities.html">活动</a></li>
+                    <li><a href="group.html">创客团体</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="regist.html">注册</a></li>
+                    <!-- 登录成功
+                    <li><a href="login.html">个人中心</a></li>
+                    <li><a href="regist.html">注销</a></li>-->
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="sec" placeholder="按课程、导师名称">
+                        <div class="scrdiv" style="display: none; position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 175px; padding: 5px 12px; border: 1px solid #ccc">
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                        </div>
+                        <div class="input-group-btn">
+                            <button class="btn-wr" tabindex="-1" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="b-20"></div>
+
+    <div class="container">
+
+        <div class="row">
+            <form class="form-horizontal" role="form" id="feedbackForm">
+                <div class="col-sm-12">
+                    <div class="col-sm-11 col-sm-offset-1 pro-box-title">
+                        <div class="pro-bt-titl">
+                            <p style="font-size: 18px;">提交意见</p>
+                            <p style="text-indent: 8px;">尊敬的amaker用户，您在本平台上遇到的任何问题，请在这里告诉我们，我们会及时处理，感谢您提的宝贵意见!</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-11 col-sm-offset-1 pro-pl-box">
+                        <div class="col-sm-10">
+                            <textarea id="feeCon" name="feeCon" class="form-control" rows="3" style="resize: none;" placeholder="请输入您的评论内容"></textarea>
+                            <div class="col-sm-12">&nbsp;</div>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-primary btn-block " style="height: 90px">提交</button>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12">
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 pro-cc-box">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-2">
+                                        <div class="col-sm-12">
+                                            <img src="img/noimg0.jpg" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="col-sm-6 media-heading">王同学</div>
+                                        <div class="col-sm-6">2014-12-30 12:12:21</div>
+                                        <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 pro-cc-box">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-2">
+                                        <div class="col-sm-12">
+                                            <img src="img/noimg0.jpg" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="col-sm-6 media-heading">王同学</div>
+                                        <div class="col-sm-6">2014-12-30 12:12:21</div>
+                                        <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 pro-cc-box">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-2">
+                                        <div class="col-sm-12">
+                                            <img src="img/noimg0.jpg" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="col-sm-6 media-heading">王同学</div>
+                                        <div class="col-sm-6">2014-12-30 12:12:21</div>
+                                        <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 pro-cc-box">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-2">
+                                        <div class="col-sm-12">
+                                            <img src="img/noimg0.jpg" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="col-sm-6 media-heading">王同学</div>
+                                        <div class="col-sm-6">2014-12-30 12:12:21</div>
+                                        <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 pro-cc-box">
+                        <ul class="media-list">
+                            <li class="media">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-2">
+                                        <div class="col-sm-12">
+                                            <img src="img/noimg0.jpg" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="col-sm-6 media-heading">王同学</div>
+                                        <div class="col-sm-6">2014-12-30 12:12:21</div>
+                                        <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <hr>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-12" style="text-align: center; cursor: pointer;" id="cli">点击查看更多</div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <div class="amakerfooter">
+        <div class="container-fluid m-ft">
+            <ul class="list-inline">
+                <li><a href="#">关于Amaker</a></li>
+                <li>·</li>
+                <li><a href="#">服务协议</a></li>
+                <li>·</li>
+                <li><a href="#">合作机构</a></li>
+                <li>·</li>
+                <li><a href="#">联系我们</a></li>
+                <li>·</li>
+                <li class="share">关注我们：
+        	<a class="ck-ft weixing" href="javascript:void(0)"></a>
+                    <div class="qrcode-g">
+                        <div class="qrImg">
+                            <img src="img/qrcode_for_gh_8be2fded1c7f_258.jpg" width="100" height="100">
+                        </div>
+                        <p class="qrTitle">微信号:A_maker</p>
+                        <div class="tip"></div>
+                    </div>
+                </li>
+            </ul>
+            <p>Copyright © 2014 - Amaker - All Right Reserved</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/validatemessage.js"></script>
+    <script src="js/feedback.js"></script>
+    
+</body>
+</html>
