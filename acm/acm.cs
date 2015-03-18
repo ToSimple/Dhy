@@ -1161,18 +1161,33 @@ namespace acm
         {
             Dictionary<int, string> dic = new Dictionary<int, string>();
             int[] i = new int[a];
+            var j = 0;
             foreach (var item in c)
             {
                 int k = Acm1007Unit(item);
                 if (!dic.ContainsKey(k))
                 {
+                    i[j] = k;
+                    j++;
                     dic.Add(k, item + ",");
                 }
                 else
                 {
                     dic[k] += item + ",";
+                    i[j] = -1;
+                    j++;
                 }
             }
+             QSortDIY(i, 0, i.Length - 1);
+
+            for (int jjj = 0; jjj < i.Length ; jjj++)
+            {
+                if (i[jjj] != -1)
+                {
+                    Console.Write(dic[i[jjj]]);
+                }
+            }
+
         }
         public static int Acm1007Unit(string a)
         {
@@ -1181,7 +1196,7 @@ namespace acm
             int gnum = 0;
 
             int r = 0;
-            for (int i = a.Length - 1; i > 0; i--)
+            for (int i = a.Length - 1; i >= 0; i--)
             {
                 switch (a[i])
                 {
@@ -1204,20 +1219,6 @@ namespace acm
             return r;
         }
 
-        public static void LXS(int[,] xy, int length = 50)
-        {
-            xy = new int[length, length];
-            Random r = new Random(DateTime.Now.GetHashCode());
-            int i = 0;
-            while (i < 50)
-            {
-                int x = r.Next(0, 100);
-                Thread.Sleep(50);
-                int y = r.Next(0, 100);
-                Thread.Sleep(50);
 
-                i++;
-            }
-        }
     }
 }

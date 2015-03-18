@@ -16,10 +16,9 @@
     <link rel="stylesheet" href="css/proj_list.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
-
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/pub.css">
-    <link href="js/jquery-ui.css" rel="stylesheet" />
+
     <!--[if IE 7]>
         <link href="css/font-awesome-ie7.min.css" rel="stylesheet" />
     <![endif]-->
@@ -72,6 +71,57 @@
             padding-bottom: 2px;
             font-weight: bold;
             color: #EA5200;
+        }
+
+        .fbom {
+            background-color: #eee;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .br {
+            height: 90px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .imgdv {
+                width: 110px;
+                margin: 0px auto;
+                padding: 0px;
+            }
+
+            .alldv {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .media-heading {
+                width: 80px;
+                float: left;
+            }
+
+            .media-data {
+                width: 200px;
+                float: left;
+            }
+
+            .media-con {
+                clear: both;
+            }
+
+            .br {
+                height: 45px;
+            }
+
+            .pro-pl-box {
+                margin: 0px;
+                padding: 0px;
+            }
+            .pro-cc-box {
+                margin:0;
+                padding:0;
+            }
         }
     </style>
 </head>
@@ -151,138 +201,105 @@
         <div class="row">
             <form class="form-horizontal" role="form" id="feedbackForm">
                 <div class="col-sm-12">
-                    <div class="col-sm-11 col-sm-offset-1 pro-box-title">
-                        <div class="pro-bt-titl">
-                            <p style="font-size: 18px;">提交意见</p>
-                            <p style="text-indent: 8px;">尊敬的amaker用户，您在本平台上遇到的任何问题，请在这里告诉我们，我们会及时处理，感谢您提的宝贵意见!</p>
+                    <div class="col-sm-12 fbom">
+                        <div class="col-sm-12 pro-box-title">
+                            <div class="pro-bt-titl">
+                                <p style="font-size: 18px;">提交意见</p>
+                                <p style="text-indent: 8px;">尊敬的amaker用户，您在本平台上遇到的任何问题，请在这里告诉我们，我们会及时处理，感谢您提的宝贵意见!</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-11 col-sm-offset-1 pro-pl-box">
-                        <div class="col-sm-10">
-                            <textarea id="feeCon" name="feeCon" class="form-control" rows="3" style="resize: none;" placeholder="请输入您的评论内容"></textarea>
-                            <div class="col-sm-12">&nbsp;</div>
-                        </div>
-                        <div class="col-sm-2">
-                            <button type="submit" class="btn btn-primary btn-block " style="height: 90px">提交</button>
-                        </div>
+                        <div class="col-sm-12 pro-pl-box">
+                            <div class="col-sm-10">
+                                <textarea id="feeCon" name="feeCon" class="form-control" rows="3" style="resize: none;" placeholder="请输入您的评论内容"></textarea>
+                                <div class="col-sm-12">&nbsp;</div>
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-primary btn-block br ">提交</button>
+                            </div>
 
+                        </div>
                     </div>
                     <div class="col-sm-12">
                         <hr>
                     </div>
                     <div class="col-sm-12 pro-cc-box">
-                        <ul class="media-list">
-                            <li class="media">
-                                <div class="col-sm-12">
-                                    <div class="col-sm-2">
-                                        <div class="col-sm-12">
-                                            <img src="img/noimg0.jpg" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="col-sm-6 media-heading">王同学</div>
-                                        <div class="col-sm-6">2014-12-30 12:12:21</div>
-                                        <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <hr>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
+                        <div class="col-sm-12 alldv">
+                            <div class="col-sm-2 imgdv ">
+                                <img src="img/noimg0.jpg" />
+                            </div>
+                            <div class="col-sm-8 ">
+                                <div class="col-sm-6  media-heading">王同学</div>
+                                <div class="col-sm-6 media-data">2014-12-30 12:12:21</div>
+                                <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <hr>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-sm-12 pro-cc-box">
-                        <ul class="media-list">
-                            <li class="media">
-                                <div class="col-sm-12">
-                                    <div class="col-sm-2">
-                                        <div class="col-sm-12">
-                                            <img src="img/noimg0.jpg" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="col-sm-6 media-heading">王同学</div>
-                                        <div class="col-sm-6">2014-12-30 12:12:21</div>
-                                        <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <hr>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
+                        <div class="col-sm-12 alldv">
+                            <div class="col-sm-2 imgdv ">
+                                <img src="img/noimg0.jpg" />
+                            </div>
+                            <div class="col-sm-8 ">
+                                <div class="col-sm-6  media-heading">王同学</div>
+                                <div class="col-sm-6 media-data">2014-12-30 12:12:21</div>
+                                <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <hr>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-sm-12 pro-cc-box">
-                        <ul class="media-list">
-                            <li class="media">
-                                <div class="col-sm-12">
-                                    <div class="col-sm-2">
-                                        <div class="col-sm-12">
-                                            <img src="img/noimg0.jpg" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="col-sm-6 media-heading">王同学</div>
-                                        <div class="col-sm-6">2014-12-30 12:12:21</div>
-                                        <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <hr>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
+                        <div class="col-sm-12 alldv">
+                            <div class="col-sm-2 imgdv ">
+                                <img src="img/noimg0.jpg" />
+                            </div>
+                            <div class="col-sm-8 ">
+                                <div class="col-sm-6  media-heading">王同学</div>
+                                <div class="col-sm-6 media-data">2014-12-30 12:12:21</div>
+                                <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <hr>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-sm-12 pro-cc-box">
-                        <ul class="media-list">
-                            <li class="media">
-                                <div class="col-sm-12">
-                                    <div class="col-sm-2">
-                                        <div class="col-sm-12">
-                                            <img src="img/noimg0.jpg" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="col-sm-6 media-heading">王同学</div>
-                                        <div class="col-sm-6">2014-12-30 12:12:21</div>
-                                        <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <hr>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
+                        <div class="col-sm-12 alldv">
+                            <div class="col-sm-2 imgdv ">
+                                <img src="img/noimg0.jpg" />
+                            </div>
+                            <div class="col-sm-8 ">
+                                <div class="col-sm-6  media-heading">王同学</div>
+                                <div class="col-sm-6 media-data">2014-12-30 12:12:21</div>
+                                <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <hr>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-sm-12 pro-cc-box">
-                        <ul class="media-list">
-                            <li class="media">
-                                <div class="col-sm-12">
-                                    <div class="col-sm-2">
-                                        <div class="col-sm-12">
-                                            <img src="img/noimg0.jpg" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="col-sm-6 media-heading">王同学</div>
-                                        <div class="col-sm-6">2014-12-30 12:12:21</div>
-                                        <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <hr>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
+                        <div class="col-sm-12 alldv">
+                            <div class="col-sm-2 imgdv ">
+                                <img src="img/noimg0.jpg" />
+                            </div>
+                            <div class="col-sm-8 ">
+                                <div class="col-sm-6  media-heading">王同学</div>
+                                <div class="col-sm-6 media-data">2014-12-30 12:12:21</div>
+                                <div class="col-sm-12 media-con">老师教的很不的很不的很不的很不的很不的很不老师教的很不的很不的很不的很不的很不的很不的很不的很的很不的很不的很不错，学习sada123123sds氛围我12312很喜欢！</div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <hr>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="col-sm-12" style="text-align: center; cursor: pointer;" id="cli">点击查看更多</div>
                 </div>
-
             </form>
         </div>
 
@@ -318,6 +335,6 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/validatemessage.js"></script>
     <script src="js/feedback.js"></script>
-    
+
 </body>
 </html>

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hello World</title>
+    <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+</head>
+<body>
+    <div ng-app="" ng-init="quantity=1;cost=5">
+
+        <p>总价： {{ quantity * cost }}</p>
+
+    </div>
+    <div ng-app="" ng-init="firstName='John';lastName='Doe'">
+
+        <p>姓名： {{ firstName + " " + lastName }}</p>
+
+    </div>
+    <div ng-app="" ng-init="firstName='John';lastName='Doe'">
+
+        <p>姓名： <span ng-bind="firstName + ' ' + lastName"></span></p>
+
+    </div>
+    <div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">
+
+        <p>姓为 {{ person.lastName }}</p>
+
+    </div>
+    <div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">
+
+        <p>姓为 <span ng-bind="person.lastName"></span></p>
+
+    </div>
+    <div ng-app="" ng-init="points=[1,15,19,2,40]">
+
+        <p>第三个值为 <span ng-bind="points[2]"></span></p>
+
+    </div>
+    <div ng-app="" ng-init="points=[1,15,19,2,40]">
+
+        <p>第三个值为 <span ng-bind="points[2]"></span></p>
+
+    </div>
+</body>
+</html>

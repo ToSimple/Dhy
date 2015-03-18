@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hello World</title>
+
+</head>
+<body>
+    <div ng-app="" ng-controller="personController">
+        <p>姓名为 {{ person.lastName | uppercase }}</p>
+    </div>
+    <div ng-app="" ng-controller="personController">
+        <p>姓名为 {{ person.lastName | lowercase }}</p>
+    </div>
+    <div ng-app="" ng-controller="personController">
+        数量：<input type="number" ng-model="person.quantity">
+        价格：<input type="number" ng-model="person.price">
+
+        <p>总价 = {{ fullName() | currency }}</p>
+
+    </div>
+
+    <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+    <script src="ajs/fliter.js"></script>
+</body>
+</html>
