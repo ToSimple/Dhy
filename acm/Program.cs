@@ -96,14 +96,17 @@ namespace acm
             //acm.acm1006(283, 102, 23, 320);
             //acm.acm1006(203, 301, 203, 40);
 
-            string[] n = new string[6];
-            n[0] = "AACATGAAGG";
-            n[1] = "TTTTGGCCAA";
-            n[2] = "TTTGGCCAAA";
-            n[3] = "GATCAGATTT";
-            n[4] = "CCCGGGGGGA";
-            n[5] = "ATCGATGCAT";
-            acm.acm1007(6, 6, n);
+            //string[] n = new string[6];
+            //n[0] = "AACATGAAGG";
+            //n[1] = "TTTTGGCCAA";
+            //n[2] = "TTTGGCCAAA";
+            //n[3] = "GATCAGATTT";
+            //n[4] = "CCCGGGGGGA";
+            //n[5] = "ATCGATGCAT";
+            //acm.acm1007(6, n);
+            acm.Acm1008(10, "zac", 0);
+            acm.Acm1008(0, "pop", 0);
+            acm.Acm1008(10, "zac", 1995);
         }
     }
 }

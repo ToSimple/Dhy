@@ -19,6 +19,48 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/pub.css">
+    <style>
+       
+        .bq-red {
+         background: #990033;
+        }
+        .bq-bule {
+         background: #0755a1 ;
+        }
+        .bq-green {
+         background: #237449;
+        }
+
+        .bq {
+            margin-left: 120px;
+            margin-top: 20px;
+            width: 140px;
+            height: 20px;
+            z-index: 1;
+           
+            transform: rotate(50deg);
+            -ms-transform: rotate(50deg); /* IE 9 */
+            -moz-transform: rotate(50deg); /* Firefox */
+            -webkit-transform: rotate(50deg); /* Safari 和 Chrome */
+            -o-transform: rotate(50deg);
+            border-radius: 2px;
+            box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+            color: #fff;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+        }
+      
+        @media (max-width: 700px) {
+            .bq {
+                 margin-left: 70px;
+            margin-top: 20px;
+            width: 140px;
+            height: 20px;
+           
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -54,7 +96,7 @@
                     <li><a href="teacher.html">导师</a></li>
                     <li class="active"><a href="group.html">课程</a></li>
                     <li><a href="activities.html">活动</a></li>
-                   <li><a href="group.html">创客团体</a></li>
+                    <li><a href="group.html">创客团体</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -208,7 +250,7 @@
         function findScreen() {
             if (document.body.clientWidth < 1300) {
                 $(".mobsearch").css("display", "block");
-                $("#logo").prop("src", "images/icon.png").css("height", "45");
+                $("#logo").prop("src", "img/icon.png").css("height", "45");
                 $(".navCent-img").css("padding-top", "4px");
                 $(".navbar-form").css("display", "none");
             }

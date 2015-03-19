@@ -67,7 +67,8 @@
 				
 				back += '<div class="woo">';
 				back += '	<div class="prj_card shadow" style="width:'+PROJ_CARD_WIDTH+'px">';
-				back += '		<div class="img_wrap" style="height:'+h+'px">';
+				back += '		<div class="img_wrap" style="height:' + h + 'px">';
+				back += '<div class="bq bq-red">进行中</div>';
 				back += '			<a href="/proj/detail/'+this.id+'"><img srcd="' + img_src + '" alt="' + this.name + '" /></a>';
 				back += '		</div>';
 				back += '		<div class="info_wrap">';
@@ -77,8 +78,8 @@
 				back += '<p>简介：南京大学教授，从事科从事科研工作20年......</p>';
 				back += '		</div>';
 				back += '		<div class="btn-group btn-group-lg btn-group-justified">';
-				back += '			<a class="btn btn-default" href="#" role="button">立即报名</a> ';
-				back += '			<a class="btn btn-default" href="#" role="button">详细介绍</a>';
+				back += '			<a class="btn btn-default" href="#" role="button">报名</a> ';
+				back += '			<a class="btn btn-default" href="#" role="button">详细</a>';
 				back += '		</div>';
 				back += '	</div>';
 				back += '</div>';

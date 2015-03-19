@@ -789,6 +789,12 @@ namespace acm
             return ritems.ToArray();
 
         }
+        /// <summary>
+        /// 求幂
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="r"></param>
+        /// <returns></returns>
         public static char[] exponentiation(string a, int r)
         {
             char[] aa = new char[1];
@@ -1037,7 +1043,10 @@ namespace acm
             }
 
         }
-
+        /// <summary>
+        /// 冒泡排序
+        /// </summary>
+        /// <param name="array"></param>
         public static void MPSort(int[] array)
         {
             int tep;
@@ -1157,7 +1166,7 @@ namespace acm
             return n;
         }
 
-        public static void acm1007(int a, int b, string[] c)
+        public static void acm1007(int a, string[] c)
         {
             Dictionary<int, string> dic = new Dictionary<int, string>();
             int[] i = new int[a];
@@ -1178,9 +1187,9 @@ namespace acm
                     j++;
                 }
             }
-             QSortDIY(i, 0, i.Length - 1);
+            QSortDIY(i, 0, i.Length - 1);
 
-            for (int jjj = 0; jjj < i.Length ; jjj++)
+            for (int jjj = 0; jjj < i.Length; jjj++)
             {
                 if (i[jjj] != -1)
                 {
@@ -1219,6 +1228,147 @@ namespace acm
             return r;
         }
 
+        public static void Acm1008(int day, string mon, int year)
+        {
+            int m = 0;
+            switch (mon)
+            {
+                case "pop":
+                    m = 1;
+                    break;
+                case "no":
+                    m = 2;
+                    break;
+                case "zip":
+                    m = 3;
+                    break;
+                case "zotz":
+                    m = 4;
+                    break;
+                case "tzec":
+                    m = 5;
+                    break;
+                case "xul":
+                    m = 6;
+                    break;
+                case "yoxkin":
+                    m = 7;
+                    break;
+                case "mol":
+                    m = 8;
+                    break;
+                case "chen":
+                    m = 9;
+                    break;
+                case "yax":
+                    m = 10;
+                    break;
+                case "zac":
+                    m = 11;
+                    break;
+                case "ceh":
+                    m = 12;
+                    break;
+                case "mac":
+                    m = 13;
+                    break;
+                case "kankin":
+                    m = 14;
+                    break;
+                case "muan":
+                    m = 15;
+                    break;
+                case "pax":
+                    m = 16;
+                    break;
+                case "koyab":
+                    m = 17;
+                    break;
+                case "cumhu":
+                    m = 18;
+                    break;
+            }
+            day += (m-1) * 20 + year * 365+1;
+            int tzolkinY = day / 260;
+            int tzolkinB = day % 13;
+            int tzolkinDayA = 0;
+            switch (tzolkinB)
+            {
+                case 0:
+                    tzolkinDayA = 13;
+                    break;
+                case 1:
+                    tzolkinDayA = 1;
+                    break;
+                case 2:
+                    tzolkinDayA = 2;
+                    break;
+                case 3:
+                    tzolkinDayA = 3;
+                    break;
+                case 4:
+                    tzolkinDayA = 4;
+                    break;
+                case 5:
+                    tzolkinDayA = 5;
+                    break;
+                case 6:
+                    tzolkinDayA = 6;
+                    break;
+                case 7:
+                    tzolkinDayA = 7;
+                    break;
+                case 8:
+                    tzolkinDayA = 8;
+                    break;
+                case 9:
+                    tzolkinDayA = 9;
+                    break;
+                case 10:
+                    tzolkinDayA = 10;
+                    break;
+                case 11:
+                    tzolkinDayA = 11;
+                    break;
+                case 12:
+                    tzolkinDayA = 12;
+                    break;
+            }
+            int tzolkinC = day % 20;
+            string tzolkinDayB = "";
+            switch (tzolkinC)
+            {
+                case 1: tzolkinDayB = "imix"; break;
+                case 2: tzolkinDayB = "ik"; break;
+                case 3: tzolkinDayB = "akbal"; break;
+                case 4: tzolkinDayB = "kan"; break;
+                case 5: tzolkinDayB = "chicchan"; break;
+                case 6: tzolkinDayB = "cimi"; break;
+                case 7: tzolkinDayB = "manik"; break;
+                case 8: tzolkinDayB = "lamat"; break;
+                case 9: tzolkinDayB = "muluk"; break;
+                case 10: tzolkinDayB = "ok"; break;
+                case 11: tzolkinDayB = "chuen"; break;
+                case 12: tzolkinDayB = "eb"; break;
+                case 13: tzolkinDayB = "ben"; break;
+                case 14: tzolkinDayB = "ix"; break;
+                case 15: tzolkinDayB = "mem"; break;
+                case 16: tzolkinDayB = "cib"; break;
+                case 17: tzolkinDayB = "caban"; break;
+                case 18: tzolkinDayB = "eznab"; break;
+                case 19: tzolkinDayB = "canac"; break;
+                case 0: tzolkinDayB = "ahau"; break;
+            }
+            Console.WriteLine(tzolkinDayA + " " + tzolkinDayB + " " + tzolkinY);
+        }
+        public static void Acm1009(int[] a)
+        {
 
+        }
+        public static void Acm1009Unit(int[] a,int width)
+        {
+           int row= a.Length / width;   
+         
+        }
     }
 }
