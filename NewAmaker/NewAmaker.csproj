@@ -57,6 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="amaker\css\jquery.mobile.custom.structure.css" />
+    <Content Include="amaker\css\jquery.mobile.custom.structure.min.css" />
+    <Content Include="amaker\css\jquery.mobile.custom.theme.css" />
+    <Content Include="amaker\css\jquery.mobile.custom.theme.min.css" />
+    <Content Include="amaker\index.html" />
+    <Content Include="amaker\js\jquery.min.js" />
+    <Content Include="amaker\js\jquery.mobile.custom.min.js" />
     <Content Include="AngularJS\2expression.html" />
     <Content Include="AngularJS\1Helloworld.html" />
     <Content Include="AngularJS\1HelloWorld2.html" />
@@ -68,6 +75,12 @@
     <Content Include="images\22.jpg" />
     <Content Include="images\33.jpg" />
     <Content Include="index.html" />
+    <Content Include="jqmobile\jquery.mobile.custom.js" />
+    <Content Include="jqmobile\jquery.mobile.custom.min.js" />
+    <Content Include="jqmobile\jquery.mobile.custom.structure.css" />
+    <Content Include="jqmobile\jquery.mobile.custom.structure.min.css" />
+    <Content Include="jqmobile\jquery.mobile.custom.theme.css" />
+    <Content Include="jqmobile\jquery.mobile.custom.theme.min.css" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.min.js" />
@@ -86,6 +99,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
