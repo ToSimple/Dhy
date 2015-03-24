@@ -49,7 +49,9 @@
                 this.value='';
             }else{
                 var URL = URL || window.URL || webkitURL;
+                
                 var blob = URL.createObjectURL(file);
+                alert(blob);
                 o.before(blob);
                 _compress(blob,file);
                 this.value='';

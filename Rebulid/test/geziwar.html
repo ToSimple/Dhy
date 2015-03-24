@@ -70,6 +70,9 @@
     </style>
 </head>
 <body>
+   <!-- <form>
+        <input type="file" id="go"/>
+    </form>-->
     <div class="container ">
         <div class="col-sm-1 item"></div>
         <div class="col-sm-1 item"></div>
@@ -175,8 +178,26 @@
     <script src="js/jquery.min.js"></script>
   
     <script>
+        function geizi(o, n) {
+            var str="";
+            for (var i = 0; i < n; i++) {
+                for (var j = 0; j < n; j++) {
+                    str += "<div class=\"col-sm-" + 12 / n + " item\"></div>";
+                }               
+            }
+            o.html(str);
+        };
         $(".item").on("click", function () {
-            alert(1);
+            alert("haha");
+            var a = $(".container");
+            geizi(a, 3);
+            var b = 12 / 3;
+         
+            var a = ".col-sm-" + b;
+            b= b * 10 + "px";
+            var c = "#ccc";
+
+            $(a).css("background-color", c).css("width",b).css("height",b);
         });
 
     </script>
