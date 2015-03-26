@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="../ueditor.config.js"></script>
+    <script src="../ueditor.all.min.js"></script>
+</head>
+<body>
+    <div class="col-sm-8 col-sm-offset-1 pro-pl-box">
+        <div class="col-sm-10">
+            <script id="editor" type="text/plain" style="height: 100px;"></script>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary btn-block btr">提交</button>
+               <button onclick="getContendt()">获得内容</button>
+        </div>
+    </div>
+    <script src="ueditor/ueditor.config.js"></script>
+    <script src="ueditor/ueditor.all.min.js"></script>
+
+    <script>
+
+        var ue = UE.getEditor('editor');
+        function getContendt() {
+            var arr = [];
+            arr.push("内容为：");
+            arr.push(UE.getEditor('editor').getContent());
+            alert(arr.join("\n"));
+        }
+
+    </script>
+</body>
+</html>
