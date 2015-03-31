@@ -17,5 +17,24 @@
     <div class="sc">
         asdsad
     </div>
+    <script>
+        //随机数生成
+        rand = (function(){
+            var today = new Date(); 
+            var seed = today.getTime();
+            function rnd(){
+                seed = ( seed * 9301 + 49297 ) % 233280;
+                return seed / ( 233280.0 );
+            };
+            return function rand(number){
+                return Math.ceil(rnd(seed) * number);
+            };
+        })();
+        myNum = (rand(1)); 
+        for (var i = 0; i < 10; i++) {
+            alert(myNum);
+        }
+
+    </script>
 </body>
 </html>

@@ -70,6 +70,11 @@
             top: 145px;
             left: 60px;
         }
+
+        .ui-panel {
+            width: 12em;
+        }
+
     </style>
 </head>
 <body>
@@ -78,7 +83,7 @@
         <div data-role="header" data-theme="b">
             <a>Amaker</a>
             <h1>用户中心</h1>
-            <a href="#rightpanel3" data-role="button" class="ui-btn-right"><i class="fa fa-navicon"></i></a>
+            <a href="#rightpanel3" ><i class="fa fa-navicon" style="color: #fff; font-size: 18px;"></i></a>
         </div>
 
         <div data-role="content" data-theme="b">
@@ -100,7 +105,7 @@
                     </p>
                 </div>
             </div>
-            <div data-role="navbar">
+            <div data-role="navbar" >
                 <ul>
                     <li><a href="#" class="gj gj1">任务</a></li>
                     <li><a href="#" class="gj gj2">项目</a></li>
@@ -108,14 +113,17 @@
                     <li><a href="#" class="gj gj4">朋友</a></li>
                 </ul>
             </div>
-            <ul data-role="listview" data-inset="true" class="sel sel1">
+
+            <ul data-role="listview"  data-inset="true" class="sel sel1" data-theme="c">
                 <li><a href="#">进行中的任务</a></li>
                 <li><a href="#">已完成的任务</a></li>
                 <li><a href="#">关注的任务</a></li>
                 <li><a href="#">推荐的任务</a></li>
                 <li><a href="#">发布的任务</a></li>
                 <li><a href="#">发布任务</a></li>
+
             </ul>
+
             <ul data-role="listview" data-inset="true" class="sel sel2" style="display: none;">
                 <li><a href="#">关注的项目</a></li>
                 <li><a href="#">推荐的项目</a></li>
@@ -132,9 +140,10 @@
             <div data-theme="b" data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
                 <div class="ui-panel-inner pr">
                     <div class="pltop">
-                        <img src="../img/default.jpg" class="rpph" /><h2>欢迎您，波波</h2>
+                        <img src="../img/default.jpg" class="rpph" /><h2>比特</h2>
                     </div>
                     <ul class="rpanelul">
+                        <li></li>
                         <li><a href="#">项目</a></li>
                         <li><a href="#">团体</a></li>
                         <li><a href="#">创客</a></li>

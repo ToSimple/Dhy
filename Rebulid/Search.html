@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Amaker</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=false">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/proj_list.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/pub.css">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index_1.html" class="navbar-brand navCent-img navlogimg">
+                    <img src="img/logo.png" height="32" id="logo"></a>
+                <form class="mobsearch" style="display: none;">
+                    <div class="input-group navCent navCent-inp" style="width: 62%; text-align: center;">
+                        <input type="text" class="form-control" id="msec" placeholder="按名称搜索">
+                        <div class="mscrdiv" style="display: none; position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 62%; padding: 5px 0px; border: 1px solid #ccc; text-align: left;">
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                        </div>
+                        <div class="input-group-btn">
+                            <button class="btn-wr" tabindex="-1" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">项目</a></li>
+                    <li><a href="teacher.html">导师</a></li>
+                    <li><a href="lesson.html">课程</a></li>
+                    <li><a href="activities.html">活动</a></li>
+                    <li><a href="group.html">创客团体</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="login.html">登录</a></li>
+                    <li><a href="regist.html">注册</a></li>
+                    <!-- 登录成功
+                    <li><a href="login.html">个人中心</a></li>
+                    <li><a href="regist.html">注销</a></li>-->
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="sec" placeholder="按课程、导师名称">
+                        <div class="scrdiv" style="display: none; position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 175px; padding: 5px 12px; border: 1px solid #ccc">
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                            <p><a>赛格累</a></p>
+                        </div>
+                        <div class="input-group-btn">
+                            <button class="btn-wr" tabindex="-1" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="main">
+        <div class="container">
+            <div class="tool_bar shadow">
+                <h1>当前位置：搜索 / 高级搜索</h1>
+            </div>
+        </div>
+        <!--/.container-->
+        <div class="h50"></div>
+        <div class="container">
+            <div class="row">
+                <form class="form-horizontal">
+                    <div class="col-sm-12">
+                        <div class="tophead">搜索条件</div>
+                        <hr />
+                        <div class="form-group">
+                            <label for="ct" class="col-sm-2 control-label">创建者</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="ct">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pn" class="col-sm-2 control-label">项目名称</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="pn">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bq" class="col-sm-2 control-label">标签</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="bq">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="jj" class="col-sm-2 control-label">简介</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="jj">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dt" class="col-sm-2 control-label">发布日期</label>
+                            <div class="col-sm-3">
+                                <input type="datetime" class="form-control" id="dt">
+                            </div>
+                            <div class="col-sm-1" style="height: 34px; line-height: 34px; text-align: center;">至</div>
+                            <div class="col-sm-3">
+                                <input type="datetime" class="form-control" id="Datetime1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h20"></div>
+                    <div class="col-sm-12">
+                        <div class="tophead">排序条件</div>
+                        <hr />
+                        <div class="radio pxtj">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="Radio2" value="option1" checked>
+                                热度
+                            </label>
+                            <label>
+                                <input type="radio" name="optionsRadios" id="Radio3" value="option1" checked>
+                                时间
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-sm-offset-4">
+                        <button type="submit" class="btn btn-success btn-lg btn-block">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--/.main-->
+
+
+    <div class="amakerfooter">
+        <div class="container-fluid m-ft">
+            <ul class="list-inline">
+                <li><a href="#">关于Amaker</a></li>
+                <li>·</li>
+                <li><a href="#">服务协议</a></li>
+                <li>·</li>
+                <li><a href="#">合作机构</a></li>
+                <li>·</li>
+                <li><a href="#">联系我们</a></li>
+                <li>·</li>
+                <li class="share">关注我们：
+        	<a class="ck-ft weixing" href="javascript:void(0)"></a>
+                    <div class="qrcode-g">
+                        <div class="qrImg">
+                            <img src="img/qrcode_for_gh_8be2fded1c7f_258.jpg" width="100" height="100">
+                        </div>
+                        <p class="qrTitle">微信号:A_maker</p>
+                        <div class="tip"></div>
+                    </div>
+                </li>
+            </ul>
+            <p>Copyright © 2014 - Amaker - All Right Reserved</p>
+        </div>
+    </div>
+    <script src="js/jquery-1.js"></script>
+    <script src="js/common.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // try{
+        // }catch(err){
+        // 	var FIRST_PAGE_ARR = [];
+        // }
+        window.onorientationchange = function () {
+            //alert(window.orientation);
+            if (window.orientation == 0) {
+                $(".navCent-inp").css("width", "62%");
+                $(".mscrdiv").css("width", "62%");
+            } else {
+                $(".navCent-inp").css("width", "75%");
+                $(".mscrdiv").css("width", "75%");
+            }
+
+        };
+        findScreen();
+        function findScreen() {
+            if (document.body.clientWidth < 1300) {
+                $(".mobsearch").css("display", "block");
+                $("#logo").prop("src", "img/icon.png").css("height", "45");
+                $(".navCent-img").css("padding-top", "4px");
+                $(".navbar-form").css("display", "none");
+            }
+            if (document.body.clientWidth > 1000) {
+                $(".navCent-inp").css("width", "70%");
+                $(".mscrdiv").css("width", "70%");
+            }
+        };
+        $(".weixing").on("mouseover", function () {
+            $(".qrcode-g").css("display", "block");
+        });
+        $(".weixing").on("mouseout", function () {
+            $(".qrcode-g").css("display", "none");
+        });
+        if (navigator.userAgent.indexOf("MSIE") > 0) {
+            if (navigator.userAgent.indexOf("MSIE 6.0") > 0) {
+                alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
+                window.close();
+            }
+            if (navigator.userAgent.indexOf("MSIE 7.0") > 0) {
+                alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
+                window.close();
+            }
+            if (navigator.userAgent.indexOf("MSIE 8.0") > 0) {
+                alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
+                window.close();
+            }
+            if (navigator.userAgent.indexOf("MSIE 9.0") > 0 && !window.innerWidth) {
+                alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
+                window.close();
+            }
+            if (navigator.userAgent.indexOf("MSIE 9.0") > 0) {
+                alert("你的浏览器不支持HTML5，请升级你的浏览器或下载火狐、Google浏览器！");
+                window.close();
+            }
+        }
+        $("#sec").on("focus", function (e) {
+            $(".scrdiv").css("display", "block");
+            $(".scrdiv").html("<p><a>赛格雷</a></p><p><a>赛格雷</a></p><p><a>赛格雷</a></p><p><a>赛格雷</a></p>");
+        });
+        $("#sec").on("blur", function (e) {
+            $(".scrdiv").css("display", "none");
+        });
+        $("#sec").on("keyup", function (e) {
+            $(".scrdiv").html("加载中...");
+            // alert($("#sec").val());
+            //$(".scrdiv").html($("#sec").val());
+            $.ajax({
+                url: "",
+                data: { i: $("sec").val() },
+                success: function (data) {
+                    $(".scrdiv").html("<p><a>" + $("#sec").val() + "</a></p>" + "<p><a>" + $("#sec").val() + "</a></p>" + "<p><a>" + $("#sec").val() + "</a></p>");
+                }
+            });
+        });
+
+        $("#msec").on("focus", function (e) {
+            $(".mscrdiv").css("display", "block");
+            $(".mscrdiv").html("<p><a>赛格雷</a></p><p><a>赛格雷</a></p><p><a>赛格雷</a></p><p><a>赛格雷</a></p>");
+        });
+        $("#msec").on("blur", function (e) {
+            $(".mscrdiv").css("display", "none");
+        });
+        $("#msec").on("keyup", function (e) {
+            $(".mscrdiv").html("加载中...");
+            // alert($("#sec").val());
+            //$(".scrdiv").html($("#sec").val());
+            $.ajax({
+                url: "",
+                data: { i: $("msec").val() },
+                success: function (data) {
+                    $(".mscrdiv").html("<p><a>" + $("#sec").val() + "</a></p>" + "<p><a>" + $("#sec").val() + "</a></p>" + "<p><a>" + $("#sec").val() + "</a></p>");
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>
+
+

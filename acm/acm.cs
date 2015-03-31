@@ -1361,14 +1361,16 @@ namespace acm
             }
             Console.WriteLine(tzolkinDayA + " " + tzolkinDayB + " " + tzolkinY);
         }
-        public static void Acm1009(int[] a)
+        public static void Acm1009(int[][] a)
         {
-
+            for (int i = 0; i < a.Length; i++)
+            {
+                
+            }
         }
         public static void Acm1009Unit(int[] a,int width)
         {
-           int row= a.Length / width;   
-         
+           int row= a.Length / width;            
         }
     }
 }

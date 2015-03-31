@@ -1,0 +1,23 @@
+﻿    .pxtj {
+            padding: 10px;
+        }
+
+            .pxtj label {
+                margin-left: 80px;
+                font-size: 18px;
+            }
+
+        .tophead {
+            font-size: 18px;
+        }
+
+        .container hr {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 500px) {
+            .pxtj label {
+                margin-left: 0px;
+                margin-right: 20px;
+            }
+        }

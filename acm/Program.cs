@@ -104,9 +104,11 @@ namespace acm
             //n[4] = "CCCGGGGGGA";
             //n[5] = "ATCGATGCAT";
             //acm.acm1007(6, n);
-            acm.Acm1008(10, "zac", 0);
-            acm.Acm1008(0, "pop", 0);
-            acm.Acm1008(10, "zac", 1995);
+
+            //acm.Acm1008(10, "zac", 0);
+            //acm.Acm1008(0, "pop", 0);
+            //acm.Acm1008(10, "zac", 1995);
+
         }
     }
 }
