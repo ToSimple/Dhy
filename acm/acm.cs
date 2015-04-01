@@ -27,7 +27,6 @@ namespace acm
             Console.WriteLine(Exp(a, b));
 
         }
-
         #region 实验的
         public static double Sum(char a, char b)
         {
@@ -957,7 +956,6 @@ namespace acm
             return ritems.ToArray();
         }
         #endregion
-
         public static void acm1002(string[] azx)
         {
 
@@ -1100,6 +1098,34 @@ namespace acm
             return high;
         }
 
+        public static void QSortDIY(double[] array, int low, int high)
+        {
+            if (low > high)
+                return;
+            int ie = QSortUnit(array, low, high);
+            QSortDIY(array, low, ie - 1);
+            QSortDIY(array, ie + 1, high);
+        }
+        public static int QSortUnit(double[] array, int low, int high)
+        {
+            double key = array[low];
+            while (low < high)
+            {
+                while (array[high] >= key && high > low)
+                {
+                    --high;
+                }
+                array[low] = array[high];
+                while (array[low] <= key && high > low)
+                {
+                    ++low;
+                }
+                array[high] = array[low];
+            }
+            array[low] = key;
+            return high;
+        }
+
         public static void acm1003(double a)
         {
             if (a == 0)
@@ -1115,7 +1141,6 @@ namespace acm
             }
             Console.WriteLine(b - 2 + " card(s)");
         }
-
         public static void acm1004(float[] a)
         {
             float sum = 0;
@@ -1125,7 +1150,6 @@ namespace acm
             }
             Console.WriteLine("$" + sum / a.Count());
         }
-
         public static void acm1005(int n, float[,] a)
         {
             float pi = 3.1415926f, rr;
@@ -1165,7 +1189,6 @@ namespace acm
                 n++;
             return n;
         }
-
         public static void acm1007(int a, string[] c)
         {
             Dictionary<int, string> dic = new Dictionary<int, string>();
@@ -1227,7 +1250,6 @@ namespace acm
             }
             return r;
         }
-
         public static void Acm1008(int day, string mon, int year)
         {
             int m = 0;
@@ -1288,7 +1310,7 @@ namespace acm
                     m = 18;
                     break;
             }
-            day += (m-1) * 20 + year * 365+1;
+            day += (m - 1) * 20 + year * 365 + 1;
             int tzolkinY = day / 260;
             int tzolkinB = day % 13;
             int tzolkinDayA = 0;
@@ -1365,12 +1387,60 @@ namespace acm
         {
             for (int i = 0; i < a.Length; i++)
             {
-                
+                if (i < 7)
+                {
+
+                }
+                else if (i % 7 == 0)
+                {
+
+                }
+                else if ((i - 6) % 7 == 0)
+                {
+
+                }
+                else if (true)
+                {
+
+                }
             }
         }
-        public static void Acm1009Unit(int[] a,int width)
+        public static void Acm1009Unit(int[] a, int width)
         {
-           int row= a.Length / width;            
+            int row = a.Length / width;
+        }
+
+        public static void Acm1018(int[] a, int[] b)
+        {
+            Dictionary<int, double> dic = new Dictionary<int, double>();
+            double c;
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                c = a[i] / b[i];
+                c = Math.Round(c, 3);
+                if (dic.ContainsKey(a[i]))
+                {
+                    if (dic[a[i]] < c)
+                    {
+                        dic[a[i]] = c;
+                    }
+                }
+                else
+                {
+                    dic.Add(a[i], c);
+                }           
+            }
+            double[] pxdic = dic.Values.ToArray();
+            double max = 0;
+            for (int i = 0; i < pxdic.Length; i++)
+            {
+                if (pxdic[i]>max)
+                {
+                    max = pxdic[i];
+                }
+            }
+            Console.WriteLine(max);
         }
     }
 }

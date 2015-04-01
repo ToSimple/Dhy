@@ -109,6 +109,9 @@ namespace acm
             //acm.Acm1008(0, "pop", 0);
             //acm.Acm1008(10, "zac", 1995);
 
+            int[] a = new int[] { 100, 150, 80, 120, 155, 100, 120 };
+            int[] b = new int[] { 25, 35, 25, 80, 40, 100, 110 };
+            acm.Acm1018(a, b);
         }
     }
 }

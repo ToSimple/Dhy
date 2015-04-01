@@ -13,7 +13,8 @@
         .cohebox {
             height: 150px;
             background-color: #fff;
-            border: 1px solid #111;
+            opacity: 0.9;
+            filter: alpha(opacity=90); /* For IE8 and earlier */  
             margin-bottom: 10px;
         }
 
@@ -39,112 +40,12 @@
                 box-shadow: 2px 2px 2px #000;
             }
 
-        .cc {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            text-align: center;
-            line-height: 50px;
-            color: #eee;
-            box-shadow: 2px 2px 2px #000;
-            text-shadow: 2px 2px 2px #000;
-        }
-
-        .cc1 {
-            background-color: #0ff;
-            position: absolute;
-            top: 70px;
-            left: 25px;
-        }
-
-        .cc2 {
-            background-color: #ff6a00;
-            position: absolute;
-            top: 70px;
-            left: 95px;
-        }
-
-        .cc3 {
-            background-color: #b6ff00;
-            position: absolute;
-            top: 145px;
-            left: 60px;
-        }
-
         .ui-panel {
             width: 12em;
         }
-
-
-        .loader,
-        .loader:before,
-        .loader:after {
-            border-radius: 50%;
-        }
-
-            .loader:before,
-            .loader:after {
-                position: absolute;
-                content: '';
-            }
-
-            .loader:before {
-                width: 5.2em;
-                height: 10.2em;
-                background: #ccc;
-                border-radius: 10.2em 0 0 10.2em;
-                top: -0.1em;
-                left: -0.1em;
-                -webkit-transform-origin: 5.2em 5.1em;
-                transform-origin: 5.2em 5.1em;
-                -webkit-animation: load2 2s infinite ease 1.5s;
-                animation: load2 2s infinite ease 1.5s;
-            }
-
-        .loader {
-            font-size: 11px;
-            text-indent: -99999em;
-            position: relative;
-            width: 10em;
-            height: 10em;
-            box-shadow: inset 0 0 0 1em #FFF;
-        }
-
-            .loader:after {
-                width: 5.2em;
-                height: 10.2em;
-                background: #ccc;
-                border-radius: 0 10.2em 10.2em 0;
-                top: -0.1em;
-                left: 5.1em;
-                -webkit-transform-origin: 0px 5.1em;
-                transform-origin: 0px 5.1em;
-                -webkit-animation: load2 2s infinite ease;
-                animation: load2 2s infinite ease;
-            }
-
-        @-webkit-keyframes load2 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes load2 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
+        .ui-content {
+            padding:0;
+            margin:0;
         }
     </style>
 </head>
@@ -162,25 +63,65 @@
                 <div class="cx-l">
                     <div class="ll">
                         <img width="80" height="80" src="../img/default.jpg" />
-                        <div class="cc cc1">12</div>
-                        <div class="cc cc2">22</div>
-                        <div class="cc cc3">12</div>
                     </div>
                 </div>
                 <div class="cx-r">
                     <h3>比特</h3>
-                    <p>积分：124</p>
-                    <p>
-                        上次登陆时间:<br />
-                        2015-3-4
-                    </p>
+                    <p><i class="fa fa-database"></i>:124 <i class="fa fa-calendar"></i>:2015-3-4</p>
+                    <canvas id="myCanvas" width="140" height="50">你的浏览器不支持HTML 的Canvas动画，请更换浏览器</canvas>
+                    <script>
+                        var c = document.getElementById("myCanvas");
+
+                        var ctx = c.getContext("2d");
+
+                        var x = 0;
+
+                        var c = document.getElementById("myCanvas");
+                        var ctx = c.getContext("2d");
+
+                        ctx.beginPath();
+                        ctx.arc(20, 20, 20, 0, 0.8 * Math.PI);
+                        ctx.closePath();
+                        ctx.fillStyle = 'rgba(255,0,0,0.25)';
+                        ctx.fill();
+
+                        ctx.beginPath();
+                        ctx.arc(20, 20, 15, 0, 2 * Math.PI);
+                        ctx.closePath();
+                        ctx.fillStyle = 'rgba(255,255,255,1)';
+                        ctx.fill();
+
+                        ctx.beginPath();
+                        ctx.arc(65, 20, 20, 0, 1.2 * Math.PI);
+                        ctx.closePath();
+                        ctx.fillStyle = 'rgba(0,255,0,0.25)';
+                        ctx.fill();
+
+                        ctx.beginPath();
+                        ctx.arc(65, 20, 15, 0, 2 * Math.PI);
+                        ctx.closePath();
+                        ctx.fillStyle = 'rgba(255,255,255,1)';
+                        ctx.fill();
+
+                        ctx.beginPath();
+                        ctx.arc(110, 20, 20, 0, 2 * Math.PI);
+                        ctx.closePath();
+                        ctx.fillStyle = 'rgba(0,0,255,0.25)';
+                        ctx.fill();
+
+                        ctx.beginPath();
+                        ctx.arc(110, 20, 15, 0, 2 * Math.PI);
+                        ctx.closePath();
+                        ctx.fillStyle = 'rgba(255,255,255,1)';
+                        ctx.fill();
+                    </script>
                 </div>
 
 
 
 
             </div>
-            <div class="loader">加载中...</div>
+
             <div data-role="navbar">
                 <ul>
                     <li><a href="#" class="gj gj1">任务</a></li>
@@ -189,7 +130,6 @@
                     <li><a href="#" class="gj gj4">朋友</a></li>
                 </ul>
             </div>
-
             <ul data-role="listview" data-inset="true" class="sel sel1" data-theme="c">
                 <li><a href="#">进行中的任务</a></li>
                 <li><a href="#">已完成的任务</a></li>
@@ -199,7 +139,6 @@
                 <li><a href="#">发布任务</a></li>
 
             </ul>
-
             <ul data-role="listview" data-inset="true" class="sel sel2" style="display: none;" data-theme="c">
                 <li><a href="#">关注的项目</a></li>
                 <li><a href="#">推荐的项目</a></li>
