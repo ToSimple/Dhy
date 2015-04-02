@@ -54,75 +54,32 @@
             background-color: #0ff;
             position: absolute;
             top: 70px;
-            left: 25px;
+            left:10px;
         }
 
         .cc2 {
             background-color: #ff6a00;
             position: absolute;
             top: 70px;
-            left: 95px;
+            left: 85px;
         }
 
         .cc3 {
             background-color: #b6ff00;
             position: absolute;
-            top: 145px;
-            left: 60px;
+            top: 125px;
+            left: 50px;
         }
 
         .ui-panel {
             width: 12em;
         }
-
-
-        .loader,
-        .loader:before,
-        .loader:after {
-            border-radius: 50%;
+        .ui-content {
+            padding:0;
+            margin:0;
         }
 
-            .loader:before,
-            .loader:after {
-                position: absolute;
-                content: '';
-            }
-
-            .loader:before {
-                width: 5.2em;
-                height: 10.2em;
-                background: #ccc;
-                border-radius: 10.2em 0 0 10.2em;
-                top: -0.1em;
-                left: -0.1em;
-                -webkit-transform-origin: 5.2em 5.1em;
-                transform-origin: 5.2em 5.1em;
-                -webkit-animation: load2 2s infinite ease 1.5s;
-                animation: load2 2s infinite ease 1.5s;
-            }
-
-        .loader {
-            font-size: 11px;
-            text-indent: -99999em;
-            position: relative;
-            width: 10em;
-            height: 10em;
-            box-shadow: inset 0 0 0 1em #FFF;
-        }
-
-            .loader:after {
-                width: 5.2em;
-                height: 10.2em;
-                background: #ccc;
-                border-radius: 0 10.2em 10.2em 0;
-                top: -0.1em;
-                left: 5.1em;
-                -webkit-transform-origin: 0px 5.1em;
-                transform-origin: 0px 5.1em;
-                -webkit-animation: load2 2s infinite ease;
-                animation: load2 2s infinite ease;
-            }
-
+       
         @-webkit-keyframes load2 {
             0% {
                 -webkit-transform: rotate(0deg);
@@ -180,7 +137,7 @@
 
 
             </div>
-            <div class="loader">加载中...</div>
+            
             <div data-role="navbar">
                 <ul>
                     <li><a href="#" class="gj gj1">任务</a></li>
@@ -219,13 +176,9 @@
                         <img src="../img/default.jpg" class="rpph" /><h2>比特</h2>
                     </div>
                     <ul class="rpanelul">
-                        <li></li>
-                        <li><a href="#">项目</a></li>
-                        <li><a href="#">团体</a></li>
-                        <li><a href="#">创客</a></li>
-                        <li><a href="#">任务</a></li>
-                        <li><a href="#"><i class="fa fa-user"></i>用户中心</a></li>
-                        <li><a href="#"><i class="fa fa-sign-out"></i>注销</a></li>
+                        <li><a href="#"><i class="fa fa-pencil-square-o"></i>修改密码</a></li>
+                        <li><a href="#"><i class="fa fa-database"></i>我的积分</a></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i>安全退出</a></li>
                     </ul>
                     <style>
                         .pr {
@@ -262,13 +215,13 @@
                                 padding-left: 10px;
                                 background-color: #fff;
                                 width: 100%;
-                                height: 40px;
+                                height: 2.4em;
                                 border-bottom: 1px solid #999;
                             }
 
                                 .rpanelul li a {
-                                    line-height: 40px;
-                                    font-size: 28px;
+                                    line-height:2.4em;
+                                    font-size: 1.2em;
                                     text-decoration: none;
                                 }
                     </style>
