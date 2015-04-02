@@ -1,7 +1,9 @@
-﻿using English.Helpers;
+﻿using English.help;
+using English.Helpers;
 using English.model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -21,6 +23,15 @@ namespace English.bll
             else
             {
                 return 0;
+            }
+        }
+
+        public static List<Word> Find()
+        {
+            DataTable dt=  DBHelper.GetDataSet("selet * from Word");
+            foreach (DataRow dr in dt.Rows)
+            {
+
             }
         }
     }
