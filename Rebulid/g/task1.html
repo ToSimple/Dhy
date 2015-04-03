@@ -7,135 +7,96 @@
     <link href="jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
     <link href="jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
     <link href="font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/right.css" rel="stylesheet" />
     <script src="jqjm/jquery.min.js"></script>
     <script src="jqjm/jquery.mobile-1.4.5.min.js"></script>
 
-    <style>
-        .cx-l {
-            width: 40%;
-            float: left;
-        }
-
-        .cx-r {
-            text-align: center;
-            float: left;
-            width: 60%;
-        }
-
-        .ll {
-            width: 80px;
-            height: 80px;
-            margin: 30px 0 0 30px;
-        }
-
-            .ll img {
-                border-radius: 50%;
-                box-shadow: 0px 1px 1px #000;
-            }
-
-        .ui-panel {
-            width: 12em;
-        }
-
-        .ui-content {
-            padding: 0;
-            margin: 0;
-        }
-    </style>
 </head>
 <body>
     <div data-role="page" data-theme="a">
 
         <div data-role="header" data-theme="a">
-            <a href="i.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
+            <a href="i.html?i=1#one" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
             <h1>进行中的任务</h1>
             <a href="#rightpanel3"><i class="fa fa-navicon"></i></a>
         </div>
-        <ul data-role="listview" data-inset="false">
-            <li><a href="#">
-                <img src="../img/default.jpg" />
-                <h2>Broken Bells</h2>
-                <p>Broken Bells</p>
-            </a>
-            </li>
-            <li><a href="#">
-                <img src="../img/default.jpg" />
-                <h2>Warning</h2>
-                <p>Hot Chip</p>
-            </a>
-            </li>
-            <li><a href="#">
-                <img src="../img/default.jpg" />
-                <h2>Wolfgang Amadeus Phoenix</h2>
-                <p>Phoenix</p>
-            </a>
-            </li>
+        <ul data-role="listview" data-inset="false" class="uplist">
         </ul>
+        <div></div>
         <div data-role="content" data-theme="a">
             <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
                 <div class="ui-panel-inner pr">
-                    <div class="pltop">
-                        <img src="../img/default.jpg" class="rpph" /><h2>比特</h2>
-                    </div>
                     <ul class="rpanelul">
-                        <li><a href="#"><i class="fa fa-pencil-square-o"></i>修改密码</a></li>
-                        <li><a href="#"><i class="fa fa-database"></i>我的积分</a></li>
-                        <li><a href="#"><i class="fa fa-sign-out"></i>安全退出</a></li>
+                        <li class="ui-first-child" data-icon="delete">
+                            <a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-user"></i>&nbsp;个人资料</a></li>
+                        <li><a href="#"><i class="fa fa-bell-o"></i>&nbsp;我的消息</a></li>
+                        <li><a href="#"><i class="fa fa-pencil-square-o"></i>&nbsp;修改密码</a></li>
+                        <li><a href="#"><i class="fa fa-database"></i>&nbsp;账户管理</a></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;安全退出</a></li>
                     </ul>
-                    <style>
-                        .pr {
-                            margin: 0px;
-                            padding: 0px;
-                        }
-
-                        .pltop {
-                            background: #fff;
-                            overflow: auto;
-                            border-bottom: 1px solid #999;
-                        }
-
-                            .pltop .rpph {
-                                border-radius: 50%;
-                                width: 80px;
-                                height: 80px;
-                                float: left;
-                                margin: 5px 10px 0 10px;
-                            }
-
-                        .pltop {
-                            line-height: 50px;
-                        }
-
-                        .rpanelul {
-                            list-style: none;
-                            padding: 0;
-                            margin: 0;
-                            clear: both;
-                        }
-
-                            .rpanelul li {
-                                padding-left: 10px;
-                                background-color: #fff;
-                                width: 100%;
-                                height: 40px;
-                                border-bottom: 1px solid #999;
-                            }
-
-                                .rpanelul li a {
-                                    line-height: 40px;
-                                    font-size: 28px;
-                                    text-decoration: none;
-                                }
-                    </style>
                 </div>
             </div>
         </div>
-        <!-- <div data-role="footer" data-theme="b">
-            <h1>底部文本</h1>
-        </div>-->
+        <div data-role="footer" class="load" data-position="fixed">
+            <i class="fa fa-refresh fa-spin"></i>
+        </div>
     </div>
     <script>
-       
+        $.ajax({
+            type: "get",
+            url: "list.aspx",
+            dataType: "json",
+            data: { "index": 0 },
+            beforeSend: function () {
+                $(".load").css("display", "block");
+            },
+            success: function (data) {
+                var str = '';
+                $.each(data.list, function () {
+                    // alert(this.id + "-" + "-" + this.img + "-" + this.title);
+                    str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
+                })
+                $(".uplist").append(str);
+            },
+            complete: function () {
+                $(".load").css("display", "none");
+            }
+        })
+        $(document).on("scrollstop", function () {
+            //alert($(window).scrollTop());//这个方法是当前滚动条滚动的距离
+            //alert($(window).height());//获取当前窗体的高度
+            //alert($(document).height());//获取当前文档的高度
+            //alert($(document).height()-$(window).height());
+            var ws = $(window).scrollTop();
+            var wh = $(window).height();
+            var dh = $(document).height();
+            //alert(dh - wh - ws);
+            if (dh - wh - ws < 50) {
+                var i = 1;
+                $.ajax({
+                    type: "get",
+                    url: "list.aspx",
+                    dataType: "json",
+                    data: { "index": i },
+                    beforeSend: function () {
+                        $(".load").css("display", "block");
+                    },
+                    success: function (data) {
+                        var str = '';
+                        $.each(data.list, function () {
+                            // alert(this.id + "-" + "-" + this.img + "-" + this.title);
+                            str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
+                        })
+                        $(".uplist").append(str);
+                    },
+                    complete: function () {
+                        $(".load").css("display", "none");
+                    }
+                })
+            }
+        });
     </script>
 </body>
 </html>

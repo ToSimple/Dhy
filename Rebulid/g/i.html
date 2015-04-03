@@ -7,6 +7,7 @@
     <link href="jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
     <link href="jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
     <link href="font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/right.css" rel="stylesheet" />
     <script src="jqjm/jquery.min.js"></script>
     <script src="jqjm/jquery.mobile-1.4.5.min.js"></script>
 
@@ -47,17 +48,13 @@
                 margin: 20px 0 0 10px;
                 font-size: 1.6em;
             }
-
-        .ui-panel {
-            width: 12em;
-        }
     </style>
 </head>
 <body>
     <div data-role="page" data-theme="a">
 
         <div data-role="header" data-theme="a">
-            <a href="i.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-home">主页</a>
+            <a href="i.html" data-ajax="false" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-home">主页</a>
             <h1>用户中心</h1>
             <a href="#rightpanel3"><i class="fa fa-navicon" style=""></i></a>
         </div>
@@ -69,154 +66,62 @@
             </div>
             <div class="cx-r">
                 <h3>比特</h3>
-                <p><i class="fa fa-database"></i>积分:124</p>
+                <p><i class="fa fa-database"></i>账户积分:124</p>
 
                 <canvas id="myCanvas" width="140" height="50">你的浏览器不支持HTML 的Canvas动画，请更换浏览器</canvas>
-                <script>
-                    var j = .8;
-                    var f = 1.6;
-                    var l = 2;
-                    var c = document.getElementById("myCanvas");
-                    var ctx = c.getContext("2d");
 
-                    ctx.beginPath();
-                    ctx.arc(20, 20, 15, 0, 2 * Math.PI);
-                    ctx.lineWidth = 3;
-                    ctx.strokeStyle = '#b6b9c6';
-                    ctx.stroke();
-
-                    ctx.beginPath();
-                    ctx.arc(20, 20, 15, 0, j * Math.PI);
-                    ctx.lineWidth = 3;
-                    ctx.strokeStyle = '#ff494a';
-                    ctx.stroke();
-
-                    ctx.beginPath();
-                    ctx.arc(65, 20, 15, 0, 2 * Math.PI);
-                    ctx.lineWidth = 3;
-                    ctx.strokeStyle = '#b6b9c6';
-                    ctx.stroke();
-                    ctx.beginPath();
-                    ctx.arc(65, 20, 15, 0, f * Math.PI);
-                    ctx.lineWidth = 3;
-                    ctx.strokeStyle = '#ff494a';
-                    ctx.stroke();
-
-                    ctx.beginPath();
-                    ctx.arc(110, 20, 15, 0, l * Math.PI);
-                    ctx.lineWidth = 3;
-                    ctx.strokeStyle = '#b6b9c6';
-                    ctx.stroke();
-                    ctx.beginPath();
-                    ctx.arc(110, 20, 15, 0, l * Math.PI);
-                    ctx.lineWidth = 3;
-                    ctx.strokeStyle = '#ff494a';
-                    ctx.stroke();
-
-
-
-                    ctx.fillStyle = "#000"
-                    ctx.font = '1em 微软雅黑 ';
-                    ctx.fillText('剑', 12, 25);
-                    ctx.font = '1em 微软雅黑 ';
-                    ctx.fillText('法', 57, 25);
-                    ctx.font = '1em 微软雅黑 ';
-                    ctx.fillText('灵', 102, 25);
-                </script>
             </div>
         </div>
         <div data-role="tabs" id="tabs">
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#one" data-ajax="false">任务</a></li>
-                    <li><a href="#two" data-ajax="false">项目</a></li>
-                    <li><a href="#three" data-ajax="false">团体</a></li>
-                    <li><a href="javascript:void(0);" data-ajax="false">朋友</a></li>
+                    <li><a class="opt opt1" href="#one" data-ajax="false" data-icon="info" class="ui-btn-active">任务</a></li>
+                    <li><a class="opt opt2" href="#two" data-ajax="false" data-icon="gear" name="pro">项目</a></li>
+                    <li><a class="opt opt3" href="#three" data-ajax="false" data-icon="star">团体</a></li>
+                    <li><a class="opt opt4" href="javascript:void(0);" data-icon="user" data-ajax="false">朋友</a></li>
                 </ul>
             </div>
             <div id="one">
                 <ul data-role="listview" data-inset="false">
-                    <li><a href="task1.html" data-ajax="false">进行中的任务</a></li>
-                    <li><a href="task2.html" data-ajax="false">已完成的任务</a></li>
-                    <li><a href="#">关注的任务</a></li>
-                    <li><a href="#">推荐的任务</a></li>
-                    <li><a href="#">发布的任务</a></li>
-                    <li><a href="#">发布任务</a></li>
+                    <li><a href="task1.html" data-ajax="false">进行中的任务<span class="ui-li-count">328</span></a></li>
+                    <li><a href="task2.html" data-ajax="false">已完成的任务<span class="ui-li-count">328</span></a></li>
+                    <li><a href="#">关注的任务<span class="ui-li-count">328</span></a></li>
+                    <li><a href="#">推荐的任务<span class="ui-li-count">328</span></a></li>
+                    <li><a href="#">发布的任务<span class="ui-li-count">328</span></a></li>
+                    <li><a href="#">创建任务</a></li>
                 </ul>
             </div>
             <div id="two">
                 <ul data-role="listview" data-inset="false">
-                    <li><a href="#">关注的项目</a></li>
-                    <li><a href="#">推荐的项目</a></li>
-                    <li><a href="#">创建的项目</a></li>
+                    <li><a href="Pro.html" data-ajax="false">关注的项目<span class="ui-li-count">328</span></a></li>
+                    <li><a href="#">推荐的项目<span class="ui-li-count">328</span></a></li>
+                    <li><a href="#">创建的项目<span class="ui-li-count">328</span></a></li>
                     <li><a href="#">创建项目</a></li>
                 </ul>
             </div>
             <div id="three">
                 <ul data-role="listview" data-inset="false">
-                    <li><a href="#">加入的团体</a></li>
-                    <li><a href="#">关注的团体</a></li>
-                    <li><a href="#">推荐的团队</a></li>
-                    <li><a href="#">我的团体</a></li>
+                    <li><a href="#">加入的团体<span class="ui-li-count">328</span></a></li>
+                    <li><a href="#">关注的团体<span class="ui-li-count">328</span></a></li>
+                    <li><a href="#">推荐的团队<span class="ui-li-count">328</span></a></li>
+                    <li><a href="#">我的团体<span class="ui-li-count">328</span></a></li>
                     <li><a href="#">创建团体</a></li>
                 </ul>
             </div>
         </div>
         <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
             <div class="ui-panel-inner pr">
-                <div class="pltop">
-                    <img src="../img/default.jpg" class="rpph" /><h2>比特</h2>
-                </div>
                 <ul class="rpanelul">
-                    <li><a href="#"><i class="fa fa-pencil-square-o"></i>修改密码</a></li>
-                    <li><a href="#"><i class="fa fa-database"></i>我的积分</a></li>
-                    <li><a href="#"><i class="fa fa-sign-out"></i>安全退出</a></li>
+                    <li class="ui-first-child" data-icon="delete">
+                        <a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-user"></i>&nbsp;个人资料</a></li>
+                    <li><a href="#"><i class="fa fa-bell-o"></i>&nbsp;我的消息</a></li>
+                    <li><a href="#"><i class="fa fa-pencil-square-o"></i>&nbsp;修改密码</a></li>
+                    <li><a href="#"><i class="fa fa-database"></i>&nbsp;账户管理</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;安全退出</a></li>
                 </ul>
-                <style>
-                    .pr {
-                        margin: 0px;
-                        padding: 0px;
-                    }
 
-                    .pltop {
-                        background: #fff;
-                        overflow: auto;
-                        border-bottom: 1px solid #999;
-                    }
-
-                        .pltop .rpph {
-                            border-radius: 50%;
-                            width: 80px;
-                            height: 80px;
-                            float: left;
-                            margin: 5px 10px 0 10px;
-                        }
-
-                    .pltop {
-                        line-height: 50px;
-                    }
-
-                    .rpanelul {
-                        list-style: none;
-                        padding: 0;
-                        margin: 0;
-                        clear: both;
-                    }
-
-                        .rpanelul li {
-                            padding-left: 10px;
-                            background-color: #fff;
-                            width: 100%;
-                            height: 40px;
-                            border-bottom: 1px solid #999;
-                        }
-
-                            .rpanelul li a {
-                                line-height: 40px;
-                                font-size: 28px;
-                                text-decoration: none;
-                            }
-                </style>
             </div>
         </div>
 
@@ -228,7 +133,78 @@
 
     </div>
     <script>
-       
+        var j = .8;
+        var f = 1.6;
+        var l = 2;
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(20, 20, 15, 0, 2 * Math.PI);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#b5e6ff';
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(20, 20, 15, 0, j * Math.PI);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#ff494a';
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(65, 20, 15, 0, 2 * Math.PI);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#b5e6ff';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(65, 20, 15, 0, f * Math.PI);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#ff494a';
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(110, 20, 15, 0, l * Math.PI);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#b5e6ff';
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(110, 20, 15, 0, l * Math.PI);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#ff494a';
+        ctx.stroke();
+
+        ctx.fillStyle = "#000"
+        ctx.font = '1em 微软雅黑 ';
+        ctx.fillText('剑', 12, 25);
+        ctx.font = '1em 微软雅黑 ';
+        ctx.fillText('法', 57, 25);
+        ctx.font = '1em 微软雅黑 ';
+        ctx.fillText('灵', 102, 25);
+    </script>
+    <script>
+        $(function () {
+            function getQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]); return null;
+            }
+            var r = getQueryString("i");
+            //alert(r);
+            if (r == 1) {
+                $(".opt").removeClass("ui-btn-active");
+                $(".opt1").addClass("ui-btn-active");
+            } else if (r == 2) {
+                $(".opt").removeClass("ui-btn-active");
+                $(".opt2").addClass("ui-btn-active");
+            } else if (r == 3) {
+                $(".opt").removeClass("ui-btn-active");
+                $(".opt3").addClass("ui-btn-active");
+            } else {
+                $(".opt").removeClass("ui-btn-active");
+                $(".opt1").addClass("ui-btn-active");
+            }
+        })
+
     </script>
 </body>
 </html>
