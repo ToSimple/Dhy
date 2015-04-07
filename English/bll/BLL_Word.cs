@@ -16,7 +16,7 @@ namespace English.bll
         {
             var _repo = SS.GetRepo();
             _repo.Add<Word>(model);
-            if (model.Id!=null)
+            if (model.Id != 0)
             {
                 return model.Id;
             }
@@ -28,11 +28,7 @@ namespace English.bll
 
         public static List<Word> Find()
         {
-            DataTable dt=  DBHelper.GetDataSet("selet * from Word");
-            foreach (DataRow dr in dt.Rows)
-            {
-
-            }
+            return null;
         }
     }
 }

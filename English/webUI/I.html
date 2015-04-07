@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>翻译</title>
+</head>
+
+<body>
+    <form>
+        <textarea id="content"></textarea>
+        <p></p>
+        <a id="tj">提交</a>
+    </form>
+    <script src="../jqjm/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#tj").on("click", function () {
+                var a = $("#content").val();
+
+              
+                $.ajax({
+                    type: "POST",
+                    url: "../WebService1.asmx/AddWord",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    data: '{ val1: ' + a + '}',
+                    success: function (e) {
+                        alert(e.d);
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
