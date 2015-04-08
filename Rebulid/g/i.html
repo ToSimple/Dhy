@@ -8,51 +8,7 @@
     <link href="jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
     <link href="font/css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/right.css" rel="stylesheet" />
-    <script src="jqjm/jquery.min.js"></script>
-    <script src="jqjm/jquery.mobile-1.4.5.min.js"></script>
-
-    <style>
-        .cohebox {
-            opacity: 0.9;
-            filter: alpha(opacity=90); /* For IE8 and earlier */
-            margin-bottom: 10px;
-        }
-
-        .cx-l {
-            width: 40%;
-            float: left;
-        }
-
-            .cx-l .ll {
-                margin: 20px 0 0 0px;
-            }
-
-            .cx-l p {
-                margin-left: 10px;
-                font-size: 0.8em;
-            }
-
-            .cx-l .ll img {
-                margin-left: 30px;
-                -webkit-box-shadow: 0px 1px 1px #000;
-                -moz-box-shadow: 0px 1px 1px #000;
-                box-shadow: 0px 1px 1px #000;
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                border-radius: 50%;
-            }
-
-        .cx-r {
-            text-align: center;
-            float: left;
-            width: 60%;
-        }
-
-            .cx-r h3 {
-                margin: 20px 0 0 10px;
-                font-size: 1.6em;
-            }
-    </style>
+    <link href="css/i.css" rel="stylesheet" />
 </head>
 <body>
     <div data-role="page" data-theme="a">
@@ -79,8 +35,8 @@
         <div data-role="tabs" id="tabs">
             <div data-role="navbar">
                 <ul>
-                    <li><a class="opt opt1" href="#one" data-ajax="false" data-icon="info" class="ui-btn-active">任务</a></li>
-                    <li><a class="opt opt2" href="#two" data-ajax="false" data-icon="gear" name="pro">项目</a></li>
+                    <li><a class="opt opt1 ui-btn-active" href="#one" data-ajax="false" data-icon="info" >任务</a></li>
+                    <li><a class="opt opt2" href="#two" data-ajax="false" data-icon="gear">项目</a></li>
                     <li><a class="opt opt3" href="#three" data-ajax="false" data-icon="star">团体</a></li>
                     <li><a class="opt opt4" href="javascript:void(0);" data-icon="user" data-ajax="false">朋友</a></li>
                 </ul>
@@ -136,79 +92,8 @@
         </div>-->
 
     </div>
-    <script>
-        var j = .8;
-        var f = 1.6;
-        var l = 2;
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");
-
-        ctx.beginPath();
-        ctx.arc(20, 20, 15, 0, 2 * Math.PI);
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = '#b5e6ff';
-        ctx.stroke();
-
-        ctx.beginPath();
-        ctx.arc(20, 20, 15, 0, j * Math.PI);
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = '#ff494a';
-        ctx.stroke();
-
-        ctx.beginPath();
-        ctx.arc(65, 20, 15, 0, 2 * Math.PI);
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = '#b5e6ff';
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.arc(65, 20, 15, 0, f * Math.PI);
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = '#ff494a';
-        ctx.stroke();
-
-        ctx.beginPath();
-        ctx.arc(110, 20, 15, 0, l * Math.PI);
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = '#b5e6ff';
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.arc(110, 20, 15, 0, l * Math.PI);
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = '#ff494a';
-        ctx.stroke();
-
-        ctx.fillStyle = "#000"
-        ctx.font = '1em 微软雅黑 ';
-        ctx.fillText('剑', 12, 25);
-        ctx.font = '1em 微软雅黑 ';
-        ctx.fillText('法', 57, 25);
-        ctx.font = '1em 微软雅黑 ';
-        ctx.fillText('灵', 102, 25);
-    </script>
-    <script>
-        $(function () {
-            function getQueryString(name) {
-                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-                var r = window.location.search.substr(1).match(reg);
-                if (r != null) return unescape(r[2]); return null;
-            }
-            var r = getQueryString("i");
-            //alert(r);
-            if (r == 1) {
-                $(".opt").removeClass("ui-btn-active");
-                $(".opt1").addClass("ui-btn-active");
-            } else if (r == 2) {
-                $(".opt").removeClass("ui-btn-active");
-                $(".opt2").addClass("ui-btn-active");
-            } else if (r == 3) {
-                $(".opt").removeClass("ui-btn-active");
-                $(".opt3").addClass("ui-btn-active");
-            } else {
-                $(".opt").removeClass("ui-btn-active");
-                $(".opt1").addClass("ui-btn-active");
-            }
-        })
-
-    </script>
+    <script src="jqjm/jquery.min.js"></script>
+    <script src="jqjm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/i.js"></script>
 </body>
 </html>

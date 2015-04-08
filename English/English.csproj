@@ -287,6 +287,7 @@
     <Content Include="jqjm\jquery.mobile.structure-1.4.5.min.css" />
     <Content Include="jqjm\jquery.mobile.theme-1.4.5.css" />
     <Content Include="jqjm\jquery.mobile.theme-1.4.5.min.css" />
+    <Content Include="jsonp.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebService1.asmx" />
     <Content Include="webUI\I.html" />
@@ -295,6 +296,13 @@
     <Compile Include="bll\BLL_Word.cs" />
     <Compile Include="help\MysqlDBHelp.cs" />
     <Compile Include="help\SS.cs" />
+    <Compile Include="jsonp.aspx.cs">
+      <DependentUpon>jsonp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jsonp.aspx.designer.cs">
+      <DependentUpon>jsonp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="model\Word.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebService1.asmx.cs">

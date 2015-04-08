@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>翻译</title>
+</head>
+<body>
+    <form>
+        <textarea id="content"></textarea>
+        <div id="res"></div>
+        <a id="tj">提交</a>
+    </form>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            function jsonpcallback(json) {
+                console.log(json)
+            }
+            $("#tj").on("click", function () {
+                var a = $("#content").val();
+                $.ajax({
+                    url: "http://localhost:1538/jsonp.aspx",
+                    dataType: "jsonp",
+                    jsonp: "callbackparam",                    
+                    success: function (data) {
+                        var $ul = $("<ul></ul>");
+                        $.each(data, function (i, v) {
+                            $("<li/>").text(v["id"] + " " + v["name"]).appendTo($ul)
+                        });
+                        $("#res").append($ul);
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
