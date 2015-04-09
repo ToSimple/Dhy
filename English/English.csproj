@@ -69,6 +69,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="canvas\demo1.html" />
+    <Content Include="canvas\demo2.html" />
+    <Content Include="canvas\demo3.html" />
+    <Content Include="canvas\demo4.html" />
+    <Content Include="canvas\demo5.html" />
+    <Content Include="canvas\demo6.html" />
+    <Content Include="canvas\demo7.html" />
+    <Content Include="canvas\demo8.html" />
+    <Content Include="canvas\demo9.html" />
+    <Content Include="canvas\kestral.png" />
     <Content Include="jqjm\images\ajax-loader.gif" />
     <Content Include="jqjm\images\icons-png\action-black.png" />
     <Content Include="jqjm\images\icons-png\action-white.png" />

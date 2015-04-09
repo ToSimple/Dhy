@@ -18,7 +18,7 @@
 
         <div data-role="header" data-theme="a">
             <a href="i.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
-            <h1>关注的项目</h1>
+            <h1>创建项目</h1>
             <a href="#rightpanel3"><i class="fa fa-navicon"></i></a>
         </div>
         <form method="post" action="demo_form.php">
@@ -31,27 +31,55 @@
 
                 <label for="email">项目作者:</label>
                 <input type="email" name="email" id="email" placeholder="项目作者..">
+
+                <label for="info">附加信息:</label>
+                <textarea name="addinfo" id="info"></textarea>
+
+                <fieldset data-role="controlgroup">
+                    <legend>附加信息:</legend>
+                    <label for="male">M</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="female">F</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                </fieldset>
+                <fieldset data-role="controlgroup">
+                    <legend>选择类型:</legend>
+                    <label for="red">Red</label>
+                    <input type="checkbox" name="favcolor" id="red" value="red">
+                    <label for="green">Green</label>
+                    <input type="checkbox" name="favcolor" id="green" value="green">
+                    <label for="blue">Blue</label>
+                    <input type="checkbox" name="favcolor" id="blue" value="blue">
+                </fieldset>
+                <fieldset data-role="fieldcontain">
+                    <label for="day">选择时间:</label>
+                    <select name="day" id="day">
+                        <option value="mon">Monday</option>
+                        <option value="tue">Tuesday</option>
+                        <option value="wed">Wednesday</option>
+                    </select>
+                </fieldset>
             </div>
         </form>
-      
-            <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
-                <div class="ui-panel-inner pr">
 
-                    <ul class="rpanelul">
-                        <li class="ui-first-child" data-icon="delete">
-                            <a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-user"></i>&nbsp;个人资料</a></li>
-                        <li><a href="#"><i class="fa fa-bell-o"></i>&nbsp;我的消息</a></li>
-                        <li><a href="#"><i class="fa fa-pencil-square-o"></i>&nbsp;修改密码</a></li>
-                        <li><a href="#"><i class="fa fa-database"></i>&nbsp;账户管理</a></li>
-                        <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;安全退出</a></li>
-                    </ul>
+        <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
+            <div class="ui-panel-inner pr">
 
-                </div>
+                <ul class="rpanelul">
+                    <li class="ui-first-child" data-icon="delete">
+                        <a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-user"></i>&nbsp;个人资料</a></li>
+                    <li><a href="#"><i class="fa fa-bell-o"></i>&nbsp;我的消息</a></li>
+                    <li><a href="#"><i class="fa fa-pencil-square-o"></i>&nbsp;修改密码</a></li>
+                    <li><a href="#"><i class="fa fa-database"></i>&nbsp;账户管理</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;安全退出</a></li>
+                </ul>
+
             </div>
+        </div>
 
-        
+
 
         <!-- <div data-role="footer" data-theme="b">
             <h1>底部文本</h1>
