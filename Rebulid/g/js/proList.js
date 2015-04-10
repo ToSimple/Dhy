@@ -1,6 +1,6 @@
 ﻿$.ajax({
     type: "get",
-    url: "tasklist.aspx",
+    url: "prolist.aspx",
     dataType: "json",
     data: { "index": 0 },
     beforeSend: function () {
@@ -31,7 +31,7 @@ $(document).on("scrollstop", function () {
         var i = 1;
         $.ajax({
             type: "get",
-            url: "tasklist.aspx",
+            url: "prolist.aspx",
             dataType: "json",
             data: { "index": i },
             beforeSend: function () {

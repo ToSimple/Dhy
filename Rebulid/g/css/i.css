@@ -11,11 +11,7 @@
 
     .cx-l .ll {
         margin: 20px 0 0 0px;
-    }
-
-    .cx-l p {
-        margin-left: 10px;
-        font-size: 0.8em;
+        text-align:right;
     }
 
     .cx-l .ll img {
@@ -29,9 +25,15 @@
     }
 
 .cx-r {
-    text-align: center;
+    text-align: left;
     float: left;
     width: 60%;
+}
+.cx-r .box h3{
+    margin-left:50px;
+}
+.cx-r .box p{
+    margin-left:30px;
 }
 
     .cx-r h3 {

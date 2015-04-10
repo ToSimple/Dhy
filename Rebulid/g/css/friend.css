@@ -1,4 +1,6 @@
-﻿.cohebox {
+﻿
+
+    .cohebox {
     opacity: 0.9;
     filter: alpha(opacity=90); /* For IE8 and earlier */
     margin-bottom: 10px;
@@ -11,7 +13,11 @@
 
     .cx-l .ll {
         margin: 20px 0 0 0px;
-        text-align:right;
+    }
+
+    .cx-l p {
+        margin-left: 10px;
+        font-size: 0.8em;
     }
 
     .cx-l .ll img {
@@ -25,18 +31,13 @@
     }
 
 .cx-r {
-    text-align: left;
+    text-align: center;
     float: left;
     width: 60%;
-}
-.cx-r .box h3{
-    margin-left:50px;
-}
-.cx-r .box p{
-    margin-left:30px;
 }
 
     .cx-r h3 {
         margin: 20px 0 0 10px;
         font-size: 1.6em;
     }
+
