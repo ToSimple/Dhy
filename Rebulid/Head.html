@@ -37,81 +37,51 @@
     </style>
 </head>
 <body>
-
-
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="index_1.html" class="navbar-brand navCent-img navlogimg">
-                    <img src="img/logo.png" height="32" id="logo"></a>
-                <form class="mobsearch" style="display: none;">
-                    <div class="input-group navCent navCent-inp" style="width: 62%; text-align: center;">
-                        <input type="text" class="form-control" id="msec" placeholder="按名称搜索">
-                        <div class="mscrdiv" style="display: none; position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 62%; padding: 5px 0px; border: 1px solid #ccc; text-align: left;">
-                            <p><a>赛格累</a></p>
-                            <p><a>赛格累</a></p>
-                            <p><a>赛格累</a></p>
-                            <p><a>赛格累</a></p>
-                            <p><a>赛格累</a></p>
-                        </div>
-                        <div class="input-group-btn">
-                            <button class="btn-wr" tabindex="-1" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">项目</a></li>
-                    <li><a href="teacher.html">导师</a></li>
-                    <li><a href="lesson.html">课程</a></li>
-                    <li><a href="activities.html">活动</a></li>
-                    <li><a href="group.html">创客团体</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.html">登录</a></li>
-                    <li><a href="regist.html">注册</a></li>
-                    <!-- 登录成功
+    <nav>
+        <div>
+            <a href="index_1.html" class="navbar-brand navCent-img navlogimg">
+                <img src="img/logo.png" height="32" id="logo"></a>
+        </div>
+        <form class="" role="search">
+            <ul class="">
+                <li class="active"><a href="index.html">项目</a></li>
+                <li><a href="teacher.html">导师</a></li>
+                <li><a href="lesson.html">课程</a></li>
+                <li><a href="activities.html">活动</a></li>
+                <li><a href="group.html">创客团体</a></li>
+            </ul>
+            <ul class="">
+                <li><a href="login.html">登录</a></li>
+                <li><a href="regist.html">注册</a></li>
+                <!-- 登录成功
                     <li><a href="login.html">个人中心</a></li>
                     <li><a href="regist.html">注销</a></li>-->
-                </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="sec" placeholder="按课程、导师名称">
-                        <div class="scrdiv" style="display: none; position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 175px; padding: 5px 12px; border: 1px solid #ccc">
-                            <p><a>赛格累</a></p>
-                            <p><a>赛格累</a></p>
-                            <p><a>赛格累</a></p>
-                            <p><a>赛格累</a></p>
-                            <p><a>赛格累</a></p>
-                        </div>
-                        <div class="input-group-btn">
-                            <button class="btn-wr" tabindex="-1" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                        </div>
-                    </div>
-                </form>
+            </ul>
+            <div class="">
+                <input type="text" class="form-control" id="sec" placeholder="按课程、导师名称">
+                <div class="scrdiv" style="display: none; position: fixed; z-index: 9999; background-color: #fff; margin-top: 40px; width: 175px; padding: 5px 12px; border: 1px solid #ccc">
+                    <p><a>赛格累</a></p>
+                    <p><a>赛格累</a></p>
+                    <p><a>赛格累</a></p>
+                    <p><a>赛格累</a></p>
+                    <p><a>赛格累</a></p>
+                </div>
+                <div class="input-group-btn">
+                    <button class="btn-wr" tabindex="-1" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
             </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
+        </form>
     </nav>
+
+
+
+
 
     <div class="main">
         <div class="container">
             <div class="tool_bar shadow">
                 <div id="J_sortProj" class="action">
-                  <a href="#" class="active" data-sort="created_at"><i class="fa fa-reorder"></i><span>按时间</span></a>
+                    <a href="#" class="active" data-sort="created_at"><i class="fa fa-reorder"></i><span>按时间</span></a>
 
                     <a data-sort="period" href="#"><i class="fa fa-clock-o"></i><span>按周期</span></a>
                     <a href="#" data-sort="fork"><i class="fa fa-code-fork"></i><span>按Fork</span></a>

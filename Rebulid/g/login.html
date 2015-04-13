@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登录</title>
+    <link href="jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
+    <link href="jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/right.css?v=1.0" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+</head>
+<body class="loginBody">
+    <div data-role="page" data-theme="a">
+        <div class="loginHead" data-role="header" data-theme="a" data-position="fixed">
+            <a href="i.html" data-ajax="false" data-role="none">
+                <img src="../img/logo.png" /></a>
+            <h1></h1>
+            <a href="i.htm" data-role="none" data-ajax="false"><i class="fa fa-pencil-square-o"></i><strong>注册</strong></a>
+        </div>
+        <form method="post">
+            <div class="loginform" data-role="fieldcontain">
+                <label for="fullname">账户:</label>
+                <input type="text" placeholder="请输入邮箱" name="fullname" id="fullname">
+                <div class=""></div>
+                <label for="pwd">密码:</label>
+                <input type="password" placeholder="请输入密码" name="pwd" id="pwd">
+
+                <div></div>
+                <label for="val">验证码:</label>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <input type="text" name="val" id="val">
+                    </div>
+                    <div class="ui-block-b">
+                        <img class="valImg" src="../img/qrcode_for_gh_8be2fded1c7f_258.jpg" />
+                    </div>
+                </div>
+                <div></div>
+                <div class="remenber">
+                    <i class="fa fa-circle-thin"></i>记住密码
+                </div>
+                <div></div>
+
+                <a class="btn" data-role="none" data-ajax="false"><strong>登录</strong></a>
+
+            </div>
+        </form>
+        <!-- <div data-role="footer" data-theme="b">
+            <h1>底部文本</h1>
+        </div>-->
+    </div>
+    <script src="jqjm/jquery.min.js"></script>
+    <script src="jqjm/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $(function () {
+            $(".remenber").on("click", function () {
+                var a = $(this).find("i");
+                if (a.hasClass("fa-circle-thin")) {
+                    $(this).find("i").removeClass("fa-circle-thin").addClass("fa-check-circle");
+                } else {
+                    $(this).find("i").removeClass("fa-check-circle").addClass("fa-circle-thin");
+                }
+            })
+            $("#fullname").parent().prepend("<i class='fa fa-envelope-o icon'></i>");
+            $("#pwd").parent().prepend("<i class='fa fa-lock icon'></i>");
+            $(".btn").on("click", function () {
+                $("body").children().first().prepend("<div class='say'>用户名和密码不能为空</div>");
+                setTimeout(clearSay, 2000);
+            })
+            function clearSay() {
+                $(".say").remove();
+            }
+        })
+    </script>
+</body>
+</html>

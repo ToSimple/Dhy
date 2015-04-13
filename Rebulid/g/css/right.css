@@ -35,3 +35,7 @@
     text-align: center;
     display: none;
 }
+
+.search {
+    padding:0 10px;
+}
