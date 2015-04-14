@@ -14,17 +14,22 @@
         var b = $("#password").val();
         var c = $("#validateNum").val();
         var str = "";
-
+        var booft = true;
         if (a.trim() == "") {
             str = "<div class='say'>账号不能为空</div>";
+            booft = false;
         } else if (b.trim() == "") {
             str = "<div class='say'>密码不能为空</div>";
+            booft = false;
         } else if (c.trim() == "") {
             str = "<div class='say'>验证码不能为空</div>";
+            booft = false;
         }
-
-        $("body").children().first().prepend(str);
-        setTimeout(clearSay, 2000);
+        if (!booft) {
+            $("body").children().first().prepend(str);
+            setTimeout(clearSay, 2000);
+        }
+        return booft;
     })
     function clearSay() {
         $(".say").remove();

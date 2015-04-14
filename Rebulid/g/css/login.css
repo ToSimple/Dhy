@@ -39,6 +39,7 @@
 .valImg {
     height: 37px;
     width: 100px;
+    margin-left:10px;
 }
 
 
@@ -49,6 +50,7 @@
 }
 
 .btn {
+    width:100%;
     text-decoration: none;
     text-shadow: 0 0 #111;
     display: block;
