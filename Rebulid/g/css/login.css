@@ -1,51 +1,57 @@
 ﻿.loginHead {
     background-color: #0755a1;
-    border:0px;
+    border: 0px;
+    height: 50px;
 }
 
- * {
+* {
     font-family: "Microsoft YaHei";
 }
 
 .loginHead a strong {
+  
     color: #fff;
     display: inline-block;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: 300;
     text-decoration: none;
+    text-shadow: 0 0 0 #fff;
 }
 
 .loginHead a i {
+    margin: 5px 0 0 3px;
     width: 100%;
     font-weight: 300;
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #fff;
 }
 
 .loginHead a img {
-    margin: 3px 0 0 10px;
-    height: 25px;
+    margin: 5px 0 0 10px;
+    height: 35px;
 }
 
 .loginBody label {
+    margin-top: 10px;
     color: #7c7c7c;
 }
 
 .valImg {
-    height: 50px;
+    height: 37px;
     width: 100px;
 }
 
 
 .btn strong {
-     color: #fff;
-   font-weight:500;
+    color: #fff;
+    font-weight: 500;
     font-size: 1em;
 }
-.btn { text-decoration: none; text-shadow:0  0 #111;
-   
+
+.btn {
+    text-decoration: none;
+    text-shadow: 0 0 #111;
     display: block;
-    width: 100%;
     background-color: #0755a1;
     -moz-user-select: none;
     cursor: pointer;
@@ -58,51 +64,125 @@
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-   
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
     border-style: solid;
     border-width: 1px;
     font-weight: 700;
     outline: 0;
+    clear:both;
 }
 
     .btn::-moz-focus-inner {
         border-color: transparent!important;
     }
 
-.remenber {
+
+
+.icon {
+    text-align: center;
+    width: 16px;
+    margin-left: 0.3em;
+    float: left;
+    line-height: 36px;
     color: #7c7c7c;
 }
 
-    .remenber .fa {
-        color: #0755a1;
-    }
+.loginform {
+    padding: 10px 10px;
+}
 
-.icon {
-    text-align:center;
-    width:16px;
-    margin-left: 5px;
-    float: left;
-    line-height: 36px; color: #7c7c7c;
-}
-.loginform {padding: 10px 10px;
-}
     .loginform input {
-        width:80%;
+        width: 80%;
     }
 
 .say {
-    position:fixed;
-    top:0px;
+    position: fixed;
+    top: 0px;
     text-align: center;
-    z-index:99999;
-    text-shadow:0  0 #111;
-    color:#fff;
+    z-index: 99999;
+    text-shadow: 0 0 #111;
+    color: #fff;
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    line-height:44px;
     height: 44px;
-    left:3%;
-    width:94%;
+    left: 3%;
+    width: 94%;
 }
- br{
+
+.mbx {
+    color: #7c7c7c;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #7c7c7c;
+}
+
+    .mbx a {
+        text-decoration: none;
+        font-weight: 300;
+    }
+
+.ui-block-a div {
+    margin: 0;
+}
+
+.botban {
+    width: 100%;
+}
+
+    .botban .remenber {
+        color: #7c7c7c;
+        width: 40%;
+        line-height: 22px;
+        height: 22px;
+        display: inline-block;
+    }
+
+/*.remenber input {
+    display: inline-block;
+}*/
+
+/*.botban .remenber .fa {
     
+    color: #0755a1;
+}
+
+.botban .rigt {
+    text-align: right;
+    line-height: 22px;
+    height: 22px;
+    width: 50%;
+    display: inline-block;
+}
+
+    .botban .rigt a {
+        text-decoration: none;
+        color: #7c7c7c;
+        font-weight: 400;
+    }*/
+
+.remember .lb {
+    color: #7c7c7c;
+    font-weight: 400;
+    border:0px;
+    background-color:#f9f9f9;
+}
+
+
+.forget {
+    text-align: right;
+    height: 45px;
+    line-height: 45px;
+}
+
+    .forget a {
+        text-decoration: none;
+        color: #CC6666;
+        font-weight: 400;
+    }
+
+.kd {
+    height:5px;
+    width:100%;
+    clear:both;
 }

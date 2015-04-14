@@ -1,0 +1,15 @@
+﻿.btnBox {
+    padding: 0px 10px;
+}
+
+    .btnBox .btn {
+        color: #fff;
+        background: #0755a1;
+        text-shadow: 0 0 0 #fff;
+    }
+
+        .btnBox .btn:hover {
+            color: #fff;
+            background: #006699;
+            text-shadow: 0 0 0 #fff;
+        }

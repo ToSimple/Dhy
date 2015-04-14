@@ -10,7 +10,7 @@
         var str = '';
         $.each(data.list, function () {
             // alert(this.id + "-" + "-" + this.img + "-" + this.title);
-            str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
+            str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="taskInfo.html"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
         })
         $(".uplist").append(str);
     },
@@ -41,7 +41,7 @@ $(document).on("scrollstop", function () {
                 var str = '';
                 $.each(data.list, function () {
                     // alert(this.id + "-" + "-" + this.img + "-" + this.title);
-                    str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="#"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
+                    str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="taskInfo.html"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
                 })
                 $(".uplist").append(str);
             },

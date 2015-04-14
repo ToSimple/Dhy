@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>任务选项</title>
+    <link href="../jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
+    <link href="../jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/right.css" rel="stylesheet" />
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <a href="task1.html" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
+            <h1>任务选项</h1>
+           <a href="#rightpanel3"><i class="fa fa-navicon"></i></a>
+        </div>
+        <div data-role="controlgroup" data-type="vertical" class="btnBox">
+            <a href="#" data-role="button" class="btn">编辑任务</a>
+            <a href="#" data-role="button"  class="btn">删除任务</a>
+        </div>
+        
+            <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
+                <div class="ui-panel-inner pr">
+                    <ul class="rpanelul">
+                        <li class="ui-first-child" data-icon="delete"><a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a></li>
+                        <li><a href="../info.html" data-ajax="false"><i class="fa fa-user"></i>&nbsp;个人资料</a></li>
+                        <li><a href="../sendInfo.html" data-ajax="false"><i class="fa fa-bell-o"></i>&nbsp;我的消息</a></li>
+                        <li><a href="../changeMM.html" data-ajax="false"><i class="fa fa-pencil-square-o"></i>&nbsp;修改密码</a></li>
+                        <li><a href="../account.html" data-ajax="false"><i class="fa fa-database"></i>&nbsp;账户管理</a></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;安全退出</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        <!-- <div data-role="footer" data-theme="b">
+            <h1>底部文本</h1>
+        </div>-->
+    </div>
+    <script src="../jqjm/jquery.min.js"></script>
+    <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
+</body>
+</html>
