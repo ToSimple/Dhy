@@ -4,7 +4,7 @@
     dataType: "json",
     data: { "index": 0 },
     beforeSend: function () {
-        $(".load").css("display", "block");
+        $(".load").css("display", "none");
     },
     success: function (data) {
         var str = '';
@@ -16,6 +16,7 @@
     },
     complete: function () {
         $(".load").css("display", "none");
+        $(".firstLoad").css("display", "none");
     }
 })
 $(document).on("scrollstop", function () {

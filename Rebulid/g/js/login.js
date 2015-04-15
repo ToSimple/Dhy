@@ -16,22 +16,60 @@
         var str = "";
         var booft = true;
         if (a.trim() == "") {
-            str = "<div class='say'>账号不能为空</div>";
+            str = "账号不能为空";
             booft = false;
         } else if (b.trim() == "") {
-            str = "<div class='say'>密码不能为空</div>";
+            str = "密码不能为空";
             booft = false;
         } else if (c.trim() == "") {
-            str = "<div class='say'>验证码不能为空</div>";
+            str = "验证码不能为空";
             booft = false;
         }
         if (!booft) {
-            $("body").children().first().prepend(str);
-            setTimeout(clearSay, 2000);
+            showMessage(str);
         }
-        return booft;
+        else {
+            login();
+        }
     })
-    function clearSay() {
-        $(".say").remove();
+
+
+
+    //刷新验证码
+    function refrushAuthImg(obj) {
+        obj.src = obj.src + "?code=" + Math.random();
+    }
+
+
+    //登录
+    function login() {
+        //表单数据
+        var formData = {
+            'username': $("#username").val(),
+            'password': $("#password").val(),
+            'validateNum': $("#validateNum").val(),
+            'rememberMe': $("#rememberMe").val()
+        };
+
+        //ajax提交
+        $.ajax({
+            url: "user/userLogin",
+            data: formData,
+            type: "post",
+            dataType: "json",
+            success: function (results) {
+                if (results != null) {
+                    if (results.mes.length > 0)
+                    {
+                        showMessage(results.mes);
+                    }
+
+                    if (results.locationUrl.length > 0)
+                    { window.location = results.locationUrl; }
+                }
+            }, error: function (error) {
+                console.log(error);
+            }
+        });
     }
 })

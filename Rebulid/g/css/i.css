@@ -11,32 +11,38 @@
 
     .cx-l .ll {
         margin: 20px 0 0 0px;
-        text-align:right;
+        text-align: right;
     }
 
-    .cx-l .ll img {
-        margin-left: 30px;
-        -webkit-box-shadow: 0px 1px 1px #000;
-        -moz-box-shadow: 0px 1px 1px #000;
-        box-shadow: 0px 1px 1px #000;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-    }
+        .cx-l .ll img {
+            margin-left: 30px;
+            -webkit-box-shadow: 0px 1px 1px #000;
+            -moz-box-shadow: 0px 1px 1px #000;
+            box-shadow: 0px 1px 1px #000;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
 
 .cx-r {
     text-align: left;
     float: left;
     width: 60%;
 }
-.cx-r .box h3{
-    margin-left:50px;
-}
-.cx-r .box p{
-    margin-left:30px;
-}
+
+    .cx-r .box h3 {
+        margin-left: 50px;
+    }
+
+    .cx-r .box p {
+        margin-left: 30px;
+    }
 
     .cx-r h3 {
         margin: 20px 0 0 10px;
         font-size: 1.6em;
     }
+
+.inflb {
+    text-align: center;
+}

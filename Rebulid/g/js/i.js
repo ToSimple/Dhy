@@ -84,4 +84,9 @@ $(function () {
         $(".opt").removeClass("ui-btn-active");
         $(".opt1").addClass("ui-btn-active");
     }
+    //需要给安全退出加一个id="ext"
+    $("#ext").on("click", function () {
+        var r = window.confirm("你确定要退出登录账号？");
+        return r;
+    })
 })

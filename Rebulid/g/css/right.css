@@ -30,10 +30,21 @@
             text-decoration: none;
         }
 
+.firstLoad { 
+    padding-top:10px;
+    font-size:40px;
+   text-align:center;
+    height:45px;
+    line-height:45px;
+}
+   
 /*ajax加载页面*/
 .load {
+    display:none;
     text-align: center;
     display: none;
+    height:45px;
+    line-height:45px;
 }
 
 .search {
@@ -44,4 +55,8 @@
     margin-top: 10px;
     height: 60px;
     width: 80px;
+}
+
+#fm {
+    padding: 0 10px;
 }
