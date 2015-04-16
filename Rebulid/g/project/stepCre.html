@@ -3,52 +3,53 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>创建项目</title>
+    <title>创建步骤</title>
     <link href="../jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
     <link href="../jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
     <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/right.css" rel="stylesheet" />
+    <link href="../css/proinfo.css" rel="stylesheet" />
 </head>
 <body>
     <div data-role="page" data-theme="a">
 
-        <div data-role="header" data-theme="a" data-position="fixed">
-            <a href="../i.html?i=2#two" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
-
-            <h1>创建项目</h1>
-            <a href="../i.html?i=2#two" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">提交</a>
+        <div data-role="header" data-theme="a" data-position="fixed" class="headi">
+            <a href="proInfo.html" class="hdbutton ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
+            <h1>创建步骤</h1>
+            <a href="proInfo.html" class="hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">提交</a>
         </div>
-        <form method="post" action="demo_form.php">
-            <div data-role="fieldcontain">
+        <div class="box">
+            <div class="box-content-pd">
+                <form method="post">
+                    <label for="fullname">步骤标题:</label>
+                    <input type="text" name="fullname" id="full name">
 
-                <label for="fullname">步骤标题:</label>
-                <input type="text" name="fullname" id="fullname">
-
-                <label for="upl">步骤图片:</label>
-                <fieldset data-role="controlgroup">
-                    <input type="file" name="upl" id="upl">
-                    <img src="javascript:void(0);" id="img" style="width: 120px; display: none;">
-                    <input type="file" name="upl" id="File1">
-                    <img src="javascript:void(0);" id="img1" style="width: 120px; display: none;">
-                    <input type="file" name="upl" id="File2">
-                    <img src="javascript:void(0);" id="img2" style="width: 120px; display: none;">
-                </fieldset>
-
-                <label for="1">步骤说明:</label>
-                <script id="editor" type="text/plain" style="width: 1024px; height: 500px;"></script>
+                    <label for="upl">步骤图片:</label>
+                   
+                        <input type="file" name="upl" id="upl">
+                        <img src="javascript:void(0);" id="img" style="width: 120px; display: none;">
+                        <input type="file" name="upl" id="File1">
+                        <img src="javascript:void(0);" id="img1" style="width: 120px; display: none;">
+                        <input type="file" name="upl" id="File2">
+                        <img src="javascript:void(0);" id="img2" style="width: 120px; display: none;">
+                   
+                    <label for="1">步骤说明:</label>
+                    <script id="editor" type="text/plain" style="width: 100%; height: 200px;"></script>
+                </form>
             </div>
-        </form>
-        <!-- <div data-role="footer" data-theme="b">
-            <h1>底部文本</h1>
-        </div>-->
+
+        </div>
+
+
     </div>
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
     <script src="../ueditor/ueditor.config.js"></script>
     <script src="../ueditor/ueditor.all.js"></script>
-    
+
     <script>
         $(function () {
-         
+
             var ue = UE.getEditor('editor');
 
         })

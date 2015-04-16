@@ -24,35 +24,76 @@
     }
 
         .rpanelul li a {
+            color: #0755a1;
             display: block;
             line-height: 40px;
             font-size: 1em;
             text-decoration: none;
         }
 
-.firstLoad { 
-    padding-top:10px;
-    font-size:40px;
-   text-align:center;
-    height:45px;
-    line-height:45px;
-}
-   
-/*ajax加载页面*/
-.load {
-    display:none;
+.firstLoad {
+    padding-top: 10px;
+    font-size: 25px;
     text-align: center;
-    display: none;
-    height:45px;
-    line-height:45px;
+    height: 45px;
+    line-height: 45px;
 }
 
+/*ajax加载页面*/
+.load {
+    font-size: 20px;
+    display: none;
+    text-align: center;
+    display: none;
+    height: 45px;
+    line-height: 45px;
+}
+
+.headi {
+    background-color: #0755a1;
+    text-shadow: 0 0 0 #fff;
+    color: #fff;
+    height: 50px;
+    font-weight: 500;
+}
+
+    .headi h1 {
+        
+        height: 32px;
+        line-height: 32px;
+    }
+
+    .headi .hdbutton {
+        display: inline-block;
+        margin-top: 5px;
+    }
+
+.head {
+    background-color: #0755a1;
+    text-shadow: 0 0 0 #fff;
+    color: #fff;
+    height: 110px;
+    font-weight: 500;
+}
+
+    .head h1 {
+        height: 32px;
+        line-height: 32px;
+    }
+
+    .head .hdbutton {
+        display: inline-block;
+        margin-top: 5px;
+    }
+
 .search {
-    padding: 0 10px;
+    height: 45px;
+    padding: 2px 5px 10px 5px;
+    background-color: #fff;
 }
 
 .uplist img {
-    margin-top: 10px;
+    margin: 10px 0 0 5px;
     height: 60px;
     width: 80px;
 }

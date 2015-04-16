@@ -10,7 +10,7 @@
         var str = '';
         $.each(data.list, function () {
             // alert(this.id + "-" + "-" + this.img + "-" + this.title);
-            str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="proInfo.html"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
+            str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="proInfo.html" data-ajax="false"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
         })
         $(".uplist").append(str);
     },
@@ -18,7 +18,8 @@
         $(".load").css("display", "none");
         $(".firstLoad").css("display", "none");
     }
-})
+});
+var i = 1;
 $(document).on("scrollstop", function () {
     //alert($(window).scrollTop());//这个方法是当前滚动条滚动的距离
     //alert($(window).height());//获取当前窗体的高度
@@ -29,22 +30,25 @@ $(document).on("scrollstop", function () {
     var dh = $(document).height();
     //alert(dh - wh - ws);
     if (dh - wh - ws < 50) {
-        var i = 1;
+      
         $.ajax({
             type: "get",
             url: "prolist.aspx",
             dataType: "json",
             data: { "index": i },
             beforeSend: function () {
-                $(".load").css("display", "block");
+                if (i!=1) {
+                    $(".load").css("display", "block");
+                }                
             },
             success: function (data) {
                 var str = '';
                 $.each(data.list, function () {
                     // alert(this.id + "-" + "-" + this.img + "-" + this.title);
-                    str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="proInfo.html"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
+                    str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="proInfo.html" data-ajax="false"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
                 })
                 $(".uplist").append(str);
+                i++;
             },
             complete: function () {
                 $(".load").css("display", "none");
@@ -52,3 +56,10 @@ $(document).on("scrollstop", function () {
         })
     }
 });
+$(function () {
+    $("#search").on("change", function () {
+      
+    });
+});
+
+
