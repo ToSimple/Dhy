@@ -5,7 +5,7 @@ using System.Text;
 
 namespace acm
 {
-    class Program
+    class 大杀器
     {
         static void Main(string[] args)
         {
@@ -114,44 +114,41 @@ namespace acm
             //acm.Acm1018(a, b);
 
 
-           List<a> items = new List<a>();
-           items.Add(new a { Id = 1, Name = "小米", ComeDate = DateTime.Now, Year="一年级" });
-           items.Add(new a { Id = 2, Name = "小明", ComeDate = DateTime.Now.AddDays(2), Year = "一年级" });
-           items.Add(new a { Id = 3, Name = "小王", ComeDate = DateTime.Now.AddDays(1), Year = "一年级" });
+            //List<a> items = new List<a>();
+            //items.Add(new a { Id = 1, Name = "小米", ComeDate = DateTime.Now, Year="一年级" });
+            //items.Add(new a { Id = 2, Name = "小明", ComeDate = DateTime.Now.AddDays(2), Year = "一年级" });
+            //items.Add(new a { Id = 3, Name = "小王", ComeDate = DateTime.Now.AddDays(1), Year = "一年级" });
 
-           List<a> items2 = new List<a>();
-           items2.Add(new a { Id = 1, Name = "小米", ComeDate = DateTime.Now, Year = "一年级" });
-           items2.Add(new a { Id = 2, Name = "小明", ComeDate = DateTime.Now.AddDays(2), Year = "二年级" });
-           items2.Add(new a { Id = 3, Name = "小王", ComeDate = DateTime.Now.AddDays(1), Year = "二年级" });
+            //List<a> items2 = new List<a>();
+            //items2.Add(new a { Id = 1, Name = "小米", ComeDate = DateTime.Now, Year = "一年级" });
+            //items2.Add(new a { Id = 2, Name = "小明", ComeDate = DateTime.Now.AddDays(2), Year = "二年级" });
+            //items2.Add(new a { Id = 3, Name = "小王", ComeDate = DateTime.Now.AddDays(1), Year = "二年级" });
 
-           List<a> items3 = new List<a>();
-           items3.Add(new a { Id = 1, Name = "小米", ComeDate = DateTime.Now, Year = "一年级" });
-           items3.Add(new a { Id = 2, Name = "小明", ComeDate = DateTime.Now.AddDays(2), Year = "二年级" });
-           items3.Add(new a { Id = 3, Name = "小王", ComeDate = DateTime.Now.AddDays(1), Year = "三年级" });
+            //List<a> items3 = new List<a>();
+            //items3.Add(new a { Id = 1, Name = "小米", ComeDate = DateTime.Now, Year = "一年级" });
+            //items3.Add(new a { Id = 2, Name = "小明", ComeDate = DateTime.Now.AddDays(2), Year = "二年级" });
+            //items3.Add(new a { Id = 3, Name = "小王", ComeDate = DateTime.Now.AddDays(1), Year = "三年级" });
 
-           foreach (var i in items2.GroupBy(c => c.Year).Select(d => new { d.Key, Value = d.OrderByDescending(c => c.ComeDate).ToList() }))
-           {
-              
-               Console.WriteLine("Key="+ i.Key);
-               Console.WriteLine("Vale:");
-               foreach (var j in i.Value)
-               {
-                   Console.WriteLine("年纪"+j.Year);
-                   Console.WriteLine("学号="+j.Id);
-                   Console.WriteLine("姓名="+j.Name);
-                   Console.WriteLine("入学时间=" + j.ComeDate);
-               }
-             
-           }
-           
+            //foreach (var i in items2.GroupBy(c => c.Year).Select(d => new { d.Key, Value = d.OrderByDescending(c => c.ComeDate).ToList() }))
+            //{
+
+            //    Console.WriteLine("Key="+ i.Key);
+            //    Console.WriteLine("Vale:");
+            //    foreach (var j in i.Value)
+            //    {
+            //        Console.WriteLine("年纪"+j.Year);
+            //        Console.WriteLine("学号="+j.Id);
+            //        Console.WriteLine("姓名="+j.Name);
+            //        Console.WriteLine("入学时间=" + j.ComeDate);
+            //    }
+
+            //}
+
+
+
 
         }
-        public class a
-        {
-            public int Id { get; set; }
-            public string Name { get; set; }
-            public DateTime ComeDate { get; set; }
-            public string Year { get; set; }
-        }
+
+
     }
 }

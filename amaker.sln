@@ -115,6 +115,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "English", "English\English.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLbug", "HTMLbug\HTMLbug.csproj", "{B66ADFAF-BD8A-4BE7-993A-D9595E03C75D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Play", "Play\Play.csproj", "{EC729DCF-1CA2-4B17-B01B-FB55374B449F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -235,6 +237,16 @@ Global
 		{B66ADFAF-BD8A-4BE7-993A-D9595E03C75D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B66ADFAF-BD8A-4BE7-993A-D9595E03C75D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B66ADFAF-BD8A-4BE7-993A-D9595E03C75D}.Release|Win32.ActiveCfg = Release|Any CPU
+		{EC729DCF-1CA2-4B17-B01B-FB55374B449F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC729DCF-1CA2-4B17-B01B-FB55374B449F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC729DCF-1CA2-4B17-B01B-FB55374B449F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EC729DCF-1CA2-4B17-B01B-FB55374B449F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EC729DCF-1CA2-4B17-B01B-FB55374B449F}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{EC729DCF-1CA2-4B17-B01B-FB55374B449F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC729DCF-1CA2-4B17-B01B-FB55374B449F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC729DCF-1CA2-4B17-B01B-FB55374B449F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EC729DCF-1CA2-4B17-B01B-FB55374B449F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EC729DCF-1CA2-4B17-B01B-FB55374B449F}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
