@@ -1,0 +1,180 @@
+.tool_bar {
+  height: 40px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  line-height: 40px;
+  padding-left: 1em;
+  position: fixed;
+  width: 940px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1;
+}
+.tool_bar h1 {
+  font-size: 1.2em;
+  font-weight: normal;
+  display: inline;
+}
+.tool_bar .action {
+  float: right;
+}
+.tool_bar .action a {
+  display: inline-block;
+  text-decoration: none;
+  color: #666;
+  height: 100%;
+  padding: 0 1.2em;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.tool_bar .action a.active,
+.tool_bar .action a.active:hover,
+.tool_bar .action a.active:active {
+  border-left: 1px solid #E0E0E0;
+  border-right: 1px solid #E0E0E0;
+  background-color: #F5F5F5;
+}
+.tool_bar .action a:hover {
+  background-color: #F5F5F5;
+}
+.tool_bar .action a:active {
+  background-color: #EEE;
+}
+.tool_bar .action a.last,
+.tool_bar .action a.last:hover,
+.tool_bar .action a.last:active {
+  border-radius: 0 6px 6px 0;
+  border-right: none;
+}
+.tool_bar .action a .fa {
+  margin-right: 5px;
+}
+.tool_bar .avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 3px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+@media (max-width: 960px) {
+  .tool_bar {
+    width: 100%;
+    margin-left: -10px;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    top: 46px;
+  }
+  .tool_bar .action a.last {
+    border-radius: 0;
+  }
+}
+@media (max-width: 520px) {
+  .tool_bar .action a {
+    padding: 0 .8em;
+  }
+  .tool_bar .action a span {
+    display: none;
+  }
+  .tool_bar .action a .fa {
+    margin-right: 0;
+  }
+}
+.prj_card {
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  width: 220px;
+  overflow: hidden;
+}
+.prj_card img {
+  width: 100%;
+}
+.prj_card .info_wrap {
+  padding: 0 .9em;
+  border-bottom: 1px solid #EEEFEA;
+}
+.prj_card .bottom {
+  padding: .8em 0;
+}
+.prj_card .bottom span {
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+  color: #666;
+}
+.prj_card .bottom span .fa {
+  color: #FA5473;
+  font-size: 1.2em;
+  margin-right: 3px;
+}
+@media (max-width: 480px) {
+  .prj_card .bottom span {
+    width: 31%;
+  }
+}
+#gotop {
+  position: fixed;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+  bottom: 8px;
+  right: 8px;
+  border-radius: 4px;
+  visibility: hidden;
+  background-repeat: no-repeat;
+  color: #ADADAD;
+  background: #fff;
+  font-size: 2.5em;
+  text-align: center;
+  line-height: 50px;
+}
+#gotop:hover {
+  background-position: 0 -50px;
+  text-decoration: none;
+}
+#woo-holder {
+  margin-top: 50px;
+}
+@media (max-width: 960px) {
+  #woo-holder {
+    margin-top: 40px;
+  }
+}
+.woo-pager ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 3em 0 3em;
+}
+.woo-pager ul li {
+  display: inline-block;
+  padding: 0 1em;
+}
+/* loading */
+.woo-loading {
+  height: 40px;
+  background: url(http://cdn.duitang.com/uploads/people/201307/30/20130730175612_KU2dF.gif) center 12px no-repeat;
+}
+/* masn 生效前设置不可见 */
+.woo-masned {
+  zoom: 1;
+  overflow: visible;
+  visibility: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* woo 基本单元块，初始状态不可见 */
+.woo-masned .woo {
+  position: absolute;
+  top: -6000px;
+  overflow: visible;
+  transition: top 0.8s ease-in-out, left 0.8s ease-in-out;
+  -webkit-transition: top 0.8s ease-in-out, left 0.8s ease-in-out;
+  -moz-transition: top 0.8s ease-in-out, left 0.8s ease-in-out;
+  -o-transition: top 0.8s ease-in-out, left 0.8s ease-in-out;
+}

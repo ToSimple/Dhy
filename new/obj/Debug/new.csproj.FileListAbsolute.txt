@@ -1,0 +1,5 @@
+D:\github\Dhy\new\bin\@new.dll
+D:\github\Dhy\new\bin\@new.pdb
+D:\github\Dhy\new\obj\Debug\new.csprojResolveAssemblyReference.cache
+D:\github\Dhy\new\obj\Debug\@new.dll
+D:\github\Dhy\new\obj\Debug\@new.pdb

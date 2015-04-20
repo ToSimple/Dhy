@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
+    <link href="jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="font/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="css/right.css?v=1.0" rel="stylesheet" />
+    <link href="css/i.css?v=1.0" rel="stylesheet" />
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <a href="i.html" data-ajax="false" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-home">主页</a>
+            <h1>用户中心</h1>
+            <a href="#rightpanel3"><i class="fa fa-navicon" style=""></i></a>
+        </div>
+        <div class="cohebox">
+            <div class="cx-l">
+                <div class="ll">
+                    <img width="100" height="100" src="../img/default.jpg" />
+                </div>
+            </div>
+            <div class="cx-r">
+                <div class="box">
+                    <h3>比特</h3>
+                    <p><i class="fa fa-database"></i>账户积分:124</p>
+                    <canvas id="myCanvas" width="180" height="60">你的浏览器不支持HTML 的Canvas动画，请更换浏览器</canvas>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="fieldcontain" class="ui-field-contain inflb">
+            <label for="name">全名：哈哈哈</label>
+            <label for="search">生日：1990-03-01</label>
+            <label for="colors">选择喜爱的颜色：红色</label>
+        </div>
+
+
+
+        <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
+            <div class="ui-panel-inner pr">
+                <ul class="rpanelul">
+                    <li class="ui-first-child" data-icon="delete">
+                        <a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a>
+                    </li>
+                    <li><a href="infochange.html"><i class="fa fa-user"></i>&nbsp;修改个人资料</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- <div data-role="footer" data-theme="b">
+            <h1>底部文本</h1>
+        </div>-->
+
+    </div>
+    <script src="jqjm/jquery.min.js"></script>
+    <script src="jqjm/jquery.mobile-1.4.5.min.js"></script>
+
+</body>
+</html>

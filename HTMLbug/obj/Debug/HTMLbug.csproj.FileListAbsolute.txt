@@ -1,0 +1,6 @@
+D:\github\Dhy\HTMLbug\bin\Debug\HTMLbug.exe.config
+D:\github\Dhy\HTMLbug\bin\Debug\HTMLbug.exe
+D:\github\Dhy\HTMLbug\bin\Debug\HTMLbug.pdb
+D:\github\Dhy\HTMLbug\obj\Debug\HTMLbug.csprojResolveAssemblyReference.cache
+D:\github\Dhy\HTMLbug\obj\Debug\HTMLbug.exe
+D:\github\Dhy\HTMLbug\obj\Debug\HTMLbug.pdb

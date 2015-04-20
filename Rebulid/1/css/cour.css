@@ -1,0 +1,38 @@
+﻿.title{
+		background-color: #fff;
+   		border-bottom: 1px solid #eee;
+    	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		text-align:center;
+	}
+	.title h2{
+		margin-top:10px;	
+		margin-bottom:00px;	
+	}
+	.tit-ps{
+		font-size:20px;
+		margin-bottom:10px;
+	}
+	.im{
+		margin-bottom:10px;
+		text-align:center;
+		font-size:16px;
+	}
+	.im img{
+		margin-bottom:3px;
+	}
+	.im-tea{
+		outline:4px solid #e38d13;
+	}
+	.im-zj{
+		outline:4px solid #428bca ;
+	}
+	.media-heading{
+		font-size:18px;
+		font-style:italic;
+	}
+	.im-stu{
+		outline:4px solid #ccc;
+	}
+	.btn-yy{
+		border-radius:10px;
+	}

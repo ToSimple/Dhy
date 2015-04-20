@@ -1,0 +1,5 @@
+D:\github\Dhy\NewAmaker\bin\NewAmaker.dll
+D:\github\Dhy\NewAmaker\bin\NewAmaker.pdb
+D:\github\Dhy\NewAmaker\obj\Debug\NewAmaker.dll
+D:\github\Dhy\NewAmaker\obj\Debug\NewAmaker.pdb
+D:\github\Dhy\NewAmaker\obj\Debug\NewAmaker.csprojResolveAssemblyReference.cache

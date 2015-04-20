@@ -1,0 +1,5 @@
+D:\github\Dhy\bbl\bin\bbl.dll
+D:\github\Dhy\bbl\bin\bbl.pdb
+D:\github\Dhy\bbl\obj\Debug\bbl.dll
+D:\github\Dhy\bbl\obj\Debug\bbl.pdb
+D:\github\Dhy\bbl\obj\Debug\bbl.csprojResolveAssemblyReference.cache

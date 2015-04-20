@@ -1,0 +1,6 @@
+D:\github\Dhy\Play\bin\Debug\Play.exe.config
+D:\github\Dhy\Play\bin\Debug\Play.exe
+D:\github\Dhy\Play\bin\Debug\Play.pdb
+D:\github\Dhy\Play\obj\Debug\Play.exe
+D:\github\Dhy\Play\obj\Debug\Play.pdb
+D:\github\Dhy\Play\obj\Debug\Play.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+D:\github\Dhy\English\bin\English.dll
+D:\github\Dhy\English\bin\English.pdb
+D:\github\Dhy\English\obj\Debug\English.dll
+D:\github\Dhy\English\obj\Debug\English.pdb
+D:\github\Dhy\English\obj\Debug\English.csprojResolveAssemblyReference.cache
