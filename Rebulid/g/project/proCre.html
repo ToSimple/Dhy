@@ -7,77 +7,73 @@
     <link href="../jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
     <link href="../jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
     <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
+
     <link href="../css/right.css" rel="stylesheet" />
     <link href="../css/proinfo.css" rel="stylesheet" />
+    <link href="../css/Cret.css" rel="stylesheet" />
 </head>
 <body>
     <div data-role="page" data-theme="a">
 
-        <div data-role="header" data-theme="a" data-position="fixed">
-            <a href="../i.html?i=2#two" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
-
+        <div data-role="header" data-theme="a" data-position="fixed" class="headi ">
+            <a href="../i.html?i=2#two" class="hdbutton ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
             <h1>创建项目</h1>
-            <a href="../i.html?i=2#two" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">提交</a>
+            <a href="javascript:;" class="btn hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">提交</a>
         </div>
         <div class="box">
-            <div class="box-content">
+            <div class="box-content-pd">
                 <form method="post">
-                    <div data-role="fieldcontain">
-                        <label for="fullname">项目名称:</label>
-                        <input type="text" name="fullname" id="fullname">
+                    <div data-role="fieldcontain" class="formPro">
+                        <label for="day">分类</label>
+                        <select name="day" id="type">
+                            <option value="qt">其他</option>
+                            <option value="cd">穿戴</option>
+                            <option value="pr">烹饪</option>
+                            <option value="jj">家居</option>
+                            <option value="hw">户外</option>
+                            <option value="yl">娱乐</option>
+                            <option value="mx">模型</option>
 
-                        <label for="bday">项目创建时间:</label>
-                        <input type="date" name="bday" id="bday">
-
-                        <label for="email">项目作者:</label>
-                        <input type="email" name="email" id="email" placeholder="项目作者..">
-
-                        <label for="info">附加信息:</label>
-                        <textarea name="info" id="info"></textarea>
-
-                        
+                        </select>
+                        <div class="kd"></div>
+                        <label for="name">项目名称:</label>
+                        <input type="text" name="name" id="name"><div class="kd"></div>
+                        <label for="tip">项目标签:</label>
+                        <input type="text" name="tip" id="tip"><div class="kd"></div>
+                        <label for="bq">项目版权:</label>
+                        <input type="text" name="bq" id="bq"><div class="kd"></div>
+                        <label for="zl">参考资料:</label>
+                        <input type="text" name="zl" id="zl"><div class="kd"></div>
+                        <label for="ly">来源:</label>
+                        <input type="text" name="ly" id="ly"><div class="kd"></div>
+                        <label for="info">简介:</label>
+                        <script id="editor" type="text/plain"></script><div class="kd"></div>
+                        <div class="clear"></div>
                         <label for="upl">上传图片:</label>
-                        <input type="file" name="upl" id="upl">
-                        <img src="javascript:void(0);" id="img" style="width: 120px; display: none;">
-                        <input type="file" name="upl" id="File1">
-                        <img src="javascript:void(0);" id="img1" style="width: 120px; display: none;">
-                        <input type="file" name="upl" id="File2">
-                        <img src="javascript:void(0);" id="img2" style="width: 120px; display: none;">
-
-                        <fieldset data-role="controlgroup">
-                            <legend>附加信息:</legend>
-                            <label for="male">M</label>
-                            <input type="radio" name="gender" id="male" value="male">
-                            <label for="female">F</label>
-                            <input type="radio" name="gender" id="female" value="female">
-                        </fieldset>
-                        <fieldset data-role="controlgroup">
-                            <legend>选择类型:</legend>
-                            <label for="red">Red</label>
-                            <input type="checkbox" name="favcolor" id="red" value="red">
-                            <label for="green">Green</label>
-                            <input type="checkbox" name="favcolor" id="green" value="green">
-                            <label for="blue">Blue</label>
-                            <input type="checkbox" name="favcolor" id="blue" value="blue">
-                        </fieldset>
-                        <fieldset data-role="fieldcontain">
-                            <label for="day">选择时间:</label>
-                            <select name="day" id="day">
-                                <option value="mon">Monday</option>
-                                <option value="tue">Tuesday</option>
-                                <option value="wed">Wednesday</option>
+                        <input type="file" name="upl" id="upl" />
+                        <img src="javascript:void(0);" id="img" />
+                        <input type="file" name="upl" id="File1" />
+                        <img src="javascript:void(0);" id="img1" />
+                        <input type="file" name="upl" id="File2" />
+                        <img src="javascript:void(0);" id="img2" />
+                        <div data-role="fieldcontain">
+                            <label for="switch">发布状态:</label>
+                            <select name="switch" id="switch" data-role="slider">
+                                <option value="off">暂缓</option>
+                                <option value="on">发布</option>
                             </select>
-                        </fieldset>
-
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
-        <!-- <div data-role="footer" data-theme="b">
-            <h1>底部文本</h1>
-        </div>-->
     </div>
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../ueditor/ueditor.config.js"></script>
+    <script src="../ueditor/ueditor.all.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/proCre.js"></script>
+
 </body>
 </html>

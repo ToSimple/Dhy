@@ -7,48 +7,32 @@
     <link href="../jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
     <link href="../jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
     <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/right.css" rel="stylesheet" />
+    <link href="../css/proinfo.css" rel="stylesheet" />
+    <link href="../css/Cret.css" rel="stylesheet" />
+
 </head>
 <body>
     <div data-role="page" data-theme="a">
 
-        <div data-role="header" data-theme="a" data-position="fixed">
-            <a href="../i.html?i=2#two" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
-
+        <div data-role="header" data-theme="a" data-position="fixed" class="headi">
+            <a href="../i.html?i=2#two" class="hdbutton ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
             <h1>项目步骤</h1>
-            <a href="../i.html?i=2#two" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">提交</a>
+            <a href="../i.html?i=2#two" class="hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">提交</a>
         </div>
-        <form method="post">
-            <div data-role="box">
-                <label for="fullname">步骤标题:</label>
-                <div>
-                    <img src="../../img/ccb41d56e312309107e86d74b1615ca99e819079.jpg" />
-                </div>
-                <div>
-                    <img src="../../img/ccb41d56e312309107e86d74b1615ca99e819079.jpg" />
-                </div>
-                <div>
-                    <img src="../../img/ccb41d56e312309107e86d74b1615ca99e819079.jpg" />
-                </div>
-                <label for="1">步骤说明:</label>
-                <script id="editor" type="text/plain" style="width: 1024px; height: 500px;"></script>
+        <div class="box">
+            <div class="box-content-pd">
+                <h2>制作步骤</h2>
+                <p>这是一个特殊步骤这是一个特殊步骤这是一个特殊步骤这是一个特殊步骤这是一个特殊步骤这是一个特殊步骤这是一个特殊步骤</p>
+                <label for="upl">步骤图片:</label>
+                <img src="../../img/ccb41d56e312309107e86d74b1615ca99e819079.jpg" />
+                <img src="../../img/ccb41d56e312309107e86d74b1615ca99e819079.jpg" />
+                <img src="../../img/ccb41d56e312309107e86d74b1615ca99e819079.jpg" />
             </div>
-        </form>
-        <!-- <div data-role="footer" data-theme="b">
-            <h1>底部文本</h1>
-        </div>-->
+        </div>
+
     </div>
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
-    <script src="../ueditor/ueditor.config.js"></script>
-    <script src="../ueditor/ueditor.all.js"></script>
-
-    <script>
-        $(function () {
-
-            var ue = UE.getEditor('editor');
-
-        })
-
-    </script>
 </body>
 </html>

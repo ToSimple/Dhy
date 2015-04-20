@@ -25,9 +25,7 @@
         </div>
         <div class="firstLoad"><i class="fa fa-refresh fa-spin"></i></div>
         <ul data-role="listview" data-inset="false" class="uplist">
-            
         </ul>
-
         <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
             <div class="ui-panel-inner pr">
                 <ul class="rpanelul">
@@ -36,11 +34,10 @@
                     <li><a href="../sendInfo.html" data-ajax="false"><i class="fa fa-bell-o"></i>&nbsp;我的消息</a></li>
                     <li><a href="../changeMM.html" data-ajax="false"><i class="fa fa-pencil-square-o"></i>&nbsp;修改密码</a></li>
                     <li><a href="../account.html" data-ajax="false"><i class="fa fa-database"></i>&nbsp;账户管理</a></li>
-                    <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;安全退出</a></li>
+                    <li><a href="javascript:;" class="out"><i class="fa fa-sign-out"></i>&nbsp;安全退出</a></li>
                 </ul>
             </div>
         </div>
-
         <div data-role="footer" class="load" data-position="fixed">
             <i class="fa fa-refresh fa-spin"></i>
         </div>
@@ -48,5 +45,14 @@
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
     <script src="../js/proList.js"></script>
+    <script>
+        $(".out").on("click", function () {
+            var r = confirm("您是否确定要退出？");
+            if (r == true) {
+            }
+            else {
+            }
+        });
+    </script>
 </body>
 </html>

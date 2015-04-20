@@ -53,14 +53,14 @@
     background-color: #0755a1;
     text-shadow: 0 0 0 #fff;
     color: #fff;
-    height: 50px;
+    height: 54px;
     font-weight: 500;
 }
 
+
     .headi h1 {
-        
-        height: 32px;
-        line-height: 32px;
+        height: 44px;
+        line-height: 30px;
     }
 
     .headi .hdbutton {
@@ -101,3 +101,27 @@
 #fm {
     padding: 0 10px;
 }
+
+.say {
+    position: fixed;
+    top: 0px;
+    text-align: center;
+    z-index: 99999;
+    text-shadow: 0 0 #111;
+    color: #fff;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+    line-height: 44px;
+    height: 44px;
+    left: 3%;
+    width: 94%;
+}
+
+a {
+    text-decoration: none;
+    color: #0755a1;
+}
+
+    a:hover {
+        text-decoration: none;
+        color: #0654a0;
+    }

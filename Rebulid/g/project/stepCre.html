@@ -9,6 +9,7 @@
     <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
     <link href="../css/right.css" rel="stylesheet" />
     <link href="../css/proinfo.css" rel="stylesheet" />
+    <link href="../css/Cret.css" rel="stylesheet" />
 </head>
 <body>
     <div data-role="page" data-theme="a">
@@ -16,44 +17,35 @@
         <div data-role="header" data-theme="a" data-position="fixed" class="headi">
             <a href="proInfo.html" class="hdbutton ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
             <h1>创建步骤</h1>
-            <a href="proInfo.html" class="hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">提交</a>
+            <a href="javascript:;" class="hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">提交</a>
         </div>
         <div class="box">
             <div class="box-content-pd">
                 <form method="post">
-                    <label for="fullname">步骤标题:</label>
-                    <input type="text" name="fullname" id="full name">
+                    <div data-role="fieldcontain" class="formPro">
+                        <label for="fullname">步骤标题:</label>
+                        <input type="text" name="fullname" id="full name">
+                        <label for="1">步骤说明:</label>
+                        <script id="editor" type="text/plain"></script><div class="clear"></div>
+                        <label for="upl">步骤图片:</label>
 
-                    <label for="upl">步骤图片:</label>
-                   
                         <input type="file" name="upl" id="upl">
-                        <img src="javascript:void(0);" id="img" style="width: 120px; display: none;">
+                        <img src="javascript:void(0);" id="img">
                         <input type="file" name="upl" id="File1">
-                        <img src="javascript:void(0);" id="img1" style="width: 120px; display: none;">
+                        <img src="javascript:void(0);" id="img1">
                         <input type="file" name="upl" id="File2">
-                        <img src="javascript:void(0);" id="img2" style="width: 120px; display: none;">
-                   
-                    <label for="1">步骤说明:</label>
-                    <script id="editor" type="text/plain" style="width: 100%; height: 200px;"></script>
+                        <img src="javascript:void(0);" id="img2">
+                    </div>
                 </form>
             </div>
 
         </div>
-
-
     </div>
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
     <script src="../ueditor/ueditor.config.js"></script>
     <script src="../ueditor/ueditor.all.js"></script>
-
-    <script>
-        $(function () {
-
-            var ue = UE.getEditor('editor');
-
-        })
-
-    </script>
+    <script src="../js/common.js"></script>
+    <script src="../js/stepCre.js"></script>
 </body>
 </html>
