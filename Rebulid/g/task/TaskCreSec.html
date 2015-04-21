@@ -15,26 +15,19 @@
         <div data-role="header" data-theme="a" data-position="fixed">
             <a href="../i.html?i=1#one" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
             <h1>创建任务</h1>
-            <a href="../i.html?i=1#one" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">下一步</a>
+            <a href="../i.html?i=1#one" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">完成</a>
         </div>
         <div class="box">
             <div class="box-head">
-                <div class="title">基本信息</div>
+                <div class="title">限定条件信息</div>
             </div>
             <div class="box-content-pd">
                 <div data-role="fieldcontain">
-                    <label for="fullname">任务类别:</label>
-                    <select name="day" id="type">
-                        <option value="1">系统</option>
-                        <option value="2">用户</option>
-                    </select>
+                    <label for="date">开始时间:</label>
+                    <input type="datetime" id="date"/>
                     <div class="kd"></div>
-                    <label for="bday">任务属性:</label>
-                    <select name="day" id="Select1">
-                        <option value="1">剑</option>
-                        <option value="2">法</option>
-                        <option value="3">灵</option>
-                    </select>
+                   <label for="Datetime1">截至时间:</label>
+                    <input type="datetime" id="Datetime1"/>
                     <div class="kd"></div>
                     <label for="email">任务名称:</label>
                     <input type="text" name="a" id="a" placeholder="任务名称">
@@ -68,10 +61,5 @@
     </div>
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
-
-    <script>
-
-
-    </script>
 </body>
 </html>

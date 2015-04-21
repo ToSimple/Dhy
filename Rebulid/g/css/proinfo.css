@@ -50,7 +50,15 @@
 
                 .box .box-content .info {
                     padding: 10px 10px;
-                    line-height:25px
+                    line-height:25px;
+                    word-break:break-all; /*支持IE，chrome，FF不支持*/
+                    word-wrap:break-word;/*支持IE，chrome，FF*/
+                }
+                .box .box-content-pd .info {
+                    padding: 10px 10px;
+                    line-height:25px;
+                    word-break:break-all; /*支持IE，chrome，FF不支持*/
+                    word-wrap:break-word;/*支持IE，chrome，FF*/
                 }
 
             .box .box-content-pd {

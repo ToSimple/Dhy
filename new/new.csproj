@@ -57,45 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Amaker.htm" />
-    <Content Include="Amaker_files\0c137de7e2ac6ff16319e22724ee226b2d986a24.png" />
-    <Content Include="Amaker_files\0e43dd849abad411322ff7efa4ccbdd4842905ba.png" />
-    <Content Include="Amaker_files\147509eb9f558c21f29a505e1824933e8fea7ac1.png" />
-    <Content Include="Amaker_files\17275536.js" />
-    <Content Include="Amaker_files\2af567ef0fddecdc7fbc36c3bf37101b83f349d6.png" />
-    <Content Include="Amaker_files\2c3eaf656f086f4e65d632708d07b1ffb7310da8.png" />
-    <Content Include="Amaker_files\2ddc358c6b21ff7d1bbf2086fceccb39d4af72c8.jpg" />
-    <Content Include="Amaker_files\3f570afe9f288528407386deb7cb22b997dd34d7.jpg" />
-    <Content Include="Amaker_files\49223b19fab0e6a0a0032e1de00f45dee7ce6b00.png" />
-    <Content Include="Amaker_files\6a5b5a5bead4132d915cc26927946a6a21541e5d.png" />
-    <Content Include="Amaker_files\6c868c559e71dc41a86345a93ceb214ee3fab5fc.png" />
-    <Content Include="Amaker_files\75a2e8ab7a556ae4fa9c29e4bd8a0a5b46791d84.jpg" />
-    <Content Include="Amaker_files\837fc0c6dd85b7de7a64ea9712f1f6cc707cc9ee.png" />
-    <Content Include="Amaker_files\897929ec2d1eb43ed0aa83cdd685f43c3db93b15.jpg" />
-    <Content Include="Amaker_files\a823bfe122393df6bf78f2fcabe367fc20b99b77.jpg" />
-    <Content Include="Amaker_files\ab055dc6e81baad25320fa045c9cb6402fb18f9f.png" />
-    <Content Include="Amaker_files\acd2c8d0245eb97b0dcf9207e8073886bee79cd3.png" />
-    <Content Include="Amaker_files\browser.js" />
-    <Content Include="Amaker_files\c681cf59135294349f30f452f98cb32338ec41b3.png" />
-    <Content Include="Amaker_files\c76b563f38453d44f35faeff595100acb87e0235.png" />
-    <Content Include="Amaker_files\ca79aec75cb239acaf966b23ce99f42ce1c47d93.gif" />
-    <Content Include="Amaker_files\ccb41d56e312309107e86d74b1615ca99e819079.jpg" />
-    <Content Include="Amaker_files\cdac5208111882ec80f067bd732023c15f1e0469.gif" />
-    <Content Include="Amaker_files\common.css" />
-    <Content Include="Amaker_files\common.js" />
-    <Content Include="Amaker_files\d0fa817d16f2fa9cf56cb7be458bb7b0397cb359.jpg" />
-    <Content Include="Amaker_files\default.jpg" />
-    <Content Include="Amaker_files\f77cd1fb86ad00ef5c0e54bd4bde48ab65710acc.png" />
-    <Content Include="Amaker_files\font-awesome.css" />
-    <Content Include="Amaker_files\history.js" />
-    <Content Include="Amaker_files\icon_0.gif" />
-    <Content Include="Amaker_files\jquery-1.js" />
-    <Content Include="Amaker_files\logo.png" />
-    <Content Include="Amaker_files\proj_list.css" />
-    <Content Include="Amaker_files\proj_list.js" />
-    <Content Include="Amaker_files\reset.css" />
-    <Content Include="Amaker_files\tabswitch.js" />
-    <Content Include="Amaker_files\woo.js" />
+    <Content Include="HTML.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
