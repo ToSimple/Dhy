@@ -24,7 +24,18 @@ li{list-style:none;}
 </head>
 
 <body>
-<div class="m-slider">
+    <script>
+
+        var add = function () {
+            var counter = 0;
+            return function () { return counter += 1; }
+        }();
+
+        alert(add());
+        alert(add());
+        alert(counter);
+    </script>
+<!--<div class="m-slider">
     <ul class="cnt" id="slider">
         <li>
             <img src="http://imglf1.ph.126.net/qKodH3sZoVbPalKFtHS9mw==/6608946691259322175.jpg">
@@ -130,6 +141,6 @@ li{list-style:none;}
     };
 
     slider.init();
-</script>
+</script>-->
 </body>
 </html>

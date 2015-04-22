@@ -77,8 +77,8 @@
 }
 
     .head h1 {
-        height: 32px;
-        line-height: 32px;
+        height: 28px;
+        line-height: 28px;
     }
 
     .head .hdbutton {
@@ -87,7 +87,7 @@
     }
 
 .search {
-    height: 45px;
+    height: 50px;
     padding: 2px 5px 10px 5px;
     background-color: #fff;
 }
@@ -129,4 +129,14 @@ a {
     height: 5px;
     width: 100%;
     clear: both;
+}
+.col-red {
+    font-size:1.3em;
+    border:0px;
+    color:#FF3300;
+}
+.col-greed {
+     font-size:1.3em;
+    border:0px;
+    color:#33CC00;
 }

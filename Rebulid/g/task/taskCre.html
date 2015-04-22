@@ -9,13 +9,14 @@
     <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
     <link href="../css/proinfo.css" rel="stylesheet" />
     <link href="../css/right.css" rel="stylesheet" />
+    <link href="../css/proinfo.css" rel="stylesheet" />
 </head>
 <body>
     <div data-role="page" data-theme="a">
-        <div data-role="header" data-theme="a" data-position="fixed">
-            <a href="../i.html?i=1#one" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
+        <div data-role="header" data-theme="a" data-position="fixed" class="headi">
+            <a href="../i.html?i=1#one" class="hdbutton" data-ajax="false"><i class="fa  fa-chevron-left"></i></a>
             <h1>创建任务</h1>
-            <a href="../i.html?i=1#one" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">下一步</a>
+            <a href="javascript:;" class="btn hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">下一步</a>
         </div>
         <div class="box">
             <div class="box-head">
@@ -23,33 +24,33 @@
             </div>
             <div class="box-content-pd">
                 <div data-role="fieldcontain">
-                    <label for="fullname">任务类别:</label>
-                    <select name="day" id="type">
+                    <label for="tp">任务类别:</label>
+                    <select name="tp" id="tp">
                         <option value="1">系统</option>
                         <option value="2">用户</option>
                     </select>
                     <div class="kd"></div>
-                    <label for="bday">任务属性:</label>
-                    <select name="day" id="Select1">
+                    <label for="prop">任务属性:</label>
+                    <select name="prop" id="prop">
                         <option value="1">剑</option>
                         <option value="2">法</option>
                         <option value="3">灵</option>
                     </select>
                     <div class="kd"></div>
-                    <label for="email">任务名称:</label>
-                    <input type="text" name="a" id="a" placeholder="任务名称">
+                    <label for="name">任务名称:</label>
+                    <input type="text" name="name" id="name" placeholder="任务名称">
                     <div class="kd"></div>
-                    <label for="info">任务标签:</label>
-                    <input type="text" name="a" id="Text1" placeholder="任务标签">
+                    <label for="b">任务标签:</label>
+                    <input type="text" name="b" id="b" placeholder="任务标签">
                     <div class="kd"></div>
                     <label for="info">任务简介:</label>
                     <textarea name="info" id="info"></textarea>
                     <div class="kd"></div>
-                    <label for="info">交易积分:</label>
-                    <input type="text" name="a" id="Text2" placeholder="交易积分">
+                    <label for="d">交易积分:</label>
+                    <input type="text" name="d" id="d" placeholder="交易积分">
                     <div class="kd"></div>
-                    <label for="fullname">任务类别:</label>
-                    <select name="day" id="fullname">
+                    <label for="montype">任务类别:</label>
+                    <select name="montype" id="montype">
                         <option value="1">无</option>
                         <option value="2">收入</option>
                         <option value="3">支出</option>
@@ -68,10 +69,10 @@
     </div>
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../ueditor/ueditor.config.js"></script>
+    <script src="../ueditor/ueditor.all.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/taskCre.js"></script>
 
-    <script>
-
-
-    </script>
 </body>
 </html>

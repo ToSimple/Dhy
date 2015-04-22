@@ -10,7 +10,7 @@
         var str = '';
         $.each(data.list, function () {
             // alert(this.id + "-" + "-" + this.img + "-" + this.title);
-            str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="proInfo.html" data-ajax="false"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
+            str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="proInfo.html" data-ajax="false"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p><span class="ui-li-count col-red"><i class="fa fa-minus-circle"></i></span></a></li>';
         })
         $(".uplist").append(str);
     },
@@ -30,22 +30,22 @@ $(document).on("scrollstop", function () {
     var dh = $(document).height();
     //alert(dh - wh - ws);
     if (dh - wh - ws < 50) {
-      
+
         $.ajax({
             type: "get",
             url: "prolist.aspx",
             dataType: "json",
             data: { "index": i },
             beforeSend: function () {
-                if (i!=1) {
+                if (i != 1) {
                     $(".load").css("display", "block");
-                }                
+                }
             },
             success: function (data) {
                 var str = '';
                 $.each(data.list, function () {
                     // alert(this.id + "-" + "-" + this.img + "-" + this.title);
-                    str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="proInfo.html" data-ajax="false"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p></a></li>';
+                    str += '<li class="ui-li-has-thumb ui-first-child"><a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="proInfo.html" data-ajax="false"><img src="' + this.img + '" /><h2>' + this.id + '</h2><p>' + this.title + '</p><span class="ui-li-count col-greed"><i class="fa fa-check-square"></i></span></a></li>';
                 })
                 $(".uplist").append(str);
                 i++;
@@ -58,7 +58,7 @@ $(document).on("scrollstop", function () {
 });
 $(function () {
     $("#search").on("change", function () {
-      
+
     });
 });
 

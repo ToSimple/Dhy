@@ -38,13 +38,22 @@
                 </ul>
             </div>
         </div>
-        <div data-role="footer" class="load" data-position="fixed">
-            <i class="fa fa-refresh fa-spin"></i>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar" class="ui-btn-active">
+                <ul>
+                    <li><a href="#">主页</a></li>
+                </ul>
+            </div>
+            <!-- /navbar -->
+            <div class="load"><i class="fa fa-refresh fa-spin"></i></div>
+
         </div>
+
     </div>
+
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
-    <script src="../js/proList.js"></script>
+    <script src="../js/proList.js?v=1.0.1"></script>
     <script>
         $(".out").on("click", function () {
             var r = confirm("您是否确定要退出？");

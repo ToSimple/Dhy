@@ -144,9 +144,14 @@ namespace acm
 
             //}
 
-
-
-
+            double s = 5000;
+            for (int i = 0; i < 30; i++)
+            {
+                
+                s*=1.01;
+                Console.WriteLine("第"+(i+1)+"天:"+s);
+            }
+            Console.WriteLine(s-5000);
         }
 
 

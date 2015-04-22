@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        .alert {
+            height: 50px;
+            line-height: 50px;
+            font-size: 2em;
+            background-color: #0094ff;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <a class="btn">测试</a>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".btn").on("click", function () {
+                var a = new d_alert("测试", true, 2000);
+                a.show();
+            })
+
+            //var d_alert = {
+            //    content: "",
+            //    clear: true,
+            //    clearTime: 2000,
+
+            //};
+            function d_alert(content, clear, clearTime) {
+                this.content = content;
+                this.clear = clear;
+                this.clearTime = clearTime;
+
+                this.show = function () {                
+                    content = "<div class='alert'>" +content + "</div>";
+                    $("body").prepend(content);
+                    if (clear == true) {
+                        setTimeout(clearSay, clearTime);
+                    }
+                }
+                function clearSay() {
+                    $(".alert").remove();
+                }
+
+            }
+            d_alert.prototype.show(){
+                
+            }
+        })
+
+
+
+      
+
+        //function showMessage(str) {
+        //    var a = "<div class='alert'>" + str + "</div>";
+        //    $("body").prepend(a);
+        //    setTimeout(clearSay, 2000);
+        //}
+        //function clearSay() {
+        //    $(".alert").remove();
+        //}
+    </script>
+</body>
+</html>

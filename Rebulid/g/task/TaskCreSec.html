@@ -12,10 +12,10 @@
 </head>
 <body>
     <div data-role="page" data-theme="a">
-        <div data-role="header" data-theme="a" data-position="fixed">
-            <a href="../i.html?i=1#one" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
+        <div data-role="header" data-theme="a" data-position="fixed" class="headi">
+            <a href="../i.html?i=1#one" class="hdbutton ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
             <h1>创建任务</h1>
-            <a href="../i.html?i=1#one" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">完成</a>
+            <a href="javaScript:;" class="btn hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">完成</a>
         </div>
         <div class="box">
             <div class="box-head">
@@ -23,43 +23,49 @@
             </div>
             <div class="box-content-pd">
                 <div data-role="fieldcontain">
-                    <label for="date">开始时间:</label>
-                    <input type="datetime" id="date"/>
+                    <label for="a">开始时间:</label>
+                    <input type="datetime" id="a" />
                     <div class="kd"></div>
-                   <label for="Datetime1">截至时间:</label>
-                    <input type="datetime" id="Datetime1"/>
+                    <label for="b">截至时间:</label>
+                    <input type="datetime" id="b" />
                     <div class="kd"></div>
-                    <label for="email">任务名称:</label>
-                    <input type="text" name="a" id="a" placeholder="任务名称">
+                    <label for="c">限定频次:</label>
+                    <input type="text" name="c" id="c" placeholder="限定频次">
                     <div class="kd"></div>
-                    <label for="info">任务标签:</label>
-                    <input type="text" name="a" id="Text1" placeholder="任务标签">
+                    <label for="d">积分要求:</label>
+                    <input type="text" name="d" id="d" placeholder="积分要求">
                     <div class="kd"></div>
-                    <label for="info">任务简介:</label>
-                    <textarea name="info" id="info"></textarea>
+                    <fieldset data-role="controlgroup" style="width: 100%;">
+                        <legend>限定对象:</legend>
+                        <input type="checkbox" name="obj1" id="obj1">
+                        <label for="obj1">个人</label>
+                        <input type="checkbox" name="obj2" id="obj2">
+                        <label for="obj2">团体</label>
+                    </fieldset>
                     <div class="kd"></div>
-                    <label for="info">交易积分:</label>
-                    <input type="text" name="a" id="Text2" placeholder="交易积分">
-                    <div class="kd"></div>
-                    <label for="fullname">任务类别:</label>
-                    <select name="day" id="fullname">
-                        <option value="1">无</option>
-                        <option value="2">收入</option>
-                        <option value="3">支出</option>
+                    <label for="payType">支付方式:</label>
+                    <select name="day" id="payType">
+                        <option value="1">实时支付 </option>
+                        <option value="2">付款方确认支付</option>
                     </select>
                     <div class="kd"></div>
-                    <label for="state">任务类别:</label>
-                    <select name="state" id="state">
-                        <option value="1">暂缓</option>
-                        <option value="2">预热中</option>
-                        <option value="3">进行中</option>
-                        <option value="4">已结束</option>
-                    </select>
+                    <fieldset data-role="controlgroup" style="width: 100%;">
+                        <legend>任务等级:</legend>
+                        <select name="role" id="role">
+                             <option value="0">无</option>
+                            <option value="1">剑</option>
+                            <option value="2">法</option>
+                            <option value="3">灵</option>
+                        </select>
+                        <input type="text" name="roleNum" id="roleNum" placeholder="等级数">
+                    </fieldset>
                 </div>
             </div>
         </div>
     </div>
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/taskCreSec.js"></script>
 </body>
 </html>
