@@ -140,3 +140,15 @@ a {
     border:0px;
     color:#33CC00;
 }
+     .proItem input {
+            position:absolute;
+            z-index:999;
+            left:0;
+            top:30px;
+        }
+        .ui-listview .ui-li-has-thumb > img:first-child, .ui-listview .ui-li-has-thumb > .ui-btn > img:first-child, .ui-listview .ui-li-has-thumb .ui-li-thumb   {
+            left:20px;
+        }
+      .ui-listview > .ui-li-has-thumb > .ui-btn, .ui-listview > .ui-li-static.ui-li-has-thumb  {
+            padding-left:7em;
+        }

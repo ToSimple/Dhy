@@ -3,14 +3,47 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <style>
+        .proItem {
+            width:100%;
+            height:50px;
+        }
+    </style>
 </head>
 <body>
-
-            <h1>h1标签</h1>
-            <h2>h2标签</h2>
-            <h3>h3标签</h3>
-            <h4>h4标签</h4>
-            <h5>h5标签</h5>
-   
+ 
+     <div class="proItem"><input name="a" type="checkbox" class="bjckbox" value="1" />    </div>
+     <div class="proItem"><input name="a" type="checkbox" class="bjckbox"  value="2"/>    </div>
+     <div class="proItem"><input name="a" type="checkbox" class="bjckbox"  value="3"/>    </div>
+     <div class="proItem"><input name="a" type="checkbox" class="bjckbox"  value="4"/>    </div>
+     <div class="proItem"><input name="a" type="checkbox" class="bjckbox"  value="5"/>    </div>
+     <div class="proItem"><input name="a" type="checkbox" class="bjckbox"  value="6"/>    </div>
+    <a class="qxgz">获取</a>
+    <a></a>
+    <h1>h1标签</h1>
+    <h2>h2标签</h2>
+    <h3>h3标签</h3>
+    <h4>h4标签</h4>
+    <h5>h5标签</h5>
+    <script src="jquery.min.js"></script>
+    <script>
+        var mode = "edit";
+        $(document).on("click", ".qxgz", function () {           
+            $("input[name='a']:checked").each(function () {
+                alert($(this).attr("value"));
+            });
+        });
+        $(".proItem").on("click", function () {           
+            if (mode == "edit") {
+               
+                alert($(this).children("input").is(":checked"));
+                if ($(this).children("input").is(":checked")) {                    
+                    $(this).children("input").prop("checked", false);
+                } else {                   
+                    $(this).children("input").prop("checked", true);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
