@@ -16,7 +16,7 @@
         <div data-role="header" data-theme="a" data-position="fixed" class="head">
             <a href="../i.html?i=2#two" class="hdbutton ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
             <h1>关注的项目</h1>
-            <a href="#rightpanel3" class="hdbutton"  ><i class="fa fa-navicon"></i></a>
+            <a href="#rightpanel3" class="hdbutton"><i class="fa fa-navicon"></i></a>
             <div data-role="navbar" class="search">
                 <form action="pro1.html">
                     <input type="search" name="search" id="search" placeholder="搜索内容...">
@@ -29,19 +29,20 @@
         <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
             <div class="ui-panel-inner pr">
                 <ul class="rpanelul">
-                  <li class="ui-first-child" data-icon="delete"><a data-rel="close" href="#"><i class="fa fa-caret-square-o-right"></i>&nbsp;收起</a></li>
-                     <li><a href="javascript:;" data-ajax="false" class="bj"><i class="fa fa-reply"></i>&nbsp;取消编辑</a></li>
+                    <li class="ui-first-child" data-icon="delete"><a data-rel="close" href="#"><i class="fa fa-caret-square-o-right"></i>&nbsp;收起</a></li>
+                    <li><a href="javascript:;" data-ajax="false" class="bj"><i class="fa fa-reply"></i>&nbsp;取消编辑</a></li>
                     <li><a href="../info.html" data-ajax="false"><i class="fa fa-star-o"></i>&nbsp;取消关注</a></li>
+                    <li ><a href="javascript:;" data-ajax="false"  id="uili_key"><i class="fa fa-home"></i>&nbsp;用户中心</a></li>
                 </ul>
             </div>
         </div>
-       <div data-role="footer" data-position="fixed">
-        <!--    <div data-role="navbar" class="ui-btn-active">
+        <div data-role="footer" data-position="fixed">
+            <!--    <div data-role="navbar" class="ui-btn-active">
                 <ul>
                     <li><a href="#">主页</a></li>
                 </ul>
             </div>-->
-            
+
             <div class="load"><i class="fa fa-refresh fa-spin"></i></div>
 
         </div>
@@ -59,7 +60,7 @@
             else {
             }
         });
-       
+
         var control = navigator.control || {};
         if (control.gesture) {
             control.gesture(false);

@@ -131,11 +131,13 @@ a {
     clear: both;
 }
 .col-red {
+    padding-top:14px;
     font-size:1.3em;
     border:0px;
     color:#FF3300;
 }
 .col-greed {
+      padding-top:14px;
      font-size:1.3em;
     border:0px;
     color:#33CC00;
@@ -151,4 +153,7 @@ a {
         }
       .ui-listview > .ui-li-has-thumb > .ui-btn, .ui-listview > .ui-li-static.ui-li-has-thumb  {
             padding-left:7em;
+        }
+      #uili_key {
+            color:#CC0033;
         }
