@@ -13,7 +13,7 @@ function loo(i) {
             } else {
                 $(".load").css("display", "none");
             }
-           
+
         },
         success: function (data) {
             var str = '';
@@ -30,23 +30,21 @@ function loo(i) {
             //    $(".listItem").animate({
             //        left: '80px'
             //    });
+            //$(document).on("click", ".qxbj", function () {
+            //    $(this).html('<i class="fa fa-pencil-square-o"></i>&nbsp;编辑</a>').removeClass("qxbj").addClass("bj");
+            //    $(".listItem").animate({
+            //        left: '0'
+            //    });
+            //});
+            //$(".qxbj").one("click", function () {
+            //    alert(2);
+            //    $(this).html('<i class="fa fa-pencil-square-o"></i>&nbsp;编辑</a>').removeClass("qxbj").addClass("bj");
+            //    $(".listItem").animate({
+            //        left: '0'
+            //    });
+            //});
 
 
-                //$(document).on("click", ".qxbj", function () {
-                //    $(this).html('<i class="fa fa-pencil-square-o"></i>&nbsp;编辑</a>').removeClass("qxbj").addClass("bj");
-                //    $(".listItem").animate({
-                //        left: '0'
-                //    });
-                //});
-                //$(".qxbj").one("click", function () {
-                //    alert(2);
-                //    $(this).html('<i class="fa fa-pencil-square-o"></i>&nbsp;编辑</a>').removeClass("qxbj").addClass("bj");
-                //    $(".listItem").animate({
-                //        left: '0'
-                //    });
-                //});
-                    
-           
         },
         complete: function () {
             $(".load").css("display", "none");
@@ -73,7 +71,6 @@ $(document).on("scrollstop", function () {
 //function addButton() {
 //    $(document).on('swipeleft', '.listItem', function () {
 //        var a = $(this).html();
-
 //        alert(typeof (a));
 //        var b = '<a class="qxgz" style="display:inline-block;height:81px;line-height:81px;width:45%;background-color:#10ffff;text-align:center;">取消关注</a><a class="qx" style="text-align:center;display:inline-block;height:81px;line-height:81px;width:45%;background-color:#ffff10;">取消</a>';
 

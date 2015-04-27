@@ -13,20 +13,19 @@
 <body>
     <div data-role="page" data-theme="a">
 
-        <div data-role="header" data-theme="a" data-position="fixed">
-            <a href="../i.html?i=4#four" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
+        <div data-role="header" data-theme="a" data-position="fixed" class="head">
+            <a href="../i.html?i=4#four" class="hdbutton ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
             <h1>朋友圈</h1>
-            <a href="#rightpanel3"><i class="fa fa-navicon"></i></a>
-        </div>  <div data-role="navbar" class="search">
-             <input type="search" name="search" id="search" placeholder="搜索内容...">
+            <a href="#rightpanel3" class="hdbutton"><i class="fa fa-navicon"></i></a>
+            <div data-role="navbar" class="search">
+                <input type="search" name="search" id="search" placeholder="搜索内容...">
+            </div>
         </div>
         <ul data-role="listview" data-inset="false" class="uplist">
         </ul>
-
         <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
             <div class="ui-panel-inner pr">
-
-              <ul class="rpanelul">
+                <ul class="rpanelul">
                     <li class="ui-first-child" data-icon="delete"><a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a></li>
                     <li><a href="../info.html" data-ajax="false"><i class="fa fa-user"></i>&nbsp;个人资料</a></li>
                     <li><a href="../sendInfo.html" data-ajax="false"><i class="fa fa-bell-o"></i>&nbsp;我的消息</a></li>

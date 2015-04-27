@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../css/right.css" rel="stylesheet" />
+</head>
+<body>
+    <label>账号</label>
+    <input id="aaa" />
+    <label>密码</label>
+    <input id="bbb" />
+    <button id="btn">提交</button>
+    <script src="../jqjm/jquery.min.js"></script>
+    <script src="common.js"></script>
+    <script>
+
+        vd.tags = ["aaa", "bbb"];
+        vd.rules = [{ required: true, minlength: 6 }, { required: true, number: true,equalTo:"aaa" }];
+        vd.messages = [{ required: "账号不能为空", minlength: "账号不能少于6个字符串" }, { required: "密码不能为空", number: "密码必须是数字",equalTo:"密码必须和账号相同:)" }]
+        vd.submit = function () {
+            alert("表单已经提交");
+            //$.ajax({
+            //    url: "user/userLogin",
+            //    data: formData,
+            //    type: "post",
+            //    dataType: "json",
+            //    success: function (results) {
+            //        if (results != null) {
+            //            if (results.mes.length > 0) {
+            //                showMessage(results.mes);
+            //            }
+
+            //            if (results.locationUrl.length > 0)
+            //            { window.location = results.locationUrl; }
+            //        }
+            //    }, error: function (error) {
+            //        console.log(error);
+            //    }
+            //});
+        }
+        vd.bind("btn");
+
+
+
+
+
+
+    </script>
+</body>
+</html>
