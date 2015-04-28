@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>修改任务</title>
+    <link href="../jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
+    <link href="../jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/proinfo.css" rel="stylesheet" />
+    <link href="../css/right.css" rel="stylesheet" />
+    <link href="../css/proinfo.css" rel="stylesheet" />
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed" class="headi">
+            <a href="../i.html?i=1#one" class="hdbutton" data-ajax="false"><i class="fa  fa-chevron-left"></i></a>
+            <h1>修改任务</h1>
+            <a href="javascript:;" class="btn hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check" data-ajax="false">修改</a>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <div class="title">基本信息</div>
+            </div>
+            <div class="box-content-pd">
+                <div data-role="fieldcontain">
+
+                    <label for="tp">任务类别:</label>
+                    <select name="tp" id="tp">
+                        <option value="1">系统</option>
+                        <option value="2">用户</option>
+                    </select>
+                    <div class="kd"></div>
+                    <label for="prop">任务属性:</label>
+                    <select name="prop" id="prop">
+                        <option value="1">剑</option>
+                        <option value="2">法</option>
+                        <option value="3">灵</option>
+                    </select>
+                    <div class="kd"></div>
+                    <label for="name">任务名称:</label>
+                    <input type="text" name="name" id="name" placeholder="任务名称">
+                    <div class="kd"></div>
+                    <label for="b">任务标签:</label>
+                    <input type="text" name="b" id="b" placeholder="任务标签">
+                    <div class="kd"></div>
+                    <label for="info">任务简介:</label>
+                    <textarea name="info" id="info"></textarea>
+                    <div class="kd"></div>
+                    <label for="d">交易积分:</label>
+                    <input type="text" name="d" id="d" placeholder="交易积分">
+                    <div class="kd"></div>
+                    <label for="montype">任务类别:</label>
+                    <select name="montype" id="montype">
+                        <option value="1">无</option>
+                        <option value="2">收入</option>
+                        <option value="3">支出</option>
+                    </select>
+                    <div class="kd"></div>
+                    <label for="state">任务类别:</label>
+                    <select name="state" id="state">
+                        <option value="1">暂缓</option>
+                        <option value="2">预热中</option>
+                        <option value="3">进行中</option>
+                        <option value="4">已结束</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-head">
+                <div class="title">限定条件信息</div>
+            </div>
+            <div class="box-content-pd">
+                <div data-role="fieldcontain">
+                    <label for="a">开始时间:</label>
+                    <input type="datetime" id="a" />
+                    <div class="kd"></div>
+                    <label for="b">截至时间:</label>
+                    <input type="datetime" id="b2" />
+                    <div class="kd"></div>
+                    <label for="c">限定频次:</label>
+                    <input type="text" name="c" id="c" placeholder="限定频次">
+                    <div class="kd"></div>
+                    <label for="d1">积分要求:</label>
+                    <input type="text" name="d1" id="d1" placeholder="积分要求">
+                    <div class="kd"></div>
+                    <fieldset data-role="controlgroup" style="width: 100%;">
+                        <legend>限定对象:</legend>
+                        <input type="checkbox" name="obj1" id="obj1">
+                        <label for="obj1">个人</label>
+                        <input type="checkbox" name="obj2" id="obj2">
+                        <label for="obj2">团体</label>
+                    </fieldset>
+                    <div class="kd"></div>
+                    <label for="payType">支付方式:</label>
+                    <select name="day" id="payType">
+                        <option value="1">实时支付 </option>
+                        <option value="2">付款方确认支付</option>
+                    </select>
+                    <div class="kd"></div>
+                    <fieldset data-role="controlgroup" style="width: 100%;">
+                        <legend>任务等级:</legend>
+                        <select name="role" id="role">
+                            <option value="0">无</option>
+                            <option value="1">剑</option>
+                            <option value="2">法</option>
+                            <option value="3">灵</option>
+                        </select>
+                        <input type="text" name="roleNum" id="roleNum" placeholder="等级数">
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../jqjm/jquery.min.js?ver=1.1.1"></script>
+    <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../ueditor/ueditor.config.js"></script>
+    <script src="../ueditor/ueditor.all.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/taskEdi.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+D:\github\Dhy\new\obj\Debug\newweb.csprojResolveAssemblyReference.cache
+D:\github\Dhy\new\obj\Debug\@new.dll
+D:\github\Dhy\new\obj\Debug\@new.pdb
