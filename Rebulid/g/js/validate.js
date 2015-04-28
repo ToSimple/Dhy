@@ -1,5 +1,4 @@
-﻿
-//验证规则
+﻿//验证规则
 //this.rules{
 //    required: false,
 //    number: false,
@@ -21,7 +20,7 @@
 //    min:"数值不能小于"
 //} 
 function validate() {
-   
+
     //参数模块
     //验证表单元素集
     this.tags = [];
@@ -41,9 +40,9 @@ function validate() {
         //验证通过后
         tags.submit = this.submit;
         //绑定触发
-        
+
         $(document).on("click", "#" + btnId, function () {
-           
+
             //通过ext参数控制是否退出大循环
             var ext = false;
             //循环表单元素集合
@@ -66,7 +65,11 @@ function validate() {
                         }
                         //判断是否为数字
                         if (j == "number" && val == true) {
-                            
+                            if (tag.val().search(" ") != -1 || tag.val().search("　") != -1) {
+                                showMessage(tags.message[i].number);
+                                ext = true;
+                                return false;
+                            }
                             if (isNaN(tag.val())) {
                                 showMessage(tags.message[i].number);
                                 ext = true;
@@ -96,14 +99,16 @@ function validate() {
                                 return false;
                             }
                         }
-                        if (j == "max") {
+                        //数值不能大于
+                        if (j == "max") {                          
                             if (tag.val() > val) {
                                 showMessage(tags.message[i].max);
                                 ext = true;
                                 return false;
                             }
                         }
-                        if (j == "min") {                            
+                        //数值不能小于
+                        if (j == "min") {
                             if (tag.val() < val) {
                                 showMessage(tags.message[i].min);
                                 ext = true;

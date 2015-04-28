@@ -1,30 +1,11 @@
 ﻿
 $(function () {
 
-    $(".btn").on("click", function () {
-        var a = $("#name").val();
-        var b = $("#tip").val();
+    vd.tags = ["name", "tip"];
+    vd.rules = [{ required: true, minlength: 6 }, { required: true, number: true }];
+    vd.messages = [{ required: "团队名称不能为空", minlength: "团队名称不能少于6个字符串" }, { required: "标签不能为空" }]
+    vd.submit = function () {
 
-
-        var str = "";
-        var booft = true;
-        if (a.trim() == "") {
-            str = "项目名称不能为空";
-            booft = false;
-        } else if (b.trim() == "") {
-            str = "标签不能为空";
-            booft = false;
-        }
-        if (!booft) {
-            showMessage(str);
-        }
-        else {
-            submit();
-        }
-    })
-
-
-    function submit() {
         //表单数据
         var formData = {
             'name': $("#name").val(),
@@ -50,5 +31,7 @@ $(function () {
                 console.log(error);
             }
         });
+
     }
+    vd.bind("btn");
 })

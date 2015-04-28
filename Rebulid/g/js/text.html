@@ -12,12 +12,12 @@
     <input id="bbb" />
     <button id="btn">提交</button>
     <script src="../jqjm/jquery.min.js"></script>
-    <script src="common.js"></script>
+    <script src="validate.js"></script>
     <script>
 
         vd.tags = ["aaa", "bbb"];
-        vd.rules = [{ required: true, minlength: 6 }, { required: true, number: true,equalTo:"aaa" }];
-        vd.messages = [{ required: "账号不能为空", minlength: "账号不能少于6个字符串" }, { required: "密码不能为空", number: "密码必须是数字",equalTo:"密码必须和账号相同:)" }]
+        vd.rules = [{ required: true, minlength: 6 }, { required: true, number: true,min:100 }];
+        vd.messages = [{ required: "账号不能为空", minlength: "账号不能少于6个字符串" }, { required: "密码不能为空", number: "密码必须是数字",min:"数值不能小于100" }]
         vd.submit = function () {
             alert("表单已经提交");
             //$.ajax({
