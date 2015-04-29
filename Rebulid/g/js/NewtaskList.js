@@ -183,18 +183,18 @@ function getData() {
                     var img_src = default_img.src;
                 }
 
-                str += '<li id="li_' + this[0].usersAttentionProjectsId + '" class="lia ui-li-has-thumb ui-first-child '
+                str += '<li id="li_' + this[0].usersAttentionProjectsId + '" class="lia'
                         + liCss
                         + '"><input type="checkbox" class="bjcboxCss" name="bjckbox" value="'
                         + this[0].usersAttentionProjectsId
                         + '" style="display:'
                         + dis
                         + '"/><a class="ah ui-btn ui-btn-icon-right ui-icon-carat-r" data-ajax="false">'
-                        + '<h2>'
+
                         + this[1].name
-                        + '</h2><p>'
+
                         + this[1].addtime
-                        + '</p></a></li>';
+                        + '</a></li>';
 
             })
             $(".uplist").append(str);

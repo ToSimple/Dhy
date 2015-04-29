@@ -53,37 +53,37 @@
     background-color: #0755a1;
     text-shadow: 0 0 0 #fff;
     color: #fff;
-    height: 54px;
-    font-weight: 500;
+    /*height: 54px;
+    font-weight: 500;*/
 }
 
 
     .headi h1 {
-        height: 44px;
-        line-height: 30px;
+        /*height: 44px;
+        line-height: 30px;*/
     }
 
     .headi .hdbutton {
-        display: inline-block;
-        margin-top: 5px;
+        /*display: inline-block;
+        margin-top: 5px;*/
     }
 
 .head {
     background-color: #0755a1;
     text-shadow: 0 0 0 #fff;
     color: #fff;
-    height: 110px;
-    font-weight: 500;
+    /*height: 110px;
+    font-weight: 500;*/
 }
 
     .head h1 {
-        height: 28px;
-        line-height: 28px;
+        /*height: 28px;
+        line-height: 28px;*/
     }
 
     .head .hdbutton {
-        display: inline-block;
-        margin-top: 5px;
+        /*display: inline-block;
+        margin-top: 5px;*/
     }
 
 .search {
