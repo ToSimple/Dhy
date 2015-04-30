@@ -9,62 +9,8 @@
     <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
     <link href="../css/proinfo.css" rel="stylesheet" />
     <link href="../css/right.css" rel="stylesheet" />
-    <style>
-        .dialogbox {
-            height: 100%;
-            width: 100%;
-            background-color: #808080;
-            position: absolute;
-            z-index: 9999;
-            top: 1px;
-            opacity: 0.9;
-            display: none;
-        }
+    <link href="../css/taskCreSec.css" rel="stylesheet" />
 
-        .padbox {
-            height: 300px;
-            width: 90%;
-            margin: 0 auto;
-            background-color: #fff;
-        }
-
-        .dia-con {
-            padding: 0 10px;
-            clear: both;
-        }
-
-        .dia-title {
-            margin-top: 120px;
-            background-color: #ccc;
-            width: 100%;
-            height: 40px;
-            line-height: 40px;
-        }
-
-            .dia-title i {
-                float: right;
-                height: 40px;
-                line-height: 40px;
-                margin-right: 10px;
-            }
-
-        .ui-input-search {
-            margin: 10px 10px;
-        }
-
-        .dia-con {
-            margin-top: 10px;
-            height: 200px;
-            overflow: scroll;
-        }
-
-        .dia-conItem {
-            height: 40px;
-            line-height: 40px;
-            background-color: #fff;
-            border-bottom: 1px solid #808080;
-        }
-    </style>
 </head>
 <body>
     <div data-role="page">
@@ -114,7 +60,7 @@
                             <option value="3">灵</option>
                         </select>
                         <input type="text" name="roleNum" id="roleNum" placeholder="等级数">
-                        <input type="hidden" id="pan" />
+                        <input type="hidden" id="pan" value="1,2,3,4" />
                         <input type="hidden" id="tuan" />
                     </fieldset>
                 </div>
@@ -122,12 +68,12 @@
         </div>
         <div class="dialogbox dg-pan">
             <div class="padbox">
-                <div class="dia-title">搜索个人<i class="close close-pan">选定</i></div>
+                <div class="dia-title"><i class="fa fa-close close-dia "></i>搜索个人<i class="close close-pan xd">选定</i></div>
                 <div data-role="navbar">
-                    <input type="search" name="search" id="search" placeholder="搜索内容...">
+                    <input type="search" name="searchper" id="searchper" placeholder="搜索内容...">
                 </div>
-                <div class="dia-con">
-                    <div class="dia-conItem dia-pan">
+                <div class="dia-con dia-pan-con">
+                    <!--                    <div class="dia-conItem dia-pan">
                         <input type="checkbox" data-role="none" value="1">dhy                   
                     </div>
                     <div class=" dia-conItem dia-pan">
@@ -150,7 +96,7 @@
                     </div>
                     <div class="dia-conItem dia-pan">
                         <input type="checkbox" data-role="none" value="8">dhy
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -161,7 +107,7 @@
                 <div data-role="navbar">
                     <input type="search" name="search" id="search1" placeholder="搜索内容...">
                 </div>
-                <div class="dia-con">
+                <div class="dia-con dia-tuan-con">
                     <div class="dia-conItem dia-tuan">
                         <input type="checkbox" data-role="none" value="1">dhy                   
                     </div>
@@ -189,8 +135,8 @@
                 </div>
             </div>
         </div>
-        <div data-role="footer" class="load" data-position="fixed">
-            <i class="fa fa-refresh fa-spin"></i>
+        <div class="dialogbox dg-load">
+            <div class="dg-load-box"><i class="fa fa-refresh fa-spin"></i></div>
         </div>
 
     </div>
@@ -198,63 +144,105 @@
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/taskCreSec.js"></script>
-    <script>
+<!--    <script>
         $(function () {
-            var one = true;
+            //个人
+            var one = true;//锁
+            //绑定事件
             $("#obj1").on("click", function () {
                 if (one) {
-                    $.ajax({
-                        url: "taskCreSec.aspx",
-                        data: "",
-                        type: "get",
-                        dataType: "json",
-                        beforeSend: function () {
-                            $(".load").css("display", "block");
-                            one = false;
-                        },
-                        success: function (results) {
-                            dialogpan(results);
-                        }, complete: function () {
-                            $(".load").css("display", "none");
-                            one = true;
-                        }
-                    });
+                    //查看隐藏域是否有数据
+                    var hid = $("#pan").val();
+                    //如果有数据 ，获取数据填写表单
+                    if (hid != "") {
+                        var formData = {
+                            'userIds': hid
+                        };
+                        $.ajax({
+                            url: "taskCreSec.aspx",
+                            data: formData,
+                            type: "get",
+                            dataType: "json",
+                            beforeSend: function () {
+                                $(".dg-load").css("display", "block");
+                                one = false;
+                            },
+                            success: function (results) {
+                                $(".dg-load").css("display", "none")
+                                dialogpan(results);
+                                showOrClosePan();
+                            },
+                            complete: function () {
+                                $(".dg-load").css("display", "none");
+                                one = true;
+                            }
+                        });
+                    } else {
+                        //隐藏域为空，加载空表单
+                        showOrClosePan();
+                    }
+
                 }
             });
+            //组装选中checked的标签
             function dialogpan(results) {
+                //results有值，生成选中对象标签
                 if (results != undefined) {
                     var str = "";
                     $.each(results.users, function () {
                         str += '<div class="dia-conItem dia-pan">';
-                        str += '<input type="checkbox" data-role="none" value="' + this.id + '"">' + this.name;
-                        str += '</div>';                        
+                        str += '<input type="checkbox" data-role="none" value="' + this.id + '" checked="checked" >' + this.name;
+                        str += '</div>';
                     });
-                    $(".dia-con").html(str);
+                    $(".dia-pan-con").html(str);
+                }                
+            }
+            //组装未选择的标签 在加载列表开头 seach用到 
+            function dialogpanNoChecked(results) {
+                //results有值，生成选中对象标签
+                if (results != undefined) {
+                    var str = "";
+                    $.each(results.users, function () {
+                        str += '<div class="dia-conItem dia-pan">';
+                        str += '<input type="checkbox" data-role="none" value="' + this.id + '" >' + this.name;
+                        str += '</div>';
+                    });
+                    $(".dia-pan-con").prepend(str);
                 }
-
-
+            }
+            //显示还是隐藏模拟窗口
+            function showOrClosePan() {
                 if ($(".dg-pan").css("display") == "none") {
+                    $("#searchper").val("");
                     $(".dg-pan").css("display", "block");
                 } else {
                     $(".dg-pan").css("display", "none");
                 }
             }
+            //单击列表一行，选中checked
             $(document).on("click", ".dia-pan", function () {
                 var a = $(this).children("input").prop("checked");
                 $(this).children("input").prop("checked", !a);
             });
+            //关闭按钮
+            $(".close-dia").on("click", function () {
+                showOrClosePan();
+            });
+            //选定按钮
             $(".close-pan").on("click", function () {
-                dialogpan();
+                showOrClosePan();                
                 var items = $(".dia-pan > input:checkbox");
                 var pd = false;
                 var str = "";
+                //遍历每个对象，如果未选中则删除dom标签
                 $.each(items, function () {
                     if (this.checked) {
-                        str += this.value + ","
+                        str += this.value + ",";
                         pd = true;
+                    } else {
+                        this.parentNode.parentNode.removeChild(this.parentNode);
                     }
                 });
-
                 $("#pan").val(str);
                 if (!pd) {
                     $("#obj1").prop("checked", false);
@@ -265,43 +253,60 @@
                 }
 
             });
+            
+            $("#searchper").on("change", function () {
+                var formData = {
+                    'name': $(this).val()
+                };
+                $.ajax({
+                    url: "taskCreSec.aspx",
+                    data: formData,
+                    type: "get",
+                    dataType: "json",
+                    success: function (results) {                      
+                        dialogpanNoChecked(results);
+                    },
+                });              
+            });
 
 
-            $("#obj2").on("click", function () {
-                dialogtuan();
-            });
-            function dialogtuan() {
-                if ($(".dg-tuan").css("display") == "none") {
-                    $(".dg-tuan").css("display", "block");
-                } else {
-                    $(".dg-tuan").css("display", "none");
-                }
-            }
-            $(".dia-tuan").on("click", function () {
-                var a = $(this).children("input").prop("checked");
-                $(this).children("input").prop("checked", !a);
-            });
-            $(".close-tuan").on("click", function () {
-                dialogtuan();
-                var items = $(".dia-tuan > input:checkbox");
-                var pd = false;
-                var str = "";
-                $.each(items, function () {
-                    if (this.checked) {
-                        str += this.value + ","
-                        pd = true;
-                    }
-                });
-                $("#tuan").val(str);
-                if (!pd) {
-                    $("#obj2").prop("checked", false);
-                    $("#obj2").parent().children().first().removeClass("ui-checkbox-on").addClass("ui-checkbox-off");
-                } else {
-                    $("#obj2").prop("checked", true);
-                    $("#obj2").parent().children().first().removeClass("ui-checkbox-off").addClass("ui-checkbox-on");
-                }
-            });
+
+
+            //$("#obj2").on("click", function () {
+            //    dialogtuan();
+            //});
+            //function dialogtuan() {
+            //    if ($(".dg-tuan").css("display") == "none") {
+            //        $(".dg-tuan").css("display", "block");
+            //    } else {
+            //        $(".dg-tuan").css("display", "none");
+            //    }
+            //}
+            //$(".dia-tuan").on("click", function () {
+            //    var a = $(this).children("input").prop("checked");
+            //    $(this).children("input").prop("checked", !a);
+            //});
+            //$(".close-tuan").on("click", function () {
+            //    dialogtuan();
+            //    var items = $(".dia-tuan > input:checkbox");
+            //    var pd = false;
+            //    var str = "";
+            //    $.each(items, function () {
+            //        if (this.checked) {
+            //            str += this.value + ","
+            //            pd = true;
+            //        }
+            //    });
+            //    $("#tuan").val(str);
+            //    if (!pd) {
+            //        $("#obj2").prop("checked", false);
+            //        $("#obj2").parent().children().first().removeClass("ui-checkbox-on").addClass("ui-checkbox-off");
+            //    } else {
+            //        $("#obj2").prop("checked", true);
+            //        $("#obj2").parent().children().first().removeClass("ui-checkbox-off").addClass("ui-checkbox-on");
+            //    }
+            //});
         })
-    </script>
+    </script>-->
 </body>
 </html>

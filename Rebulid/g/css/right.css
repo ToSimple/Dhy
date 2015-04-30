@@ -125,35 +125,117 @@ a {
         text-decoration: none;
         color: #0654a0;
     }
-    .kd {
+
+.kd {
     height: 5px;
     width: 100%;
     clear: both;
 }
+
 .col-red {
-    padding-top:14px;
-    font-size:1.3em;
-    border:0px;
-    color:#FF3300;
+    padding-top: 14px;
+    font-size: 1.3em;
+    border: 0px;
+    color: #FF3300;
 }
+
 .col-greed {
-      padding-top:14px;
-     font-size:1.3em;
-    border:0px;
-    color:#33CC00;
+    padding-top: 14px;
+    font-size: 1.3em;
+    border: 0px;
+    color: #33CC00;
 }
-     .proItem input {
-            position:absolute;
-            z-index:999;
-            left:0;
-            top:30px;
-        }
+
+.proItem input {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 30px;
+}
+
 .ui-listview .proItem > img:first-child, .ui-listview .proItem > .ui-btn > img:first-child, .ui-listview .proItem .ui-li-thumb {
     left: 20px;
 }
+
 .ui-listview > .proItem > .ui-btn, .ui-listview > .ui-li-static.proItem {
     padding-left: 7em;
 }
-      #uili_key {
-            color:#CC0033;
-        }
+
+#uili_key {
+    color: #CC0033;
+}
+
+.proItemnoimg .noimg {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 25px;
+}
+
+.ui-listview .proItemnoimg > img:first-child, .ui-listview .proItemnoimg > .ui-btn > img:first-child, .ui-listview .proItemnoimg .ui-li-thumb {
+    left: 10px;
+}
+
+.ui-listview > .proItemnoimg > .ui-btn, .ui-listview > .ui-li-static.proItemnoimg {
+    padding-left: 2em;
+}
+
+/*.ltop {
+    position: absolute;
+    z-index: 999;
+    left: 4px;
+    top: 5px;
+}*/
+
+.ltop-red {
+    color: #990033;
+}
+
+.ltop-blue {
+    color: #0755a1;
+}
+
+.ltop-green {
+    color: #237449;
+}
+
+/*.sd {
+    float: left;
+    padding-left: 50px;
+    position: absolute;
+    right: -30px;
+    width: 160px;
+    height: 20px;
+    z-index: 1;
+    transform: rotate(50deg);
+    -ms-transform: rotate(50deg); 
+    -moz-transform: rotate(50deg);
+    -webkit-transform: rotate(50deg); 
+    -o-transform: rotate(50deg);
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 0 0 0 #fff;
+    line-height: 18px;
+    text-align: center;
+}
+
+.sd-red {
+    background: #990033;
+}
+
+.sd-bule {
+    background: #0755a1;
+}
+
+.sd-green {
+    background: #237449;
+}
+.ah h2{
+    max-width:80%;
+}*/
+
+.ah-p {
+    padding-left:24px;
+}

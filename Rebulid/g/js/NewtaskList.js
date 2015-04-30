@@ -41,8 +41,8 @@ $(function () {
     $(document).on("click", "#editBtn", function () {
         mode = "edit";
         dis = "inline-block";
-        liCss = "proItem";
-        $(".lia").addClass("proItem");
+        liCss = "proItemnoimg";
+        $(".lia").addClass("proItemnoimg");
         //显示复选框
         $(".bjcboxCss").css("display", "inline-block");
         //href失效
@@ -58,7 +58,7 @@ $(function () {
         mode = "show";
         dis = "none";
         liCss = "";
-        $(".lia").removeClass("proItem");
+        $(".lia").removeClass("proItemnoimg");
         //隐藏复选框
         $(".bjcboxCss").css("display", "none");
         //href生效
@@ -185,17 +185,20 @@ function getData() {
 
                 str += '<li id="li_' + this[0].usersAttentionProjectsId + '" class="lia'
                         + liCss
-                        + '"><input type="checkbox" class="bjcboxCss" name="bjckbox" value="'
+                        + '"><input type="checkbox" class="bjcboxCss noimg"  name="bjckbox" value="'
                         + this[0].usersAttentionProjectsId
                         + '" style="display:'
                         + dis
-                        + '"/><a class="ah ui-btn ui-btn-icon-right ui-icon-carat-r" data-ajax="false">'
-
+                        + '"/>'
+                        + '<a class="ah ui-btn ui-btn-icon-right ui-icon-carat-r" data-ajax="false">'                         
+                        //+ '<div class="sd sd-bule">进行中</div>'
+                        //<i class="fa fa fa-check-circle ltop-blue"></i>
+                        //<i class="fa fa fa-play-circle ltop-green"></i>
+                        + '<h2><i class="fa fa-minus-circle ltop-red"></i> '
                         + this[1].name
-
+                        + '</h2><p class="ah-p">'
                         + this[1].addtime
-                        + '</a></li>';
-
+                        + '</p></a></li>';
             })
             $(".uplist").append(str);
         },
