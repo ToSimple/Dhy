@@ -7,7 +7,7 @@ function loo(i) {
         url: "prolist.aspx",
         dataType: "json",
         data: { "index": i },
-        beforeSend: function () {
+        beforeSend: function () { 
             if (i != 1) {
                 $(".load").css("display", "block");
             } else {
