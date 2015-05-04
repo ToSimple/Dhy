@@ -237,5 +237,10 @@ a {
 }*/
 
 .ah-p {
-    padding-left:24px;
+    padding-left: 24px;
 }
+
+.tip-min {
+    float: right;
+}
+

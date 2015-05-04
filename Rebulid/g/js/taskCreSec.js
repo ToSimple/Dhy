@@ -180,6 +180,11 @@ $(function () {
                 this.parentNode.parentNode.removeChild(this.parentNode);
             }
         });
+
+        
+        if (str.lastIndexOf(",") == (str.length - 1)) {
+            str = str.substr(0, str.length-1);     
+        }
         $("#pan").val(str);
         if (!pd) {
             $("#obj1").prop("checked", false);

@@ -41,11 +41,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FactoryPatternOfAbstract\AbstractFactory.cs" />
+    <Compile Include="FactoryPatternOfAbstract\Bow.cs" />
+    <Compile Include="FactoryPatternOfAbstract\FactoryProducer.cs" />
+    <Compile Include="FactoryPatternOfAbstract\Ghost.cs" />
+    <Compile Include="FactoryPatternOfAbstract\IMonster.cs" />
+    <Compile Include="FactoryPatternOfAbstract\WeaponFactory.cs" />
+    <Compile Include="FactoryPatternOfAbstract\Orc.cs" />
+    <Compile Include="FactoryPatternOfAbstract\IWeapon.cs" />
+    <Compile Include="FactoryPatternOfAbstract\Wolfman.cs" />
+    <Compile Include="FactoryPatternOfAbstract\Sword.cs" />
+    <Compile Include="FactoryPatternOfAbstract\Spear.cs" />
+    <Compile Include="FactoryPatternOfAbstract\MonsterFactory.cs" />
+    <Compile Include="FactoryPattern\IMonster.cs" />
+    <Compile Include="FactoryPattern\MonsterFactory.cs" />
+    <Compile Include="FactoryPattern\Orc.cs" />
+    <Compile Include="FactoryPattern\Wolfman.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingletonPattern\SingleObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BuilderPattern\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

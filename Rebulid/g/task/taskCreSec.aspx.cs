@@ -33,21 +33,6 @@ public partial class g_task_taskCreSec : System.Web.UI.Page
                     data += "{\"name\":\"John\" , \"id\":\"1\" },";
                     data += "{\"name\":\"John\" , \"id\":\"1\" },";
                     data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
-                    data += "{\"name\":\"John\" , \"id\":\"1\" },";
                 }
                 else if (item == "2")
                 {
