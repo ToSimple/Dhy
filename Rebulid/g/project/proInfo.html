@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>项目选项</title>
+
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
     <link href="../jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
@@ -72,11 +73,11 @@
 
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+                        <div  class="angle"><i class="fa fa-angle-left"></i></div>
+                        <span  class="sr-only">Previous</span>
                     </a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <div class="angle"><i class="fa fa-angle-right"></i></div>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
@@ -95,7 +96,7 @@
             <div class="box-content-pd">
                 <div class="box">
                     <div class="box-head">
-                        <a >1.电脑控制切割</a>
+                        <a>1.电脑控制切割</a>
                     </div>
                     <div class="box-content-pd">
                         <a href="stepInfo.html" data-ajax="false">
@@ -121,7 +122,6 @@
                     <li><a href="#"><i class="fa fa-pencil-square-o"></i>&nbsp;编辑项目</a></li>
                     <li><a href="#"><i class="fa fa-trash-o"></i>&nbsp;删除项目</a></li>
                     <li><a href="stepCre.html" data-ajax="false"><i class="fa fa-plus"></i>&nbsp;添加步骤</a></li>
-
                 </ul>
             </div>
         </div>
@@ -135,7 +135,7 @@
     <script src="../bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
     <script>
         (function () {
-            
+
             var control = navigator.control || {};
             if (control.gesture) {
                 control.gesture(false);
