@@ -41,6 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuilderPattern\Cappuccino.cs" />
+    <Compile Include="BuilderPattern\CItaly.cs" />
+    <Compile Include="BuilderPattern\CUsa.cs" />
+    <Compile Include="BuilderPattern\CaffeAmericano.cs" />
+    <Compile Include="BuilderPattern\ICoffe.cs" />
+    <Compile Include="BuilderPattern\IIncludeing.cs" />
+    <Compile Include="BuilderPattern\Latte.cs" />
+    <Compile Include="BuilderPattern\LatteeAmericano.cs" />
+    <Compile Include="BuilderPattern\Meal.cs" />
+    <Compile Include="BuilderPattern\MealBuilder.cs" />
+    <Compile Include="BuilderPattern\NMilk.cs" />
+    <Compile Include="BuilderPattern\NWater.cs" />
     <Compile Include="FactoryPatternOfAbstract\AbstractFactory.cs" />
     <Compile Include="FactoryPatternOfAbstract\Bow.cs" />
     <Compile Include="FactoryPatternOfAbstract\FactoryProducer.cs" />
@@ -64,9 +76,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BuilderPattern\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

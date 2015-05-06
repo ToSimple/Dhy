@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        //js创建对象方法一
+        function caffeFirst(c, w) {
+            this.coffeBean = c;
+            this.liquids = w;
+        }
+        caffeFirst.prototype.brew = function () {
+            return "一杯由" + this.liquids + "和" + this.coffeBean + "冲泡的咖啡";
+        }
+        var cup1 = new caffeFirst("阿拉比卡咖啡豆", "全脂牛奶");
+        console.log(cup1.brew());
+
+        //js创建对象方法二
+        function caffeSecend(c, w) {
+            var obj = new Object();
+            obj.coffBean = c;
+            obj.liquids = w;
+            obj.brew = function () {
+                return "一杯由" + this.liquids + "和" + this.coffBean + "冲泡的咖啡";
+            };
+            return obj;
+        }
+        var cup2 = new caffeSecend("阿拉比卡咖啡豆", "全脂牛奶");
+        console.log(cup2.brew());
+
+        ////js创建对象方法三
+        var caffeThird = new Object();
+        caffeThird.coffBean = "阿拉比卡咖啡豆";
+        caffeThird.liquids = "全脂牛奶";
+        caffeThird.brew = function () {
+            return "一杯由" + this.liquids + "和" + this.coffBean + "冲泡的咖啡";
+        }
+        console.log(caffeThird.brew());
+
+        //js创建对象方法四
+        var caffeForth = {
+            "coffBean": "阿拉比卡咖啡豆",
+            "liquids": "全脂牛奶",
+            "brew": function () {
+                return "一杯由" + this.liquids + "和" + this.coffBean + "冲泡的咖啡";
+            }
+        };
+        console.log(caffeForth.brew());
+
+        //js创建对象方法五
+        var Circle = new Function("this.PI = 3.14159;this.area = function( r ) {return r*r*this.PI;}");
+        console.log((new Circle()).area(1.0));
+
+    </script>
+</body>
+</html>

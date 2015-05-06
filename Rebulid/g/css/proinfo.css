@@ -14,18 +14,19 @@
     width: 95%;
     margin: 10px auto;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);*/
+    background-color: #fff;
 }
 
     .box .box-head {
-        padding: 10px;
+        padding: 5px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         width: 100%;
     }
 
         .box .box-head .title {
-            font-size: 1.3em;
-            font-weight: 700;
+            font-size: 1em;
+            font-weight: 500;
         }
 
         .box .box-head .tip span {
@@ -41,6 +42,7 @@
         }
 
     .box .box-content {
+        background-color: #fff;
         width: 100%;
     }
 
@@ -63,6 +65,7 @@
     }
 
     .box .box-content-pd {
+        background-color: #fff;
         width: 100%;
         padding: 5px 10px;
     }
@@ -79,4 +82,54 @@ img {
     margin: 280% 0;
     font-size: 2em;
     color: #fff;
+}
+
+.bq-red {
+    background: #990033;
+}
+
+.bq-bule {
+    background: #0755a1;
+}
+
+.bq-green {
+    background: #237449;
+}
+
+.bq {
+    float: right;
+    padding-left: 50px;
+    position: relative;
+    right: -50px;
+    width: 160px;
+    height: 20px;
+    z-index: 1;
+    transform: rotate(50deg);
+    -ms-transform: rotate(50deg); /* IE 9 */
+    -moz-transform: rotate(50deg); /* Firefox */
+    -webkit-transform: rotate(50deg); /* Safari 和 Chrome */
+    -o-transform: rotate(50deg);
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 0 0 0 #fff;
+    line-height: 18px;
+    text-align: center;
+}
+
+.box-head {
+    overflow: hidden;
+}
+
+.xdpi {
+    color: #fff;
+    font-size: 1em;
+    background-color: #326bae;
+    text-shadow: 0 0 0 #fff;
+}
+
+.col-12 {
+    padding-left: 10px;
+    width: 100%;
 }

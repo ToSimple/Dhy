@@ -13,11 +13,25 @@ function clearSay() {
 
 //收缩
 $(".tip-min").on("click", function () {
-    if ($(this).parent().parent().children(".box-content").css("display") == "none") {
+
+
+
+    if ($(this).parent().parent().parent().children(".box-content-pd").css("display") == "none") {
+
         $(this).children("i").removeClass("fa-caret-square-o-up").addClass("fa-caret-square-o-down");
-        $(this).parent().parent().children(".box-content").css("display", "block");
-    } else {
+        $(this).parent().parent().parent().children(".box-content-pd").css("display", "block");
+    } else if ($(this).parent().parent().parent().children(".box-content-pd").css("display") == "block") {
+
         $(this).children("i").removeClass("fa-caret-square-o-down").addClass("fa-caret-square-o-up");
-        $(this).parent().parent().children(".box-content").css("display", "none");
+        $(this).parent().parent().parent().children(".box-content-pd").css("display", "none");
+    }
+    if ($(this).parent().parent().parent().children(".box-content").css("display") == "none") {
+
+        $(this).children("i").removeClass("fa-caret-square-o-up").addClass("fa-caret-square-o-down");
+        $(this).parent().parent().parent().children(".box-content").css("display", "block");
+    } else if ($(this).parent().parent().parent().children(".box-content").css("display") == "block") {
+
+        $(this).children("i").removeClass("fa-caret-square-o-down").addClass("fa-caret-square-o-up");
+        $(this).parent().parent().parent().children(".box-content").css("display", "none");
     }
 })
