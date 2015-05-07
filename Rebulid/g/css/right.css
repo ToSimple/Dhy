@@ -243,6 +243,9 @@ a {
 .tip-min {
     float: right;
 }
+    .tip-min i {
+        font-size:1.2em;
+    }
 
 .dis-none {
     display:none;

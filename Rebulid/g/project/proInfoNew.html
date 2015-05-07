@@ -19,15 +19,14 @@
             <h1>项目详细</h1>
             <a href="#rightpanel3" class="hdbutton "><i class="fa fa-navicon"></i></a>
         </div>
-        <!--<div data-role="controlgroup" data-type="vertical" class="btnBox">
+        <!--        <div data-role="controlgroup" data-type="vertical" class="btnBox">
             <a href="#" data-role="button" class="btn">编辑项目</a>
             <a href="#" data-role="button" class="btn">删除项目</a>
             <a href="step.html" data-role="button" class="btn">编辑步骤</a>
-            </div>
-        -->
+        </div>-->
         <div class="box">
             <div class="box-head">
-                <div class="bq bq-bule">个人</div>
+                  <div class="bq bq-bule">个人</div>
                 <div class="title">Amaker创客工具参考资料之 “剑”系工具（动手制作类) </div>
                 <div class="tip">
                     <span class="label label-info">Amaker</span>
@@ -72,16 +71,19 @@
                             <img src="../../img/c681cf59135294349f30f452f98cb32338ec41b3.png" />
                         </div>
                     </div>
+
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <!--  <div  class="angle"><i class="fa fa-angle-left"></i></div>-->
-                        <span class="sr-only">Previous</span>
+                      <!--  <div  class="angle"><i class="fa fa-angle-left"></i></div>-->
+                        <span  class="sr-only">Previous</span>
                     </a>
                     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
                         <!--<div class="angle"><i class="fa fa-angle-right"></i></div>-->
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+
+
                 <div class="info">
                     <p>来源于MIT，供创客导师编制课程时参考。该项目用于测试该项目用于测试该项目用于测试该项目用于测试该项目用于测试 </p>
                     <p>参考资料：<a>点击查看</a></p>
@@ -89,11 +91,7 @@
             </div>
         </div>
         <div class="box">
-            <div class="box-head xdpi">
-                <div class="title">
-                    项目所属<div class="tip-min"><i class="fa fa-caret-square-o-down"></i></div>
-                </div>
-            </div>
+            <div class="box-head xdpi"><div class="title">项目所属<div class="tip-min"><i class="fa fa-caret-square-o-down"></i></div></div></div>
             <div class="box-content">
                 <div class="tab">
                     <div class="col-12 ssxm-con">
@@ -102,11 +100,9 @@
                 </div>
             </div>
         </div>
-        <div class="box">
+        <div class="box">          
             <div class="box-head xdpi">
-                <div class="title">
-                    项目步骤<div class="tip-min"><i class="fa fa-caret-square-o-up"></i></div>
-                </div>
+                <div class="title">项目步骤<div class="tip-min"><i class="fa fa-caret-square-o-up"></i></div></div>
             </div>
             <div class="box-content-pd dis-none">
                 <div class="box">
@@ -129,6 +125,7 @@
                 </div>
             </div>
         </div>
+
         <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
             <div class="ui-panel-inner pr">
                 <ul class="rpanelul">
@@ -150,10 +147,12 @@
     <script src="../js/common.js"></script>
     <script>
         (function () {
+
             var control = navigator.control || {};
             if (control.gesture) {
                 control.gesture(false);
             }
+
             $(".item").on("swipeleft", function () {
                 $('.carousel').carousel('next');
             });
