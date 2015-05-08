@@ -69,21 +69,38 @@ $(function () {
         $(".bjbtn").css("display", "none");
     });
 
-    // 取消关注
-    $(document).on("click", ".qxgz", function () {
+    // 删除成员
+    $(document).on("click", ".sccy", function () {
         var sel = "";
         $("input[name='bjckbox']:checked").each(function () {
             sel += "," + $(this).attr("value");
         });
         if (sel == "") {
-            alert("请选择取消项！");
+            alert("请选择项！");
         } else {
-            if (confirm("确定要取消关注吗？")) {
+            if (confirm("确定要删除成员吗？")) {
                 if (sel != "") sel = sel.substring(1);
-                deleteAttention(sel);
+                deleteMember(sel);
             }
         }
     });
+
+    // 提升管理员
+    $(document).on("click", ".tsgly", function () {
+        var sel = "";
+        $("input[name='bjckbox']:checked").each(function () {
+            sel += "," + $(this).attr("value");
+        });
+        if (sel == "") {
+            alert("请选择项！");
+        } else {
+            if (confirm("确定要提升管理员吗？")) {
+                if (sel != "") sel = sel.substring(1);
+                upMember(sel);
+            }
+        }
+    });
+
 
     //编辑模式下，选中一列数据选中checkbox
     $(document).on("click", ".lia", function () {
@@ -103,8 +120,9 @@ $(function () {
 
 });
 
-//取消关注提交处理
-function deleteAttention(selIds) {
+
+
+function deleteMember(selIds) {
     //表单数据
     var formData = {
         'selIds': selIds
@@ -123,7 +141,44 @@ function deleteAttention(selIds) {
 
             //成功
             if (results.mN == 1) {
-                //清除取消的关注项
+                //清除
+                var sIds = new Array();
+                sIds = selIds.split(",");
+
+                for (var i = 0; i < sIds.length; i++) {
+                    $("#li_" + sIds[i]).remove();
+                }
+            }
+
+        },
+        error: function (error) {
+            console.log(error);
+        }
+    });
+}
+
+
+
+function upMember(selIds) {
+    //表单数据
+    var formData = {
+        'selIds': selIds
+    };
+    //ajax提交表单
+    $.ajax({
+        url: "deleteAttention",
+        data: formData,
+        type: "post",
+        dataType: "json",
+        success: function (results) {
+            if (results.mes.length > 0) {
+                //显示提示信息
+                showMessage(results.mes);
+            }
+
+            //成功
+            if (results.mN == 1) {
+                //清除
                 var sIds = new Array();
                 sIds = selIds.split(",");
 
@@ -195,7 +250,7 @@ function getData() {
                         + this[1].name
                         + '</h2><p>'
                         + this[1].addtime
-                        + '</p></a></li>';
+                        + '</p><span class="ui-li-count col-red"><i class="fa fa-minus-circle"></i></span></a></li>';
 
             })
             $(".uplist").append(str);

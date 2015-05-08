@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>加入的团体</title>
+    <link href="../jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
+    <link href="../jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/right.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed" class="head">
+            <a href="../i.html?i=3#three" class="hdbutton ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
+            <h1>加入的团体</h1>
+            <button id="editBtn" class="btn hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-edit" data-ajax="false">编辑</button>
+            <a href="#rightpanel3" class="hdbutton bjbtn ui-btn-right ui-btn ui-corner-all" style="display: none;"><i class="fa fa-navicon"></i></a>
+            <div data-role="navbar" class="search">
+                <input type="search" name="search" id="search" placeholder="搜索内容...">
+            </div>
+        </div>
+        <ul data-role="listview" data-inset="false" class="uplist">
+        </ul>
+        <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
+            <div class="ui-panel-inner pr">
+                <ul class="rpanelul">
+                    <li class="ui-first-child" data-icon="delete"><a data-rel="close" href="#"><i class="fa fa-caret-square-o-right"></i>&nbsp;收起</a></li>
+                    <li><a href="javascript:;" data-ajax="false" class="qxbj"><i class="fa fa-reply"></i>&nbsp;取消编辑</a></li>
+                    <li><a id="obj1" data-ajax="false"><i class="fa fa-star-o"></i>&nbsp;角色管理</a></li>
+                    <li><a class="sccy" data-ajax="false"><i class="fa fa-remove"></i>&nbsp;删除成员</a></li>
+                    <li><a href="javascript:;" data-ajax="false" id="uili_key"><i class="fa fa-home"></i>&nbsp;用户中心</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer" class="load" data-position="fixed">
+            <i class="fa fa-refresh fa-spin"></i>
+        </div>
+
+        <div class="dialogbox dg-pan">
+            <div class="padbox" style="height:350px" >
+                <div class="dia-title"><i class="fa fa-close close-dia ">角色管理</i><i class="close close-pan xd">确定</i></div>
+                <div class="dia-con dia-pan-con" style="height:300px" >
+                 	<form>
+					<fieldset data-role="controlgroup">
+					<legend>全部角色:</legend>
+					<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2a" value="1" checked="checked">
+					<label for="radio-choice-v-2a">团长</label>
+					<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2b" value="2">
+					<label for="radio-choice-v-2b">管理员</label>
+					<input type="radio" name="radio-choice-v-2" id="radio-choice-v-2c" value="3">
+					<label for="radio-choice-v-2c">任务专员</label>
+                    <input type="radio" name="radio-choice-v-2" id="radio-choice-v-2d" value="4">
+					<label for="radio-choice-v-2d">普通会员</label>
+				</fieldset>
+			</form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../jqjm/jquery.min.js"></script>
+    <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/groupJoin.js"></script>
+    <script>
+
+        $(function () {
+
+            //
+            var one = true;//锁
+            //绑定事件
+            $("#obj1").on("click", function () {
+                if (one) {
+                    //隐藏域为空，加载空表单
+                    showOrClosePan();
+                }
+            });
+            //组装未选择的标签 在加载列表开头 seach用到 
+            function showOrClosePan() {
+                if ($(".dg-pan").css("display") == "none") {
+                    $("#searchper").val("");
+                    $(".dg-pan").css("display", "block");
+                } else {
+                    $(".dg-pan").css("display", "none");
+                }
+            }
+            //关闭按钮
+            $(".close-dia").on("click", function () {
+                showOrClosePan();
+            });
+            //选定按钮
+            $(".close-pan").on("click", function () {
+                showOrClosePan();
+
+            });
+
+        })
+    </script>
+</body>
+</html>

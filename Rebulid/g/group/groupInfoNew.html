@@ -63,14 +63,14 @@
                     </div>
                     <div id="three">
                         <ul data-role="listview" data-inset="false">
-                            <li><a href="group/group1.html" data-ajax="false">添加团队成员</a></li>
+                            <li><a data-ajax="false" id="obj1">添加团队成员</a></li>
                             <li><a href="group/group2.html" data-ajax="false">现有团队成员</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel"  class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
+        <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
             <div class="ui-panel-inner pr">
                 <ul class="rpanelul">
                     <li class="ui-first-child" data-icon="delete"><a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a></li>
@@ -85,9 +85,45 @@
         <!-- <div data-role="footer" data-theme="b">
             <h1>底部文本</h1>
         </div>-->
+        <input type="hidden" id="pan" value="1,2,3,4" />
+        <div class="dialogbox dg-pan">
+            <div class="padbox">
+                <div class="dia-title"><i class="fa fa-close close-dia ">搜索个人</i><i class="close close-pan xd">发送邀请</i></div>
+                <div data-role="navbar">
+                    <input type="search" name="searchper" id="searchper" placeholder="搜索内容...">
+                </div>
+                <div class="dia-con dia-pan-con">
+                    <!--                    <div class="dia-conItem dia-pan">
+                        <input type="checkbox" data-role="none" value="1">dhy                   
+                    </div>
+                    <div class=" dia-conItem dia-pan">
+                        <input type="checkbox" data-role="none" value="2">dhy
+                    </div>
+                    <div class="dia-conItem dia-pan">
+                        <input type="checkbox" data-role="none" value="3">dhy
+                    </div>
+                    <div class="dia-conItem dia-pan">
+                        <input type="checkbox" data-role="none" value="4">dhy
+                    </div>
+                    <div class="dia-conItem dia-pan">
+                        <input type="checkbox" data-role="none" value="5">dhy
+                    </div>
+                    <div class="dia-conItem dia-pan">
+                        <input type="checkbox" data-role="none" value="6">dhy
+                    </div>
+                    <div class="dia-conItem dia-pan">
+                        <input type="checkbox" data-role="none" value="7">dhy
+                    </div>
+                    <div class="dia-conItem dia-pan">
+                        <input type="checkbox" data-role="none" value="8">dhy
+                    </div>-->
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/GroupInfo.js"></script>
 </body>
 </html>
