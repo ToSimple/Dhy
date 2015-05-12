@@ -27,22 +27,33 @@
     </style>
 </head>
 <body>
-    <%  %>
     <form id="form1" runat="server">
         <div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
 
-            <div>$1.21</div>
-            <div>$85</div>
-            <div>$1019</div>
-            <div>4$47.03</div>
-
-            <div></div>
-            <div></div>
-            <div></div>
         </div>
     </form>
+    <script src="jquery-1.9.0.min.js"></script>
+    <script>
+        
+        var Cat = {
+            createNew: function () {
+
+                var cat = {};
+
+                cat.name = "大毛";
+
+                cat.makeSound = function () { alert(this.name); };
+
+                return cat;
+            }
+        };
+        var cat1 = Cat.createNew();
+        cat1.name="哈哈"
+        cat1.makeSound(); // 喵喵喵
+       
+        var cat2 = Cat.createNew();
+        cat2.makeSound();
+        alert(typeof (Cat));
+    </script>
 </body>
 </html>

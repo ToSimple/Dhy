@@ -227,13 +227,13 @@ function getData() {
             var default_img = {
                 w: 80,
                 h: 60,
-                src: '../../img/default.jpg'
+                src: '../../img/icon.png'
             }
             $.each(results.data, function () {
                 if (this[1].projectImgses
                         && this[1].projectImgses.length) {
                     var img_src =
-                          "../../img/default.jpg";
+                          "../../img/icon.png";
                 } else {
                     var img_src = default_img.src;
                 }

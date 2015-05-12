@@ -8,6 +8,7 @@
 //    minlength: 0,
 //    max:0,
 //    min:0,
+//    dag: true
 //}
 ////验证显示信息
 //this.Message{
@@ -18,6 +19,7 @@
 //    minlength: "长度不能小于" + this.rules.minlength,
 //    max:"数值不能大于"
 //    min:"数值不能小于"
+//    dag:"必须是整数"
 //} 
 function validate() {
 
@@ -111,6 +113,16 @@ function validate() {
                         if (j == "min") {
                             if (tag.val() < val) {
                                 showMessage(tags.message[i].min);
+                                ext = true;
+                                return false;
+                            }
+                        }
+                        //数值必须整数
+                        if (j == "dag") {
+                            //alert(tag.val());
+                            //alert(tag.val().indexOf("."));
+                            if (tag.val().indexOf(".")!=-1) {
+                                showMessage(tags.message[i].dag);
                                 ext = true;
                                 return false;
                             }

@@ -1,0 +1,19 @@
+﻿        .box-info {
+           
+        }
+        .box-info div{
+            margin:0 auto;
+            max-width:200px;
+            
+        }
+            .box-info p {
+                text-align:left;
+            }
+
+        .red {
+            color: #c12020;
+        }
+
+        .green {
+            color: #13cc16;
+        }

@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
+    <link href="jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="font/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="css/right.css?v=1.0" rel="stylesheet" />
+    <link href="css/i.css?v=1.0" rel="stylesheet" />
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        .box-info {
+            text-align: center;
+        }
+
+        .red {
+            color: #c12020;
+        }
+
+        .ui-info {
+            width: 100%;
+            overflow: auto;
+            margin: 5px 0 5px 5px;
+        }
+
+        .lab {
+            float: left;
+            width: 33%;
+            height: 24px;
+            line-height: 24px;
+        }
+
+        #money {
+            float: left;
+            width: 62%;
+        }
+
+        .ulinfo {
+            margin: 5px 0;
+        }
+
+        .alipay {
+            float: left;
+            display: inline-block;
+            height: 31px;
+            line-height: 30px;
+        }
+
+        .alipayimg {
+            width: 142px;
+            background-position: 0 0;
+            background: url("../img/pay.png") no-repeat;
+        }
+
+        .czbtn {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            text-indent: 0px;
+            text-shadow: none;
+            width: 100%;
+        }
+
+        .ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .czzs-info {
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+        <div data-role="header" data-theme="a" data-position="fixed">
+            <a href="i.html" data-ajax="false" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-home">主页</a>
+            <h1>充值</h1>
+            <a href="#rightpanel3"><i class="fa fa-navicon" style=""></i></a>
+        </div>
+        <div class="box-info">
+            <p><i class="fa fa-database"></i>现有积分: <span class="red">100</span></p>
+        </div>
+        <div class="ui-info">
+            <label for="money" class="lab" data-role="none">充值金额:</label>
+            <input type="text" name="money" id="money" value="" data-role="none">
+        </div>
+        <div class="ui-info czzs-info">
+            <p>
+                温馨提示：<br />
+                1、通过信用卡的快捷支付有500元限制，超过500元时您可以选择其他方式支付。<br />
+                2、如您有欠费账单，充值后会优先补扣欠费账单。<br />
+                3、充值后请及时对支付订单进行结算，以免影响正常服务。
+            </p>
+        </div>
+        <ul data-role="listview" data-inset="true" class="ulinfo">
+            <li class="alipyali">
+                <input type="radio" data-role="none" class="alipay" checked="checked" />
+                <i class="alipay alipayimg"></i></li>
+        </ul>
+        <div>
+            <a id="alipaybtn" class="czbtn" data-role="none">充值</a>
+        </div>
+        <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
+            <div class="ui-panel-inner pr">
+                <ul class="rpanelul">
+                    <li class="ui-first-child" data-icon="delete">
+                        <a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a>
+                    </li>
+                    <li><a href="infochange.html"><i class="fa fa-user"></i>&nbsp;修改个人资料</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div data-role="footer" data-theme="b">
+            <h1>底部文本</h1>
+        </div>-->
+    </div>
+    <script src="jqjm/jquery.min.js"></script>
+    <script src="jqjm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/validate.js"></script>
+    <script>
+        vd.tags = ["money"];
+        vd.rules = [{ required: true, number: true, max: 500, min: 0, dag: true }];
+        vd.messages = [{ required: "金额不能为空", number: "金额必须是数字", max: "充值金额不能大于500", min: "充值金额不能小于0", dag: "金额必须是整数" }]
+        vd.submit = function () {
+            alert("表单已经提交");
+            //location.href = "www.zhihubao.com" + "?money=" + $("#").val();
+            //$.ajax({
+            //    url: "user/userLogin",
+            //    data: formData,
+            //    type: "post",
+            //    dataType: "json",
+            //    success: function (results) {
+            //        if (results != null) {
+            //            if (results.mes.length > 0) {
+            //                showMessage(results.mes);
+            //            }
+
+            //            if (results.locationUrl.length > 0)
+            //            { window.location = results.locationUrl; }
+            //        }
+            //    }, error: function (error) {
+            //        console.log(error);
+            //    }
+            //});
+        }
+        vd.bind("alipaybtn");
+        
+    </script>
+</body>
+</html>
