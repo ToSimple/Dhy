@@ -244,7 +244,7 @@ function getData() {
                         + this[0].usersAttentionProjectsId
                         + '" style="display:'
                         + dis
-                        + '"/><a class="ah ui-btn ui-btn-icon-right ui-icon-carat-r" data-ajax="false"><img src="'
+                        + '"/><a class="ah ui-btn ui-btn-icon-right ui-icon-carat-r" data-ajax="false"><img class="circleImg" src="'
                         + img_src
                         + '" /><h2>'
                         + this[1].name

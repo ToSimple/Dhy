@@ -329,6 +329,6 @@ a {
     height:60px;
     border-radius:50px;
 }
-.ui-listview > li.ui-first-child img:first-child:not(.ui-li-icon) {
+.ui-listview > li.ui-first-child .circleImg:first-child:not(.ui-li-icon) {
     border-top-left-radius:50px;
 }
