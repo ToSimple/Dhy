@@ -53,6 +53,28 @@
         var Circle = new Function("this.PI = 3.14159;this.area = function( r ) {return r*r*this.PI;}");
         console.log((new Circle()).area(1.0));
 
+
+        var person = {};
+        Object.defineProperties(person, {
+            _age: {
+                value: 19
+            },
+            isAdult: {
+                get: function () {
+                    if (this._age >= 18) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+        });
+        var p1 = person;
+        p1._age = 1;
+        alert(p1._age);
+        alert(p1.isAdult ? '成年' : '未成年');//成年
+        var p2 = person;
+        alert(p2.isAdult ? '成年' : '未成年');//成年
     </script>
 </body>
 </html>

@@ -1,0 +1,82 @@
+﻿.box-buyInfo {
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+}
+
+    .box-buyInfo .bi_head {
+        padding: 10px;
+        font-size: 1.1em;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .box-buyInfo .bi_money {
+        padding: 10px;
+        font-size: 1em;
+        color: #777;
+        border-bottom: 1px solid #ccc;
+    }
+
+        .box-buyInfo .bi_money p {
+            margin: 0;
+            color: #000;
+            font-size: 2em;
+            text-align: right;
+        }
+
+    .box-buyInfo .bi_pName {
+        padding: 10px;
+        font-size: 1em;
+        color: #777;
+        border-bottom: 1px solid #ccc;
+    }
+
+        .box-buyInfo .bi_pName span {
+            margin: 0 0 0 20px;
+            color: #000;
+        }
+
+    .box-buyInfo .bi_content {
+        padding: 10px;
+        font-size: 1em;
+        color: #777;
+    }
+
+        .box-buyInfo .bi_content span {
+            margin: 0 0 0 20px;
+            color: #000;
+        }
+
+.bq-red {
+    background: #990033;
+}
+
+.bq-bule {
+    background: #0755a1;
+}
+
+.bq-green {
+    background: #237449;
+}
+
+.bq {
+    float: right;
+    padding-left: 50px;
+    position: absolute;
+    right: -60px;
+    width: 160px;
+    height: 20px;
+    z-index: 1;
+    transform: rotate(50deg);
+    -ms-transform: rotate(50deg); /* IE 9 */
+    -moz-transform: rotate(50deg); /* Firefox */
+    -webkit-transform: rotate(50deg); /* Safari 和 Chrome */
+    -o-transform: rotate(50deg);
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 1em;
+    text-shadow: 0 0 0 #fff;
+    line-height: 18px;
+    text-align: center;
+    opacity: 0.9;
+}

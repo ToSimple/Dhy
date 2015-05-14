@@ -46,3 +46,23 @@
 .inflb {
     text-align: center;
 }
+ .cx-r .box p {
+            margin-bottom: 0px;
+        }
+
+        .userExp {
+            width: 180px;
+            height: 60px;
+        }
+
+            .userExp .exp_li {
+                float: left;
+            }
+
+                .userExp .exp_li img {
+                    width: 55px;
+                    height: 55px;
+                }
+        .exp_num {
+            text-align:center;
+        }
