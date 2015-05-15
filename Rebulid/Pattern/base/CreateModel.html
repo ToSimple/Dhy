@@ -96,7 +96,7 @@
         //}
 
         //原型模式
-        // 原型模式的缺点，它省略了为构造函数传递初始化参数，这在一定程序带来不便；
+        //原型模式的缺点，它省略了为构造函数传递初始化参数，这在一定程序带来不便；
         //另外，最主要是当对象的属性是引用类型时，它的值是不变的，总是引用同一个外部对象，所有实例对该对象的操作都会其它实例
         //function Person() {
         //}
@@ -149,21 +149,21 @@
         //动态原型模式将所有构造信息都封装在构造函数中，又保持了组合的优点。
         //其原理就是通过判断构造函数的原型中是否已经定义了共享的方法或属性，如果没有则定义，否则不再执行定义过程。
         //该方式只原型上方法或属性只定义一次，且将所有构造过程都封装在构造函数中，对原型所做的修改能立即体现所有实例中
-        //function Person(name, age, job) {
-        //    this.name = name;
-        //    this.age = age;
-        //    this.job = job;
-        //    this.lessons = ['Math', 'Physics'];
-        //    this.getName;
-        //    if (typeof this.getName != 'function') {//通过判断实例封装
-        //        Person.prototype = {
-        //            constructor: Person,//原型字面量方式会将对象的constructor变为Object，此外强制指回Person
-        //            getName: function () {
-        //                return this.name;
-        //            }
-        //        }
-        //    }
-        //}       
+        function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.lessons = ['Math', 'Physics'];
+            this.getName;            
+        }
+        if (typeof this.getName != 'function') {//通过判断实例封装
+            Person.prototype = {
+                constructor: Person,//原型字面量方式会将对象的constructor变为Object，此外强制指回Person
+                getName: function () {
+                    return this.name;
+                }
+            }
+        }
 
         //var person1 = new Person('Jack', 19, 'SoftWare Engneer');
         //person1.lessons.push('Biology');
@@ -172,10 +172,10 @@
         //alert(person2.lessons);//Math,Physics
         //alert(person1.getName === person2.getName);//true,//共享原型中定义方法
 
-        //var a = new Person("Mr.A", 22, "Boss");
+        var a = new Person("Mr.A", 22, "Boss");
         //var b = new Person("Miss.B", 33, "Teacher");
 
-        //alert(a.getName());
+        alert(a.getName());
 
         //alert(b.getName());
 

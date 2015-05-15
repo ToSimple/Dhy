@@ -1,0 +1,83 @@
+<!doctype html >
+<html>
+<head>
+    <title>二叉树</title>
+    <meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
+    <script type="text/javascript">
+        var users = {
+            data: [{ account: 'mc172', name: '乔峰', c1: 'NaN', c2: 'NaN', father: 'mc170' },
+                   { account: 'mc171', name: '马国忠', c1: 'NaN', c2: 'NaN', father: 'mc170' },
+                   { account: 'mc170', name: '1111', c1: 'mc171', c2: 'mc172', father: 'NaN' },
+                   { account: 'mc169', name: '1111', c1: 'NaN', c2: 'NaN', father: 'NaN' },
+                   { account: 'mc168', name: '1111', c1: 'NaN', c2: 'NaN', father: 'NaN' }]
+        };
+
+        var bnode = function (account, name, left, right) {
+            this.account = account || "";
+            this.name = name || "";
+            this.left = left != 'NaN' ? left : null;
+            this.right = right != 'NaN' ? right : null;
+        };
+        bnode.prototype = {
+            toString: function () {
+                var html = ["<ul><li>"];
+                html.push(this.name);
+                if (this.left) html.push(this.left.toString());
+                if (this.right) html.push(this.right.toString());
+                html.push("</li></ul>");
+
+                return html.join("");
+            }
+        };
+
+        function findFather(root, account) {
+            for (var i = 0; i < root.length; i++) {
+                if (root[i].left === account) {
+                    return { parent: root[i], sub: 0 };
+                }
+                if (root[i].right === account) {
+                    return { parent: root[i], sub: 1 };
+                }
+            }
+            return null;
+        }
+        function createTree(users) {
+            var root = [], u, t = null, i = 0, p, data = users.data;
+            while (data.length > 0) {
+                u = data[i];
+                if (u.father != 'NaN') {
+                    p = findFather(root, u.account);
+                    if (p) {
+                        t = new bnode(u.account, u.name, u.c1, u.c2);
+                        p.parent[p.sub ? "right" : "left"] = t;
+                        data.splice(i, 1);
+                    } else {
+                        i++;
+                    }
+                } else if (u.father == 'NaN') {
+                    t = new bnode(u.account, u.name, u.c1, u.c2);
+                    data.splice(i, 1);
+                    root.push(t);
+                } else {
+                    i++;
+                }
+                if (i >= data.length) i = 0;
+            }
+            return root;
+        }
+
+        window.onload = function () {
+            var tree = document.getElementById("tree");
+            var root = createTree(users), html = [];
+            for (var i = 0; i < root.length; i++) {
+                html.push(root[i].toString());
+            }
+            tree.innerHTML = html.join("");
+        };
+	</script>
+</head>
+<body>
+    <div id="tree"></div>
+</body>
+</html>
+

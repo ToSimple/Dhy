@@ -8,125 +8,125 @@ namespace newweb.I
 {
     public interface IHTML
     {
-        public Tube DocName();
-        public Tube head();
+        Tube DocName();
+        Tube head();
         #region head子
         /// <summary>
         /// 定义标题
         /// </summary>
         /// <returns></returns>
-        public Tube Title();
+        Tube Title();
         /// <summary>
         /// 定义所有的链接标签的默认链接
         /// </summary>
         /// <returns></returns>
-        public Tube Base();
+        Tube Base();
 
         /// <summary>
         /// 定义了文档与外部资源之间的关系
         /// </summary>
         /// <returns></returns>
-        public Tube Link();
+        Tube Link();
         /// <summary>
         /// 定义了HTML文档的样式文件引用地址
         /// </summary>
         /// <returns></returns>
-        public Tube Style();
+        Tube Style();
         /// <summary>
         /// 为搜索引擎定义
         /// </summary>
         /// <returns></returns>
-        public Tube Meta();
+        Tube Meta();
 
         /// <summary>
         /// 定义加载脚本文件
         /// </summary>
         /// <returns></returns>
-        public Tube Script();
+        Tube Script();
         #endregion
-        public Tube body();
+        Tube body();
         #region
         //标题
-        public Tube H1();
-        public Tube H2();
-        public Tube H3();
-        public Tube H4();
-        public Tube H5();
-        public Tube H6();
+        Tube H1();
+        Tube H2();
+        Tube H3();
+        Tube H4();
+        Tube H5();
+        Tube H6();
         /// <summary>
         /// 定义段落
         /// </summary>
         /// <returns></returns>
-        public Tube P();
+        Tube P();
         /// <summary>
         /// 定义换行
         /// </summary>
         /// <returns></returns>
-        public Tube Br();
+        Tube Br();
         /// <summary>
         ///  定义水平线
         /// </summary>
         /// <returns></returns>
-        public Tube Hr();
+        Tube Hr();
         /// <summary>
         /// 定义注释
         /// </summary>
         /// <returns></returns>
-        public Tube Note();
+        Tube Note();
 
-        
+
         /// <summary>
         /// 定义粗体文本
         /// </summary>
         /// <returns></returns>
-        public Tube B();
+        Tube B();
         /// <summary>
         /// 定义着重文字
         /// </summary>
         /// <returns></returns>
-        public Tube Em();
+        Tube Em();
         /// <summary>
         /// 定义斜体字
         /// </summary>
         /// <returns></returns>
-        public Tube I();
+        Tube I();
         /// <summary>
         /// 定义小号字
         /// </summary>
         /// <returns></returns>
-        public Tube Small();
+        Tube Small();
         /// <summary>
         /// 定义加重语气
         /// </summary>
         /// <returns></returns>
-        public Tube Strong();
+        Tube Strong();
         /// <summary>
         /// 定义下标字
         /// </summary>
         /// <returns></returns>
-        public Tube Sub();
+        Tube Sub();
         /// <summary>
         /// 定义上标字
         /// </summary>
         /// <returns></returns>
-        public Tube Sup();
+        Tube Sup();
         /// <summary>
         /// 定义插入字
         /// </summary>
         /// <returns></returns>
-        public Tube Ins();
+        Tube Ins();
         /// <summary>
         /// 定义删除字
         /// </summary>
         /// <returns></returns>
-        public Tube Del();
+        Tube Del();
         /// <summary>
         /// 定义超链接
         /// </summary>
         /// <returns></returns>
-        public Tube A();
+        Tube A();
 
-
+        #endregion
 
     }
 }

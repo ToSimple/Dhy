@@ -3,4 +3,3 @@ D:\github\Dhy\acm\bin\Debug\acm.pdb
 D:\github\Dhy\acm\obj\Debug\acm.exe
 D:\github\Dhy\acm\obj\Debug\acm.pdb
 D:\github\Dhy\acm\bin\Debug\acm.exe.config
-D:\github\Dhy\acm\obj\Debug\acm.csprojResolveAssemblyReference.cache

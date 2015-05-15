@@ -64,5 +64,6 @@
                     height: 55px;
                 }
         .exp_num {
+            margin-top:-5px;
             text-align:center;
         }

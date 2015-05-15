@@ -6,9 +6,155 @@
     <title></title>
 </head>
 <body>
+    <canvas id="cloud" width="400" height="400"></canvas>
     <script src="jquery-1.9.0.min.js"></script>
     <script>
-      
+        //随机数
+        function rnd(seed) {
+            seed = (seed * 9301 + 49297) % 233280;
+            return seed / (233280.0);
+        };
+        function rand(number) {
+            today = new Date();
+            seed = today.getTime();
+            return Math.ceil(rnd(seed) * number);
+        };
+
+        //快排
+        function qp(freq, low, high) {
+            if (low > high)
+                return;
+            var ie = qpUnit(freq, low, high);
+            qp(freq, low, ie - 1);
+            qp(freq, ie + 1, high);
+        }
+        function qpUnit(freq, low, high) {
+            var key = freq[low];
+            while (low < high) {
+                while (freq[high] >= key && high > low) {
+                    --high;
+                }
+                freq[low] = freq[high];
+                while (freq[low] <= key && high > low) {
+                    ++low;
+                }
+                freq[high] = freq[low];
+            }
+            freq[low] = key;
+            return high;
+        }
+
+        //快排 双联
+        function qpsl(word, freq, low, high) {
+            if (low > high)
+                return;
+            var ie = qpslUnit(word, freq, low, high);
+            qpsl(word, freq, low, ie - 1);
+            qpsl(word, freq, ie + 1, high);
+        }
+        function qpslUnit(word, freq, low, high) {
+            var key = freq[low];
+            var keyword = word[low]
+            while (low < high) {
+                while (freq[high] >= key && high > low) {
+                    --high;
+                }
+                freq[low] = freq[high];
+                word[low] = word[high];
+                while (freq[low] <= key && high > low) {
+                    ++low;
+                }
+                freq[high] = freq[low];
+                word[high] = word[low];
+            }
+            freq[low] = key;
+            word[low] = keyword;
+            return high;
+        }
+
+        //快排老母，索引
+        var morther1 = [[7, 32, 3, 43, 22, 1, 5, 3], ["a", "b", "c", "d", "e", "f", "g", "h"]];
+        var morther2 = { "age": [7, 32, 3, 43, 22, 1, 5, 3], "name": ["a", "b", "c", "d", "e", "f", "g", "h"] };
+
+        //DhyUI工具集
+        dhyUI = {};
+        //v0.0.1
+        //词云工具
+        //words --- 关键词列表["a","b","c"]
+        //freq-- - 关键词对应的词频列表[12,22,11]
+        //scale---显示字体大小的范围[5,30]
+        function wordCloud(word, freq, scale) {
+            this.word = word;
+            this.freq = freq;
+            this.scale = scale;
+            this.draw;
+        }
+        if (typeof this.draw != 'function') {//通过判断实例封装入原型
+            wordCloud.prototype = {
+                constructor: dhyUI,//DhyUI工具包系列
+                draw: function (id) {
+                    var canvas = document.getElementById(id);
+                    if (canvas == null)
+                        return false;
+                    var context = canvas.getContext("2d");
+                    //context.fillStyle = "#EEEEFF";
+                    //context.fillRect(0, 0, 400, 400);
+
+                    //核心
+                    qpsl(this.word, this.freq, 0, this.freq.length - 1);
+                    for (var i = 0; i < this.word.length; i++) {
+                        var a = this.word[i];
+                        context.font = "italic " + this.freq[i] + "px sans-serif";
+                        context.fillStyle = "#00f";
+                        context.textBaseline = 'top';
+                        var txt = this.word[i];
+                        context.fillText(txt,30*i,30*i);
+                    }
+                    //填充字符串
+                    //var length = context.measureText(txt);
+                    //context.fillText("长" + length.width + "px", 0, 50);
+                    //context.font = "bolid 30px sans-serif";
+                    //txt = "stroke示例文字";
+                    //length = context.measureText(txt);
+                    //context.strokeText(txt, 0, 100);
+                    //context.fillText("长" + length.width + "px", 0, 150);
+                }
+            }
+        }
+        $(function () {
+
+            var word = ["Amaker", "创客", "极客", "3D打印", "机器人", "钢铁侠", "虚拟现实", "物联网", "数字世界"];
+            var freq = [12, 10, 3, 12, 23, 44, 5, 77, 0];
+            var scale = [0.5, 2];
+            //console.log(word);
+            //console.log(freq);
+            //qpsl(word, freq, 0, 8);
+            //console.log("排序后")
+            //console.log(word);
+            //console.log(freq);
+            //测试排序老母遍历方法
+            //$.each(morther1, function () {
+            //    alert(this);
+            //});
+            //for (var item in morther2) {
+            //    alert(item + "的值=" + morther2[item]);
+            //}
+            //测试 快排          
+            //$.each(freq, function () {
+            //    alert(this);
+            //})
+            //qp(freq, 0, 8);
+            //alert("排序后")
+            //$.each(freq, function () {
+            //    alert(this);
+            //})
+            //测试 词云
+            var wc = new wordCloud(word, freq, scale);
+            wc.draw("cloud");
+        })
+
+
+
     </script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.box-czSucess {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cs_head {
+    color: #00a92d;
+    font-size: 2em;
+    height: 64px;
+    line-height: 64px;
+}
+
+    .cs_head i {
+        display: inline-block;
+        font-size: 64px;
+    }
+
+    .cs_head p {
+        display: inline-block;
+        height: 64px;
+        line-height: 64px;
+        margin: 0;
+        vertical-align: top;
+    }
