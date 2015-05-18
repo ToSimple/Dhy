@@ -40,7 +40,10 @@
             background-position: 0 0;
             background: url("../../img/pay.png") no-repeat;
         }
-
+        .btnbox {
+    width:100%;
+     text-align: center;
+}
         .czbtn {
             color: #fff;
             background-color: #337ab7;
@@ -48,7 +51,8 @@
             display: inline-block;
             padding: 6px 12px;
             margin-bottom: 0;
-            font-size: 14px;
+            margin:0 auto;
+            font-size: 20px;
             font-weight: 400;
             line-height: 1.42857143;
             text-align: center;
@@ -65,7 +69,7 @@
             border-radius: 4px;
             text-indent: 0px;
             text-shadow: none;
-            width: 100%;
+            width: 80%;
         }
 
         .ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a {
