@@ -120,21 +120,22 @@
         //构造函数模式用于定义实例的属性，而原型模式用于定义方法和共享的属性。
         //结果，每个实例都会有自己的一份实例属性的副本，但同时又共享着对方方法的引用，最大限度的节约内存。
         //此外，组合模式还支持向构造函数传递参数，可谓是集两家之所长。
-        //function Person(name, age, job) {
-        //    this.name = name;
-        //    this.age = age;
-        //    this.job = job;
-        //    this.lessons = ['Math', 'Physics'];
-        //}
-        //Person.prototype = {
-        //    constructor: Person,//原型字面量方式会将对象的constructor变为Object，此外强制指回Person
-        //    getName: function () {
-        //        return this.name;
-        //    }
-        //}
-        //var person1 = new Person('Jack', 19, 'SoftWare Engneer');
-        //person1.lessons.push('Biology');
-        //var person2 = new Person('Lily', 39, 'Mechanical Engneer');
+            //function Person(name, age, job) {
+            //    this.name = name;
+            //    this.age = age;
+            //    this.job = job;
+            //    this.lessons = ['Math', 'Physics'];
+            //}
+            //Person.prototype = {
+            //    constructor: Person,//原型字面量方式会将对象的constructor变为Object，此外强制指回Person
+            //    getName: ['a','b','c','d']
+            //}
+
+            //var person1 = new Person('Jack', 19, 'SoftWare Engneer');
+            //person1.getName.push('Biology');
+            //alert(person1.getName);
+            //var person2 = new Person('Lily', 39, 'Mechanical Engneer');
+            //alert(person2.getName);
         //alert(person1.lessons);//Math,Physics,Biology
         //alert(person2.lessons);//Math,Physics
         //alert(person1.getName());
@@ -149,22 +150,19 @@
         //动态原型模式将所有构造信息都封装在构造函数中，又保持了组合的优点。
         //其原理就是通过判断构造函数的原型中是否已经定义了共享的方法或属性，如果没有则定义，否则不再执行定义过程。
         //该方式只原型上方法或属性只定义一次，且将所有构造过程都封装在构造函数中，对原型所做的修改能立即体现所有实例中
-        //function Person(name, age, job) {
-        //    this.name = name;
-        //    this.age = age;
-        //    this.job = job;
-        //    this.lessons = ['Math', 'Physics'];
-            
-        //    if (typeof this.getName != 'function') {//通过判断实例封装         
-        //        Person.prototype = {
-        //            constructor: Person,//原型字面量方式会将对象的constructor变为Object，此外强制指回Person
-        //            getName: function () {
-        //                return this.name;
-        //            }
-        //        }
-               
-        //    }
-        //}
+        function Person(name, age, job) {
+            this.name = name;
+            this.age = age;
+            this.job = job;
+            this.lessons = ['Math', 'Physics'];
+            if (typeof this.getName != 'function') {//通过判断实例封装         
+                Person.prototype.getName = function () {
+                    alert(this.name);
+                }               
+            }
+           
+        }
+        Person.prototype.get = ['Math', 'Physics'];
      
         //function Blog(name, url) {
         //    this.name = name;
@@ -181,10 +179,12 @@
         //var blog = new Blog('wuyuchang', 'http://tools.jb51.net');
         //var blog2 = new Blog('wyc', 'http:***.com');
 
-        //var person1 = new Person('Jack', 19, 'SoftWare Engneer');
-        //person1.lessons.push('Biology');
-        //var person2 = new Person('Lily', 39, 'Mechanical Engneer');
-        //alert(person1.lessons);//Math,Physics,Biology
+        var person1 = new Person('Jack', 19, 'SoftWare Engneer');
+        person1.get.push('Biology');
+        alert(person1.get);
+        var person2 = new Person('Lily', 39, 'Mechanical Engneer');
+        alert(person2.get);
+        person2.get();//Math,Physics,Biology
         //alert(person2.lessons);//Math,Physics
         //alert(person1.getName === person2.getName);//true,//共享原型中定义方法
 
@@ -199,6 +199,27 @@
 
         //alert(a.getName === b.getName);//true,//共享原型中定义方法
         //alert(a instanceof Person);
+
+       // function Blog(name, url) {
+       //     this.name = name;
+       //     this.url = url;
+           
+       //     this.b = [1, 2, 3];
+       //     if (typeof this.alertInfo != 'function') {
+       //         // 这段代码只执行了一次               
+       //         Blog.prototype.alertInfo = function () {
+       //             return this.name;
+       //         }
+       //     }
+            
+       // }
+       // Blog.prototype.gogogo = ["a", "b", "c"];
+       // var blog = new Blog('wuyuchang', 'http://tools.jb51.net');
+      
+       //blog.gogogo.push("gun");
+       //alert(blog.gogogo);
+       //var blog2 = new Blog('wyc', 'http:***.com');
+       //alert(blog2.gogogo);
     </script>
 </body>
 </html>

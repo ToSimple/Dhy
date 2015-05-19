@@ -61,7 +61,7 @@
                         </select>
                         <input type="text" name="roleNum" id="roleNum" placeholder="等级数">
                         <input type="hidden" id="pan" value="1,2,3,4" />
-                        <input type="hidden" id="tuan" />
+                        <input type="hidden" id="tuan" value="1"/>
                     </fieldset>
                 </div>
             </div>
@@ -101,14 +101,14 @@
             </div>
         </div>
 
-        <div class="dialogbox dg-tuan">
+        <div class="dialogbox" id="dg-tuan">
             <div class="padbox">
-                <div class="dia-title">搜索团队<i class="close close-tuan">选定</i></div>
+                <div class="dia-title"><i class="fa fa-close"  id="close-tuan">搜索团队</i><i class="close xd" id="xd-tuan">选定</i></div>
                 <div data-role="navbar">
-                    <input type="search" name="search" id="search1" placeholder="搜索内容...">
+                    <input type="search" name="searchTuan" id="searchTuan" placeholder="搜索团队...">
                 </div>
                 <div class="dia-con dia-tuan-con">
-                    <div class="dia-conItem dia-tuan">
+                    <!--<div class="dia-conItem dia-tuan">
                         <input type="checkbox" data-role="none" value="1">dhy                   
                     </div>
                     <div class="dia-conItem dia-tuan">
@@ -131,7 +131,7 @@
                     </div>
                     <div class="dia-conItem dia-tuan">
                         <input type="checkbox" data-role="none" value="8">dhy
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -308,5 +308,6 @@
             //});
         })
     </script>-->
+
 </body>
 </html>
