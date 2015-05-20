@@ -284,10 +284,17 @@ $(function () {
             $("#dg-tuan").css("display", "none");
         }
     }
+    //单击列表一行，选中checked
+    $(document).on("click", ".dia-tuan", function () {
+        var a = $(this).children("input").prop("checked");
+        $(this).children("input").prop("checked", !a);
+    });
     //关闭按钮
     $("#close-tuan").on("click", function () {
-       var eq= $("#tuan").val(str);
-       if (eq!="") {
+     
+        var eq = $("#tuan").val();
+
+       if (eq=="") {
             $("#obj2").prop("checked", false);
             $("#obj2").parent().children().first().removeClass("ui-checkbox-on").addClass("ui-checkbox-off");
         } else {

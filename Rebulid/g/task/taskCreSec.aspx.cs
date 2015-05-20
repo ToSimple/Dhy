@@ -38,7 +38,7 @@ public partial class g_task_taskCreSec : System.Web.UI.Page
                 else if (item == "4")
                 {
                     data += "{ \"name\":\"ee\" , \"id\":\"4\" },";
-                }              
+                }
             }
             if (data[data.Length - 1] == ',')
             {
