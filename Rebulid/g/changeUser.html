@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="jqjm/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link href="jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/right.css" rel="stylesheet" />
+    <link href="css/proinfo.css" rel="stylesheet" />
+    <script src="jqjm/jquery.min.js"></script>
+    <script src="jqjm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/mobileBUGFix.mini.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/validate.js"></script>
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+
+        <div data-role="header" data-theme="a" data-position="fixed" class="headi">
+            <a href="userIndex" class="hdbutton" data-ajax="false"><i class="fa  fa-chevron-
+
+left"></i></a>
+            <h1>个人资料</h1>
+            <a id="submitBtn" href="javascript:;" id="btn" class="btn hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-check"
+                data-ajax="false">提交</a>
+        </div>
+        <div class="box">
+            <div class="box-content-pd">
+                <form method="post">
+                    <div data-role="fieldcontain">
+                        <label for="screenName">昵称:</label>
+                        <input type="text" placeholder="请输入昵称" name="screenName"
+                            id="screenName" maxlength="10">
+                        <div class="kd"></div>
+                        <label for="realName">真实姓名:</label>
+                        <input type="text" placeholder="请输入真实姓名" name="realName"
+                            id="realName" maxlength="10">
+                        <div class="kd"></div>
+                        <label for="email">邮箱:</label>
+                        <input type="text" placeholder="请输入邮箱" name="email" id="email"
+                            maxlength="20">
+                        <div class="kd"></div>
+                        <label for="telephone">联系电话:</label>
+                        <input type="text" placeholder="请输入联系电话" name="telephone"
+                            id="telephone" maxlength="20">
+                        <div class="kd"></div>
+                        <label for="tags">兴趣、爱好:</label>
+                        <input type="text" name="tags" id="tags" placeholder="多个以逗号(，)隔开，用于推送关联信息" maxlength="50">
+                        <div class="kd"></div>
+                        <label for="upl">头像:</label>                       
+                         <div class="close_btn_2">
+                             <a href="javascript:;" class="btn-del_2">
+                             <i class="fa fa-remove"></i>
+                             <img src="../img/897929ec2d1eb43ed0aa83cdd685f43c3db93b15.jpg" id="img" class="uploadimg_2"></a>                           
+                         </div>
+                        <br>
+                        <div class="kd"></div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- <div data-role="footer" data-theme="b">
+            <h1>底部文本</h1>
+        </div>-->
+    </div>
+    <script>
+        $(function () {
+            //检验
+            vd.tags = ["screenName"];
+            vd.rules = [{ required: true, minlength: 2,maxlength:10 },];
+            vd.messages = [{ required: "昵称不能为空", minlength: "昵称不能少于2个字符",maxlength: "昵称不能大于10个字符" },]
+            vd.submit = function () {
+                submit();
+            }
+            vd.bind("submitBtn");
+        });
+</script>
+
+<script language="javascript">
+    //保存
+    function submit()
+    {
+        //设置logo图片
+        var logo="";
+	
+        if(imgPathArray.length>0)
+        {
+            logo=imgPathArray[0];
+        }
+
+        //表单数据
+        var formData = {
+            'screenName': $("#screenName").val(),
+            'realName': $("#realName").val(),
+            'email': $("#email").val(),
+            'telephone': $("#telephone").val(),
+            'tags':$("#tags").val(),
+            'headPortrait':logo
+        };
+        //ajax提交表单
+        $.ajax({
+            url: "updateUserInfo",
+            data: formData,
+            type: "post",
+            dataType: "json",
+            success: function (results) {
+                if(results.mes.length>0)
+                {
+                    //显示提示信息
+                    showMessage(results.mes);
+                }
+                //页面转向
+                if(results.locationUrl.length>0)
+                {location.href=results.locationUrl;}
+        
+            }, error: function (error) {
+                console.log(error);
+            }
+        });
+    }
+</script>
+
+<script language="javascript">
+    var imgPathArray = new Array();//上传图片路径数组
+    var imgWidthArray = new Array();//上传图片宽度数组
+    var imgHeightArray = new Array();//上传图片高度数组
+    //图片上传初始化
+    ajaxImgUpload(0);
+     
+    //图片上传
+    function ajaxImgUpload(n) {
+        $("#file"+n).UploadImg({
+            url : 'headPortraitImgUpload',
+            width : '600',
+            //height : '200',
+            quality : '0.8', //压缩率，默认值为0.8
+            // 如果quality是1 宽和高都未设定 则上传原图
+            mixsize : '5242880',//5M
+            type : 'image/png,image/jpg,image/jpeg,image/pjpeg,image/gif,image/bmp',
+            before : function(blob){
+                //提交按钮不可用
+                $("#submitBtn").attr("disabled","disabled");
+                //loading
+                imgStr = "<img src=\"../img/icon.png\" style=\"padding:10px;width:50px;\">";
+                $("#fimg"+n).html(imgStr);
+            },
+            error : function(res){
+                alert(res);
+            },
+            success : function(res){
+                //上传成功
+                if(res.mes!=null && res.mes=="1")
+                {
+                    //设置图片
+                    imgPathArray[n]=res.url;
+                    imgWidthArray[n]=res.imgWidth;
+                    imgHeightArray[n]=res.imgHeight;
+                    //file不可见
+                    $("#file"+n).css("display", "none");
+                    //预览
+                    setImg(n,0,res.url);
+                    //提交按钮可用
+                    $("#submitBtn").removeAttr("disabled");
+                }
+                else
+                {
+                    //清除图片区
+                    $("#fimg"+n).html("");
+                    alert(res.mes);
+                }  
+            }
+        });
+    } 
+   
+    //预览
+    function setImg(n,id,objUrl) {
+        //id=0时未入库
+        objUrl="userfiles/image/user/head-portrait/"+objUrl;
+        var imgStr="<div class=\"close_btn_2\"><a href=\"javascript:delUploadImg("+n
+
++","+id+",'"+objUrl+"');\" class=\"btn-del_2\"><i class=\"fa fa-remove\"></i></a>";
+        imgStr += "<img src=\"../img/icon.png\" id=\"img" + n + "\" class=\"uploadimg_2\"></div>";
+        $("#fimg"+n).html(imgStr);
+        $("#img"+n).attr("src", IMG_SERVER+objUrl+IMG_RULE_4);
+    }
+	
+    //删除图片
+    function delUploadImg(n,id,imgPath)
+    {
+        if(confirm("确定要删除码？"))
+        {
+		
+            var formData = {
+                'headPortrait':imgPath
+            };
+            $.ajax({
+                url: "delHeadPortraitImgFile",
+                data: formData,
+                type: "post",
+                dataType: "json",
+                success: function (results) {
+                    //删除成功
+                    if (results.mN == 1) {
+                        //清除显示的图片
+                        $("#fimg"+n).html("");
+                        //file可见
+                        $("#file"+n).css("display", "block");
+                        //清除图片变量值
+                        imgPathArray[n]="";
+                        imgWidthArray[n]="";
+                        imgHeightArray[n]="";
+                    } 
+				
+                    if(results.mes.length>0)
+                    {
+                        //显示提示信息
+                        showMessage(results.mes);
+                    }
+                }, error: function (error) {
+                    console.log(error);
+                }
+            });
+
+        }
+    }
+</script>
+</body>
+</html>
