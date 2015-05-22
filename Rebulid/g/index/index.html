@@ -1,0 +1,622 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
+
+    <style>
+        .d_nav {
+            width: 100%;
+            background-color: #0755A0;
+            height: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .d_line_box {
+            display: inline-block;
+        }
+
+            .d_line_box input {
+                width: 100%;
+            }
+
+            .d_line_box .d_nav_icon {
+                position: absolute;
+                margin: 1px -20px;
+                color: #aaa;
+                height: 24px;
+                line-height: 24px;
+                background-color: rgba(0,0,0,0);
+            }
+
+        .d_nav_btn {
+            padding: 1px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 24px;
+        }
+
+        .search_input {
+            margin-left: auto;
+            margin-right: auto;
+            width: 55%;
+        }
+
+        .nav_img {
+            float: left;
+            height: 30px;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 500px) {
+            .search_input {
+                width: 45%;
+            }
+
+            .nav_img {
+                float: left;
+                height: 30px;
+                margin-left: 0px;
+            }
+        }
+
+        @media (min-width: 640px) {
+            .search_input {
+                width: 70%;
+            }
+
+            .nav_img {
+                float: left;
+                height: 30px;
+                margin-left: 10px;
+            }
+        }
+
+        .d_nav_right {
+            float: right;
+            height: 26px;
+            line-height: 26px;
+            margin-right: 5px;
+        }
+
+            .d_nav_right a {
+                color: #fff;
+            }
+
+        .carousel-inner .item img {
+            width: 100%;
+            max-height: 400px;
+        }
+
+        .carousel-indicators .active {
+            background-color: rgba(116,197,212,1);
+            border-color: rgba(116,197,212,1);
+        }
+
+        .carousel-indicators li {
+            background-color: #fff;
+        }
+
+        .d_tool {
+            margin: 5px 0;
+            padding: 0 10px;
+        }
+
+        .d_tool_ul {
+            float: left;
+            overflow: hidden;
+            width: 80%;
+            padding: 0px;
+            margin: 0px;
+            cursor: pointer;
+        }
+
+            .d_tool_ul li {
+                float: left;
+                display: none;
+                font-size: 1.5em;
+                height: 1.5em;
+                width: 30%;
+                text-align: center;
+                border-bottom: 3px solid #D7D7D7;
+            }
+
+            .d_tool_ul .active {
+                color: #304FFF;
+                border-bottom-color: #304FFF;
+            }
+
+            .d_tool_ul .show {
+                display: inline-block;
+            }
+
+            .d_tool_ul .dian {
+                height: 1.5em;
+                width: 10%;
+            }
+
+        .d_d_ul {
+            text-align: center;
+            width: 30px;
+            height: 29px;
+            margin: 0px;
+            padding-left: 10px;
+        }
+
+            .d_d_ul li {
+                clear: both;
+                background-color: rgba(0, 0, 0, 1);
+                border: 1px solid #fff;
+                border-radius: 10px;
+                cursor: pointer;
+                display: inline-block;
+                height: 6px;
+                margin: 1px;
+                text-indent: -999px;
+                width: 6px;
+            }
+
+        .gjsearch {
+            width: 20%;
+            height: 29px;
+            line-height: 29px;
+            background-color: #818181;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .d_con {
+            padding-top: 10px;
+            width: 100%;
+            text-align: center;
+            background-color: #F1F1F1;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .citem {
+            background-color: #fff;
+            box-shadow: 1px 1px 1px #bbb;
+        }
+
+
+        @media (max-width: 640px) {
+            .citem {
+                margin-bottom: 10px;
+                margin-left: 5%;
+                width: 42%;
+            }
+
+                .citem img {
+                    width: 100%;
+                }
+        }
+
+        @media (min-width: 641px) {
+            .citem {
+                margin-bottom: 10px;
+                margin-left: 2%;
+                margin-right: 2%;
+                width: 29%;
+            }
+
+                .citem img {
+                    width: 100%;
+                }
+        }
+
+        .c_info {
+            padding: 10px 0;
+            text-align: left;
+            width: 100%;
+            overflow: auto;
+        }
+
+            .c_info img {
+                margin-left: 5px;
+                border: 1px solid #ccc;
+                padding: 5px;
+                height: 60px;
+                width: 60px;
+                border-radius: 100px;
+                float: left;
+            }
+
+        .c_i_con {
+            width: 60%;
+            padding-left: 5px;
+            float: left;
+        }
+
+            .c_i_con .name {
+                padding-top: 12px;
+                font-size: 0.9em;
+                font-weight: 600;
+                color: #555;
+            }
+
+        .tips {
+            overflow: auto;
+        }
+
+        .tip {
+            overflow: hidden;
+            margin: 1px;
+            float: left;
+            overflow: auto;
+            max-width: 100%;
+        }
+
+        .t_con {
+            max-width: 80%;
+            text-align: center;
+            min-width: 32px;
+            background-color: #86A8A9;
+            float: left;
+            height: 22px;
+            line-height: 22px;
+            font-size: 14px;
+            box-shadow: 0 2px 2px #777;
+            color: #fff;
+        }
+
+        .arrow-right {
+            float: left;
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 12px solid #86A8A9;
+        }
+
+        @media (max-width: 320px) {
+            .tips {
+                display: none;
+            }
+
+            .c_i_con .name {
+                padding-top: 0;
+            }
+
+            .c_info img {
+                height: 30px;
+                width: 30px;
+            }
+
+            .c_i_con {
+                width: 60%;
+            }
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 640px) {
+            .c_i_con .name {
+                padding-top: 0;
+            }
+
+            .c_info img {
+                height: 40px;
+                width: 40px;
+            }
+
+            .c_i_con {
+                width: 65%;
+            }
+        }
+
+
+        .c_tj {
+            width: 100%;
+        }
+
+        .c_tjnum {
+            padding: 5px 0;
+            width: 33.3333%;
+            float: left;
+            background-color: #EBEBEB;
+        }
+
+        .fa-eye {
+            color: #C4A789;
+        }
+
+        .fa-users {
+            color: #95BCC9;
+        }
+
+        .fa-heart {
+            color: #E2704D;
+        }
+    </style>
+</head>
+<body>
+    <div class="d_nav">
+        <img class="nav_img" src="../../img/logo.png" />
+        <div class="d_line_box search_input">
+            <input type="text" maxlength="10"><a href="javascript:;"><i class="fa fa-search d_nav_icon"></i></a>
+        </div>
+        <div class="d_line_box d_nav_right"><a href="javascript:;"><i class="fa fa-navicon d_nav_btn"></i></a></div>
+    </div>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="../../img/d.png" />
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div class="item">
+                <img src="../../img/d.png" />
+                <div class="carousel-caption">
+                </div>
+            </div>
+            <div class="item">
+                <img src="../../img/d.png" />
+                <div class="carousel-caption">
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="d_tool">
+        <ul class="d_tool_ul">
+            <li class="show active"><i class="fa fa-coffee">&nbsp</i>烹饪</li>
+            <li class="show"><i class="fa fa-bicycle">&nbsp</i>户外</li>
+            <li class="show"><i class="fa fa-smile-o">&nbsp;</i>娱乐</li>
+            <li><i class="fa fa-smile-o"></i>创造</li>
+            <li><i class="fa fa-smile-o"></i>毁灭</li>
+            <li><i class="fa fa-smile-o"></i>重生</li>
+            <li class="show dian">
+                <ol class="d_d_ul">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </li>
+        </ul>
+        <i class="fa fa-search-plus gjsearch"></i>
+    </div>
+    <div class="d_con">
+        <div id="container">
+            <div class="citem">
+                <img src="http://i.imgur.com/VWfCPYx.jpg">
+                <div class="c_info">
+
+                    <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
+                    <div class="c_i_con">
+                        <div class="name">John Raymons</div>
+                        <div class="tips">
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客空</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客间创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c_tj">
+                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
+                </div>
+            </div>
+            <div class="citem">
+                <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
+                <div class="c_info">
+                    <img src="../../img/icon.png" />
+                    <div class="c_i_con">
+                        <div class="name">John Raymons</div>
+                        <div class="tips">
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客空</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客间创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="c_tj">
+                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
+                </div>
+            </div>
+            <div class="citem">
+                <img src="http://i.imgur.com/VWfCPYx.jpg">
+                <div class="c_info">
+                    <img src="../../img/icon.png" />
+                    <div class="c_i_con">
+                        <div class="name">John Raymons</div>
+                        <div class="tips">
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客空</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客间创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c_tj">
+                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
+                </div>
+            </div>
+            <div class="citem">
+                <img src="http://i.imgur.com/VWfCPYx.jpg">
+                <div class="c_info">
+                    <img src="../../img/icon.png" />
+                    <div class="c_i_con">
+                        <div class="name">John Raymons</div>
+                        <div class="tips">
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客空</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客间创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c_tj">
+                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
+                </div>
+            </div>
+            <div class="citem">
+                <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
+                <div class="c_info">
+                    <img src="../../img/icon.png" />
+                    <div class="c_i_con">
+                        <div class="name">John Raymons</div>
+                        <div class="tips">
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客空</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客间创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="c_tj">
+                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
+                </div>
+            </div>
+            <div class="citem">
+                <img src="http://i.imgur.com/VWfCPYx.jpg">
+                <div class="c_info">
+                    <img src="../../img/icon.png" />
+                    <div class="c_i_con">
+                        <div class="name">John Raymons</div>
+                        <div class="tips">
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客空</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <div class="tip">
+                                <div class="t_con">创客间创客</div>
+                                <div class="arrow-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c_tj">
+                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../jqjm/jquery.min.js"></script>
+    <script src="../bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script>
+
+
+        var $container = $('#container');
+        // initialize Masonry after all images have loaded  
+        $container.imagesLoaded(function () {
+            $container.masonry({
+                itemSelector: '.citem'
+            });
+        });
+
+    </script>
+</body>
+</html>
