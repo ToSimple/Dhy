@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="../bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -148,6 +149,7 @@
         }
 
             .d_d_ul li {
+                text-align: center;
                 clear: both;
                 background-color: rgba(0, 0, 0, 1);
                 border: 1px solid #fff;
@@ -182,6 +184,7 @@
         .container {
             margin-left: auto;
             margin-right: auto;
+            overflow: auto;
         }
 
 
@@ -217,34 +220,44 @@
         }
 
         .c_info {
-            padding: 10px 0;
+            padding: 10px 10px;
             text-align: left;
             width: 100%;
             overflow: auto;
         }
 
+            .c_info .proName {
+                font-size: 1.1em;
+                font-weight: 600;
+            }
+
             .c_info img {
                 margin-left: 5px;
                 border: 1px solid #ccc;
-                padding: 5px;
-                height: 60px;
-                width: 60px;
+                padding: 3px;
+                height: 30px;
+                width: 30px;
                 border-radius: 100px;
-                float: left;
+                float: right;
             }
 
-        .c_i_con {
-            width: 60%;
-            padding-left: 5px;
-            float: left;
-        }
-
-            .c_i_con .name {
-                padding-top: 12px;
+            .c_info .name {
+                padding-top: 6px;
                 font-size: 0.9em;
                 font-weight: 600;
                 color: #555;
+                float: right;
             }
+
+        .clear {
+            clear: both;
+        }
+
+        .c_i_con {
+            width: 100%;
+        }
+
+
 
         .tips {
             overflow: auto;
@@ -254,14 +267,13 @@
             overflow: hidden;
             margin: 1px;
             float: left;
-            overflow: auto;
             max-width: 100%;
         }
 
         .t_con {
             max-width: 80%;
             text-align: center;
-            min-width: 32px;
+            min-width: 42px;
             background-color: #86A8A9;
             float: left;
             height: 22px;
@@ -293,10 +305,6 @@
                 height: 30px;
                 width: 30px;
             }
-
-            .c_i_con {
-                width: 60%;
-            }
         }
 
         @media screen and (min-width: 320px) and (max-width: 640px) {
@@ -307,10 +315,6 @@
             .c_info img {
                 height: 40px;
                 width: 40px;
-            }
-
-            .c_i_con {
-                width: 65%;
             }
         }
 
@@ -323,7 +327,7 @@
             padding: 5px 0;
             width: 33.3333%;
             float: left;
-            background-color: #EBEBEB;
+            background-color: #dfdfdf;
         }
 
         .fa-eye {
@@ -336,6 +340,19 @@
 
         .fa-heart {
             color: #E2704D;
+        }
+        /*ajax加载页面*/
+        .load {
+            background-color: #0755A0;
+            color: #fff;
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            font-size: 20px;
+            display: none;
+            text-align: center;
+            height: 45px;
+            line-height: 45px;
         }
     </style>
 </head>
@@ -358,8 +375,9 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="../../img/d.png" />
+                 <img src="../../img/d.png"/>
                 <div class="carousel-caption">
+                   
                 </div>
             </div>
             <div class="item">
@@ -386,12 +404,12 @@
     </div>
     <div class="d_tool">
         <ul class="d_tool_ul">
-            <li class="show active"><i class="fa fa-coffee">&nbsp</i>烹饪</li>
-            <li class="show"><i class="fa fa-bicycle">&nbsp</i>户外</li>
-            <li class="show"><i class="fa fa-smile-o">&nbsp;</i>娱乐</li>
-            <li><i class="fa fa-smile-o"></i>创造</li>
-            <li><i class="fa fa-smile-o"></i>毁灭</li>
-            <li><i class="fa fa-smile-o"></i>重生</li>
+            <li class="show active" id="pengren"><i class="fa fa-coffee">&nbsp</i>烹饪</li>
+            <li class="show" id="huwai"><i class="fa fa-bicycle">&nbsp</i>户外</li>
+            <li class="show" id="yule"><i class="fa fa-smile-o">&nbsp;</i>娱乐</li>
+            <li id="xx1"><i class="fa fa-smile-o"></i>奥创</li>
+            <li id="xx2"><i class="fa fa-smile-o"></i>创客队长</li>
+            <li id="xx3"><i class="fa fa-smile-o"></i>钢铁创客</li>
             <li class="show dian">
                 <ol class="d_d_ul">
                     <li></li>
@@ -404,218 +422,352 @@
     </div>
     <div class="d_con">
         <div id="container">
-            <div class="citem">
-                <img src="http://i.imgur.com/VWfCPYx.jpg">
-                <div class="c_info">
-
-                    <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
-                    <div class="c_i_con">
+            <a href="javascript:;">
+                <div class="citem">
+                    <img src="http://i.imgur.com/VWfCPYx.jpg">
+                    <div class="c_info">
+                        <div class="proName">奥创人工智能 </div>
                         <div class="name">John Raymons</div>
-                        <div class="tips">
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客空</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客间创客</div>
-                                <div class="arrow-right"></div>
+                        <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
+                        <div class="clear"></div>
+                        <div class="c_i_con">
+                            <div class="tips">
+                                <div class="tip">
+                                    <div class="t_con">创客</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客空</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客间创客的得得得得</div>
+                                    <div class="arrow-right"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="c_tj">
+                        <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                        <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                        <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
+                    </div>
                 </div>
-                <div class="c_tj">
-                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
-                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
-                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
-                </div>
-            </div>
-            <div class="citem">
-                <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
-                <div class="c_info">
-                    <img src="../../img/icon.png" />
-                    <div class="c_i_con">
+            </a>
+            <a href="javascript:;">
+                <div class="citem">
+                    <img src="http://i.imgur.com/VWfCPYx.jpg">
+                    <div class="c_info">
+                        <div class="proName">奥创人工智能 </div>
                         <div class="name">John Raymons</div>
-                        <div class="tips">
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客空</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客间创客</div>
-                                <div class="arrow-right"></div>
+                        <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
+                        <div class="clear"></div>
+                        <div class="c_i_con">
+                            <div class="tips">
+                                <div class="tip">
+                                    <div class="t_con">创客</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客空</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客间创客的得得得得</div>
+                                    <div class="arrow-right"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
+                    <div class="c_tj">
+                        <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                        <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                        <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
+                    </div>
                 </div>
-                <div class="c_tj">
-                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
-                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
-                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
-                </div>
-            </div>
-            <div class="citem">
-                <img src="http://i.imgur.com/VWfCPYx.jpg">
-                <div class="c_info">
-                    <img src="../../img/icon.png" />
-                    <div class="c_i_con">
+            </a><a href="javascript:;">
+                <div class="citem">
+                    <img src="http://i.imgur.com/VWfCPYx.jpg">
+                    <div class="c_info">
+                        <div class="proName">奥创人工智能 </div>
                         <div class="name">John Raymons</div>
-                        <div class="tips">
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客空</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客间创客</div>
-                                <div class="arrow-right"></div>
+                        <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
+                        <div class="clear"></div>
+                        <div class="c_i_con">
+                            <div class="tips">
+                                <div class="tip">
+                                    <div class="t_con">创客</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客空</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客间创客的得得得得</div>
+                                    <div class="arrow-right"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="c_tj">
+                        <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                        <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                        <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
+                    </div>
                 </div>
-                <div class="c_tj">
-                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
-                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
-                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
-                </div>
-            </div>
-            <div class="citem">
-                <img src="http://i.imgur.com/VWfCPYx.jpg">
-                <div class="c_info">
-                    <img src="../../img/icon.png" />
-                    <div class="c_i_con">
+            </a><a href="javascript:;">
+                <div class="citem">
+                    <img src="http://i.imgur.com/VWfCPYx.jpg">
+                    <div class="c_info">
+                        <div class="proName">奥创人工智能 </div>
                         <div class="name">John Raymons</div>
-                        <div class="tips">
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客空</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客间创客</div>
-                                <div class="arrow-right"></div>
+                        <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
+                        <div class="clear"></div>
+                        <div class="c_i_con">
+                            <div class="tips">
+                                <div class="tip">
+                                    <div class="t_con">创客</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客空</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客间创客的得得得得</div>
+                                    <div class="arrow-right"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="c_tj">
-                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
-                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
-                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
-                </div>
-            </div>
-            <div class="citem">
-                <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
-                <div class="c_info">
-                    <img src="../../img/icon.png" />
-                    <div class="c_i_con">
-                        <div class="name">John Raymons</div>
-                        <div class="tips">
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客空</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客间创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                        </div>
-
+                    <div class="c_tj">
+                        <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                        <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                        <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
                     </div>
-
                 </div>
-                <div class="c_tj">
-                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
-                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
-                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
-                </div>
-            </div>
-            <div class="citem">
-                <img src="http://i.imgur.com/VWfCPYx.jpg">
-                <div class="c_info">
-                    <img src="../../img/icon.png" />
-                    <div class="c_i_con">
+            </a><a href="javascript:;">
+                <div class="citem">
+                    <img src="http://i.imgur.com/VWfCPYx.jpg">
+                    <div class="c_info">
+                        <div class="proName">奥创人工智能 </div>
                         <div class="name">John Raymons</div>
-                        <div class="tips">
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客空</div>
-                                <div class="arrow-right"></div>
-                            </div>
-                            <div class="tip">
-                                <div class="t_con">创客间创客</div>
-                                <div class="arrow-right"></div>
+                        <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />
+                        <div class="clear"></div>
+                        <div class="c_i_con">
+                            <div class="tips">
+                                <div class="tip">
+                                    <div class="t_con">创客</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客空</div>
+                                    <div class="arrow-right"></div>
+                                </div>
+                                <div class="tip">
+                                    <div class="t_con">创客间创客的得得得得</div>
+                                    <div class="arrow-right"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="c_tj">
+                        <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
+                        <div class="c_tjnum"><i class="fa fa-users">34</i></div>
+                        <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
+                    </div>
                 </div>
-                <div class="c_tj">
-                    <div class="c_tjnum"><i class="fa fa-eye">172</i></div>
-                    <div class="c_tjnum"><i class="fa fa-users">34</i></div>
-                    <div class="c_tjnum"><i class="fa fa-heart">210</i></div>
-                </div>
-            </div>
+            </a>
         </div>
     </div>
+    <div class="load"><i class="fa fa-refresh fa-spin"></i></div>
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script>
+        $(function () {
 
+            //瀑布流            
+            var $container = $('#container');
+            showpubu();
+            function showpubu() {
+                $container.imagesLoaded(function () {
+                    $container.masonry({
+                        itemSelector: '.citem'
+                    });
+                });
+            }
 
-        var $container = $('#container');
-        // initialize Masonry after all images have loaded  
-        $container.imagesLoaded(function () {
-            $container.masonry({
-                itemSelector: '.citem'
+            //禁用浏览器m默认事件
+            var control = navigator.control || {};
+            if (control.gesture) {
+                control.gesture(false);
+            }
+
+            //幻灯
+            var div = $(".item");
+            $.each(div, function () {
+                var x1;
+                var x2;
+                this.ontouchstart = function (e) {
+                    var touch = e.touches[0];
+                    x1 = touch.clientX;
+                };
+                this.ontouchmove = function (e) {
+                    e.preventDefault();
+                    var touch = e.touches[0];
+                    x2 = touch.clientX;
+                    if (x2 - x1 > 15) {
+                        $('.carousel').carousel('prev');
+                    } else if (x2 - x1 < -15) {
+                        $('.carousel').carousel('next');
+                    }
+                };
             });
-        });
+
+            //工具导航条
+            var ul = $(".d_tool_ul")[0];
+            var ux1;
+            var ux2;
+            var index = 0;
+            ul.ontouchstart = function (e) {
+                var touch = e.touches[0];
+                ux1 = touch.clientX;
+            };
+            ul.ontouchmove = function (e) {
+                e.preventDefault();
+                var touch = e.touches[0];
+                ux2 = touch.clientX;
+                var ad = $(".d_tool_ul").children();
+                var next = true;
+                ad.eq(index).animate({ width: '0px' }, "1000", function () {
+                    if (next) {
+                        next = false;
+                        ad.eq(index).removeClass("show");
+                        $(".dian").before('<li>' + ad.eq(index).html() + '</li>');
+                        ad.eq(index).remove();
+                        ad.eq(index + 3).css("display", "block");
+                    }
+                });
+
+
+            };
+
+            //加载数据
+            var pageIndex = 1;//页数
+            var type = "cool"//项目类型
+            $(document).on("click", ".d_tool_ul li", function () {             
+                if (!$(this).hasClass("dian")) {    
+                    $(".d_tool_ul li").removeClass("active");
+                    $(this).addClass("active");
+                    type = $(this).attr("id");
+                    pageIndex = 1;
+                    $container.masonry('remove', $("#container .citem"));
+                    loo();
+                }
+            });
+            //ajax列表加载
+            function loo() {
+                $.ajax({
+                    type: "get",
+                    url: "prolist.aspx",
+                    dataType: "json",
+                    data: { "pageIndex": pageIndex, "type": type },
+                    beforeSend: function () {
+                        $(".load").css("display", "block");
+                    },
+                    success: function (data) {
+                        var elem;
+                        var elems = [];
+                        $.each(data.list, function () {
+                            var str = '';
+                            elem = document.createElement('div');
+                            str+='<a href="javascript:;">                                                         ';
+                            str+='    <div class="citem">                                                         ';
+                            str+='        <img src="http://i.imgur.com/VWfCPYx.jpg">                              ';
+                            str+='        <div class="c_info">                                                    ';
+                            str+='            <div class="proName">奥创人工智能 </div>                            ';
+                            str+='            <div class="name">John Raymons</div>                                ';
+                            str+='            <img src="../../img/c76b563f38453d44f35faeff595100acb87e0235.png" />';
+                            str+='            <div class="clear"></div>                                           ';
+                            str+='            <div class="c_i_con">                                               ';
+                            str+='                <div class="tips">                                              ';
+                            str+='                    <div class="tip">                                           ';
+                            str+='                        <div class="t_con">创客</div>                           ';
+                            str+='                        <div class="arrow-right"></div>                         ';
+                            str+='                    </div>                                                      ';
+                            str+='                    <div class="tip">                                           ';
+                            str+='                        <div class="t_con">创客</div>                           ';
+                            str+='                        <div class="arrow-right"></div>                         ';
+                            str+='                    </div>                                                      ';
+                            str+='                    <div class="tip">                                           ';
+                            str+='                        <div class="t_con">创客空</div>                         ';
+                            str+='                        <div class="arrow-right"></div>                         ';
+                            str+='                    </div>                                                      ';
+                            str+='                    <div class="tip">                                           ';
+                            str+='                        <div class="t_con">创客间创客的得得得得</div>           ';
+                            str+='                        <div class="arrow-right"></div>                         ';
+                            str+='                    </div>                                                      ';
+                            str+='                </div>                                                          ';
+                            str+='            </div>                                                              ';
+                            str+='        </div>                                                                  ';
+                            str+='        <div class="c_tj">                                                      ';
+                            str+='            <div class="c_tjnum"><i class="fa fa-eye">172</i></div>             ';
+                            str+='            <div class="c_tjnum"><i class="fa fa-users">34</i></div>            ';
+                            str+='            <div class="c_tjnum"><i class="fa fa-heart">210</i></div>           ';
+                            str+='        </div>                                                                  ';
+                            str+='    </div>                                                                      ';
+                            str += '</a> ';
+
+                          
+                            elem.innerHTML = str;
+                            elems.push(elem);
+                        });
+                        $container.append(elems).masonry('appended', elems);
+                        showpubu();
+                        pageIndex++;
+                    },
+                    complete: function () {
+                        $(".load").css("display", "none");
+                        loding = true;
+                    }
+                });
+            };
+            //滚动条事件
+            var loding = true;;
+            $(document).on("scroll", function () {
+                var ws = $(window).scrollTop();
+                var wh = $(window).height();
+                var dh = $(document).height();
+                if (dh - wh - ws < 50 && loding) {
+                    loding = false;
+                    loo();
+
+                }
+            });
+        })
 
     </script>
 </body>
