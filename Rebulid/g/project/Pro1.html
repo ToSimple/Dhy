@@ -1,1 +1,72 @@
-﻿
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>项目</title>
+    <link href="../jqjm/jquery.mobile-1.4.5.css" rel="stylesheet" />
+    <link href="../jqjm/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet" />
+    <link href="../font/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/right.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div data-role="page" data-theme="a">
+
+        <div data-role="header" data-theme="a" data-position="fixed" class="head">
+            <a href="../i.html?i=2#two" class="hdbutton ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l" data-ajax="false">返回</a>
+            <h1>关注的项目</h1>
+            <button id="editBtn" class="btn hdbutton ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-edit" data-ajax="false">编辑</button>
+            <div data-role="navbar" class="search">
+                <form action="pro1.html">
+                    <input type="search" name="search" id="search" placeholder="搜索内容...">
+                </form>
+            </div>
+        </div>
+        <div class="firstLoad"><i class="fa fa-refresh fa-spin"></i></div>
+        <ul data-role="listview" data-inset="false" class="uplist">
+        </ul>
+        <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
+            <div class="ui-panel-inner pr">
+                <ul class="rpanelul">
+                    <li class="ui-first-child" data-icon="delete"><a data-rel="close" href="#"><i class="fa fa-caret-square-o-right"></i>&nbsp;收起</a></li>
+                    <li><a href="javascript:;" data-ajax="false" class="bj"><i class="fa fa-reply"></i>&nbsp;取消编辑</a></li>
+                    <li><a href="../info.html" data-ajax="false"><i class="fa fa-star-o"></i>&nbsp;取消关注</a></li>
+                    <li ><a href="javascript:;" data-ajax="false"  id="uili_key"><i class="fa fa-home"></i>&nbsp;用户中心</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <!--
+                <div data-role="navbar" class="ui-btn-active">
+                    <ul>
+                        <li><a href="#">主页</a></li>
+                    </ul>
+                </div>
+            -->
+
+            <div class="load"><i class="fa fa-refresh fa-spin"></i></div>
+
+        </div>
+
+    </div>
+
+    <script src="../jqjm/jquery.min.js"></script>
+    <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/proList.js?v=1.0.1"></script>
+    <script>
+        $(".out").on("click", function () {
+            var r = confirm("您是否确定要退出？");
+            if (r == true) {
+            }
+            else {
+            }
+        });
+
+        var control = navigator.control || {};
+        if (control.gesture) {
+            control.gesture(false);
+        }
+    </script>
+</body>
+</html>

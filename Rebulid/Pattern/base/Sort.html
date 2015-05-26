@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <script src="../../g/jqjm/jquery.min.js"></script>
+    <script>
+        var arr = [44, 23, 66, 76, 98, 11, 3, 9, 7];
+
+        //冒泡排序
+        //s = '';
+        //var length = arr.Length;
+        //for (var i = 0; i <= length - 1; i++) {
+        //    for (var j = length - 1; j > i; j--) {
+        //        if (arr[j] < arr[j - 1]) {
+        //            var temp = arr[j];
+        //            arr[j] = arr[j - 1];
+        //            arr[j - 1] = temp;
+        //        }
+        //    }
+        //}
+
+        //插入排序
+        //s = '';
+        //for (var i = 1; i < arr.length; i++) {          
+        //    var temp = arr[i];//从无序表中取出的数，放在temp里面
+        //    // j>0&&temp< array [j-1]为每一轮排序停止的条件
+        //    for (var j = i; j > 0&& temp < arr[j - 1]; j--) {
+        //        arr[j] = arr[j - 1];
+        //    }
+        //    alert(j);
+        //    arr[j] = temp;
+        //    println();
+        //}
+
+        //选择排序
+        //s = '';
+        //var temp;
+        //var pos = 0;
+        //for (var i = 0; i < arr.length - 1; i++) {
+        //    pos = i;
+        //    for (var j = i + 1; j < arr.length; j++) {
+        //        if (arr[j] < arr[pos]) {
+        //            pos = j;
+        //        }
+        //    }//第i个数与最小的数group[pos]交换
+        //    temp = arr[i];
+        //    arr[i] = arr[pos];
+        //    arr[pos] = temp;
+        //    println();
+        //}
+
+        function println() {
+            for (var item in arr) {
+                s += arr[item] + ',';
+            }
+            console.log(s);
+            s = '';
+        }
+
+
+
+    </script>
+</body>
+</html>
