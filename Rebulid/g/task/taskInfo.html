@@ -50,7 +50,11 @@
 
         </div>
         <div class="box">
-            <div class="box-head xdtj "><div class="title">所属项目<div class="tip-min"><i class="fa fa-caret-square-o-up"></i></div></div></div>
+            <div class="box-head xdtj ">
+                <div class="title">
+                    所属项目<div class="tip-min"><i class="fa fa-caret-square-o-down"></i></div>
+                </div>
+            </div>
             <div class="box-content">
                 <div class="tab">
                     <div class="col-12 ssxm-con">
@@ -60,8 +64,12 @@
             </div>
         </div>
         <div class="box">
-            <div class="box-head xdtj"> <div class="title">限定条件<div class="tip-min"><i class="fa fa-caret-square-o-up"></i></div></div></div>
-            <div class="box-content">
+            <div class="box-head xdtj">
+                <div class="title">
+                    限定条件<div class="tip-min"><i class="fa fa-caret-square-o-up"></i></div>
+                </div>
+            </div>
+            <div class="box-content dis-none">
                 <div class="tab">
                     <div class="col-4">开始时间:</div>
                     <div class="col-8">2015-3-4 10:00:00</div>
@@ -103,35 +111,56 @@
                     </div>
                 </div>
             </div>
-            <div data-demo-html="true">
-				<div data-role="collapsibleset"  data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
-					<div data-role="collapsible">
-				    <h3>莫君君</h3>
-					<p>接任务时间：2014-2-2</p>
-					</div>
-					<div data-role="collapsible">
-						<h3>君莫君</h3>
-					<p>I'm the collapsible content for section 2</p>
-
-					</div>
-					<div data-role="collapsible">
-						<h3>君君莫</h3>
-					<p>I'm the collapsible content for section 3</p>
-					</div>
-				</div>
-			</div>
+            <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
+                <div class="ui-panel-inner pr">
+                    <ul class="rpanelul">
+                        <li class="ui-first-child" data-icon="delete"><a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a></li>
+                        <li><a href="../info.html" data-ajax="false"><i class="fa fa-user"></i>&nbsp;个人资料</a></li>
+                        <li><a href="../sendInfo.html" data-ajax="false"><i class="fa fa-bell-o"></i>&nbsp;我的消息</a></li>
+                        <li><a href="../changeMM.html" data-ajax="false"><i class="fa fa-pencil-square-o"></i>&nbsp;修改密码</a></li>
+                        <li><a href="../account.html" data-ajax="false"><i class="fa fa-database"></i>&nbsp;账户管理</a></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;安全退出</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-        <div data-display="overlay" data-position="right" id="rightpanel3" data-role="panel" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-body-b ui-panel-animate ui-panel-open">
-            <div class="ui-panel-inner pr">
-                <ul class="rpanelul">
-                    <li class="ui-first-child" data-icon="delete"><a data-rel="close" href="#"><i class="fa fa-remove"></i>&nbsp;关闭</a></li>
-                    <li><a href="../info.html" data-ajax="false"><i class="fa fa-user"></i>&nbsp;个人资料</a></li>
-                    <li><a href="../sendInfo.html" data-ajax="false"><i class="fa fa-bell-o"></i>&nbsp;我的消息</a></li>
-                    <li><a href="../changeMM.html" data-ajax="false"><i class="fa fa-pencil-square-o"></i>&nbsp;修改密码</a></li>
-                    <li><a href="../account.html" data-ajax="false"><i class="fa fa-database"></i>&nbsp;账户管理</a></li>
-                    <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;安全退出</a></li>
-                </ul>
+        <div class="box">
+            <div class="box-head xdtj">
+                <div class="title">
+                    限定条件<div class="tip-min"><i class="fa fa-caret-square-o-down"></i></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div data-demo-html="true">
+                    <div data-role="collapsibleset" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-iconpos="right" data-corners="false">
+                        <div data-role="collapsible">
+                            <h3 class="col_h">
+                                <img class="col_img" src="../../img/icon.png" />
+                                莫君君
+                                <span>（个人）</span>
+                                <span class="ui-li-count  bq-red">进行中</span>
+                            </h3>
+                            <p>接任务时间：2014-2-3 13:11:32</p>
+                            <div class="col_box">
+                                <a class="col_btn">查看详细</a><a class="col_btn subFinsh">确认完成</a>
+                            </div>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 class="col_h">
+                                <img class="col_img" src="../../img/icon.png" />
+                                君莫君<span>（团队）</span><span class="ui-li-count  bq-bule">进行中</span></h3>
+                            <p>接任务时间：2014-2-2</p>
+                            <div class="col_box"><a class="col_btn col_btn_all">查看详细</a></div>
+                        </div>
+                        <div data-role="collapsible">
+                            <h3 class="col_h">
+                                <img class="col_img" src="../../img/icon.png" />
+                                君君莫<span>（团队）</span><span class="ui-li-count bq-green">进行中</span></h3>
+                            <p>接任务时间：2014-2-2</p>
+                            <div class="col_box"><a class="col_btn ">查看详细</a><a class="col_btn subFinsh">确认完成</a></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -142,5 +171,21 @@
     <script src="../jqjm/jquery.min.js"></script>
     <script src="../jqjm/jquery.mobile-1.4.5.min.js"></script>
     <script src="../js/common.js"></script>
+    <script>
+        $(".subFinsh").on("click", function () {
+            var thisdoc = $(this);
+            $.ajax({
+                url: "prolist.aspx",
+                type: "get",
+                dataType: "json",              
+                success: function (data) {
+
+                    thisdoc.parent().parent().parent().children("h3").find("span.ui-li-count").removeClass("bq-red").addClass("bq-bule").text("已完成");
+                    thisdoc.parent().children().first().addClass("col_btn_all");
+                    thisdoc.remove();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
