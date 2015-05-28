@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        a {
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            background-color: #3281c4;
+            border: 1px solid #286090;
+            text-align: center;
+            color: #fff;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            -moz-user-select: none;
+        }
+
+            a:hover {
+                background-color: #286090;
+            }
+
+            a:active {
+                /*outline:thin dotted;
+            outline-offset:-2px;*/
+                box-shadow: 0 3px 5px rgba(0,0,0,0.4) inset;
+            }
+    </style>
+</head>
+<body>
+    <a id="abtn">按 钮</a>
+    <a id="clear">清 除</a>
+    <script>
+        var add = (function () {
+            var counter = 0;
+            return function () { return counter += 1; }
+        })();
+
+        var e = document.getElementById("abtn");
+        e.onclick = function () {
+            if (add != undefined) {
+                alert(add());
+            }
+        };
+
+        var d = document.getElementById("clear");
+        d.onclick = function () {
+            add = undefined;
+            e = undefined;
+        };
+
+        //function Person(name, age, job) {
+        //    this.name = name;
+        //    this.age = age;
+        //    this.job = job;
+        //    this.lessons = ['Math', 'Physics'];
+        //    var counter = 0;
+        //    this.add = (function () {             
+        //        return function () { return counter += 1; }
+        //    })();
+        //}
+        //Person.prototype = {
+        //    constructor: Person,//原型字面量方式会将对象的constructor变为Object，此外强制指回Person
+        //    getName: ['a', 'b', 'c', 'd']
+        //}
+
+        //var a = new Person("dhy",13,"superMan");
+        //var b = new Person("luly", 11, "superWoman");
+        //a.getName.push("e");
+        //alert(a.getName+" "+ a.name);      
+        //alert(b.getName+" "+b.name);
+        //alert(b.add());
+        //alert(b.add());
+        //alert(b.add());
+
+        //var animal = {
+        //    name: "cat",
+        //    age: 3,
+        //    say: function () {
+
+        //    }
+        //}
+
+
+        //var funcs = new Array(function(){alert(2)}, function(){alert(2)});
+        //funcs[0]();
+
+
+    </script>
+</body>
+</html>
