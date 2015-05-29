@@ -69,12 +69,16 @@
         }
 
         var a = new List();
-        a.append("a");
-        alert(a.listSize + "-" + a.dataStore);
+        a.dataStore.push("1");
+        a.dataStore.push(12);
+        a.dataStore.push("asd");
+        a.dataStore.push(new List());
+        //a.append("a");
+        alert( a.dataStore);
 
         var b = new List();
-        b.append("b");
-        alert(b.listSize + "-" + b.dataStore);
+        //b.append("b");
+        alert(b.dataStore);
     </script>
 </body>
 </html>

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        //function Node(data, left, right) {
+        //    this.data = data;
+        //    this.left = left;
+        //    this.right = right;
+
+        //}
+        //Node.prototype.Show = function () {
+        //    return this.data;
+        //}
+
+        //function BST() {
+        //    this.root = null;          
+        //}
+
+        //BST.prototype.Insert = function (data) {
+        //    var n = new Node(data, null, null);
+        //    if (this.root == null) {
+        //        this.root = n;
+        //    }
+        //    else {
+        //        var current = this.root;
+        //        var parent;
+        //        while (true) {
+        //            parent = current;
+        //            if (data < current.data) {
+        //                current = current.left;
+        //                if (current == null) {
+        //                    parent.left = n;
+        //                    break;
+        //                }
+        //            }
+        //            else {
+        //                current = current.right;
+        //                if (current == null) {
+        //                    parent.right = n;
+        //                    break;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+        //var str = '';
+        ////中序
+        //BST.prototype.InOrder = function (Node) {            
+        //    if (!(Node==null)) {
+        //        this.InOrder(Node.left);
+        //        str += Node.data + ' ';
+        //        this.InOrder(Node.right);
+        //    }          
+        //}
+        ////前序
+        //BST.prototype.PreOrder = function (Node) {
+        //    if (!(Node==null)) {
+        //        str += Node.data + ' ';
+        //        this.PreOrder(Node.left);
+        //        this.PreOrder(Node.right);
+        //    }
+        //}
+        ////后序
+        //BST.prototype.PostOrder = function (Node) {
+        //    if (!(Node == null)) {               
+        //        this.PostOrder(Node.left);
+        //        this.PostOrder(Node.right);
+        //        str += Node.data + ' ';
+        //    }
+        //}
+
+        //var nums = new BST();
+        //nums.Insert(23);
+        //nums.Insert(45);
+        //nums.Insert(16);
+        //nums.Insert(37);
+        //nums.Insert(3);
+        //nums.Insert(99);
+        //nums.Insert(22);
+        ////nums.InOrder(nums.root);
+        ////nums.PreOrder(nums.root);
+        //nums.PostOrder(nums.root);
+        //console.log("Inorder traversal: " + str);
+        
+        
+
+
+        //var word = 'aa',
+        //result = [];
+        //for (var i = 0, l = word.length; i < l; i++) {
+        //    result.push(word.charCodeAt(i));
+        //}
+        //alert(result.join(','));
+
+        //斐波那契数列0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, …  
+
+        function recurFib(n) {
+            if (n < 2) {
+                return n;
+            }
+            else {
+                return recurFib(n-1) + recurFib(n-2);
+            }
+        }
+   
+        function dynFib(n) {
+            var val = [];
+            for (var i = 0; i <= n; ++i) {
+                val[i] = 0;
+            }
+            if (n == 1 || n == 2) {
+                return 1;
+            }
+            else {
+                val[1] = 1;
+                val[2] = 2;
+                for (var i = 3; i <= n; ++i) {
+                    val[i] = val[i-1] + val[i-2];
+                }
+                return val[n-1];
+            }
+        }
+        var start = new Date().getTime();
+        console.log(recurFib(10));
+        var stop = new Date().getTime();
+        console.log(" 递归计算耗时 - " + (stop - start) + " 毫秒 ");
+        console.log();
+        start = new Date().getTime();
+        console.log(dynFib(10));
+        stop = new Date().getTime();
+        console.log(" 动态规划耗时 - " + (stop - start) + " 毫秒 ");
+        //var str = '';
+        //for (var i = 0; i <= 10; i++) {
+        //    str += recurFib(i) + ",";
+          
+        //}
+        //alert(str);
+
+       
+    </script>
+</body>
+</html>
