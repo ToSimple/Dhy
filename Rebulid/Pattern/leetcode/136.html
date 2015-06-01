@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        /**
+         * @param {number[]} nums
+         * @return {number}
+         */
+        var singleNumber = function (nums) {
+            var result = nums[0];
+            for (var i = 1; i < nums.length; i++) {
+                result = result ^ nums[i];
+            }
+            return result;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        /**
+        * Definition for a binary tree node.
+              */
+        function TreeNode(val) {
+            this.val = val;
+            this.left = this.right = null;
+        }
+        /**
+         * @param {TreeNode} root
+         * @return {number}
+         */
+        
+        var maxDepth = function (root) {
+            return root === null ? 0 : Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+        };
+        
+       
+       
+    </script>
+</body>
+</html>

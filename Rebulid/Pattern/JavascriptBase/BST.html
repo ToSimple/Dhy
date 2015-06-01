@@ -6,89 +6,137 @@
 </head>
 <body>
     <script>
-        //function Node(data, left, right) {
-        //    this.data = data;
-        //    this.left = left;
-        //    this.right = right;
+        function Node(data, left, right) {
+            this.data = data;
+            this.left = left;
+            this.right = right;
 
-        //}
-        //Node.prototype.Show = function () {
-        //    return this.data;
-        //}
+        }
+        Node.prototype.Show = function () {
+            return this.data;
+        }
 
-        //function BST() {
-        //    this.root = null;          
-        //}
+        function BST() {
+            this.root = null;
+        }
 
-        //BST.prototype.Insert = function (data) {
-        //    var n = new Node(data, null, null);
-        //    if (this.root == null) {
-        //        this.root = n;
-        //    }
-        //    else {
-        //        var current = this.root;
-        //        var parent;
-        //        while (true) {
-        //            parent = current;
-        //            if (data < current.data) {
-        //                current = current.left;
-        //                if (current == null) {
-        //                    parent.left = n;
-        //                    break;
-        //                }
-        //            }
-        //            else {
-        //                current = current.right;
-        //                if (current == null) {
-        //                    parent.right = n;
-        //                    break;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-        //var str = '';
-        ////中序
-        //BST.prototype.InOrder = function (Node) {            
-        //    if (!(Node==null)) {
-        //        this.InOrder(Node.left);
-        //        str += Node.data + ' ';
-        //        this.InOrder(Node.right);
-        //    }          
-        //}
-        ////前序
-        //BST.prototype.PreOrder = function (Node) {
-        //    if (!(Node==null)) {
-        //        str += Node.data + ' ';
-        //        this.PreOrder(Node.left);
-        //        this.PreOrder(Node.right);
-        //    }
-        //}
-        ////后序
-        //BST.prototype.PostOrder = function (Node) {
-        //    if (!(Node == null)) {               
-        //        this.PostOrder(Node.left);
-        //        this.PostOrder(Node.right);
-        //        str += Node.data + ' ';
-        //    }
-        //}
-
-        //var nums = new BST();
-        //nums.Insert(23);
-        //nums.Insert(45);
-        //nums.Insert(16);
-        //nums.Insert(37);
-        //nums.Insert(3);
-        //nums.Insert(99);
-        //nums.Insert(22);
-        ////nums.InOrder(nums.root);
-        ////nums.PreOrder(nums.root);
+        BST.prototype.Insert = function (data) {
+            var n = new Node(data, null, null);
+            if (this.root == null) {
+                this.root = n;
+            }
+            else {
+                var current = this.root;
+                var parent;
+                while (true) {
+                    parent = current;
+                    if (data < current.data) {
+                        current = current.left;
+                        if (current == null) {
+                            parent.left = n;
+                            break;
+                        }
+                    }
+                    else {
+                        current = current.right;
+                        if (current == null) {
+                            parent.right = n;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        var str = '';
+        //中序
+        BST.prototype.InOrder = function (Node) {
+            if (!(Node == null)) {
+                this.InOrder(Node.left);
+                str += Node.data + ' ';
+                this.InOrder(Node.right);
+            }
+        }
+        //前序
+        BST.prototype.PreOrder = function (Node) {
+            if (!(Node == null)) {
+                str += Node.data + ' ';
+                this.PreOrder(Node.left);
+                this.PreOrder(Node.right);
+            }
+        }
+        //后序
+        BST.prototype.PostOrder = function (Node) {
+            if (!(Node == null)) {
+                this.PostOrder(Node.left);
+                this.PostOrder(Node.right);
+                str += Node.data + ' ';
+            }
+        }
+        var nums = new BST();
+        nums.Insert(23);
+        nums.Insert(45);
+        nums.Insert(16);
+        nums.Insert(37);
+        nums.Insert(3);
+        nums.Insert(99);
+        nums.Insert(22);
+        nums.Insert(1);
+        //nums.InOrder(nums.root);
+        //nums.PreOrder(nums.root);
         //nums.PostOrder(nums.root);
         //console.log("Inorder traversal: " + str);
-        
-        
+        //递归遍历二叉树深度
+        var i = 0;
+        //var maxDepth = function (root) {
+        //    return root === null ? 0 : Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+        //};
+        ////alert(maxDepth(nums.root) + "@");
+       
+        //var start = new Date().getTime();
+        ////alert(maxDepth(nums.root));
+        //maxDepth(nums.root);
+        //var end = new Date().getTime();
+        //console.log(end - start);
 
+        //var maxL = function (root) {
+        //    if (root.left===null) {
+        //        return 1;
+        //    } else {
+        //        return maxL(root.left) + 1;
+        //    }
+        //}
+        //alert(maxL(nums.root));
+        //var maxR = function (root) {
+        //    if (root.right === null) {
+        //        return 1;
+        //    } else {
+        //        return maxR(root.right) + 1;
+        //    }
+        //}
+        //alert(maxR(nums.root));
 
+        //非递归二叉树深度
+        var maxDepth = function (root) {
+            var l = root;
+            var r = root;
+            var lnum = 1;
+            var rnum = 1;
+            while (l.left !== null) {
+                l = l.left;
+                lnum++;
+            }
+            while (r.right !== null) {
+                r = r.right;
+                rnum++;
+            }
+            return Math.max(lnum, rnum);
+        }
+        var start = new Date().getTime();
+        //alert(maxDepth(nums.root));
+        maxDepth(nums.root)
+        var end = new Date().getTime();
+        console.log(end - start);
+        //转ascii编码
         //var word = 'aa',
         //result = [];
         //for (var i = 0, l = word.length; i < l; i++) {
@@ -96,51 +144,50 @@
         //}
         //alert(result.join(','));
 
+        //动态规划和递归
         //斐波那契数列0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, …  
+        //function recurFib(n) {
+        //    if (n < 2) {
+        //        return n;
+        //    }
+        //    else {
+        //        return recurFib(n-1) + recurFib(n-2);
+        //    }
+        //}
 
-        function recurFib(n) {
-            if (n < 2) {
-                return n;
-            }
-            else {
-                return recurFib(n-1) + recurFib(n-2);
-            }
-        }
-   
-        function dynFib(n) {
-            var val = [];
-            for (var i = 0; i <= n; ++i) {
-                val[i] = 0;
-            }
-            if (n == 1 || n == 2) {
-                return 1;
-            }
-            else {
-                val[1] = 1;
-                val[2] = 2;
-                for (var i = 3; i <= n; ++i) {
-                    val[i] = val[i-1] + val[i-2];
-                }
-                return val[n-1];
-            }
-        }
-        var start = new Date().getTime();
-        console.log(recurFib(10));
-        var stop = new Date().getTime();
-        console.log(" 递归计算耗时 - " + (stop - start) + " 毫秒 ");
-        console.log();
-        start = new Date().getTime();
-        console.log(dynFib(10));
-        stop = new Date().getTime();
-        console.log(" 动态规划耗时 - " + (stop - start) + " 毫秒 ");
+        //function dynFib(n) {
+        //    var val = [];
+        //    for (var i = 0; i <= n; ++i) {
+        //        val[i] = 0;
+        //    }
+        //    if (n == 1 || n == 2) {
+        //        return 1;
+        //    }
+        //    else {
+        //        val[1] = 1;
+        //        val[2] = 2;
+        //        for (var i = 3; i <= n; ++i) {
+        //            val[i] = val[i-1] + val[i-2];
+        //        }
+        //        return val[n-1];
+        //    }
+        //}
+        //var start = new Date().getTime();
+        //console.log(recurFib(10));
+        //var stop = new Date().getTime();
+        //console.log(" 递归计算耗时 - " + (stop - start) + " 毫秒 ");
+        //console.log();
+        //start = new Date().getTime();
+        //console.log(dynFib(10));
+        //stop = new Date().getTime();
+        //console.log(" 动态规划耗时 - " + (stop - start) + " 毫秒 ");
         //var str = '';
         //for (var i = 0; i <= 10; i++) {
-        //    str += recurFib(i) + ",";
-          
+        //    str += recurFib(i) + ",";          
         //}
         //alert(str);
 
-       
+
     </script>
 </body>
 </html>
