@@ -74,6 +74,7 @@
         }
         var nums = new BST();
         nums.Insert(23);
+        nums.Insert(null);
         nums.Insert(45);
         nums.Insert(16);
         nums.Insert(37);
@@ -81,17 +82,30 @@
         nums.Insert(99);
         nums.Insert(22);
         nums.Insert(1);
+      
+
+        var nums2 = new BST();
+        nums2.Insert(23);
+        nums2.Insert(45);
+        nums2.Insert(16);
+        nums2.Insert(null);
+        nums2.Insert(37);
+        nums2.Insert(3);
+        nums2.Insert(99);
+        nums2.Insert(22);
+        nums2.Insert(1);
+       
         //nums.InOrder(nums.root);
         //nums.PreOrder(nums.root);
         //nums.PostOrder(nums.root);
         //console.log("Inorder traversal: " + str);
         //递归遍历二叉树深度
-        var i = 0;
+        //var i = 0;
         //var maxDepth = function (root) {
         //    return root === null ? 0 : Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
         //};
         ////alert(maxDepth(nums.root) + "@");
-       
+
         //var start = new Date().getTime();
         ////alert(maxDepth(nums.root));
         //maxDepth(nums.root);
@@ -116,26 +130,38 @@
         //alert(maxR(nums.root));
 
         //非递归二叉树深度
-        var maxDepth = function (root) {
-            var l = root;
-            var r = root;
-            var lnum = 1;
-            var rnum = 1;
-            while (l.left !== null) {
-                l = l.left;
-                lnum++;
-            }
-            while (r.right !== null) {
-                r = r.right;
-                rnum++;
-            }
-            return Math.max(lnum, rnum);
-        }
-        var start = new Date().getTime();
+        //var maxDepth = function (root) {
+        //    var l = root;
+        //    var r = root;
+        //    var lnum = 1;
+        //    var rnum = 1;
+        //    while (l.left !== null) {
+        //        l = l.left;
+        //        lnum++;
+        //    }
+        //    while (r.right !== null) {
+        //        r = r.right;
+        //        rnum++;
+        //    }
+        //    return Math.max(lnum, rnum);
+        //}
         //alert(maxDepth(nums.root));
-        maxDepth(nums.root)
-        var end = new Date().getTime();
-        console.log(end - start);
+        //var start = new Date().getTime();       
+        //maxDepth(nums.root)
+        //var end = new Date().getTime();
+        //console.log(end - start);
+
+        //判断二叉树相等
+       
+        nums.InOrder(nums.root);
+        alert(str);
+        var a = str;
+        str = '';
+        nums2.InOrder(nums2.root);
+        var b = str;
+        alert(str);
+        alert(a === b);
+
         //转ascii编码
         //var word = 'aa',
         //result = [];

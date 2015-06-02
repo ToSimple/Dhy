@@ -61,6 +61,11 @@
     padding: 10px;
     text-align: center;
 }
+.d_nav img{
+    margin-top:-5px;
+    height:40px;
+    width:40px;
+}
 
 .d_line_box {
     display: inline-block;
@@ -87,11 +92,14 @@
 }
 
 .search_input {
+
     margin-left: auto;
     margin-right: auto;
-    width: 55%;
+    width: 65%;
 }
-
+    .search_input input {
+        height:30px;
+    }
 .nav_img {
     float: left;
     height: 30px;
@@ -100,7 +108,7 @@
 
 @media (max-width: 500px) {
     .search_input {
-        width: 45%;
+        width: 65%;
     }
 
     .nav_img {
@@ -112,7 +120,7 @@
 
 @media (min-width: 640px) {
     .search_input {
-        width: 70%;
+        width: 80%;
     }
 
     .nav_img {
@@ -153,7 +161,7 @@
 }
 
 .d_tool {
-    margin: 5px 0;
+    margin: 15px 0;
     padding: 0 10px;
 }
 
@@ -187,7 +195,7 @@
 
     .d_tool_ul .dian {
         height: 1.5em;
-        width: 10%;
+        width: 8%;
     }
 
 .d_d_ul {
@@ -270,7 +278,7 @@
 }
 
 .c_info {
-    padding: 10px 10px;
+    padding: 10px 10px 5px 10px;
     text-align: left;
     width: 100%;
     overflow: auto;
@@ -282,7 +290,7 @@
     }
 
     .c_info img {
-        margin-left: 5px;
+        margin-left: 2px;
         border: 1px solid #ccc;
         padding: 3px;
         height: 30px;
@@ -309,7 +317,7 @@
 
 .c_i_con {
     width: 100%;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .tips {

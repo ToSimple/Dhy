@@ -42,7 +42,7 @@
     var ul = $(".d_tool_ul")[0];
     var ux1;
     var ux2;
-    var index = 0;
+    var g = true;
     ul.ontouchstart = function (e) {
         var touch = e.touches[0];
         ux1 = touch.clientX;
@@ -52,20 +52,33 @@
         var touch = e.touches[0];
         ux2 = touch.clientX;
         var ad = $(".d_tool_ul").children();
-        var next = true;
+        var hi = ad.eq(0).css("width");
         if (ux2 - ux1 < -15) {
-            ad.eq(index).animate({ width: '0px' }, "1000", function () {
-                if (next) {
-                    next = false;
-                    ad.eq(index).removeClass("show");
-                    $(".dian").before('<li>' + ad.eq(index).html() + '</li>');
-                    ad.eq(index).remove();
-                    ad.eq(index + 3).css("display", "block");
-                }
-            });
+            if (g) {
+                g = false;
+                ad.eq(0).animate({ paddingRight: hi, opacity: '0.4' }, "1000", function () {
+                    ad.eq(0).removeClass("show");
+                    $(".dian").before('<li>' + ad.eq(0).html() + '</li>');
+                    ad.eq(0).remove();
+                    ad.eq(3).css("width", hi).css("display", "block");
+                    g = true;
+                });
+            }
+        } else if (ux2 - ux1 > 15) {
+            if (g) {
+                g = false;
+                ad.eq(2).animate({ paddingLeft: hi, opacity: '0.4' }, "1000", function () {
+                    ad.eq(2).removeClass("show");
+                    ad.eq(2).css("display", "none");
+                    ad.eq(2).css("padding-left", 0);
+                    ad.eq(2).css("opacity", 1);
+                    ad.eq(0).before('<li class="show">' + ad.eq(5).html() + '</li>');
+                    ad.eq(5).remove();
+                    g = true;
+                });
+
+            }
         }
-
-
     };
 
     //加载数据
@@ -125,7 +138,6 @@
                     str += '            </div>                                                              ';
                     str += '            <img src="img/c76b563f38453d44f35faeff595100acb87e0235.png" />';
                     str += '            <div class="name">John Raymons</div>                                ';
-
                     str += '        </div>                                                                  ';
                     str += '        <div class="c_tj">                                                      ';
                     str += '            <div class="c_tjnum"><i class="fa fa-eye">172</i></div>             ';
@@ -134,8 +146,6 @@
                     str += '        </div>                                                                  ';
                     str += '    </div>                                                                      ';
                     str += '</a> ';
-
-
                     elem.innerHTML = str;
                     elems.push(elem);
                 });
@@ -152,6 +162,9 @@
     //滚动条事件
     var loding = true;;
     $(document).on("scroll", function () {
+      
+            $(".right_nav").css("display", "none");
+
         var ws = $(window).scrollTop();
         var wh = $(window).height();
         var dh = $(document).height();
@@ -167,10 +180,10 @@
             $(".right_nav").css("display", "block");
             $(".right_nav").animate({ width: '44%' }, "800");
         } else {
-            $(".right_nav").animate({ width: '0' }, "500", function () {
+            $(".right_nav").animate({ width: '0' }, "800", function () {
                 $(".right_nav").css("display", "none");
             });
-          
+
         }
     })
 })

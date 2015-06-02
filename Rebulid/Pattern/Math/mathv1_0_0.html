@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function ExMath() {
+
+        }
+        ExMath.prototype.constructor = Math;
+        ExMath.prototype.plus = function (a, b) {
+            return a + b;
+        }
+        //Math.prototype.exPlus = function (a, b) {
+        //    var numsA = a.split('.');
+        //    var numsB = b.split('.');
+        //    //整数部分
+            
+
+        //    //小数部分
+        //    var xslengthA = numsA[1].length;
+        //    var xslengthB = numsB[1].length;
+        //    if (xslengthA>xslengthB) {
+        //        for (var i = 0; i < xslengthA-xslengthB; i++) {
+        //            numsB[1].push(0);
+        //        }
+        //    } else {
+        //        for (var i = 0; i < xslengthB - xslengthA; i++) {
+        //            numsA[1].push(0);
+        //        }
+        //    }
+            
+        //    var plus = function (na,nb) {
+        //        var naItems = na.split('');
+        //        var nbItems = nb.split('');
+        //        var alength = naItems.length;
+        //        var blength = nbItems.length;
+        //        var jw = 0;
+        //        var sum = 0;;
+        //        while (true) {
+        //            sum = naItems[alength] + nbItems[blength];
+                    
+        //        }
+                
+        //    }
+        //}
+
+
+
+        var a = new ExMath();
+        //alert(a.plus(124324234234123421123, 1));
+        //a.exPlus("124324234234123421123123123", "12312");
+        alert(Math.pow(4, 3));
+    </script>
+</body>
+</html>
